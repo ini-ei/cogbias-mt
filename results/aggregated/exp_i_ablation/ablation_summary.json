@@ -1,0 +1,78 @@
+{
+  "bias_rate_table": {
+    "claude-4-sonnet|A_baseline": 0.1,
+    "claude-4-sonnet|B_no_sysprompt": 0.1,
+    "claude-4-sonnet|C_temp_low": 0.1,
+    "claude-4-sonnet|D_temp_high": 0.2,
+    "gemini-3.1-pro|A_baseline": 0.667,
+    "gemini-3.1-pro|B_no_sysprompt": 0.4,
+    "gemini-3.1-pro|C_temp_low": 0.4,
+    "gemini-3.1-pro|D_temp_high": 0.5,
+    "gpt-5|A_baseline": 0.8,
+    "gpt-5|B_no_sysprompt": 0.8,
+    "gpt-5|C_temp_low": 0.7,
+    "gpt-5|D_temp_high": 0.8,
+    "llama-4-maverick|A_baseline": 0.6,
+    "llama-4-maverick|B_no_sysprompt": 0.7,
+    "llama-4-maverick|C_temp_low": 0.6,
+    "llama-4-maverick|D_temp_high": 0.8
+  },
+  "per_model_condition_variance": {
+    "claude-4-sonnet": {
+      "mean_bias_rate": 0.125,
+      "variance": 0.0019,
+      "range": 0.1,
+      "by_condition": {
+        "A_baseline": 0.1,
+        "B_no_sysprompt": 0.1,
+        "C_temp_low": 0.1,
+        "D_temp_high": 0.2
+      }
+    },
+    "gemini-3.1-pro": {
+      "mean_bias_rate": 0.492,
+      "variance": 0.0119,
+      "range": 0.267,
+      "by_condition": {
+        "A_baseline": 0.667,
+        "B_no_sysprompt": 0.4,
+        "C_temp_low": 0.4,
+        "D_temp_high": 0.5
+      }
+    },
+    "gpt-5": {
+      "mean_bias_rate": 0.775,
+      "variance": 0.0019,
+      "range": 0.1,
+      "by_condition": {
+        "A_baseline": 0.8,
+        "B_no_sysprompt": 0.8,
+        "C_temp_low": 0.7,
+        "D_temp_high": 0.8
+      }
+    },
+    "llama-4-maverick": {
+      "mean_bias_rate": 0.675,
+      "variance": 0.0069,
+      "range": 0.2,
+      "by_condition": {
+        "A_baseline": 0.6,
+        "B_no_sysprompt": 0.7,
+        "C_temp_low": 0.6,
+        "D_temp_high": 0.8
+      }
+    }
+  },
+  "cross_model_variance_at_baseline": {
+    "baseline_mean_bias_rate": 0.542,
+    "variance": 0.0702,
+    "range": 0.7,
+    "by_model": {
+      "claude-4-sonnet": 0.1,
+      "gemini-3.1-pro": 0.667,
+      "gpt-5": 0.8,
+      "llama-4-maverick": 0.6
+    }
+  },
+  "interpretation": "モデル間分散 (cross_model) > 条件間分散 (per_model) の平均値 なら、モデル本体の寄与が周辺設定より支配的と解釈できる。"
+}

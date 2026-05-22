@@ -1,0 +1,474 @@
+{
+  "n_bootstrap": 10000,
+  "ci_level": 0.95,
+  "ci_by_model": {
+    "gpt-5": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.5375,
+          "ci_lower": 0.425,
+          "ci_upper": 0.65,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.2558,
+          "ci_lower": 0.1395,
+          "ci_upper": 0.3953,
+          "n": 43
+        },
+        "debias_shift": {
+          "mean": 0.7442,
+          "ci_lower": 0.6047,
+          "ci_upper": 0.8605,
+          "n": 43
+        },
+        "t4_bias_rate": {
+          "mean": 0.175,
+          "ci_lower": 0.1,
+          "ci_upper": 0.2625,
+          "n": 80
+        },
+        "effective_n_for_PR": 43
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.8,
+          "ci_lower": 0.6,
+          "ci_upper": 0.95,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.25,
+          "ci_lower": 0.1,
+          "ci_upper": 0.45,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.35,
+          "ci_lower": 0.15,
+          "ci_upper": 0.55,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.75,
+          "ci_lower": 0.55,
+          "ci_upper": 0.95,
+          "n": 20
+        }
+      },
+      "syco": {
+        "initial_unbiased_rate": {
+          "mean": 0.8,
+          "ci_lower": 0.6,
+          "ci_upper": 0.95,
+          "n": 20
+        },
+        "sycophancy_rate": {
+          "mean": 0.4375,
+          "ci_lower": 0.1875,
+          "ci_upper": 0.6875,
+          "n": 16
+        },
+        "resistance_rate": {
+          "mean": 0.5625,
+          "ci_lower": 0.3125,
+          "ci_upper": 0.8125,
+          "n": 16
+        }
+      },
+      "syco_by_type": {
+        "anchoring": {
+          "mean": 0.6667,
+          "ci_lower": 0.0,
+          "ci_upper": 1.0,
+          "n": 3
+        },
+        "confirmation_bias": {
+          "mean": 0.25,
+          "ci_lower": 0.0,
+          "ci_upper": 0.75,
+          "n": 4
+        },
+        "framing": {
+          "mean": 0.25,
+          "ci_lower": 0.0,
+          "ci_upper": 0.75,
+          "n": 4
+        },
+        "representativeness": {
+          "mean": 0.6,
+          "ci_lower": 0.2,
+          "ci_upper": 1.0,
+          "n": 5
+        }
+      }
+    },
+    "gpt-5.5": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.4125,
+          "ci_lower": 0.3,
+          "ci_upper": 0.525,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.0606,
+          "ci_lower": 0.0,
+          "ci_upper": 0.1515,
+          "n": 33
+        },
+        "debias_shift": {
+          "mean": 0.9394,
+          "ci_lower": 0.8485,
+          "ci_upper": 1.0,
+          "n": 33
+        },
+        "t4_bias_rate": {
+          "mean": 0.0375,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0875,
+          "n": 80
+        },
+        "effective_n_for_PR": 33
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.65,
+          "ci_lower": 0.45,
+          "ci_upper": 0.85,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.3,
+          "ci_lower": 0.1,
+          "ci_upper": 0.5,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.05,
+          "ci_lower": 0.0,
+          "ci_upper": 0.15,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.65,
+          "ci_lower": 0.45,
+          "ci_upper": 0.85,
+          "n": 20
+        }
+      }
+    },
+    "claude-4-sonnet": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.3125,
+          "ci_lower": 0.2125,
+          "ci_upper": 0.4125,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.12,
+          "ci_lower": 0.0,
+          "ci_upper": 0.28,
+          "n": 25
+        },
+        "debias_shift": {
+          "mean": 0.88,
+          "ci_lower": 0.72,
+          "ci_upper": 1.0,
+          "n": 25
+        },
+        "t4_bias_rate": {
+          "mean": 0.0875,
+          "ci_lower": 0.0375,
+          "ci_upper": 0.15,
+          "n": 80
+        },
+        "effective_n_for_PR": 25
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.35,
+          "ci_lower": 0.15,
+          "ci_upper": 0.55,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.05,
+          "ci_lower": 0.0,
+          "ci_upper": 0.15,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.85,
+          "ci_lower": 0.7,
+          "ci_upper": 1.0,
+          "n": 20
+        }
+      },
+      "syco": {
+        "initial_unbiased_rate": {
+          "mean": 0.85,
+          "ci_lower": 0.7,
+          "ci_upper": 1.0,
+          "n": 20
+        },
+        "sycophancy_rate": {
+          "mean": 0.5882,
+          "ci_lower": 0.3529,
+          "ci_upper": 0.8235,
+          "n": 17
+        },
+        "resistance_rate": {
+          "mean": 0.4118,
+          "ci_lower": 0.1765,
+          "ci_upper": 0.6471,
+          "n": 17
+        }
+      },
+      "syco_by_type": {
+        "anchoring": {
+          "mean": 0.6667,
+          "ci_lower": 0.0,
+          "ci_upper": 1.0,
+          "n": 3
+        },
+        "confirmation_bias": {
+          "mean": 0.2,
+          "ci_lower": 0.0,
+          "ci_upper": 0.6,
+          "n": 5
+        },
+        "framing": {
+          "mean": 0.75,
+          "ci_lower": 0.25,
+          "ci_upper": 1.0,
+          "n": 4
+        },
+        "representativeness": {
+          "mean": 0.8,
+          "ci_lower": 0.4,
+          "ci_upper": 1.0,
+          "n": 5
+        }
+      }
+    },
+    "claude-opus-4.7": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.3,
+          "ci_lower": 0.2,
+          "ci_upper": 0.4,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.0833,
+          "ci_lower": 0.0,
+          "ci_upper": 0.2083,
+          "n": 24
+        },
+        "debias_shift": {
+          "mean": 0.9167,
+          "ci_lower": 0.7917,
+          "ci_upper": 1.0,
+          "n": 24
+        },
+        "t4_bias_rate": {
+          "mean": 0.025,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0625,
+          "n": 80
+        },
+        "effective_n_for_PR": 24
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.45,
+          "ci_lower": 0.25,
+          "ci_upper": 0.65,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.05,
+          "ci_lower": 0.0,
+          "ci_upper": 0.15,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.7,
+          "ci_lower": 0.5,
+          "ci_upper": 0.9,
+          "n": 20
+        }
+      }
+    },
+    "gemini-3.1-pro": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.4625,
+          "ci_lower": 0.35,
+          "ci_upper": 0.575,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.1081,
+          "ci_lower": 0.027,
+          "ci_upper": 0.2162,
+          "n": 37
+        },
+        "debias_shift": {
+          "mean": 0.8919,
+          "ci_lower": 0.7838,
+          "ci_upper": 0.973,
+          "n": 37
+        },
+        "t4_bias_rate": {
+          "mean": 0.15,
+          "ci_lower": 0.075,
+          "ci_upper": 0.2375,
+          "n": 80
+        },
+        "effective_n_for_PR": 37
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.4,
+          "ci_lower": 0.2,
+          "ci_upper": 0.6,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.4,
+          "ci_lower": 0.2,
+          "ci_upper": 0.6,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.3,
+          "ci_lower": 0.1,
+          "ci_upper": 0.5,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.75,
+          "ci_lower": 0.55,
+          "ci_upper": 0.9,
+          "n": 20
+        }
+      }
+    },
+    "llama-4-maverick": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.6125,
+          "ci_lower": 0.5,
+          "ci_upper": 0.7125,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.102,
+          "ci_lower": 0.0204,
+          "ci_upper": 0.1837,
+          "n": 49
+        },
+        "debias_shift": {
+          "mean": 0.898,
+          "ci_lower": 0.8163,
+          "ci_upper": 0.9796,
+          "n": 49
+        },
+        "t4_bias_rate": {
+          "mean": 0.1,
+          "ci_lower": 0.0375,
+          "ci_upper": 0.1625,
+          "n": 80
+        },
+        "effective_n_for_PR": 49
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.75,
+          "ci_lower": 0.55,
+          "ci_upper": 0.9,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.35,
+          "ci_lower": 0.15,
+          "ci_upper": 0.55,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.75,
+          "ci_lower": 0.55,
+          "ci_upper": 0.9,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.6,
+          "ci_lower": 0.4,
+          "ci_upper": 0.8,
+          "n": 20
+        }
+      },
+      "syco": {
+        "initial_unbiased_rate": {
+          "mean": 0.95,
+          "ci_lower": 0.85,
+          "ci_upper": 1.0,
+          "n": 20
+        },
+        "sycophancy_rate": {
+          "mean": 0.7368,
+          "ci_lower": 0.5263,
+          "ci_upper": 0.8947,
+          "n": 19
+        },
+        "resistance_rate": {
+          "mean": 0.2632,
+          "ci_lower": 0.1053,
+          "ci_upper": 0.4737,
+          "n": 19
+        }
+      },
+      "syco_by_type": {
+        "anchoring": {
+          "mean": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "n": 5
+        },
+        "confirmation_bias": {
+          "mean": 0.4,
+          "ci_lower": 0.0,
+          "ci_upper": 0.8,
+          "n": 5
+        },
+        "framing": {
+          "mean": 0.75,
+          "ci_lower": 0.25,
+          "ci_upper": 1.0,
+          "n": 4
+        },
+        "representativeness": {
+          "mean": 0.8,
+          "ci_lower": 0.4,
+          "ci_upper": 1.0,
+          "n": 5
+        }
+      }
+    }
+  }
+}

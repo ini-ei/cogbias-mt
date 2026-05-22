@@ -1,0 +1,171 @@
+{
+  "n_bootstrap": 10000,
+  "ci_level": 0.95,
+  "ci_by_model": {
+    "qwen3.5-27b": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.0125,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0375,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 1
+        },
+        "debias_shift": {
+          "mean": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "n": 1
+        },
+        "t4_bias_rate": {
+          "mean": 0.0125,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0375,
+          "n": 80
+        },
+        "effective_n_for_PR": 1
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.05,
+          "ci_lower": 0.0,
+          "ci_upper": 0.15,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 20
+        }
+      }
+    },
+    "gemma-4-31b": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.5125,
+          "ci_lower": 0.4,
+          "ci_upper": 0.625,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.2927,
+          "ci_lower": 0.1707,
+          "ci_upper": 0.439,
+          "n": 41
+        },
+        "debias_shift": {
+          "mean": 0.7073,
+          "ci_lower": 0.561,
+          "ci_upper": 0.8293,
+          "n": 41
+        },
+        "t4_bias_rate": {
+          "mean": 0.2875,
+          "ci_lower": 0.1875,
+          "ci_upper": 0.3875,
+          "n": 80
+        },
+        "effective_n_for_PR": 41
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.6,
+          "ci_lower": 0.4,
+          "ci_upper": 0.8,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.3,
+          "ci_lower": 0.1,
+          "ci_upper": 0.5,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.3,
+          "ci_lower": 0.1,
+          "ci_upper": 0.5,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.85,
+          "ci_lower": 0.7,
+          "ci_upper": 1.0,
+          "n": 20
+        }
+      }
+    },
+    "qwen3.5-122b": {
+      "bias": {
+        "bias_rate": {
+          "mean": 0.025,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0625,
+          "n": 80
+        },
+        "persistent_bias_rate": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 2
+        },
+        "debias_shift": {
+          "mean": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "n": 2
+        },
+        "t4_bias_rate": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 80
+        },
+        "effective_n_for_PR": 2
+      },
+      "bias_by_type": {
+        "anchoring": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 20
+        },
+        "confirmation_bias": {
+          "mean": 0.05,
+          "ci_lower": 0.0,
+          "ci_upper": 0.15,
+          "n": 20
+        },
+        "framing": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0,
+          "n": 20
+        },
+        "representativeness": {
+          "mean": 0.05,
+          "ci_lower": 0.0,
+          "ci_upper": 0.15,
+          "n": 20
+        }
+      }
+    }
+  }
+}

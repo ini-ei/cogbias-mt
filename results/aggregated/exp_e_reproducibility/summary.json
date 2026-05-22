@@ -1,0 +1,656 @@
+{
+  "config": {
+    "n_runs": 3,
+    "temperature": 0.7,
+    "boundary_problem_ids": [
+      "framing-labor-hard-001",
+      "anchoring-legal-hard-001",
+      "confirmation_bias-labor-hard-002",
+      "framing-legal-hard-002",
+      "framing-daily_life-hard-002",
+      "representativeness-medical-hard-001",
+      "confirmation_bias-legal-hard-001",
+      "confirmation_bias-education-hard-001",
+      "framing-legal-hard-001",
+      "confirmation_bias-medical-hard-001"
+    ]
+  },
+  "summary_by_model": {
+    "gpt-5": {
+      "n_problems": 10,
+      "t2_stable_count": 10,
+      "t2_stable_rate": 1.0,
+      "t4_stable_count": 7,
+      "t4_stable_rate": 0.7,
+      "per_problem": {
+        "framing-labor-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            true,
+            true,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "anchoring-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-labor-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            true,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": false
+        },
+        "framing-legal-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            true,
+            true,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "framing-daily_life-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "representativeness-medical-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            true,
+            false,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": false
+        },
+        "confirmation_bias-education-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": false
+        },
+        "framing-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            true,
+            true,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-medical-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        }
+      }
+    },
+    "claude-4-sonnet": {
+      "n_problems": 10,
+      "t2_stable_count": 8,
+      "t2_stable_rate": 0.8,
+      "t4_stable_count": 7,
+      "t4_stable_rate": 0.7,
+      "per_problem": {
+        "framing-labor-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "anchoring-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-labor-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "framing-legal-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            true,
+            false
+          ],
+          "t4_values": [
+            false,
+            true,
+            true
+          ],
+          "t2_stable": false,
+          "t4_stable": false
+        },
+        "framing-daily_life-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            true,
+            true,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "representativeness-medical-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            true,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": false
+        },
+        "confirmation_bias-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-education-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "framing-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            false,
+            false
+          ],
+          "t4_values": [
+            true,
+            false,
+            false
+          ],
+          "t2_stable": false,
+          "t4_stable": false
+        },
+        "confirmation_bias-medical-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        }
+      }
+    },
+    "gemini-3.1-pro": {
+      "n_problems": 10,
+      "t2_stable_count": 7,
+      "t2_stable_rate": 0.7,
+      "t4_stable_count": 8,
+      "t4_stable_rate": 0.8,
+      "per_problem": {
+        "framing-labor-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            true,
+            true,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "anchoring-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-labor-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": false,
+          "t4_stable": true
+        },
+        "framing-legal-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            true,
+            true,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "framing-daily_life-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "representativeness-medical-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            true,
+            false
+          ],
+          "t4_values": [
+            false,
+            true,
+            false
+          ],
+          "t2_stable": false,
+          "t4_stable": false
+        },
+        "confirmation_bias-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            false,
+            false
+          ],
+          "t4_values": [
+            true,
+            false,
+            false
+          ],
+          "t2_stable": false,
+          "t4_stable": false
+        },
+        "confirmation_bias-education-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "framing-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            true,
+            true,
+            true
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-medical-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        }
+      }
+    },
+    "llama-4-maverick": {
+      "n_problems": 10,
+      "t2_stable_count": 8,
+      "t2_stable_rate": 0.8,
+      "t4_stable_count": 10,
+      "t4_stable_rate": 1.0,
+      "per_problem": {
+        "framing-labor-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "anchoring-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-labor-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            false,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": false,
+          "t4_stable": true
+        },
+        "framing-legal-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "framing-daily_life-hard-002": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            false,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": false,
+          "t4_stable": true
+        },
+        "representativeness-medical-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-education-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "framing-legal-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            true,
+            true,
+            true
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        },
+        "confirmation_bias-medical-hard-001": {
+          "n_runs_completed": 3,
+          "t2_values": [
+            false,
+            false,
+            false
+          ],
+          "t4_values": [
+            false,
+            false,
+            false
+          ],
+          "t2_stable": true,
+          "t4_stable": true
+        }
+      }
+    }
+  }
+}
