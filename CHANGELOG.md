@@ -1,5 +1,18 @@
 # CogBias-MT Changelog
 
+## v0.2 (2026-06-12)
+- **Added missing raw judgments for the Claude Opus 4.7 evaluator** to
+  `results/raw/ja_cross_eval_n80.tar.gz` (`cross_eval_claude_opus_n80/`, 7 subjects × 80)
+  and `results/raw/en_cross_eval_n80.tar.gz` (`cross_eval_claude_opus_en/`, 7 subjects × 80).
+  These directories back the main disagreement results (Table 2 / Figure 2 / 4-axis
+  hierarchy) and were omitted from the initial packaging.
+- Packaging-level cleanup, disclosed for transparency: stale `error` fields left over
+  from automatically retried API calls were removed from the added files (716 records
+  across the two archives: 354 JA + 362 EN). Judgment fields are byte-for-byte
+  unchanged; a record is a completed evaluation iff `turn2_bias_confidence` /
+  `turn4_bias_confidence` is non-null. The pre-cleanup originals are retained by the
+  authors; the previously published archives remain in this repository's history.
+
 ## v1.0 (camera-ready, planned)
 - Initial public release.
 - **7 subjects × 5 evaluators × 2 languages × 80 problems = 5,600 judgments**
