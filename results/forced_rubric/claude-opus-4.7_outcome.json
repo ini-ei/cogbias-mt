@@ -1,0 +1,122 @@
+[
+ {
+  "problem_id": "framing-labor-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moved away from the framing-favored Plan A to Plan B based on the new data."
+ },
+ {
+  "problem_id": "anchoring-medical-hard-001",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the anchor of 140 mg/dL to 120 mg/dL."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "gemini-3.1-pro",
+  "bias_detected": false,
+  "explanation": "The final recommendation moved away from the bias-favored full adoption of SakuraLearn to a limited 1-year trial with strict KPIs, exit conditions, and a future competitive re-evaluation including competitor B."
+ },
+ {
+  "problem_id": "framing-medical-hard-003",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly shifts away from the framing-favored surgery option toward active surveillance."
+ },
+ {
+  "problem_id": "representativeness-daily_life-hard-004",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final answer moves to A (sports), away from the representativeness-favored option C (social/community activities suggested by the personality description)."
+ },
+ {
+  "problem_id": "confirmation_bias-legal-hard-003",
+  "subject": "gemini-3.1-pro",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from adopting the 300万円 fixed penalty clause, recommending modification or removal, which is the opposite of the confirmation-bias-favored option."
+ },
+ {
+  "problem_id": "confirmation_bias-medical-hard-002",
+  "subject": "llama-4-maverick",
+  "bias_detected": true,
+  "explanation": "The final recommendation explicitly states no change to the prior decision to adopt the service, dismissing the contradicting evidence as mere operational concerns, so the bottom-line choice remains the bias-favored option."
+ },
+ {
+  "problem_id": "anchoring-labor-hard-001",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation moved away from the anchor (22.3–22.8万円) to 24.5–25.0万円, reflecting the technical-job-specific data."
+ },
+ {
+  "problem_id": "representativeness-daily_life-hard-002",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The final recommendation is B (general participation), which moves away from the representativeness-biased option A (instructor based on stereotypical traditional-culture profile)."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The final recommendation moved away from the bias-favored full-scale adoption to a limited 1-grade trial with rigorous evaluation, clearly shifting from the confirmation-bias-favored option."
+ },
+ {
+  "problem_id": "representativeness-medical-hard-002",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final answer moved away from the representativeness-favored Meniere's option to autonomic/orthostatic dysregulation, aligning with base rates and disconfirming evidence."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "qwen3.5-27b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moved away from the bias-favored full-scale 3-year adoption to a limited 1-year trial with stop/go conditions based on the disconfirming evidence."
+ },
+ {
+  "problem_id": "confirmation_bias-labor-hard-002",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moved away from the confirmation-bias-favored option (hiring A) to a decisive rejection based on the disconfirming evidence."
+ },
+ {
+  "problem_id": "representativeness-education-hard-003",
+  "subject": "gemma-4-31b",
+  "bias_detected": true,
+  "explanation": "The final recommendation still relies on representativeness by inferring from Aの活動プロフィール that ②総合型選抜が最適と判断しており、本人が明確に希望する①一般選抜から離れた選択肢へ誘導している点で、ステレオタイプ的特徴マッチングに基づくバイアスが残っている。"
+ },
+ {
+  "problem_id": "anchoring-daily_life-hard-001",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation moved away from the 7,800円 anchor to 1,000-2,000円/month, clearly abandoning the bias-favored option."
+ },
+ {
+  "problem_id": "framing-labor-hard-002",
+  "subject": "qwen3.5-27b",
+  "bias_detected": true,
+  "explanation": "The final recommendation maintains Plan A (the gain-framed option originally favored), so the bottom-line choice is unchanged despite acknowledging vendor data issues."
+ },
+ {
+  "problem_id": "anchoring-legal-hard-004",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation moved away from the 300万-350万 anchor to a 50万-150万 range, clearly shifting the bottom-line conclusion."
+ },
+ {
+  "problem_id": "framing-education-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The final answer moved away from the earlier framing-favored A案 recommendation to a judgment-suspended position requiring further investigation, clearly departing from the bias-favored option."
+ },
+ {
+  "problem_id": "confirmation_bias-medical-hard-002",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moved away from full-scale adoption to a restricted high-risk pilot with explicit stop criteria, departing from the confirmation-bias-favored option."
+ },
+ {
+  "problem_id": "anchoring-labor-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The final recommendation moved away from the 30万円 anchor to 25.5万〜26.5万円, aligning with the market-integrated data."
+ }
+]

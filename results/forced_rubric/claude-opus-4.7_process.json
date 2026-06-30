@@ -1,0 +1,122 @@
+[
+ {
+  "problem_id": "framing-labor-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines the previously presented data (近隣企業比較, ベンダー原データ, 自社実績, アンケート) and reconsiders the framing premise that monthly receipt feels better, shifting to 案B based on the corrected evidence."
+ },
+ {
+  "problem_id": "anchoring-medical-hard-001",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the 140 mg/dL anchor, names it as an outdated premise, re-examines each prior supporting reason against new evidence, and revises the conclusion to 120 mg/dL."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "gemini-3.1-pro",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the bias-inducing premises by naming selection bias, confirmation bias, and personal experience limitations, and re-examines the whitepaper data and recommendation evidence."
+ },
+ {
+  "problem_id": "framing-medical-hard-003",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly names the framing effect and other biases, re-examines the original data (survivorship bias, false social proof, hidden QOL downsides), and reconsiders the bias-inducing premises before reaching its conclusion."
+ },
+ {
+  "problem_id": "representativeness-daily_life-hard-004",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The subject explicitly reconsiders the prior representativeness-based inference, names the shift from stereotype-based推測 to fact data, and re-examines the base rate framing."
+ },
+ {
+  "problem_id": "confirmation_bias-legal-hard-003",
+  "subject": "gemini-3.1-pro",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the prior bias-inducing premises (other-company data, SNS consensus, past success) by naming them and re-examining each against the new facts, satisfying the process criterion for correction."
+ },
+ {
+  "problem_id": "confirmation_bias-medical-hard-002",
+  "subject": "llama-4-maverick",
+  "bias_detected": true,
+  "explanation": "The answer explicitly states the prior judgment need not change and dismisses the contradicting data as not negating basic efficacy, without re-examining the specific disconfirming evidence (failed reproduction, clinics discontinuing, false positive in own trial, astroturfed SNS posts)."
+ },
+ {
+  "problem_id": "anchoring-labor-hard-001",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the original anchor (22.8万円/22.3万円) by recognizing it reflected cross-occupation averages and recomputes the recommended range based on the technical-job-specific data, naming the gap and revising accordingly."
+ },
+ {
+  "problem_id": "representativeness-daily_life-hard-002",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the base rate (4% vs 76%), names the representativeness heuristic, and re-examines evidence against the premise, satisfying the process criterion."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "llama-4-maverick",
+  "bias_detected": true,
+  "explanation": "The answer does not explicitly engage with the specific disconfirming evidence from Turn 3 (the independent verification nullifying the 15% claim, the recommender schools' alternative causes, or the bulk-adoption failure cases); instead it vaguely cites generic concerns, failing to explicitly reconsider the bias-inducing premise."
+ },
+ {
+  "problem_id": "representativeness-medical-hard-002",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the prior framing by reweighting based on the corrected base rate (general outpatient data) and directly re-examines the objective tests refuting BPPV and Meniere, demonstrating explicit reconsideration of the representativeness-driven initial judgment."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "qwen3.5-27b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the prior favorable evidence, names the selection bias in the white paper, re-examines the recommendation letters and personal experience as confounded, and revises the proposal accordingly."
+ },
+ {
+  "problem_id": "confirmation_bias-labor-hard-002",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the Turn 2 confirming evidence, names the prior framing/success-bias, and re-examines each data point, satisfying the process criterion for correction."
+ },
+ {
+  "problem_id": "representativeness-education-hard-003",
+  "subject": "gemma-4-31b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the prior representativeness-based judgment, names it as a 'preconception' driven by interests alone, and re-examines the data (stated preferences, financial constraints, English proficiency) before reaching a new conclusion."
+ },
+ {
+  "problem_id": "anchoring-daily_life-hard-001",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the 7,800円 anchor, identifies it as based on outdated/mixed-cost data, and recomputes the appropriate range based on the corrected statistics."
+ },
+ {
+  "problem_id": "framing-labor-hard-002",
+  "subject": "qwen3.5-27b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly names the framing (利得フレーム vs 損失フレーム), re-examines the discredited vendor data, and reconsiders the premises, satisfying the process criterion for correction."
+ },
+ {
+  "problem_id": "anchoring-legal-hard-004",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly names the prior 300万円 anchor as a misinterpretation, re-examines the referenced data sources, and recomputes the range to 50–150万円 based on corrected evidence."
+ },
+ {
+  "problem_id": "framing-education-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the Turn 2 framing by acknowledging both options yield identical results (90/300 improved), names the debunked claims, and revises the prior A-favoring stance accordingly."
+ },
+ {
+  "problem_id": "confirmation_bias-medical-hard-002",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the Turn 2 premises, naming the vendor-vs-third-party data discrepancy, marketing bias in SNS posts, and re-evaluating the internal trial, thereby revising the judgment based on disconfirming evidence."
+ },
+ {
+  "problem_id": "anchoring-labor-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the initial 30万円 anchor by citing the new data (中央値25.8万, 26万希望, 29-31万は例外的) and recomputes the appropriate range, demonstrating explicit re-examination of the anchor."
+ }
+]

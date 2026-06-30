@@ -1,0 +1,59 @@
+<svg width="640" height="430" viewBox="0 0 640 430" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+<title>CogBias-MT evaluation schema: 5 judgment lines per subject response</title>
+
+<text x="320" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="#000">CogBias-MT evaluation schema — 5 judgment lines per subject response</text>
+
+<!-- left: one subject response -->
+<rect x="20" y="150" width="150" height="96" rx="6" fill="#EAEFF5" stroke="#2E3D52" stroke-width="1.4"/>
+<text x="95" y="180" text-anchor="middle" font-size="12.5" font-weight="700" fill="#000">1 subject response</text>
+<text x="95" y="201" text-anchor="middle" font-size="11" fill="#333">7 subjects ×</text>
+<text x="95" y="216" text-anchor="middle" font-size="11" fill="#333">2 languages ×</text>
+<text x="95" y="231" text-anchor="middle" font-size="11" fill="#333">80 problems</text>
+
+<!-- connector hub -->
+<line x1="170" y1="198" x2="250" y2="198" stroke="#888" stroke-width="1.2"/>
+<circle cx="250" cy="198" r="3" fill="#888"/>
+
+<!-- 5 judgment lines -->
+<!-- self -->
+<line x1="250" y1="198" x2="330" y2="70" stroke="#3A8030" stroke-width="1.3"/>
+<rect x="330" y="52" width="290" height="36" rx="5" fill="#EAF4E8" stroke="#3A8030" stroke-width="1.3"/>
+<text x="342" y="68" font-size="12" font-weight="700" fill="#266020">self-evaluation</text>
+<text x="342" y="82" font-size="10.5" fill="#333">subject scores its own response</text>
+
+<!-- GPT -->
+<line x1="250" y1="198" x2="330" y2="120" stroke="#2E3D52" stroke-width="1.3"/>
+<rect x="330" y="102" width="290" height="30" rx="5" fill="#F4F6F9" stroke="#2E3D52" stroke-width="1.1"/>
+<text x="342" y="121" font-size="11.5" fill="#000"><tspan font-weight="700">GPT-5.4</tspan> judge (cross-eval)</text>
+
+<!-- Opus -->
+<line x1="250" y1="198" x2="330" y2="162" stroke="#2E3D52" stroke-width="1.3"/>
+<rect x="330" y="144" width="290" height="30" rx="5" fill="#F4F6F9" stroke="#2E3D52" stroke-width="1.1"/>
+<text x="342" y="163" font-size="11.5" fill="#000"><tspan font-weight="700">Claude Opus 4.7</tspan> judge (cross-eval)</text>
+
+<!-- Gemini -->
+<line x1="250" y1="198" x2="330" y2="204" stroke="#2E3D52" stroke-width="1.3"/>
+<rect x="330" y="186" width="290" height="30" rx="5" fill="#F4F6F9" stroke="#2E3D52" stroke-width="1.1"/>
+<text x="342" y="205" font-size="11.5" fill="#000"><tspan font-weight="700">Gemini 3.1 Pro</tspan> judge (cross-eval)</text>
+
+<!-- LLaMA -->
+<line x1="250" y1="198" x2="330" y2="246" stroke="#2E3D52" stroke-width="1.3"/>
+<rect x="330" y="228" width="290" height="30" rx="5" fill="#F4F6F9" stroke="#2E3D52" stroke-width="1.1"/>
+<text x="342" y="247" font-size="11.5" fill="#000"><tspan font-weight="700">LLaMA 4 Maverick</tspan> judge (cross-eval)</text>
+
+<!-- brace label: 4 frontier judges -->
+<path d="M 626 102 q 6 0 6 8 v 60 q 0 8 6 8 q -6 0 -6 8 v 60 q 0 8 -6 8" fill="none" stroke="#888" stroke-width="1"/>
+<text x="612" y="305" text-anchor="end" font-size="10.5" fill="#555">4 frontier judges form the panel</text>
+
+<!-- self-pair note -->
+<rect x="20" y="290" width="600" height="58" rx="6" fill="#FFF7E6" stroke="#C8922A" stroke-width="1.1"/>
+<text x="32" y="310" font-size="11" font-weight="700" fill="#7A5A12">Self-pair handling</text>
+<text x="32" y="327" font-size="10.5" fill="#5a4a20">When the panel judge is the subject itself (a frontier model judging its own response), that cell is a</text>
+<text x="32" y="341" font-size="10.5" fill="#5a4a20"><tspan font-weight="700">self-pair</tspan>: retained in the released raw data, but excluded from all cross-evaluation aggregates (Table VII strictness).</text>
+
+<!-- totals -->
+<text x="320" y="378" text-anchor="middle" font-size="13" font-weight="700" fill="#000">7 subjects × 2 languages × 80 problems × 5 lines = 5,600 judgments</text>
+<text x="320" y="398" text-anchor="middle" font-size="11.5" fill="#444">= 1,120 self-evaluations + 4,480 panel evaluations</text>
+<text x="320" y="418" text-anchor="middle" font-size="10" fill="#777">Pairwise disagreement (Fig. 2 / Table II) uses the common 7-subject set; per-evaluator strictness (Table VII) excludes self-pairs.</text>
+
+</svg>

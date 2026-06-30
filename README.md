@@ -7,12 +7,14 @@
 
 ## Key findings
 
-- **Directional asymmetry** in 11 of 12 evaluator-pair × language combinations (binomial *p* surviving Bonferroni / BH; sole exception JA Opus–Gemini, *p* = 0.16). The largest pair (GPT-5.4 vs. Claude Opus 4.7) shows 92.4% / 95.7% (JA / EN) one-sided concentration.
-- **Observed skew exceeds marginal predictions** from per-evaluator base rates by 8–19pp — strictness alone does not account for the magnitude.
+- **Directional asymmetry** in 11 of 12 evaluator-pair × language combinations (cluster-level permutation *p* surviving Bonferroni / BH; sole exception JA Opus–Gemini, *p* = 0.12). The largest pair (GPT-5.4 vs. Claude Opus 4.7) shows 92.4% / 95.7% (JA / EN) one-sided concentration.
+- **Observed skew exceeds the strictness-only prediction** (independence over per-evaluator base rates) by 2–15pp — positive in all 12 combinations, and significant under two-way (problem × subject) clustering in 11/12 — so strictness alone does not account for the full magnitude.
 - **Generalization**: BR ranking preserved across JA / EN at Spearman ρ = 0.857; GPT-5.4 ranks first in strictness on all four axes (frontier × open × JA × EN) with non-overlapping Bootstrap CIs.
 - **Practical impact**: Swapping the evaluator set moves the average BiasRate of a single model by 15pp; "most robust frontier model" swings between Claude Opus 4.7 (5.0%, LLaMA-cross) and mid-tier (43.8%, GPT-cross).
 
 The benchmark number is therefore a composite of *bias × judge-rubric calibration*, not bias alone. CogBias-MT is released as a diagnostic instrument that quantifies, for any bias benchmark, how much the result moves when the judge is swapped.
+
+Full statistical detail — per-combination raw/adjusted *p* and *q*, the strictness-only prediction and residual table, two-way cluster bootstrap, mixed-effects model, leave-one-subject-out, and the forced-rubric per-cell breakdown — is in [`SUPPLEMENT.md`](SUPPLEMENT.md).
 
 ## Repository layout
 

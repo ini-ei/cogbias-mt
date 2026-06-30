@@ -1,0 +1,136 @@
+{
+ "n_boot": 10000,
+ "seed": 42,
+ "combos": [
+  {
+   "pair": "GPT-5.4-Opus4.7",
+   "lang": "JA",
+   "excess_pp": 2.4,
+   "twoway_ci_pp": [
+    -4.2,
+    10.19
+   ]
+  },
+  {
+   "pair": "GPT-5.4-Gemini3.1",
+   "lang": "JA",
+   "excess_pp": 8.59,
+   "twoway_ci_pp": [
+    4.88,
+    12.97
+   ]
+  },
+  {
+   "pair": "GPT-5.4-LLaMA4",
+   "lang": "JA",
+   "excess_pp": 5.61,
+   "twoway_ci_pp": [
+    2.62,
+    9.19
+   ]
+  },
+  {
+   "pair": "Opus4.7-Gemini3.1",
+   "lang": "JA",
+   "excess_pp": 2.78,
+   "twoway_ci_pp": [
+    0.18,
+    17.71
+   ]
+  },
+  {
+   "pair": "Opus4.7-LLaMA4",
+   "lang": "JA",
+   "excess_pp": 5.77,
+   "twoway_ci_pp": [
+    0.32,
+    13.02
+   ]
+  },
+  {
+   "pair": "Gemini3.1-LLaMA4",
+   "lang": "JA",
+   "excess_pp": 6.72,
+   "twoway_ci_pp": [
+    0.51,
+    14.53
+   ]
+  },
+  {
+   "pair": "GPT-5.4-Opus4.7",
+   "lang": "EN",
+   "excess_pp": 8.5,
+   "twoway_ci_pp": [
+    1.09,
+    17.41
+   ]
+  },
+  {
+   "pair": "GPT-5.4-Gemini3.1",
+   "lang": "EN",
+   "excess_pp": 6.39,
+   "twoway_ci_pp": [
+    2.55,
+    11.21
+   ]
+  },
+  {
+   "pair": "GPT-5.4-LLaMA4",
+   "lang": "EN",
+   "excess_pp": 15.45,
+   "twoway_ci_pp": [
+    8.31,
+    21.54
+   ]
+  },
+  {
+   "pair": "Opus4.7-Gemini3.1",
+   "lang": "EN",
+   "excess_pp": 10.53,
+   "twoway_ci_pp": [
+    0.65,
+    21.51
+   ]
+  },
+  {
+   "pair": "Opus4.7-LLaMA4",
+   "lang": "EN",
+   "excess_pp": 8.6,
+   "twoway_ci_pp": [
+    0.57,
+    16.92
+   ]
+  },
+  {
+   "pair": "Gemini3.1-LLaMA4",
+   "lang": "EN",
+   "excess_pp": 13.18,
+   "twoway_ci_pp": [
+    4.33,
+    21.91
+   ]
+  }
+ ],
+ "mixed": {
+  "GPT-Opus_JA": {
+   "n": 330,
+   "mean_gpt_side": 0.9242,
+   "intercept": 0.923,
+   "p_gpt_side": 0.7157,
+   "p_ci": [
+    0.7094,
+    0.7219
+   ]
+  },
+  "GPT-Opus_EN": {
+   "n": 208,
+   "mean_gpt_side": 0.9567,
+   "intercept": 0.957,
+   "p_gpt_side": 0.7225,
+   "p_ci": [
+    0.7169,
+    0.728
+   ]
+  }
+ }
+}

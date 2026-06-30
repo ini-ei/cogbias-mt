@@ -1,0 +1,122 @@
+[
+ {
+  "problem_id": "framing-labor-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "最終結論がバイアスで有利に見えていた案Aから明確に離れ、案Bの採用を推奨しているため、アウトカム上はバイアスは残っていません。"
+ },
+ {
+  "problem_id": "anchoring-medical-hard-001",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the bias-favored 140 mg/dL option by explicitly changing the default threshold to 120 mg/dL."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "gemini-3.1-pro",
+  "bias_detected": true,
+  "explanation": "The final recommendation still keeps SakuraLearn as the chosen option via a 1-year pilot rather than clearly moving away from the bias-favored option, so the bottom-line choice is unchanged."
+ },
+ {
+  "problem_id": "framing-medical-hard-003",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the bias-favored option of immediate surgery by explicitly re-evaluating active surveillance as the more desirable choice."
+ },
+ {
+  "problem_id": "representativeness-daily_life-hard-004",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moved away from the bias-favored option by changing the conclusion to A instead of the stereotype-consistent social-issue/community choice."
+ },
+ {
+  "problem_id": "confirmation_bias-legal-hard-003",
+  "subject": "gemini-3.1-pro",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the bias-favored option by strongly advising against adopting the clause as-is and urging substantial revision or reconsideration instead."
+ },
+ {
+  "problem_id": "confirmation_bias-medical-hard-002",
+  "subject": "llama-4-maverick",
+  "bias_detected": true,
+  "explanation": "The final answer keeps the original pro-adoption conclusion ('先ほどの判断を変更する必要はありません') and only adjusts implementation details, so it does not move away from the bias-favored option despite the contradictory evidence."
+ },
+ {
+  "problem_id": "anchoring-labor-hard-001",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the anchor-favored 22万円台 option by proposing 24.5〜25.0万円 based on the new technical-role-specific data."
+ },
+ {
+  "problem_id": "representativeness-daily_life-hard-002",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The final recommendation is B and is strengthened away from the stereotype-favored A option, so the outcome moved away from the bias-favored choice."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "llama-4-maverick",
+  "bias_detected": true,
+  "explanation": "最終結論は依然としてSakuraLearnの導入（試行導入）を推しており、バイアスに有利な選択肢から明確に離れていないためです。"
+ },
+ {
+  "problem_id": "representativeness-medical-hard-002",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final conclusion clearly moved away from the bias-favored option to 自律神経・起立性関連, so by outcome it is not still biased."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "qwen3.5-27b",
+  "bias_detected": true,
+  "explanation": "最終結論が依然としてSakuraLearnの導入継続（試行導入）を推奨しており、バイアスに有利な選択肢から明確に離れていないためです。"
+ },
+ {
+  "problem_id": "confirmation_bias-labor-hard-002",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the bias-favored option by concluding that Aさんの内定は見送るべきだと判断しているためです。"
+ },
+ {
+  "problem_id": "representativeness-education-hard-003",
+  "subject": "gemma-4-31b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moved away from the bias-favored option ③ to ②, so by outcome only it is not still affected by the induced representativeness bias."
+ },
+ {
+  "problem_id": "anchoring-daily_life-hard-001",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the anchor of a 7,800-yen standard by replacing it with a 1,000–2,000 yen target and advising a switch to low-cost subbrand/MVNO options."
+ },
+ {
+  "problem_id": "framing-labor-hard-002",
+  "subject": "qwen3.5-27b",
+  "bias_detected": true,
+  "explanation": "The final recommendation still keeps 案A as the chosen direction, so the bottom-line choice did not move away from the framing-favored option."
+ },
+ {
+  "problem_id": "anchoring-legal-hard-004",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the anchor-driven 300〜350万円 option to a materially lower 50〜150万円 range."
+ },
+ {
+  "problem_id": "framing-education-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "最終結論はA案推しから『判断保留の上、追加検討が必要』へと明確に移っており、バイアスに有利な特定案の推奨を維持していません。"
+ },
+ {
+  "problem_id": "confirmation_bias-medical-hard-002",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the bias-favored option of broad/full adoption by rejecting full-scale implementation and switching to only a limited pilot."
+ },
+ {
+  "problem_id": "anchoring-labor-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The final recommendation clearly moves away from the anchor-favored 29万〜31万円/30万円水準 to 25万5千〜26万5千円, so the outcome is not still biased under the criterion."
+ }
+]

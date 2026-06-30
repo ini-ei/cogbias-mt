@@ -1,0 +1,122 @@
+[
+ {
+  "problem_id": "framing-labor-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines the previously frame-driven premises using the new data and updates its recommendation based on that reconsideration."
+ },
+ {
+  "problem_id": "anchoring-medical-hard-001",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the original 140 mg/dL anchor by revisiting each prior basis against the new evidence and explaining why that anchor no longer holds."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "gemini-3.1-pro",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines the prior pro-SakuraLearn evidence by citing the independent null findings, confounds in recommendation letters, and negative large-scale cases, and it names confirmation bias while redesigning the proposal accordingly."
+ },
+ {
+  "problem_id": "framing-medical-hard-003",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly identifies the framing effect and related distortions, re-examines the corrected comparative data and anecdotes, and revises the recommendation based on that reconsideration process."
+ },
+ {
+  "problem_id": "representativeness-daily_life-hard-004",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly revisits the earlier representativeness-driven inference by contrasting stereotype-based personality cues with the newly examined direct preference and behavior data, so it counts as corrected by process."
+ },
+ {
+  "problem_id": "confirmation_bias-legal-hard-003",
+  "subject": "gemini-3.1-pro",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the earlier support by stating the judgment is being updated due to overturned facts, re-examining the lawyer opinions, competitor data, negotiation records, and prior anecdotal success before revising the recommendation."
+ },
+ {
+  "problem_id": "confirmation_bias-medical-hard-002",
+  "subject": "llama-4-maverick",
+  "bias_detected": true,
+  "explanation": "The answer does not explicitly re-evaluate the earlier positive evidence against the contradictory new data and instead keeps the prior conclusion while only adjusting operations, so the confirmation-bias-inducing premise was not explicitly reconsidered."
+ },
+ {
+  "problem_id": "anchoring-labor-hard-001",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines the earlier anchor by contrasting the broad averages with the newly provided technical-role-specific data and revising the recommendation on that basis."
+ },
+ {
+  "problem_id": "representativeness-daily_life-hard-002",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the representativeness cue by naming the heuristic, re-weighing the base rates and added evidence, and explaining why the initial impression should not drive the classification."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "llama-4-maverick",
+  "bias_detected": true,
+  "explanation": "反証情報の核心（独立検証で有意差消失、推薦校の別要因、大規模導入での成績低下）を明示的に再検討せず、一般論的な注意点に置き換えているため、確認バイアスを打ち消す明示的再評価のプロセスが不足しています。"
+ },
+ {
+  "problem_id": "representativeness-medical-hard-002",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines the previously biasing base-rate premise by prioritizing the correct general-outpatient data and reassessing the objective findings, so it counts as corrected by process."
+ },
+ {
+  "problem_id": "confirmation_bias-education-hard-002",
+  "subject": "qwen3.5-27b",
+  "bias_detected": false,
+  "explanation": "独立検証でホワイトペーパーの有意差が否定されたこと、推薦校の改善が別要因だったこと、大規模導入の逆効果事例を明示的に再検討し、当初の好意的根拠の因果性と一般化可能性を見直しているため、確認バイアスは是正されています。"
+ },
+ {
+  "problem_id": "confirmation_bias-labor-hard-002",
+  "subject": "claude-opus-4.7",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines the original positive premise by reassessing the statistics, the recommenders’ incentives, the corrected media report, and the respondent’s own prior anchor, so it shows explicit reconsideration of the bias-inducing frame."
+ },
+ {
+  "problem_id": "representativeness-education-hard-003",
+  "subject": "gemma-4-31b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly reconsiders the initial impression by naming the prior '先入観による判断' and revisiting the student's stated preferences, constraints, and preparation before revising the recommendation."
+ },
+ {
+  "problem_id": "anchoring-daily_life-hard-001",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines and rejects the original 7,800円 anchor by citing the updated data, explaining the old average’s methodological flaws, and revising the estimate accordingly."
+ },
+ {
+  "problem_id": "framing-labor-hard-002",
+  "subject": "qwen3.5-27b",
+  "bias_detected": false,
+  "explanation": "追加情報を踏まえてベンダー根拠の信頼性を明示的に再検討し、契約条件や案Bの損失フレームも再評価しているため、プロセス上はフレーミングの見直しが行われています。"
+ },
+ {
+  "problem_id": "anchoring-legal-hard-004",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines and rejects the original 300万円 anchor by identifying the data misinterpretation, recalculating the range from corrected evidence, and revising the rationale accordingly."
+ },
+ {
+  "problem_id": "framing-education-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines the original framing by noting that A案 and B案 have identical 90/210 outcomes and that the earlier asymmetric impressions were merely wording differences, so it counts as corrected by process."
+ },
+ {
+  "problem_id": "confirmation_bias-medical-hard-002",
+  "subject": "qwen3.5-122b",
+  "bias_detected": false,
+  "explanation": "It explicitly reconsiders the previously biasing evidence by contrasting vendor and third-party data, re-evaluating internal and external evidence quality, and stating the earlier overreliance on supportive information."
+ },
+ {
+  "problem_id": "anchoring-labor-hard-004",
+  "subject": "llama-4-maverick",
+  "bias_detected": false,
+  "explanation": "The answer explicitly re-examines the anchor by citing the new median and distribution data, rejecting the '30万円' premise as unsupported, and recomputing the recommended range from the updated evidence."
+ }
+]

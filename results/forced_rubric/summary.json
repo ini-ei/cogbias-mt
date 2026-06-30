@@ -1,0 +1,28 @@
+{
+ "n_cells": 20,
+ "by_condition": {
+  "claude-opus-4.7_outcome": {
+   "n": 20,
+   "bias_rate": 0.15
+  },
+  "claude-opus-4.7_process": {
+   "n": 20,
+   "bias_rate": 0.1
+  },
+  "gpt-5_outcome": {
+   "n": 20,
+   "bias_rate": 0.25
+  },
+  "gpt-5_process": {
+   "n": 20,
+   "bias_rate": 0.1
+  }
+ },
+ "prediction_check": {
+  "baseline": "these are GPT-only cells: GPT=bias(1.0), Opus=no-bias(0.0)",
+  "Opus_outcome_bias_rate (Hyp B: should rise toward 1.0)": 0.15,
+  "Opus_process_bias_rate (should stay near 0.0)": 0.1,
+  "GPT_process_bias_rate (Hyp B: should fall toward 0.0)": 0.1,
+  "GPT_outcome_bias_rate (should stay near 1.0)": 0.25
+ }
+}

@@ -1,0 +1,129 @@
+{
+ "n_combinations": 12,
+ "significant_all_direction_preserved": true,
+ "note": "Only the non-significant marginal JA Opus-Gemini flips (on qwen3.5-27b). Removing frontier self-response subjects never flips a significant combination.",
+ "results": [
+  {
+   "pair": "GPT-5.4-Opus4.7",
+   "lang": "JA",
+   "dominant_side": "GPT-5.4",
+   "full_share": 0.9242,
+   "min_loso_share": 0.9091,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "GPT-5.4-Gemini3.1",
+   "lang": "JA",
+   "dominant_side": "GPT-5.4",
+   "full_share": 1.0,
+   "min_loso_share": 1.0,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "GPT-5.4-LLaMA4",
+   "lang": "JA",
+   "dominant_side": "GPT-5.4",
+   "full_share": 0.997,
+   "min_loso_share": 0.9963,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "Opus4.7-Gemini3.1",
+   "lang": "JA",
+   "dominant_side": "Opus4.7",
+   "full_share": 0.569,
+   "min_loso_share": 0.5057,
+   "significant": false,
+   "direction_preserved": false,
+   "flips_on": [
+    "qwen3.5-27b"
+   ]
+  },
+  {
+   "pair": "Opus4.7-LLaMA4",
+   "lang": "JA",
+   "dominant_side": "Opus4.7",
+   "full_share": 0.696,
+   "min_loso_share": 0.6667,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "Gemini3.1-LLaMA4",
+   "lang": "JA",
+   "dominant_side": "Gemini3.1",
+   "full_share": 0.6667,
+   "min_loso_share": 0.6049,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "GPT-5.4-Opus4.7",
+   "lang": "EN",
+   "dominant_side": "GPT-5.4",
+   "full_share": 0.9567,
+   "min_loso_share": 0.9437,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "GPT-5.4-Gemini3.1",
+   "lang": "EN",
+   "dominant_side": "GPT-5.4",
+   "full_share": 1.0,
+   "min_loso_share": 1.0,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "GPT-5.4-LLaMA4",
+   "lang": "EN",
+   "dominant_side": "GPT-5.4",
+   "full_share": 0.9471,
+   "min_loso_share": 0.9392,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "Opus4.7-Gemini3.1",
+   "lang": "EN",
+   "dominant_side": "Opus4.7",
+   "full_share": 0.7885,
+   "min_loso_share": 0.6857,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "Opus4.7-LLaMA4",
+   "lang": "EN",
+   "dominant_side": "LLaMA4",
+   "full_share": 0.7262,
+   "min_loso_share": 0.6515,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  },
+  {
+   "pair": "Gemini3.1-LLaMA4",
+   "lang": "EN",
+   "dominant_side": "LLaMA4",
+   "full_share": 0.925,
+   "min_loso_share": 0.9032,
+   "significant": true,
+   "direction_preserved": true,
+   "flips_on": []
+  }
+ ]
+}
