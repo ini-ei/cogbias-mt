@@ -1,0 +1,74 @@
+{
+ "metric": "T2 BiasRate, Spearman rho between JA and EN over 7 subjects",
+ "self_eval_rho": 0.8571,
+ "self_eval_p": 0.0137,
+ "cross_eval_rho": 0.8829,
+ "cross_eval_p": 0.0085,
+ "note": "cross-eval = 4-judge mean, self-pairs excluded. Language-stability holds under both metrics; self and cross rankings differ from each other (self-underestimation, main paper 5-A).",
+ "per_subject": {
+  "gpt-5": {
+   "self_ja": 0.7875,
+   "self_en": 0.5375,
+   "cross_ja": 0.4417,
+   "cross_en": 0.4542
+  },
+  "claude-opus-4.7": {
+   "self_ja": 0.2125,
+   "self_en": 0.3,
+   "cross_ja": 0.2208,
+   "cross_en": 0.2542
+  },
+  "gemini-3.1-pro": {
+   "self_ja": 0.525,
+   "self_en": 0.4625,
+   "cross_ja": 0.5875,
+   "cross_en": 0.5375
+  },
+  "llama-4-maverick": {
+   "self_ja": 0.625,
+   "self_en": 0.6125,
+   "cross_ja": 0.775,
+   "cross_en": 0.7125
+  },
+  "qwen3.5-27b": {
+   "self_ja": 0.0625,
+   "self_en": 0.0125,
+   "cross_ja": 0.5875,
+   "cross_en": 0.5594
+  },
+  "qwen3.5-122b": {
+   "self_ja": 0.0125,
+   "self_en": 0.025,
+   "cross_ja": 0.4906,
+   "cross_en": 0.4844
+  },
+  "gemma-4-31b": {
+   "self_ja": 0.725,
+   "self_en": 0.5125,
+   "cross_ja": 0.7125,
+   "cross_en": 0.5312
+  }
+ },
+ "per_evaluator_rho": {
+  "GPT-5.4": {
+   "rho": 0.5508,
+   "p": 0.2574,
+   "n": 6
+  },
+  "Opus4.7": {
+   "rho": 0.8117,
+   "p": 0.0499,
+   "n": 6
+  },
+  "Gemini3.1": {
+   "rho": 0.8986,
+   "p": 0.0149,
+   "n": 6
+  },
+  "LLaMA4": {
+   "rho": 0.5882,
+   "p": 0.2194,
+   "n": 6
+  }
+ }
+}

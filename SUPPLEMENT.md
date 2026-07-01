@@ -98,6 +98,13 @@ is re-estimated resampling both problems and subjects (10,000 resamples,
 seed 42). Source: `results/rebuttal_checks/twoway_cluster.json`
 (`scripts/aggregation/rebuttal_twoway_cluster.py`).
 
+**Estimation-error propagation.** In both the problem-level (S2) and two-way (S3)
+bootstraps, the strictness-only prediction π is *recomputed from the resampled
+marginals inside every resample* (see `excess()` / `stats()` in the scripts), not
+held fixed at the point estimate. The residual CI therefore reflects the joint
+uncertainty of the observed dominant share **and** of π — the significance in
+11/12 is not an artifact of treating π as known.
+
 | Pair | Lang | residual | two-way 95% CI | residual > 0 |
 |:--|:--|--:|--:|:--:|
 | GPT-5.4 – Opus 4.7 | JA | +2.4pp | [−4.2, +10.2] | **NO** |
@@ -175,6 +182,23 @@ single-subject removal**, including removal of the frontier subjects whose
 self-judgments enter the pair — so no single subject, and no self-response,
 drives the skew. The only flip is the already-marginal, non-significant JA
 Opus–Gemini cell (on removing qwen3.5-27b).
+
+**Self-pair contamination path (why this matters).** The pairwise disagreement
+uses the common 7-subject set, so for pair (A, B) the two diagonal rows — A
+scoring its own response, and B scoring its own — carry A's and B's *self*-
+judgments. Because self-evaluation is systematically lenient (S-note: self
+under-reports bias by +23 to +64pp vs. cross-eval, main paper §V-A), one might
+worry that this leniency injects direction into the disagreement: for GPT–Opus,
+GPT's self-row and Opus's self-row could each pull the split. LOSO rules this
+out directly — dropping the GPT-subject row (worst case, GPT–Opus JA 92.4% →
+90.9%) or the Opus-subject row leaves the skew essentially unchanged, because
+each pair spans 7 subject rows and the 2 self-pair rows are a small, non-pivotal
+minority. Removing self-pairs from the pairwise set entirely (5 cross-only
+subject rows per pair) preserves the dominant direction in **all 11**
+significant combinations and keeps the ≥66.7% magnitude in **10 of 11** — the
+lone exception, Gemini–LLaMA JA, edges from 66.7% down to 65.6%, i.e. the
+self-pairs were, if anything, marginally *helping* that cell, not manufacturing
+its skew.
 
 ---
 
@@ -280,6 +304,46 @@ paper; open-weights results are not affected.
 
 ---
 
+## S9. Ranking preservation is not a self-evaluation artifact
+
+Section V-A shows self-evaluation is systematically lenient by a *model-dependent*
+amount, so the JA–EN ranking preservation (main paper ρ = 0.857, computed on
+self-eval BR) could in principle inherit that distortion. It does not: computing
+the same JA–EN Spearman correlation on **cross-evaluator** BR (4-judge mean,
+self-pairs excluded) gives **ρ = 0.883 (p = 0.008)** — if anything stronger than
+the self-eval ρ. Per-subject BR (T2), 7 subjects:
+
+| Subject | self JA | self EN | cross JA | cross EN |
+|:--|--:|--:|--:|--:|
+| GPT-5.4 | 78.8 | 53.8 | 44.2 | 45.4 |
+| Claude Opus 4.7 | 21.2 | 30.0 | 22.1 | 25.4 |
+| Gemini 3.1 Pro | 52.5 | 46.2 | 58.8 | 53.8 |
+| LLaMA 4 Maverick | 62.5 | 61.3 | 77.5 | 71.2 |
+| Qwen3.5-27B | 6.2 | 1.2 | 58.8 | 55.9 |
+| Qwen3.5-122B | 1.2 | 2.5 | 49.1 | 48.4 |
+| Gemma-4-31B | 72.5 | 51.2 | 71.2 | 53.1 |
+| **JA–EN Spearman ρ** | | **0.857** | | **0.883** |
+
+The *language*-stability of the ranking thus holds under both metrics. (Note the
+self-eval and cross-eval *rankings differ from each other* — e.g. Qwen is most
+robust under self-eval but mid-pack under cross-eval — which is exactly the
+self-underestimation of §V-A; the claim here is only that each metric is
+language-stable, not that self and cross agree.) Per-evaluator JA–EN ρ (each
+judge's own 7-subject ranking, n = 6, low power): GPT 0.55, Opus 0.81,
+Gemini 0.90, LLaMA 0.59.
+
+## S10. Note on κ and prevalence
+
+The main paper uses pair-level Cohen's κ (0.06–0.40) to motivate measuring the
+*direction* of disagreement rather than its magnitude. κ is known to be depressed
+when the marginal prevalence of the "bias" label is imbalanced (the
+prevalence/base-rate paradox): two judges can agree on a large fraction of cells
+yet score a low κ purely because the label is rare or common. This is an
+additional reason a low κ is uninformative about *how* judges disagree, and why
+we report the prevalence-robust dominant-side share (S1) instead of leaning on κ
+magnitude. It does not affect any significance test here: S1–S3 test the
+directional share and its residual, not κ.
+
 ## File index
 
 | Section | File(s) | Generating script |
@@ -292,6 +356,8 @@ paper; open-weights results are not affected.
 | S6 | `results/forced_rubric/*.json` | `exp_forced_rubric.py`, `analyze_forced_rubric.py` |
 | S7 | `scripts/evaluation/`, `scripts/generation/`, `data/*.jsonl` | — |
 | S8 | `results/raw/*.tar.gz` | `scripts/evaluation/` |
+| S9 | `results/rebuttal_checks/cross_eval_rho.json` | `rebuttal_cross_eval_rho.py` |
+| S10 | — (interpretive note) | — |
 
 The JSON outputs under `results/rebuttal_checks/` and `results/forced_rubric/`
 are the authoritative, directly-verifiable values for S1–S6. The `rebuttal_*` /
