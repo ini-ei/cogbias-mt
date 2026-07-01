@@ -4,6 +4,10 @@
  "self_eval_p": 0.0137,
  "cross_eval_rho": 0.8829,
  "cross_eval_p": 0.0085,
+ "cross_eval_rho_ci95_cluster": [
+  0.607,
+  1.0
+ ],
  "note": "cross-eval = 4-judge mean, self-pairs excluded. Language-stability holds under both metrics; self and cross rankings differ from each other (self-underestimation, main paper 5-A).",
  "per_subject": {
   "gpt-5": {

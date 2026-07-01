@@ -311,7 +311,12 @@ amount, so the JA–EN ranking preservation (main paper ρ = 0.857, computed on
 self-eval BR) could in principle inherit that distortion. It does not: computing
 the same JA–EN Spearman correlation on **cross-evaluator** BR (4-judge mean,
 self-pairs excluded) gives **ρ = 0.883 (p = 0.008)** — if anything stronger than
-the self-eval ρ. Per-subject BR (T2), 7 subjects:
+the self-eval ρ. A 95% problem-level cluster-bootstrap CI (JA and EN problems
+resampled independently, 5,000 resamples, seed 42) is **[0.607, 1.00]**, whose
+lower bound is above 0.5 and comparable to the self-eval CI [0.64, 0.93] cited in
+the main paper. ("Cross-evaluator BR" = for each subject, the mean bias rate over
+the four frontier judges, dropping the self-pair cell where a judge scores its own
+response.) Per-subject BR (T2), 7 subjects:
 
 | Subject | self JA | self EN | cross JA | cross EN |
 |:--|--:|--:|--:|--:|
