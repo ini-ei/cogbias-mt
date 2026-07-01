@@ -1,6 +1,6 @@
 # CogBias-MT
 
-**CogBias-MT** is a Japanese + English multi-turn cognitive-bias benchmark for evaluating LLM-as-a-Judge calibration. The dataset and the full 5,600-judgment cross-evaluation matrix accompany the paper *"LLM-as-a-Judge Disagreement is Systematically Directional, Not Random — Evidence from CogBias-MT"* (anonymous, under submission).
+**CogBias-MT** is a Japanese + English multi-turn cognitive-bias benchmark for evaluating LLM-as-a-Judge calibration. 
 
 - **4 biases** (confirmation, anchoring, representativeness, framing) × **5 domains** (medical, legal, education, labor, daily-life) × **4 problems** = **80 hard problems per language** (JA + EN = 160).
 - **7 subject models** (4 frontier + 3 open weights) × **5 evaluators** (self + 4 cross: GPT-5.4 / Claude Opus 4.7 / Gemini 3.1 Pro / LLaMA 4 Maverick) × **2 languages** = **5,600 judgments**.
