@@ -198,7 +198,22 @@ subject rows per pair) preserves the dominant direction in **all 11**
 significant combinations and keeps the ≥66.7% magnitude in **10 of 11** — the
 lone exception, Gemini–LLaMA JA, edges from 66.7% down to 65.6%, i.e. the
 self-pairs were, if anything, marginally *helping* that cell, not manufacturing
-its skew.
+its skew. Full self-pairs-excluded counterpart of main-paper Table II:
+
+| Pair | Lang | dominant side | share (self-pairs excl.) | n | share (with self-pairs, Table II) |
+|:--|:--|:--|--:|--:|--:|
+| GPT-5.4 – Opus 4.7 | JA | GPT-5.4 | 89.6% | 240 | 92.4% |
+| GPT-5.4 – Gemini 3.1 | JA | GPT-5.4 | 100.0% | 213 | 100.0% |
+| GPT-5.4 – LLaMA 4 | JA | GPT-5.4 | 99.6% | 236 | 99.7% |
+| Opus 4.7 – Gemini 3.1 | JA | Opus 4.7 | 52.1% | 94 | 56.9% |
+| Opus 4.7 – LLaMA 4 | JA | Opus 4.7 | 69.9% | 113 | 69.6% |
+| Gemini 3.1 – LLaMA 4 | JA | Gemini 3.1 | 65.6% | 64 | 66.7% |
+| GPT-5.4 – Opus 4.7 | EN | GPT-5.4 | 94.8% | 174 | 95.7% |
+| GPT-5.4 – Gemini 3.1 | EN | GPT-5.4 | 100.0% | 158 | 100.0% |
+| GPT-5.4 – LLaMA 4 | EN | GPT-5.4 | 94.2% | 137 | 94.7% |
+| Opus 4.7 – Gemini 3.1 | EN | Opus 4.7 | 81.0% | 42 | 78.8% |
+| Opus 4.7 – LLaMA 4 | EN | LLaMA 4 | 75.0% | 76 | 72.6% |
+| Gemini 3.1 – LLaMA 4 | EN | LLaMA 4 | 93.6% | 47 | 92.5% |
 
 ---
 
@@ -348,6 +363,43 @@ additional reason a low κ is uninformative about *how* judges disagree, and why
 we report the prevalence-robust dominant-side share (S1) instead of leaning on κ
 magnitude. It does not affect any significance test here: S1–S3 test the
 directional share and its residual, not κ.
+
+## S11. Unified verdict table (which cell fails which test)
+
+The paper reports "11/12" for two *different* tests whose failing cell differs.
+One-glance summary across all robustness layers:
+
+| Pair | Lang | raw asym.<br>(Bonf/BH) | residual > 0<br>(two-way cluster) | LOSO direction | self-pairs-excl.<br>direction |
+|:--|:--|:--:|:--:|:--:|:--:|
+| GPT-5.4 – Opus 4.7 | JA | ✓ | **✗** (CI [−4.2, +10.2]) | ✓ | ✓ |
+| GPT-5.4 – Gemini 3.1 | JA | ✓ | ✓ | ✓ | ✓ |
+| GPT-5.4 – LLaMA 4 | JA | ✓ | ✓ | ✓ | ✓ |
+| Opus 4.7 – Gemini 3.1 | JA | **✗** (p = 0.12) | ✓ | **✗** (flips on qwen-27b) | ✓ (52.1%, marginal) |
+| Opus 4.7 – LLaMA 4 | JA | ✓ | ✓ | ✓ | ✓ |
+| Gemini 3.1 – LLaMA 4 | JA | ✓ | ✓ | ✓ | ✓ |
+| GPT-5.4 – Opus 4.7 | EN | ✓ | ✓ | ✓ | ✓ |
+| GPT-5.4 – Gemini 3.1 | EN | ✓ | ✓ | ✓ | ✓ |
+| GPT-5.4 – LLaMA 4 | EN | ✓ | ✓ | ✓ | ✓ |
+| Opus 4.7 – Gemini 3.1 | EN | ✓ | ✓ | ✓ | ✓ |
+| Opus 4.7 – LLaMA 4 | EN | ✓ | ✓ | ✓ | ✓ |
+| Gemini 3.1 – LLaMA 4 | EN | ✓ | ✓ | ✓ | ✓ |
+
+Reading: the raw directional asymmetry fails only in JA Opus–Gemini (the two
+judges' JA strictness is nearly equal, so little signal exists); the residual
+beyond strictness fails only in JA GPT–Opus (its huge raw asymmetry is almost
+entirely strictness). No cell fails both, and no test drops below 11/12.
+
+## S12. The triple 71.7 in Table VII is an exact arithmetic coincidence
+
+GPT-5.4's JA strictness is 71.7 on all three axes (All / Frontier / Open)
+because the per-subject bias counts happen to sum identically (T2, n = 80 per
+subject, self-pair excluded):
+
+- Frontier subjects: Opus 35/80 + Gemini 65/80 + LLaMA 72/80 = **172/240 = 71.67%**
+- Open subjects: Qwen-27B 52/80 + Qwen-122B 52/80 + Gemma 68/80 = **172/240 = 71.67%**
+- All six: 344/480 = 71.67%
+
+Two disjoint triples of subjects each total exactly 172 bias calls out of 240.
 
 ## File index
 
