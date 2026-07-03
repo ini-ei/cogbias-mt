@@ -89,6 +89,32 @@ The residual is **positive in all 12** combinations (range 2–15pp). Under the
 weaker problem-level cluster bootstrap above, the residual CI excludes zero in
 all 12; under the stricter two-way control (S3) it holds in 11/12.
 
+**What the residual is, exactly (derivation under dependence).** In a 2×2 table
+with fixed margins `p_A`, `p_B`, the joint distribution has one free parameter,
+the covariance `c = P(A=1, B=1) − p_A p_B`. Writing `x = p_A(1−p_B)` and
+`y = (1−p_A) p_B` (WLOG `x > y`, i.e. A is stricter):
+
+```
+P(A-only) = x − c ,   P(B-only) = y − c
+share(c)  = (x − c) / (x + y − 2c)
+d share / dc = (x − y) / (x + y − 2c)²  >  0 .
+```
+
+Two consequences. (1) **The sign of the skew is dependence-proof**: any
+association subtracts the *same* `c` from both disagreement cells, so the
+dominant side is fixed by the margins (the strictness ordering) for every
+feasible `c` — the direction claim does not rest on independence. (2) **The
+magnitude is exactly dependence**: `share(0) = π` (eq. above), `share(c)` is
+strictly increasing in `c`, and margins + observed share identify `c`; hence
+*residual > 0 ⟺ c > 0*, i.e. the residual is algebraically equivalent to
+above-independence agreement between the judges. Since two judges scoring the
+same responses plausibly share response-level signal, a positive residual is the
+expected direction; the informative quantities are its *size* per pair (2–15pp)
+and where it is *absent* (JA GPT–Opus: the most one-sided pair is also the one
+whose skew is entirely margin-driven). An earlier draft of the main text stated
+that positive correlation leaves the side split unchanged; that statement was
+incorrect and is corrected here and in the paper (§IV-A).
+
 ---
 
 ## S3. Two-way (problem × subject) cluster bootstrap of the residual
