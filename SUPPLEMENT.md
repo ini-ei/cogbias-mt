@@ -151,14 +151,21 @@ The exception is the headline JA GPT–Opus pair: its residual (+2.4pp) is small
 so strictness alone explains essentially all of *its* concentration even though
 the raw asymmetry (92.4%) is the strongest in the design.
 
-**Multiplicity adjustment.** The CIs above are per-combination. Re-running the
-same bootstrap with Bonferroni-adjusted percentiles (α/12, i.e. the
-[0.208%, 99.792%] quantiles; `results/rebuttal_checks/twoway_bonferroni.json`)
-leaves **5 of 12** combinations above zero (GPT–Gemini JA/EN, GPT–LLaMA JA/EN,
-Gemini–LLaMA EN); the sign remains positive in all 12. The residual's
-*family-wise* significance is therefore weaker than the per-combination view —
-disclosed in the paper (§IV-A, Contributions, Conclusion) — while the
-sign-consistency and the strictness-driven direction are unaffected. (Note the two non-significant cells differ by test:
+**Multiplicity adjustment.** The CIs above are per-combination. Two adjusted
+views (both from the same seed-42 bootstrap):
+
+- **BH-FDR (α = 0.05)** on one-sided bootstrap *p*-values
+  (`results/rebuttal_checks/twoway_bh.json`): **11 of 12** reject — the sole
+  exception is JA GPT–Opus (p = 0.245), the same cell that fails the
+  per-combination CI. This matches the procedure used for the raw directional
+  asymmetry (S1) and is the primary adjusted view.
+- **Bonferroni-adjusted percentile CIs** (α/12, the [0.208%, 99.792%] quantiles;
+  `twoway_bonferroni.json`): **5 of 12** remain above zero (GPT–Gemini JA/EN,
+  GPT–LLaMA JA/EN, Gemini–LLaMA EN). Bonferroni is conservative here given the
+  dependence among the 12 tests (shared subjects and judges).
+
+The sign remains positive in all 12 under every view. Both counts are disclosed
+in the paper (§IV-A, Contributions, Conclusion). (Note the two non-significant cells differ by test:
 JA Opus–Gemini is the sole marginal case for raw directional asymmetry in S1,
 JA GPT–Opus the sole case where the residual is unsupported here.)
 

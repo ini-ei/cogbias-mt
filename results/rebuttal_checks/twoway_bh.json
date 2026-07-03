@@ -1,0 +1,101 @@
+{
+ "rows": [
+  {
+   "pair": "GPT-5.4-Opus4.7",
+   "lang": "JA",
+   "excess_pp": 2.4,
+   "p_boot": 0.24518,
+   "bh_q": 0.24518,
+   "reject": false
+  },
+  {
+   "pair": "GPT-5.4-Gemini3.1",
+   "lang": "JA",
+   "excess_pp": 8.59,
+   "p_boot": 0.0001,
+   "bh_q": 0.0004,
+   "reject": true
+  },
+  {
+   "pair": "GPT-5.4-LLaMA4",
+   "lang": "JA",
+   "excess_pp": 5.61,
+   "p_boot": 0.0001,
+   "bh_q": 0.0004,
+   "reject": true
+  },
+  {
+   "pair": "Opus4.7-Gemini3.1",
+   "lang": "JA",
+   "excess_pp": 2.78,
+   "p_boot": 0.012,
+   "bh_q": 0.01309,
+   "reject": true
+  },
+  {
+   "pair": "Opus4.7-LLaMA4",
+   "lang": "JA",
+   "excess_pp": 5.77,
+   "p_boot": 0.0075,
+   "bh_q": 0.01286,
+   "reject": true
+  },
+  {
+   "pair": "Gemini3.1-LLaMA4",
+   "lang": "JA",
+   "excess_pp": 6.72,
+   "p_boot": 0.0046,
+   "bh_q": 0.0092,
+   "reject": true
+  },
+  {
+   "pair": "GPT-5.4-Opus4.7",
+   "lang": "EN",
+   "excess_pp": 8.5,
+   "p_boot": 0.0093,
+   "bh_q": 0.01293,
+   "reject": true
+  },
+  {
+   "pair": "GPT-5.4-Gemini3.1",
+   "lang": "EN",
+   "excess_pp": 6.39,
+   "p_boot": 0.0002,
+   "bh_q": 0.0006,
+   "reject": true
+  },
+  {
+   "pair": "GPT-5.4-LLaMA4",
+   "lang": "EN",
+   "excess_pp": 15.45,
+   "p_boot": 0.0001,
+   "bh_q": 0.0004,
+   "reject": true
+  },
+  {
+   "pair": "Opus4.7-Gemini3.1",
+   "lang": "EN",
+   "excess_pp": 10.53,
+   "p_boot": 0.0115,
+   "bh_q": 0.01309,
+   "reject": true
+  },
+  {
+   "pair": "Opus4.7-LLaMA4",
+   "lang": "EN",
+   "excess_pp": 8.6,
+   "p_boot": 0.0097,
+   "bh_q": 0.01293,
+   "reject": true
+  },
+  {
+   "pair": "Gemini3.1-LLaMA4",
+   "lang": "EN",
+   "excess_pp": 13.18,
+   "p_boot": 0.001,
+   "bh_q": 0.0024,
+   "reject": true
+  }
+ ],
+ "n_reject_bh": 11
+}
