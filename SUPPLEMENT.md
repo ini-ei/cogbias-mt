@@ -146,10 +146,19 @@ uncertainty of the observed dominant share **and** of π — the significance in
 | Opus 4.7 – LLaMA 4 | EN | +8.6pp | [+0.6, +16.9] | yes |
 | Gemini 3.1 – LLaMA 4 | EN | +13.2pp | [+4.3, +21.9] | yes |
 
-**11/12 significant under two-way clustering.** The exception is the headline
-JA GPT–Opus pair: its residual (+2.4pp) is small, so strictness alone explains
-essentially all of *its* concentration even though the raw asymmetry (92.4%) is
-the strongest in the design. (Note the two non-significant cells differ by test:
+**11/12 significant under two-way clustering (per-combination, unadjusted).**
+The exception is the headline JA GPT–Opus pair: its residual (+2.4pp) is small,
+so strictness alone explains essentially all of *its* concentration even though
+the raw asymmetry (92.4%) is the strongest in the design.
+
+**Multiplicity adjustment.** The CIs above are per-combination. Re-running the
+same bootstrap with Bonferroni-adjusted percentiles (α/12, i.e. the
+[0.208%, 99.792%] quantiles; `results/rebuttal_checks/twoway_bonferroni.json`)
+leaves **5 of 12** combinations above zero (GPT–Gemini JA/EN, GPT–LLaMA JA/EN,
+Gemini–LLaMA EN); the sign remains positive in all 12. The residual's
+*family-wise* significance is therefore weaker than the per-combination view —
+disclosed in the paper (§IV-A, Contributions, Conclusion) — while the
+sign-consistency and the strictness-driven direction are unaffected. (Note the two non-significant cells differ by test:
 JA Opus–Gemini is the sole marginal case for raw directional asymmetry in S1,
 JA GPT–Opus the sole case where the residual is unsupported here.)
 
