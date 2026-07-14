@@ -347,8 +347,13 @@ fixed window; open weights run locally so are bit-reproducible.
 | LLaMA 4 Maverick | `meta-llama/llama-4-maverick` | 2026-05-08 – 05-18 |
 | Open weights (Qwen3.5-27B/122B, Gemma-4-31B) | local llama.cpp, GGUF Q4\_K\_M | — |
 
-Decoding: evaluation temperature 0.0 (default); web search and tool use
-disabled; the message array is reset per call. Each judgment record stores the
+Decoding: evaluation temperature 0.3, evaluation max_tokens 2048; response
+temperature 0.7; web search and tool use disabled; the message array is reset
+per call. Each evaluator call passes only the evaluated turn's answer, the
+ideal reference answer, the indicator checklists, and the turn-specific
+criteria — not the problem transcript or the other turn's answer. Records with
+invalid JSON or API errors were re-run via
+`scripts/evaluation/retry_errored_evaluations.py`. Each judgment record stores the
 **subject** `model`, the **evaluator** identity, both turn responses, and the
 per-turn verdict + confidence + justification score.
 
