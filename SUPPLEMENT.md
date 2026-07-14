@@ -595,3 +595,28 @@ The post-counter-evidence drop is larger in English for 3 of 4 frontier
 models (bold); LLaMA is the exception. Because the JA and EN sets are
 independently generated rather than translated, the gap is confounded with
 an item effect and is reported as an observation only.
+
+---
+
+## S19. T2 disagreement direction by evaluator pair (both languages)
+
+Referenced from §IV-B of the paper. Same construction as the T4 analysis
+(560 shared trajectories per pair before filtering, same-model panel cells
+included): among trajectories where the two evaluators' T2 labels differ,
+the share assigned to the dominant side.
+
+| Pair | JA: n, dominant | EN: n, dominant |
+|:--|:--|:--|
+| GPT–Opus | 177, GPT 84.2% | 116, GPT 92.2% |
+| GPT–Gemini | 119, GPT 100.0% | 86, GPT 97.7% |
+| GPT–LLaMA | 172, GPT 98.8% | 90, GPT 95.6% |
+| Opus–Gemini | 104, Gemini 51.0% | 70, Gemini 61.4% |
+| Opus–LLaMA | 121, Opus 69.4% | 82, LLaMA 59.8% |
+| Gemini–LLaMA | 85, Gemini 78.8% | 64, — 50.0% |
+
+The dominant-side share is at least 78% in 7 of 12 combinations, all of them
+involving GPT-5.4 except JA Gemini–LLaMA; the non-GPT pairs are weaker, and
+EN Gemini–LLaMA splits exactly 32/32. T2 asymmetry is thus similar in
+direction to but generally weaker than the T4 asymmetry of Table I in the
+paper. Descriptive values from single-run data; no tests are attached.
+Source: recomputed from `results/raw` cross-evaluation records (T2 labels).
