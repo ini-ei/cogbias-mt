@@ -74,5 +74,8 @@
    "p": 0.2194,
    "n": 6
   }
- }
+ },
+ "self_eval_exact_p": 0.0238,
+ "cross_eval_exact_p": 0.0135,
+ "note_exact": "exact two-sided p by full enumeration of 7! rank permutations (ties handled by midranks); asymptotic p retained for reference"
 }
