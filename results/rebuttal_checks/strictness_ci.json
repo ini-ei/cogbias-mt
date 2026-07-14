@@ -1,0 +1,114 @@
+{
+ "gpt-5|JA|Frontier": {
+  "point": 71.7,
+  "ci": [
+   65.8,
+   77.1
+  ]
+ },
+ "gpt-5|JA|Open": {
+  "point": 71.7,
+  "ci": [
+   64.2,
+   78.8
+  ]
+ },
+ "claude-opus-4.7|JA|Frontier": {
+  "point": 54.6,
+  "ci": [
+   46.7,
+   62.1
+  ]
+ },
+ "claude-opus-4.7|JA|Open": {
+  "point": 58.3,
+  "ci": [
+   51.2,
+   65.4
+  ]
+ },
+ "gemini-3.1-pro|JA|Frontier": {
+  "point": 48.8,
+  "ci": [
+   42.1,
+   55.4
+  ]
+ },
+ "gemini-3.1-pro|JA|Open": {
+  "point": 56.7,
+  "ci": [
+   48.3,
+   65.0
+  ]
+ },
+ "llama-4-maverick|JA|Frontier": {
+  "point": 27.5,
+  "ci": [
+   21.7,
+   33.3
+  ]
+ },
+ "llama-4-maverick|JA|Open": {
+  "point": 52.1,
+  "ci": [
+   44.2,
+   60.0
+  ]
+ },
+ "gpt-5|EN|Frontier": {
+  "point": 60.4,
+  "ci": [
+   53.3,
+   67.5
+  ]
+ },
+ "gpt-5|EN|Open": {
+  "point": 67.1,
+  "ci": [
+   58.8,
+   75.0
+  ]
+ },
+ "claude-opus-4.7|EN|Frontier": {
+  "point": 51.2,
+  "ci": [
+   42.9,
+   59.2
+  ]
+ },
+ "claude-opus-4.7|EN|Open": {
+  "point": 42.5,
+  "ci": [
+   35.0,
+   50.0
+  ]
+ },
+ "gemini-3.1-pro|EN|Frontier": {
+  "point": 45.8,
+  "ci": [
+   37.5,
+   53.8
+  ]
+ },
+ "gemini-3.1-pro|EN|Open": {
+  "point": 49.6,
+  "ci": [
+   40.4,
+   58.8
+  ]
+ },
+ "llama-4-maverick|EN|Frontier": {
+  "point": 38.3,
+  "ci": [
+   30.4,
+   46.7
+  ]
+ },
+ "llama-4-maverick|EN|Open": {
+  "point": 50.8,
+  "ci": [
+   41.7,
+   60.0
+  ]
+ }
+}

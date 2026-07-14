@@ -465,3 +465,84 @@ methodological transparency; they reference the source-project judgment layout
 (`results/phase5_v2{,_en}/…`) rather than the `results/extracted/` tree produced
 by `reproduce.sh`, so reproducing them from this repo requires pointing the
 input paths at the extracted directories.
+
+---
+
+## S13. Per-axis evaluator strictness with problem-level bootstrap CIs
+
+Evaluator strictness (mean cross-model T2 Bias rate, same-model panel cells
+excluded) with 95% percentile CIs from a problem-level cluster bootstrap
+(10,000 resamples of the 80 problem IDs; all subject records belonging to a
+sampled problem are retained). Point estimates reproduce Table VI of the paper
+exactly.
+
+| Evaluator | JA Frontier | JA Open | EN Frontier | EN Open |
+|:--|:--|:--|:--|:--|
+| GPT-5.4 | 71.7 [65.8, 77.1] | 71.7 [64.2, 78.8] | 60.4 [53.3, 67.5] | 67.1 [58.8, 75.0] |
+| Claude Opus 4.7 | 54.6 [46.7, 62.1] | 58.3 [51.2, 65.4] | 51.2 [42.9, 59.2] | 42.5 [35.0, 50.0] |
+| Gemini 3.1 Pro | 48.8 [42.1, 55.4] | 56.7 [48.3, 65.0] | 45.8 [37.5, 53.8] | 49.6 [40.4, 58.8] |
+| LLaMA 4 Maverick | 27.5 [21.7, 33.3] | 52.1 [44.2, 60.0] | 38.3 [30.4, 46.7] | 50.8 [41.7, 60.0] |
+
+GPT-5.4 has the highest point estimate on all four axes. Under these
+problem-level CIs, its separation from the runner-up is clear only on the
+JA-Frontier axis (GPT [65.8, 77.1] vs. Opus [46.7, 62.1]); on the other three
+axes the GPT interval overlaps the runner-up's. The paper therefore reads the
+four-axis first place as a consistent ordering, not four separate significant
+gaps. Note the Frontier and All rows exclude a different same-model subject
+per evaluator, so only the Open rows compare all evaluators on an identical
+response pool. Source: `results/rebuttal_checks/strictness_ci.json`
+(`scripts/aggregation/strictness_axis_ci.py`, seed 42).
+
+---
+
+## S14. Bias-by-domain breakdown of JA GPT–Opus T4 disagreements
+
+Moved from the main paper for space. Each of the 20 bias-by-domain strata
+holds 28 shared trajectories before filtering (4 problems × 7 subjects);
+cells report the disagreement count and the share assigned to the GPT-only
+side. Every stratum favors GPT, so the skew is not specific to a bias type or
+domain; per-stratum counts are small, so read sign only.
+
+| Bias | Medical | Legal | Education | Labor | Daily life | Total |
+|:--|:--|:--|:--|:--|:--|:--|
+| Confirmation | 16 / 94% | 14 / 100% | 16 / 88% | 16 / 94% | 19 / 100% | 81 / 95.1% |
+| Anchoring | 15 / 73% | 24 / 96% | 16 / 81% | 14 / 100% | 20 / 95% | 89 / 89.9% |
+| Representativeness | 13 / 100% | 10 / 90% | 17 / 88% | 10 / 90% | 21 / 100% | 71 / 94.4% |
+| Framing | 16 / 100% | 20 / 90% | 17 / 88% | 18 / 89% | 18 / 89% | 89 / 91.0% |
+| **Total** | 60 / 91.7% | 68 / 94.1% | 66 / 86.4% | 58 / 93.1% | 78 / 96.2% | 330 / 92.4% |
+
+---
+
+## S15. Illustrative T4 response patterns behind the forced-rubric probe
+
+Moved from the main paper for space. Three illustrative T4 response patterns
+on which GPT-5.4 and Opus 4.7 split. **Pattern frequencies were not coded**;
+these are author-identified illustrations, not a coded taxonomy.
+
+| Pattern (T4) | Response gist | GPT | Opus |
+|:--|:--|:--|:--|
+| A: conclusion kept, process corrected | keeps recommendation but flags framing influence | bias | no bias |
+| B: conclusion changed, process thin | overturns recommendation, no mention of bias | no bias | bias |
+| C: conclusion kept, hedge inserted | keeps conclusion, adds "depending on circumstances" | bias | no bias |
+
+---
+
+## S16. CoBBLEr translation-condition re-evaluation (full table)
+
+Moved from the main paper for space. Single evaluation run, 50 CoBBLEr items
+× 4 frontier evaluators × 3 prompt conditions; illustrative only (no CIs).
+JA-std is a standard Japanese translation of the English prompts; JA-imp
+additionally removes Japanese-specific hedging expressions from the evaluation
+targets. Scripts: `phase1`-series in the research repository
+(`gpt5_cobbler_*_eval` result files); the BR definition matches the paper's
+T2 Bias rate.
+
+| Evaluator | EN | JA-std | JA-imp | std−EN | imp−EN |
+|:--|--:|--:|--:|--:|--:|
+| GPT-5.4 | 44.0 | 42.0 | 42.0 | −2 | −2 |
+| Claude Opus 4.7 | 86.0 | 86.0 | 82.0 | +0 | −4 |
+| Gemini 3.1 | 68.0 | 64.0 | 60.0 | −4 | −8 |
+| LLaMA 4 M | 52.0 | 56.0 | 58.0 | +4 | +6 |
+
+The improved-Japanese-minus-English gap flips sign across evaluators
+(−8pp to +6pp), and BR levels vary more than two-fold (42% GPT vs. 86% Opus).
