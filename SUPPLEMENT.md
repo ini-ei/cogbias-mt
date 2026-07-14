@@ -546,3 +546,47 @@ T2 Bias rate.
 
 The improved-Japanese-minus-English gap flips sign across evaluators
 (−8pp to +6pp), and BR levels vary more than two-fold (42% GPT vs. 86% Opus).
+
+---
+
+## S17. Four-subject rankings under each judge (JA, T2)
+
+Referenced from §V-B of the paper. T2 Bias rate for each frontier subject
+under each single judge (Japanese, n = 80 per cell). † marks same-model
+panel cells, which carry known self-leniency and are shown for completeness.
+
+| Subject \ Judge | GPT-5.4 | Opus 4.7 | Gemini 3.1 | LLaMA 4 |
+|:--|--:|--:|--:|--:|
+| GPT-5.4 | 81.2† | 51.2 | 48.8 | 32.5 |
+| Claude Opus 4.7 | 43.8 | 21.2† | 17.5 | 5.0 |
+| Gemini 3.1 Pro | 81.2 | 50.0 | 46.2† | 45.0 |
+| LLaMA 4 Maverick | 90.0 | 62.5 | 80.0 | 62.5† |
+
+Claude Opus 4.7 is the most robust frontier subject under **every** judge;
+its absolute level nonetheless moves 8.8-fold (5.0 → 43.8) with the judge.
+The middle ranks change: GPT-5.4 and Gemini exchange second and third place
+across judges (GPT < Gemini under the LLaMA judge; Gemini < GPT under the
+Gemini and Opus judges). This is the basis for the corrected §V-B claim that
+scores and mid-ranks are judge-conditioned while the extreme ranks persist
+here. Source: `results/raw` cross-evaluation records
+(`cross_eval_*_n80`, T2).
+
+---
+
+## S18. Counter-evidence correction by language (dedicated self-evaluation)
+
+Moved from the main paper for space. T2/T4 Bias rates and the drop
+(T2 − T4), per model and language, from the dedicated self-evaluation line;
+two decimals so drops equal displayed differences. Single-run values.
+
+| Model | JA T2 | JA T4 | JA drop | EN T2 | EN T4 | EN drop |
+|:--|--:|--:|--:|--:|--:|--:|
+| GPT-5.4 | 78.75 | 52.50 | 26.25 | 53.75 | 17.50 | **36.25** |
+| Gemini 3.1 Pro | 52.50 | 36.25 | 16.25 | 46.25 | 15.00 | **31.25** |
+| Claude Opus 4.7 | 21.25 | 10.00 | 11.25 | 30.00 | 2.50 | **27.50** |
+| LLaMA 4 Maverick | 62.50 | 7.50 | **55.00** | 61.25 | 10.00 | 51.25 |
+
+The post-counter-evidence drop is larger in English for 3 of 4 frontier
+models (bold); LLaMA is the exception. Because the JA and EN sets are
+independently generated rather than translated, the gap is confounded with
+an item effect and is reported as an observation only.
