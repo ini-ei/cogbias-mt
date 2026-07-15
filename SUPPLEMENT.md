@@ -620,3 +620,45 @@ EN Gemini–LLaMA splits exactly 32/32. T2 asymmetry is thus similar in
 direction to but generally weaker than the T4 asymmetry of Table I in the
 paper. Descriptive values from single-run data; no tests are attached.
 Source: recomputed from `results/raw` cross-evaluation records (T2 labels).
+
+---
+
+## S20. Self-evaluation Bias rate for all seven subjects (moved from main Table)
+
+T2 Bias rate from the dedicated self-evaluation call, one record per trajectory
+over 80 problems per language, with 95% problem-level bootstrap CIs. The
+cross-language rankings are strongly correlated (Spearman ρ = 0.857, exact
+p = 0.024), as they are under cross-model panel evaluation with the same
+model-specific evaluator subsets in both languages (ρ = 0.883, exact p = 0.014).
+
+| Model | JA BR [95% CI] | EN BR [95% CI] |
+|:--|:--|:--|
+| Qwen3.5-122B-A10B | 1.3 [0.0, 3.8] | 2.5 [0.0, 6.2] |
+| Qwen3.5-27B | 6.2 [1.2, 12.5] | 1.2 [0.0, 3.8] |
+| Claude Opus 4.7 | 21.2 [12.5, 30.0] | 30.0 [20.0, 40.0] |
+| Gemini 3.1 Pro | 52.5 [41.2, 63.7] | 46.2 [35.0, 57.5] |
+| LLaMA 4 Maverick | 62.5 [51.2, 72.5] | 61.2 [50.0, 71.2] |
+| Gemma-4-31B-it | 72.5 [62.5, 82.5] | 51.2 [40.0, 62.5] |
+| GPT-5.4 | 78.8 [68.8, 87.5] | 53.8 [42.5, 65.0] |
+
+The Qwen3.5 models have the lowest self-evaluated BRs in both languages
+(1–6%); GPT-5.4 is highest in Japanese (78.8%), while in English LLaMA
+(61.2%), GPT-5.4 (53.8%), and Gemma-4 (51.2%) form an overlapping-CI group.
+Dedicated self-evaluations diverge substantially from panel evaluations in
+model-dependent directions (see S9), so self-evaluation is a ranking signal,
+not an absolute estimate. Source: `results/raw` self-evaluation records.
+
+---
+
+## S21. Panel-swing detail (single-model BR by evaluator subset)
+
+Referenced from §III-A. For the subject GPT-5.4 in Japanese, the three
+cross-model panel evaluators alone give initial Bias rates of 32.5% (LLaMA),
+48.8% (Gemini), and 51.2% (Opus), an 18.7pp range with no self-judgment. The
+four possible three-of-four panels over its five judgment lines (which include
+GPT's own self-judgment) average to 44.2%–59.6%, the 15.4pp swing reported in
+the body. For Claude Opus 4.7 in Japanese, the single-judge initial Bias rate
+is 5.0% under the LLaMA judge and 43.8% under the GPT judge (an 8.8-fold gap);
+Opus remains the lowest-BR frontier subject under every judge, while GPT-5.4
+and Gemini exchange second and third place across judges (full per-judge
+ranking in S17).
