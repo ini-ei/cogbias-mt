@@ -19,8 +19,18 @@ from rebuttal_cluster_checks import load_judgments, SUBJECTS, PAIRS
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "results/rebuttal_checks/loso.json"
-# 有意でない marginal セル (本文 §IV-A の唯一の例外)
-MARGINAL = {("Opus4.7", "Gemini3.1", "JA")}
+# 有意でないセル: cluster_checks.json の問題クラスタ置換検定 p >= 0.05 の組合せ（ハードコードしない）
+def _marginal():
+    f = ROOT / "results/rebuttal_checks/cluster_checks.json"
+    if not f.exists():
+        return {("Opus4.7", "Gemini3.1", "JA")}
+    out = set()
+    for c in json.load(open(f))["combos"]:
+        if c["perm_p"] >= 0.05:
+            a = next(e for e in ("GPT-5.4", "Opus4.7", "Gemini3.1", "LLaMA4") if c["pair"].startswith(e + "-"))
+            out.add((a, c["pair"][len(a) + 1:], c["lang"]))
+    return out
+MARGINAL = _marginal()
 
 
 def pair_counts(judg, ev_a, ev_b, drop=None):
@@ -73,8 +83,8 @@ def main():
     summary = {
         "n_combinations": len(results),
         "significant_all_direction_preserved": sig_all_ok,
-        "note": "Only the non-significant marginal JA Opus-Gemini flips (on qwen3.5-27b). "
-                "Removing frontier self-response subjects never flips a significant combination.",
+        "note": f"non-significant (perm p>=0.05) combinations: {sorted(MARGINAL)}; flips: "
+                f"{[(r['pair'], r['lang'], r['flips_on']) for r in results if not r['direction_preserved']]}",
         "results": results,
     }
     OUT.parent.mkdir(exist_ok=True)

@@ -1,9 +1,12 @@
 # CogBias-MT — Supplementary Material
 
-Companion to *"LLM-as-a-Judge Disagreement Contains Systematic Directional
-Structure: Evidence from CogBias-MT."* This document holds the full statistical
-detail compressed out of the 8-page body. Every table below is regenerable from
-the released raw judgments with the scripts named per section.
+Companion to *"Judge Choice Systematically Moves Cognitive-Bias Benchmark
+Scores: Evidence from CogBias-MT"* (WI-IAT 2026, camera-ready). This document
+holds the full statistical detail compressed out of the 7-page body. Every
+table below is regenerable from the released raw judgments with the scripts
+named per section; the numbers in the camera-ready version come from the record
+set described in S8b, and `scripts/aggregation/wiiat_numbers.py` recomputes
+every value cited in the paper from it.
 
 Notation: an *evaluator pair × language combination* is one of the 6 frontier
 evaluator pairs (GPT-5.4, Claude Opus 4.7, Gemini 3.1 Pro, LLaMA 4 Maverick)
@@ -29,30 +32,35 @@ strictness excludes self-pairs. See `figures/evaluation_schema.{svg,pdf}`.
 ## S1. Directional asymmetry: raw and adjusted significance (all 12 combinations)
 
 Cluster-level permutation test (sign-flip null, 100,000 permutations) on the
-problem-clustered disagreement counts; `perm_p` is the two-sided cluster p.
-Bonferroni and Benjamini–Hochberg (BH) corrections over the family of 12.
-Source: `results/rebuttal_checks/cluster_checks.json` (script
-`scripts/aggregation/rebuttal_cluster_checks.py`).
+problem-clustered disagreement counts; `perm_p` is the cluster p for the
+observed dominant side (the dominant side is read off the data, so doubling it
+gives the two-sided p; the reject counts below are identical under either
+convention). Bonferroni and Benjamini–Hochberg (BH) corrections over the family
+of 12. Source: `results/rebuttal_checks/cluster_checks.json` (script
+`scripts/aggregation/rebuttal_cluster_checks.py`). All values in S1–S5, S9,
+S11, S13–S14, S17, S19–S22 and S24 are from the camera-ready record set
+(see S8b for the records re-run during revision).
 
-| Pair | Lang | n_disagree | dominant side | share | perm *p* | Bonferroni *q* | BH *q* | reject @0.05 |
+| Pair | Lang | n_disagree | dominant side | share | perm *p* | Bonferroni *q* | BH *q* | reject @0.05 (BH) |
 |:--|:--|--:|:--|--:|--:|--:|--:|:--:|
-| GPT-5.4 – Opus 4.7 | JA | 330 | GPT-5.4 | 92.4% | <1e-4 | <0.001 | <0.001 | yes |
-| GPT-5.4 – Opus 4.7 | EN | 208 | GPT-5.4 | 95.7% | <1e-4 | <0.001 | <0.001 | yes |
-| GPT-5.4 – Gemini 3.1 | JA | 296 | GPT-5.4 | 100.0% | <1e-4 | <0.001 | <0.001 | yes |
-| GPT-5.4 – Gemini 3.1 | EN | 220 | GPT-5.4 | 100.0% | <1e-4 | <0.001 | <0.001 | yes |
-| GPT-5.4 – LLaMA 4 | JA | 331 | GPT-5.4 | 99.7% | <1e-4 | <0.001 | <0.001 | yes |
-| GPT-5.4 – LLaMA 4 | EN | 170 | GPT-5.4 | 94.7% | <1e-4 | <0.001 | <0.001 | yes |
-| **Opus 4.7 – Gemini 3.1** | **JA** | 116 | Opus 4.7 | 56.9% | **0.12** | 1.000 | **0.116** | **NO** |
-| Opus 4.7 – Gemini 3.1 | EN | 52 | Opus 4.7 | 78.8% | 0.00011 | 0.001 | <0.001 | yes |
-| Opus 4.7 – LLaMA 4 | JA | 125 | Opus 4.7 | 69.6% | 0.0005 | 0.006 | 0.001 | yes |
-| Opus 4.7 – LLaMA 4 | EN | 84 | LLaMA 4 | 72.6% | 0.00074 | 0.009 | 0.001 | yes |
-| Gemini 3.1 – LLaMA 4 | JA | 99 | Gemini 3.1 | 66.7% | 0.013 | 0.159 | 0.014 | yes |
-| Gemini 3.1 – LLaMA 4 | EN | 80 | LLaMA 4 | 92.5% | <1e-4 | <0.001 | <0.001 | yes |
+| GPT-5.4 – Opus 4.7 | JA | 308 | GPT-5.4 | 100.0% | <1e-5 | <0.001 | <0.001 | yes |
+| GPT-5.4 – Opus 4.7 | EN | 191 | GPT-5.4 | 99.5% | <1e-5 | <0.001 | <0.001 | yes |
+| GPT-5.4 – Gemini 3.1 | JA | 269 | GPT-5.4 | 99.6% | <1e-5 | <0.001 | <0.001 | yes |
+| GPT-5.4 – Gemini 3.1 | EN | 202 | GPT-5.4 | 100.0% | <1e-5 | <0.001 | <0.001 | yes |
+| GPT-5.4 – LLaMA 4 | JA | 351 | GPT-5.4 | 100.0% | <1e-5 | <0.001 | <0.001 | yes |
+| GPT-5.4 – LLaMA 4 | EN | 179 | GPT-5.4 | 95.0% | <1e-5 | <0.001 | <0.001 | yes |
+| Opus 4.7 – Gemini 3.1 | JA | 97 | Gemini 3.1 | 71.1% | 0.00045 | 0.005 | <0.001 | yes |
+| **Opus 4.7 – Gemini 3.1** | **EN** | 51 | Opus 4.7 | 62.7% | **0.065** | 0.781 | **0.065** | **NO** |
+| Opus 4.7 – LLaMA 4 | JA | 111 | Opus 4.7 | 69.4% | 0.0018 | 0.022 | 0.002 | yes |
+| Opus 4.7 – LLaMA 4 | EN | 78 | LLaMA 4 | 68.0% | 0.011 | 0.131 | 0.012 | yes |
+| Gemini 3.1 – LLaMA 4 | JA | 142 | Gemini 3.1 | 79.6% | <1e-5 | <0.001 | <0.001 | yes |
+| Gemini 3.1 – LLaMA 4 | EN | 79 | LLaMA 4 | 75.9% | 0.00097 | 0.012 | 0.001 | yes |
 
-**11/12 reject under both Bonferroni and BH.** The sole exception is JA
-Opus 4.7 – Gemini 3.1 (uncorrected *p* = 0.12), the marginal cell flagged in the
-body: Opus and Gemini have near-identical JA strictness (56.5% vs. 52.7%,
-overlapping CIs), so little directional signal is available.
+**11/12 reject under BH and 10/12 under Bonferroni** (EN Opus 4.7 – LLaMA 4
+passes BH but not Bonferroni, *q* = 0.131). The sole BH exception is EN
+Opus 4.7 – Gemini 3.1 (uncorrected *p* = 0.065): on that response set the two
+judges' pair-specific T4 marginals are nearly equal (13.6% vs. 11.2%), so
+little directional signal is available.
 
 ---
 
@@ -72,22 +80,22 @@ resamples). These predictions are the black caps in Figure 2.
 
 | Pair | Lang | observed | strictness-only π | residual | residual 95% CI (cluster) |
 |:--|:--|--:|--:|--:|--:|
-| GPT-5.4 – Opus 4.7 | JA | 92.4% | 90.0% | +2.4pp | [+0.3, +4.6] |
-| GPT-5.4 – Opus 4.7 | EN | 95.7% | 87.2% | +8.5pp | [+5.5, +11.7] |
-| GPT-5.4 – Gemini 3.1 | JA | 100.0% | 91.4% | +8.6pp | [+6.5, +10.9] |
-| GPT-5.4 – Gemini 3.1 | EN | 100.0% | 93.6% | +6.4pp | [+2.9, +10.4] |
-| GPT-5.4 – LLaMA 4 | JA | 99.7% | 94.1% | +5.6pp | [+3.9, +7.6] |
-| GPT-5.4 – LLaMA 4 | EN | 94.7% | 79.3% | +15.4pp | [+11.0, +20.1] |
-| Opus 4.7 – Gemini 3.1 | JA | 56.9% | 54.1% | +2.8pp | [+0.2, +7.2] |
-| Opus 4.7 – Gemini 3.1 | EN | 78.8% | 68.3% | +10.5pp | [+4.3, +16.2] |
-| Opus 4.7 – LLaMA 4 | JA | 69.6% | 63.8% | +5.8pp | [+2.6, +9.1] |
-| Opus 4.7 – LLaMA 4 | EN | 72.6% | 64.0% | +8.6pp | [+3.5, +14.2] |
-| Gemini 3.1 – LLaMA 4 | JA | 66.7% | 60.0% | +6.7pp | [+1.5, +11.9] |
-| Gemini 3.1 – LLaMA 4 | EN | 92.5% | 79.3% | +13.2pp | [+6.2, +18.4] |
+| GPT-5.4 – Opus 4.7 | JA | 100.0% | 92.3% | +7.7pp | [+5.7, +10.0] |
+| GPT-5.4 – Opus 4.7 | EN | 99.5% | 85.1% | +14.4pp | [+10.7, +18.3] |
+| GPT-5.4 – Gemini 3.1 | JA | 99.6% | 89.3% | +10.3pp | [+7.8, +13.0] |
+| GPT-5.4 – Gemini 3.1 | EN | 100.0% | 87.6% | +12.4pp | [+8.7, +16.3] |
+| GPT-5.4 – LLaMA 4 | JA | 100.0% | 95.0% | +5.0pp | [+3.5, +6.7] |
+| GPT-5.4 – LLaMA 4 | EN | 95.0% | 79.8% | +15.2pp | [+10.7, +20.0] |
+| Opus 4.7 – Gemini 3.1 | JA | 71.1% | 59.0% | +12.2pp | [+6.0, +18.6] |
+| Opus 4.7 – Gemini 3.1 | EN | 62.7% | 55.3% | +7.4pp | [+0.6, +16.0] |
+| Opus 4.7 – LLaMA 4 | JA | 69.4% | 61.6% | +7.8pp | [+3.0, +12.4] |
+| Opus 4.7 – LLaMA 4 | EN | 68.0% | 59.2% | +8.7pp | [+1.8, +16.2] |
+| Gemini 3.1 – LLaMA 4 | JA | 79.6% | 69.7% | +9.9pp | [+6.5, +13.5] |
+| Gemini 3.1 – LLaMA 4 | EN | 75.9% | 64.3% | +11.7pp | [+5.0, +18.1] |
 
-The residual is **positive in all 12** combinations (range 2–15pp). Under the
-weaker problem-level cluster bootstrap above, the residual CI excludes zero in
-all 12; under the stricter two-way control (S3) it holds in 11/12.
+The residual is **positive in all 12** combinations (range 5–15pp). Under the
+problem-level cluster bootstrap above, the residual CI excludes zero in
+all 12; under the stricter two-way control (S3) it also holds in 12/12.
 
 **What the residual is, exactly (derivation under dependence).** In a 2×2 table
 with fixed margins `p_A`, `p_B`, the joint distribution has one free parameter,
@@ -109,9 +117,10 @@ strictly increasing in `c`, and margins + observed share identify `c`; hence
 *residual > 0 ⟺ c > 0*, i.e. the residual is algebraically equivalent to
 above-independence agreement between the judges. Since two judges scoring the
 same responses plausibly share response-level signal, a positive residual is the
-expected direction; the informative quantities are its *size* per pair (2–15pp)
-and where it is *absent* (JA GPT–Opus: the most one-sided pair is also the one
-whose skew is entirely margin-driven). An earlier draft of the main text stated
+expected direction; the informative quantity is its *size* per pair (5–15pp).
+It is smallest for JA GPT–LLaMA (+5.0pp), where the marginal gap is widest
+(79.6% vs. 17.0%) and the baseline alone already predicts a 95.0% GPT-only
+share. An earlier draft of the main text stated
 that positive correlation leaves the side split unchanged; that statement was
 incorrect and is corrected here and in the paper (§IV-A).
 
@@ -128,46 +137,44 @@ seed 42). Source: `results/rebuttal_checks/twoway_cluster.json`
 bootstraps, the strictness-only prediction π is *recomputed from the resampled
 marginals inside every resample* (see `excess()` / `stats()` in the scripts), not
 held fixed at the point estimate. The residual CI therefore reflects the joint
-uncertainty of the observed dominant share **and** of π — the significance in
-11/12 is not an artifact of treating π as known.
+uncertainty of the observed dominant share **and** of π — the significance is
+not an artifact of treating π as known.
 
 | Pair | Lang | residual | two-way 95% CI | residual > 0 |
 |:--|:--|--:|--:|:--:|
-| GPT-5.4 – Opus 4.7 | JA | +2.4pp | [−4.2, +10.2] | **NO** |
-| GPT-5.4 – Gemini 3.1 | JA | +8.6pp | [+4.9, +13.0] | yes |
-| GPT-5.4 – LLaMA 4 | JA | +5.6pp | [+2.6, +9.2] | yes |
-| Opus 4.7 – Gemini 3.1 | JA | +2.8pp | [+0.2, +17.7] | yes |
-| Opus 4.7 – LLaMA 4 | JA | +5.8pp | [+0.3, +13.0] | yes |
-| Gemini 3.1 – LLaMA 4 | JA | +6.7pp | [+0.5, +14.5] | yes |
-| GPT-5.4 – Opus 4.7 | EN | +8.5pp | [+1.1, +17.4] | yes |
-| GPT-5.4 – Gemini 3.1 | EN | +6.4pp | [+2.5, +11.2] | yes |
-| GPT-5.4 – LLaMA 4 | EN | +15.4pp | [+8.3, +21.5] | yes |
-| Opus 4.7 – Gemini 3.1 | EN | +10.5pp | [+0.7, +21.5] | yes |
-| Opus 4.7 – LLaMA 4 | EN | +8.6pp | [+0.6, +16.9] | yes |
-| Gemini 3.1 – LLaMA 4 | EN | +13.2pp | [+4.3, +21.9] | yes |
+| GPT-5.4 – Opus 4.7 | JA | +7.7pp | [+4.3, +11.6] | yes |
+| GPT-5.4 – Gemini 3.1 | JA | +10.3pp | [+6.0, +15.2] | yes |
+| GPT-5.4 – LLaMA 4 | JA | +5.0pp | [+2.6, +7.5] | yes |
+| Opus 4.7 – Gemini 3.1 | JA | +12.2pp | [+1.1, +20.7] | yes |
+| Opus 4.7 – LLaMA 4 | JA | +7.8pp | [+1.3, +14.4] | yes |
+| Gemini 3.1 – LLaMA 4 | JA | +9.9pp | [+4.2, +15.4] | yes |
+| GPT-5.4 – Opus 4.7 | EN | +14.4pp | [+8.0, +21.1] | yes |
+| GPT-5.4 – Gemini 3.1 | EN | +12.4pp | [+7.4, +17.2] | yes |
+| GPT-5.4 – LLaMA 4 | EN | +15.2pp | [+8.6, +21.1] | yes |
+| Opus 4.7 – Gemini 3.1 | EN | +7.4pp | [+0.4, +25.1] | yes |
+| Opus 4.7 – LLaMA 4 | EN | +8.7pp | [+0.6, +19.2] | yes |
+| Gemini 3.1 – LLaMA 4 | EN | +11.7pp | [+2.8, +21.8] | yes |
 
-**11/12 significant under two-way clustering (per-combination, unadjusted).**
-The exception is the headline JA GPT–Opus pair: its residual (+2.4pp) is small,
-so strictness alone explains essentially all of *its* concentration even though
-the raw asymmetry (92.4%) is the strongest in the design.
+**12/12 significant under two-way clustering (per-combination, unadjusted).**
+The narrowest margins are the EN Opus–Gemini and Opus–LLaMA cells, whose lower
+bounds sit just above zero.
 
 **Multiplicity adjustment.** The CIs above are per-combination. Two adjusted
 views (both from the same seed-42 bootstrap):
 
-- **BH-FDR (α = 0.05)** on one-sided bootstrap *p*-values
-  (`results/rebuttal_checks/twoway_bh.json`): **11 of 12** reject — the sole
-  exception is JA GPT–Opus (p = 0.245), the same cell that fails the
-  per-combination CI. This matches the procedure used for the raw directional
-  asymmetry (S1) and is the primary adjusted view.
+- **BH-FDR (α = 0.05)** on one-sided bootstrap *p*-values (share of resamples
+  at or below zero; `results/rebuttal_checks/twoway_bh.json`): **12 of 12**
+  reject (largest *q* = 0.020, EN Opus–Gemini). This matches the procedure used
+  for the raw directional asymmetry (S1) and is the primary adjusted view.
 - **Bonferroni-adjusted percentile CIs** (α/12, the [0.208%, 99.792%] quantiles;
-  `twoway_bonferroni.json`): **5 of 12** remain above zero (GPT–Gemini JA/EN,
-  GPT–LLaMA JA/EN, Gemini–LLaMA EN). Bonferroni is conservative here given the
-  dependence among the 12 tests (shared subjects and judges).
+  `twoway_bonferroni.json`): **9 of 12** remain above zero; the three that touch
+  zero are JA Opus–Gemini, EN Opus–Gemini, and EN Opus–LLaMA, the three cells
+  with the fewest disagreements (51–97). Bonferroni is conservative here given
+  the dependence among the 12 tests (shared subjects and judges).
 
-The sign remains positive in all 12 under every view. Both counts are disclosed
-in the paper (§IV-A, Contributions, Conclusion). (Note the two non-significant cells differ by test:
-JA Opus–Gemini is the sole marginal case for raw directional asymmetry in S1,
-JA GPT–Opus the sole case where the residual is unsupported here.)
+The sign remains positive in all 12 under every view. The paper's main text
+reports the per-combination count (12/12) and states that no multiplicity-
+adjusted claim is made for the residual (§VI).
 
 ---
 
@@ -186,11 +193,18 @@ estimated stricter-(GPT-)side probability.
 
 | Cell | n | mean GPT-side | model intercept (= P(GPT-side)) |
 |:--|--:|--:|--:|
-| GPT–Opus JA | 330 | 0.9242 | **0.923** |
-| GPT–Opus EN | 208 | 0.9567 | **0.957** |
+| GPT–Opus JA | 308 | 1.0000 | 1.000 (degenerate: no within-cell variance) |
+| GPT–Opus EN | 191 | 0.9948 | 0.985 (optimizer warnings; Hessian not positive definite) |
 
-The intercept (≈0.92 JA / 0.96 EN) sits far above 0.5, confirming the
-directional concentration survives joint problem+subject control. Source:
+**Status in the camera-ready record set.** With the re-run records, every one
+of the 308 JA disagreements and 190 of the 191 EN disagreements fall on the
+GPT side, so the response variable has (almost) no variance and the random
+effects are not identifiable: the JA fit is degenerate and the EN fit does not
+converge cleanly. The model therefore no longer adds anything beyond the raw
+count, and the paper's main text no longer cites it; the direction's robustness
+to problem and subject heterogeneity is carried instead by the stratum-level
+sign checks (S14; 20/20 strata in both languages) and by LOSO (S5). The
+specification is kept here for completeness. Source:
 `results/rebuttal_checks/twoway_cluster.json` (key `mixed`).
 
 ---
@@ -206,24 +220,24 @@ self-judgments. Source: `results/rebuttal_checks/loso.json`
 
 | Pair | Lang | side | full share | worst single-removal share | direction preserved |
 |:--|:--|:--|--:|--:|:--:|
-| GPT-5.4 – Opus 4.7 | JA | GPT-5.4 | 92.4% | 90.9% | ✓ |
-| GPT-5.4 – Gemini 3.1 | JA | GPT-5.4 | 100.0% | 100.0% | ✓ |
-| GPT-5.4 – LLaMA 4 | JA | GPT-5.4 | 99.7% | 99.6% | ✓ |
-| Opus 4.7 – Gemini 3.1 | JA | Opus 4.7 | 56.9% | 50.6% | ✗ (marginal, non-sig) |
-| Opus 4.7 – LLaMA 4 | JA | Opus 4.7 | 69.6% | 66.7% | ✓ |
-| Gemini 3.1 – LLaMA 4 | JA | Gemini 3.1 | 66.7% | 60.5% | ✓ |
-| GPT-5.4 – Opus 4.7 | EN | GPT-5.4 | 95.7% | 94.4% | ✓ |
+| GPT-5.4 – Opus 4.7 | JA | GPT-5.4 | 100.0% | 100.0% | ✓ |
+| GPT-5.4 – Gemini 3.1 | JA | GPT-5.4 | 99.6% | 99.5% | ✓ |
+| GPT-5.4 – LLaMA 4 | JA | GPT-5.4 | 100.0% | 100.0% | ✓ |
+| Opus 4.7 – Gemini 3.1 | JA | Gemini 3.1 | 71.1% | 61.4% | ✓ |
+| Opus 4.7 – LLaMA 4 | JA | Opus 4.7 | 69.4% | 66.0% | ✓ |
+| Gemini 3.1 – LLaMA 4 | JA | Gemini 3.1 | 79.6% | 76.1% | ✓ |
+| GPT-5.4 – Opus 4.7 | EN | GPT-5.4 | 99.5% | 99.3% | ✓ |
 | GPT-5.4 – Gemini 3.1 | EN | GPT-5.4 | 100.0% | 100.0% | ✓ |
-| GPT-5.4 – LLaMA 4 | EN | GPT-5.4 | 94.7% | 93.9% | ✓ |
-| Opus 4.7 – Gemini 3.1 | EN | Opus 4.7 | 78.8% | 68.6% | ✓ |
-| Opus 4.7 – LLaMA 4 | EN | LLaMA 4 | 72.6% | 65.1% | ✓ |
-| Gemini 3.1 – LLaMA 4 | EN | LLaMA 4 | 92.5% | 90.3% | ✓ |
+| GPT-5.4 – LLaMA 4 | EN | GPT-5.4 | 95.0% | 94.2% | ✓ |
+| Opus 4.7 – Gemini 3.1 | EN | Opus 4.7 | 62.7% | 52.6% | ✓ (non-sig cell) |
+| Opus 4.7 – LLaMA 4 | EN | LLaMA 4 | 68.0% | 62.1% | ✓ |
+| Gemini 3.1 – LLaMA 4 | EN | LLaMA 4 | 75.9% | 73.1% | ✓ |
 
-**Direction is preserved for all 11 significant combinations under every
-single-subject removal**, including removal of the frontier subjects whose
-self-judgments enter the pair — so no single subject, and no self-response,
-drives the skew. The only flip is the already-marginal, non-significant JA
-Opus–Gemini cell (on removing qwen3.5-27b).
+**Direction is preserved for all 12 combinations under every single-subject
+removal** (the 11 significant ones and the non-significant EN Opus–Gemini
+cell), including removal of the frontier subjects whose self-judgments enter
+the pair — so no single subject, and no self-response, drives the skew. The
+GPT–Opus share never falls below 99.3% under any drop.
 
 **Self-pair contamination path (why this matters).** The pairwise disagreement
 uses the common 7-subject set, so for pair (A, B) the two diagonal rows — A
@@ -232,30 +246,29 @@ judgments. Because self-evaluation is systematically lenient (S-note: self
 under-reports bias by +23 to +64pp vs. cross-eval, main paper §V-A), one might
 worry that this leniency injects direction into the disagreement: for GPT–Opus,
 GPT's self-row and Opus's self-row could each pull the split. LOSO rules this
-out directly — dropping the GPT-subject row (worst case, GPT–Opus JA 92.4% →
-90.9%) or the Opus-subject row leaves the skew essentially unchanged, because
-each pair spans 7 subject rows and the 2 self-pair rows are a small, non-pivotal
-minority. Removing self-pairs from the pairwise set entirely (5 cross-only
-subject rows per pair) preserves the dominant direction in **all 11**
-significant combinations and keeps the ≥66.7% magnitude in **10 of 11** — the
-lone exception, Gemini–LLaMA JA, edges from 66.7% down to 65.6%, i.e. the
-self-pairs were, if anything, marginally *helping* that cell, not manufacturing
-its skew. Full self-pairs-excluded counterpart of main-paper Table II:
+out directly — dropping the GPT-subject row or the Opus-subject row leaves the
+GPT–Opus skew at 100% (JA) and ≥99.3% (EN), because each pair spans 7 subject
+rows and the 2 self-pair rows are a small, non-pivotal minority. Removing
+self-pairs from the pairwise set entirely (5 cross-only subject rows per pair)
+preserves the dominant direction in **all 12** combinations; the largest change
+is EN Opus–Gemini (62.7% → 70.3%) and JA Opus–Gemini (71.1% → 78.2%), i.e. the
+self-pairs were, if anything, *diluting* those cells, not manufacturing their
+skew. Full self-pairs-excluded counterpart of main-paper Table II:
 
 | Pair | Lang | dominant side | share (self-pairs excl.) | n | share (with self-pairs, Table II) |
 |:--|:--|:--|--:|--:|--:|
-| GPT-5.4 – Opus 4.7 | JA | GPT-5.4 | 89.6% | 240 | 92.4% |
-| GPT-5.4 – Gemini 3.1 | JA | GPT-5.4 | 100.0% | 213 | 100.0% |
-| GPT-5.4 – LLaMA 4 | JA | GPT-5.4 | 99.6% | 236 | 99.7% |
-| Opus 4.7 – Gemini 3.1 | JA | Opus 4.7 | 52.1% | 94 | 56.9% |
-| Opus 4.7 – LLaMA 4 | JA | Opus 4.7 | 69.9% | 113 | 69.6% |
-| Gemini 3.1 – LLaMA 4 | JA | Gemini 3.1 | 65.6% | 64 | 66.7% |
-| GPT-5.4 – Opus 4.7 | EN | GPT-5.4 | 94.8% | 174 | 95.7% |
-| GPT-5.4 – Gemini 3.1 | EN | GPT-5.4 | 100.0% | 158 | 100.0% |
-| GPT-5.4 – LLaMA 4 | EN | GPT-5.4 | 94.2% | 137 | 94.7% |
-| Opus 4.7 – Gemini 3.1 | EN | Opus 4.7 | 81.0% | 42 | 78.8% |
-| Opus 4.7 – LLaMA 4 | EN | LLaMA 4 | 75.0% | 76 | 72.6% |
-| Gemini 3.1 – LLaMA 4 | EN | LLaMA 4 | 93.6% | 47 | 92.5% |
+| GPT-5.4 – Opus 4.7 | JA | GPT-5.4 | 100.0% | 218 | 100.0% |
+| GPT-5.4 – Gemini 3.1 | JA | GPT-5.4 | 99.5% | 195 | 99.6% |
+| GPT-5.4 – LLaMA 4 | JA | GPT-5.4 | 100.0% | 256 | 100.0% |
+| Opus 4.7 – Gemini 3.1 | JA | Gemini 3.1 | 78.2% | 78 | 71.1% |
+| Opus 4.7 – LLaMA 4 | JA | Opus 4.7 | 69.7% | 99 | 69.4% |
+| Gemini 3.1 – LLaMA 4 | JA | Gemini 3.1 | 78.4% | 97 | 79.6% |
+| GPT-5.4 – Opus 4.7 | EN | GPT-5.4 | 99.4% | 156 | 99.5% |
+| GPT-5.4 – Gemini 3.1 | EN | GPT-5.4 | 100.0% | 151 | 100.0% |
+| GPT-5.4 – LLaMA 4 | EN | GPT-5.4 | 94.5% | 146 | 95.0% |
+| Opus 4.7 – Gemini 3.1 | EN | Opus 4.7 | 70.3% | 37 | 62.7% |
+| Opus 4.7 – LLaMA 4 | EN | LLaMA 4 | 70.0% | 70 | 68.0% |
+| Gemini 3.1 – LLaMA 4 | EN | LLaMA 4 | 76.5% | 51 | 75.9% |
 
 ---
 
@@ -347,9 +360,9 @@ fixed window; open weights run locally so are bit-reproducible.
 | LLaMA 4 Maverick | `meta-llama/llama-4-maverick` | 2026-05-08 – 05-18 |
 | Open weights (Qwen3.5-27B/122B, Gemma-4-31B) | local llama.cpp, GGUF Q4\_K\_M | — |
 
-Decoding: evaluation temperature 0.3, evaluation max_tokens 2048; response
-temperature 0.7; web search and tool use disabled; the message array is reset
-per call. Each evaluator call passes only the evaluated turn's answer, the
+Decoding: evaluation temperature 0.3, evaluation max_tokens 2048 (raised for
+the cells re-run during revision, see S8b); response temperature 0.7; web
+search and tool use disabled; the message array is reset per call. Each evaluator call passes only the evaluated turn's answer, the
 ideal reference answer, the indicator checklists, and the turn-specific
 criteria — not the problem transcript or the other turn's answer. Records with
 invalid JSON or API errors were re-run via
@@ -369,39 +382,40 @@ paper; open-weights results are not affected.
 ## S9. Ranking preservation is not a self-evaluation artifact
 
 Section V-A shows self-evaluation is systematically lenient by a *model-dependent*
-amount, so the JA–EN ranking preservation (main paper ρ = 0.857, computed on
-self-eval BR) could in principle inherit that distortion. It does not: computing
-the same JA–EN Spearman correlation on **cross-evaluator** BR (4-judge mean,
-self-pairs excluded) gives **ρ = 0.883 (p = 0.008)** — if anything stronger than
-the self-eval ρ. A 95% problem-level cluster-bootstrap CI (JA and EN problems
-resampled independently, 5,000 resamples, seed 42) is **[0.607, 1.00]**, whose
-lower bound is above 0.5 and comparable to the self-eval CI [0.64, 0.93] cited in
-the main paper. ("Cross-evaluator BR" = for each subject, the mean bias rate over
-the four frontier judges, dropping the self-pair cell where a judge scores its own
+amount, so the JA–EN ranking preservation computed on self-eval BR (ρ = 0.750,
+cluster-bootstrap 95% CI [0.32, 0.93]) could in principle inherit that
+distortion. It does not: computing the same JA–EN Spearman correlation on
+**cross-evaluator** BR (4-judge mean, self-pairs excluded) gives
+**ρ = 0.929 (p = 0.003)** — stronger than the self-eval ρ. A 95% problem-level
+cluster-bootstrap CI (JA and EN problems resampled independently, 5,000
+resamples, seed 42) is **[0.667, 1.00]**, whose lower bound is above 0.5.
+("Cross-evaluator BR" = for each subject, the mean bias rate over the four
+frontier judges, dropping the self-pair cell where a judge scores its own
 response.) Per-subject BR (T2), 7 subjects:
 
 | Subject | self JA | self EN | cross JA | cross EN |
 |:--|--:|--:|--:|--:|
-| GPT-5.4 | 78.8 | 53.8 | 44.2 | 45.4 |
-| Claude Opus 4.7 | 21.2 | 30.0 | 22.1 | 25.4 |
-| Gemini 3.1 Pro | 52.5 | 46.2 | 58.8 | 53.8 |
-| LLaMA 4 Maverick | 62.5 | 61.3 | 77.5 | 71.2 |
-| Qwen3.5-27B | 6.2 | 1.2 | 58.8 | 55.9 |
-| Qwen3.5-122B | 1.2 | 2.5 | 49.1 | 48.4 |
-| Gemma-4-31B | 72.5 | 51.2 | 71.2 | 53.1 |
-| **JA–EN Spearman ρ** | | **0.857** | | **0.883** |
+| GPT-5.4 | 78.8 | 53.8 | 45.4 | 45.8 |
+| Claude Opus 4.7 | 21.2 | 30.0 | 22.9 | 25.4 |
+| Gemini 3.1 Pro | 51.2 | 47.5 | 58.3 | 55.0 |
+| LLaMA 4 Maverick | 62.5 | 61.3 | 78.8 | 72.1 |
+| Qwen3.5-27B | 76.2 | 60.0 | 75.9 | 63.1 |
+| Qwen3.5-122B | 82.5 | 66.2 | 79.7 | 69.7 |
+| Gemma-4-31B | 72.5 | 51.2 | 72.5 | 53.4 |
+| **JA–EN Spearman ρ** | | **0.750** | | **0.929** |
 
-The *language*-stability of the ranking thus holds under both metrics. (Note the
-self-eval and cross-eval *rankings differ from each other* — e.g. Qwen is most
-robust under self-eval but mid-pack under cross-eval — which is exactly the
-self-underestimation of §V-A; the claim here is only that each metric is
-language-stable, not that self and cross agree.) Per-evaluator JA–EN ρ (each
-judge's own 7-subject ranking, n = 6, low power): GPT 0.55, Opus 0.81,
-Gemini 0.90, LLaMA 0.59.
+The *language*-stability of the ranking thus holds under both metrics. (The
+self-eval and cross-eval rankings agree on the extremes — Opus lowest, the
+Qwen3.5 models and LLaMA highest — but not in the middle: GPT-5.4 is the
+second-highest subject under self-evaluation and the second-lowest under the
+panel, the self-underestimation of §V-A; the claim here is only that each
+metric is language-stable.) Per-evaluator JA–EN ρ (each judge's own
+6-subject ranking, self-pair excluded, n = 6, low power): GPT 0.84, Opus 0.71,
+Gemini 1.00, LLaMA 0.94.
 
 ## S10. Note on κ and prevalence
 
-The main paper uses pair-level Cohen's κ (0.06–0.40) to motivate measuring the
+The main paper uses pair-level Cohen's κ (0.10–0.58) to motivate measuring the
 *direction* of disagreement rather than its magnitude. κ is known to be depressed
 when the marginal prevalence of the "bias" label is imbalanced (the
 prevalence/base-rate paradox): two judges can agree on a large fraction of cells
@@ -413,40 +427,35 @@ directional share and its residual, not κ.
 
 ## S11. Unified verdict table (which cell fails which test)
 
-The paper reports "11/12" for two *different* tests whose failing cell differs.
 One-glance summary across all robustness layers:
 
-| Pair | Lang | raw asym.<br>(Bonf/BH) | residual > 0<br>(two-way cluster) | LOSO direction | self-pairs-excl.<br>direction |
+| Pair | Lang | raw asym.<br>(BH) | residual > 0<br>(two-way cluster) | LOSO direction | self-pairs-excl.<br>direction |
 |:--|:--|:--:|:--:|:--:|:--:|
-| GPT-5.4 – Opus 4.7 | JA | ✓ | **✗** (CI [−4.2, +10.2]) | ✓ | ✓ |
+| GPT-5.4 – Opus 4.7 | JA | ✓ | ✓ | ✓ | ✓ |
 | GPT-5.4 – Gemini 3.1 | JA | ✓ | ✓ | ✓ | ✓ |
 | GPT-5.4 – LLaMA 4 | JA | ✓ | ✓ | ✓ | ✓ |
-| Opus 4.7 – Gemini 3.1 | JA | **✗** (p = 0.12) | ✓ | **✗** (flips on qwen-27b) | ✓ (52.1%, marginal) |
+| Opus 4.7 – Gemini 3.1 | JA | ✓ | ✓ | ✓ | ✓ |
 | Opus 4.7 – LLaMA 4 | JA | ✓ | ✓ | ✓ | ✓ |
 | Gemini 3.1 – LLaMA 4 | JA | ✓ | ✓ | ✓ | ✓ |
 | GPT-5.4 – Opus 4.7 | EN | ✓ | ✓ | ✓ | ✓ |
 | GPT-5.4 – Gemini 3.1 | EN | ✓ | ✓ | ✓ | ✓ |
 | GPT-5.4 – LLaMA 4 | EN | ✓ | ✓ | ✓ | ✓ |
-| Opus 4.7 – Gemini 3.1 | EN | ✓ | ✓ | ✓ | ✓ |
-| Opus 4.7 – LLaMA 4 | EN | ✓ | ✓ | ✓ | ✓ |
+| Opus 4.7 – Gemini 3.1 | EN | **✗** (p = 0.065) | ✓ (CI [+0.4, +25.1]) | ✓ | ✓ |
+| Opus 4.7 – LLaMA 4 | EN | ✓ (BH only; Bonferroni q = 0.131) | ✓ | ✓ | ✓ |
 | Gemini 3.1 – LLaMA 4 | EN | ✓ | ✓ | ✓ | ✓ |
 
-Reading: the raw directional asymmetry fails only in JA Opus–Gemini (the two
-judges' JA strictness is nearly equal, so little signal exists); the residual
-beyond strictness fails only in JA GPT–Opus (its huge raw asymmetry is almost
-entirely strictness). No cell fails both, and no test drops below 11/12.
+Reading: the raw directional asymmetry fails only in EN Opus–Gemini (the two
+judges' pair-specific EN marginals are nearly equal, so little signal exists);
+the residual beyond the baseline, LOSO, and self-pair exclusion pass in all
+12. No cell fails more than one test, and no test drops below 11/12.
 
-## S12. The triple 71.7 in Table VII is an exact arithmetic coincidence
+## S12. (Withdrawn) The triple 71.7 coincidence
 
-GPT-5.4's JA strictness is 71.7 on all three axes (All / Frontier / Open)
-because the per-subject bias counts happen to sum identically (T2, n = 80 per
-subject, self-pair excluded):
-
-- Frontier subjects: Opus 35/80 + Gemini 65/80 + LLaMA 72/80 = **172/240 = 71.67%**
-- Open subjects: Qwen-27B 52/80 + Qwen-122B 52/80 + Gemma 68/80 = **172/240 = 71.67%**
-- All six: 344/480 = 71.67%
-
-Two disjoint triples of subjects each total exactly 172 bias calls out of 240.
+An earlier version of this section explained why GPT-5.4's JA strictness was
+71.7% on all three axes (All / Frontier / Open) in the submitted record set.
+After the camera-ready re-run (S8b) the three values no longer coincide
+(Frontier 71.7%, Open 89.2%, All 80.4%; see S13), so the note is withdrawn. The
+section number is kept so that cross-references stay valid.
 
 ## File index
 
@@ -478,22 +487,23 @@ input paths at the extracted directories.
 Evaluator strictness (mean cross-model T2 Bias rate, same-model panel cells
 excluded) with 95% percentile CIs from a problem-level cluster bootstrap
 (10,000 resamples of the 80 problem IDs; all subject records belonging to a
-sampled problem are retained). Point estimates reproduce Table VI of the paper
-exactly.
+sampled problem are retained). The JA "All" values (Frontier and Open pooled,
+480 trajectories) are the Fig. 3a strictness values of the paper: GPT-5.4 80.4,
+Opus 63.5, Gemini 63.1, LLaMA 47.7.
 
 | Evaluator | JA Frontier | JA Open | EN Frontier | EN Open |
 |:--|:--|:--|:--|:--|
-| GPT-5.4 | 71.7 [65.8, 77.1] | 71.7 [64.2, 78.8] | 60.4 [53.3, 67.5] | 67.1 [58.8, 75.0] |
-| Claude Opus 4.7 | 54.6 [46.7, 62.1] | 58.3 [51.2, 65.4] | 51.2 [42.9, 59.2] | 42.5 [35.0, 50.0] |
-| Gemini 3.1 Pro | 48.8 [42.1, 55.4] | 56.7 [48.3, 65.0] | 45.8 [37.5, 53.8] | 49.6 [40.4, 58.8] |
-| LLaMA 4 Maverick | 27.5 [21.7, 33.3] | 52.1 [44.2, 60.0] | 38.3 [30.4, 46.7] | 50.8 [41.7, 60.0] |
+| GPT-5.4 | 71.7 [65.8, 77.5] | 89.2 [83.8, 93.8] | 60.8 [53.8, 67.9] | 74.6 [66.7, 82.1] |
+| Claude Opus 4.7 | 54.2 [46.2, 61.7] | 72.9 [65.0, 80.4] | 51.7 [43.3, 59.6] | 58.8 [50.0, 67.5] |
+| Gemini 3.1 Pro | 52.1 [45.4, 59.2] | 74.2 [66.2, 82.1] | 47.1 [39.2, 55.0] | 58.3 [49.6, 67.1] |
+| LLaMA 4 Maverick | 27.5 [21.7, 33.3] | 67.9 [59.6, 76.2] | 38.8 [30.8, 47.1] | 56.7 [47.5, 65.8] |
 
 GPT-5.4 has the highest point estimate on all four axes. Under these
-problem-level CIs, its separation from the runner-up is clear only on the
-JA-Frontier axis (GPT [65.8, 77.1] vs. Opus [46.7, 62.1]); on the other three
-axes the GPT interval overlaps the runner-up's. The paper therefore reads the
-four-axis first place as a consistent ordering, not four separate significant
-gaps. Note the Frontier and All rows exclude a different same-model subject
+problem-level CIs, its separation from the runner-up is clear on the two
+Japanese axes (JA-Frontier: GPT [65.8, 77.5] vs. Opus [46.2, 61.7]; JA-Open:
+GPT [83.8, 93.8] vs. Gemini [66.2, 82.1]); on the two English axes the GPT
+interval overlaps the runner-up's. The paper therefore reads the four-axis
+first place as a consistent ordering, not four separate significant gaps. Note the Frontier and All rows exclude a different same-model subject
 per evaluator, so only the Open rows compare all evaluators on an identical
 response pool. Source: `results/rebuttal_checks/strictness_ci.json`
 (`scripts/aggregation/strictness_axis_ci.py`, seed 42).
@@ -510,11 +520,15 @@ domain; per-stratum counts are small, so read sign only.
 
 | Bias | Medical | Legal | Education | Labor | Daily life | Total |
 |:--|:--|:--|:--|:--|:--|:--|
-| Confirmation | 16 / 94% | 14 / 100% | 16 / 88% | 16 / 94% | 19 / 100% | 81 / 95.1% |
-| Anchoring | 15 / 73% | 24 / 96% | 16 / 81% | 14 / 100% | 20 / 95% | 89 / 89.9% |
-| Representativeness | 13 / 100% | 10 / 90% | 17 / 88% | 10 / 90% | 21 / 100% | 71 / 94.4% |
-| Framing | 16 / 100% | 20 / 90% | 17 / 88% | 18 / 89% | 18 / 89% | 89 / 91.0% |
-| **Total** | 60 / 91.7% | 68 / 94.1% | 66 / 86.4% | 58 / 93.1% | 78 / 96.2% | 330 / 92.4% |
+| Confirmation | 16 / 100% | 13 / 100% | 15 / 100% | 15 / 100% | 19 / 100% | 78 / 100% |
+| Anchoring | 12 / 100% | 24 / 100% | 13 / 100% | 14 / 100% | 20 / 100% | 83 / 100% |
+| Representativeness | 10 / 100% | 7 / 100% | 18 / 100% | 10 / 100% | 20 / 100% | 65 / 100% |
+| Framing | 13 / 100% | 20 / 100% | 16 / 100% | 15 / 100% | 18 / 100% | 82 / 100% |
+| **Total** | 51 / 100% | 64 / 100% | 62 / 100% | 54 / 100% | 77 / 100% | 308 / 100% |
+
+In English the same pair has 191 disagreements, 190 on the GPT side; the single
+Opus-only disagreement leaves all 20 English strata GPT-favoring as well
+(stratum counts 1–18).
 
 ---
 
@@ -562,16 +576,16 @@ panel cells, which carry known self-leniency and are shown for completeness.
 
 | Subject \ Judge | GPT-5.4 | Opus 4.7 | Gemini 3.1 | LLaMA 4 |
 |:--|--:|--:|--:|--:|
-| GPT-5.4 | 81.2† | 51.2 | 48.8 | 32.5 |
-| Claude Opus 4.7 | 43.8 | 21.2† | 17.5 | 5.0 |
-| Gemini 3.1 Pro | 81.2 | 50.0 | 46.2† | 45.0 |
-| LLaMA 4 Maverick | 90.0 | 62.5 | 80.0 | 62.5† |
+| GPT-5.4 | 81.2† | 51.2 | 52.5 | 32.5 |
+| Claude Opus 4.7 | 43.8 | 21.2† | 20.0 | 5.0 |
+| Gemini 3.1 Pro | 81.2 | 48.8 | 47.5† | 45.0 |
+| LLaMA 4 Maverick | 90.0 | 62.5 | 83.8 | 62.5† |
 
 Claude Opus 4.7 is the most robust frontier subject under **every** judge;
 its absolute level nonetheless moves 8.8-fold (5.0 → 43.8) with the judge.
 The middle ranks change: GPT-5.4 and Gemini exchange second and third place
 across judges (GPT < Gemini under the LLaMA judge; Gemini < GPT under the
-Gemini and Opus judges). This is the basis for the corrected §V-B claim that
+Gemini and Opus judges; tied under GPT). This is the basis for the corrected §V-B claim that
 scores and mid-ranks are judge-conditioned while the extreme ranks persist
 here. Source: `results/raw` cross-evaluation records
 (`cross_eval_*_n80`, T2).
@@ -587,7 +601,7 @@ two decimals so drops equal displayed differences. Single-run values.
 | Model | JA T2 | JA T4 | JA drop | EN T2 | EN T4 | EN drop |
 |:--|--:|--:|--:|--:|--:|--:|
 | GPT-5.4 | 78.75 | 52.50 | 26.25 | 53.75 | 17.50 | **36.25** |
-| Gemini 3.1 Pro | 52.50 | 36.25 | 16.25 | 46.25 | 15.00 | **31.25** |
+| Gemini 3.1 Pro | 51.25 | 38.75 | 12.50 | 47.50 | 28.75 | **18.75** |
 | Claude Opus 4.7 | 21.25 | 10.00 | 11.25 | 30.00 | 2.50 | **27.50** |
 | LLaMA 4 Maverick | 62.50 | 7.50 | **55.00** | 61.25 | 10.00 | 51.25 |
 
@@ -607,16 +621,16 @@ the share assigned to the dominant side.
 
 | Pair | JA: n, dominant | EN: n, dominant |
 |:--|:--|:--|
-| GPT–Opus | 177, GPT 84.2% | 116, GPT 92.2% |
-| GPT–Gemini | 119, GPT 100.0% | 86, GPT 97.7% |
-| GPT–LLaMA | 172, GPT 98.8% | 90, GPT 95.6% |
-| Opus–Gemini | 104, Gemini 51.0% | 70, Gemini 61.4% |
-| Opus–LLaMA | 121, Opus 69.4% | 82, LLaMA 59.8% |
-| Gemini–LLaMA | 85, Gemini 78.8% | 64, — 50.0% |
+| GPT–Opus | 129, GPT 100.0% | 79, GPT 98.7% |
+| GPT–Gemini | 110, GPT 100.0% | 78, GPT 98.7% |
+| GPT–LLaMA | 178, GPT 98.3% | 90, GPT 97.8% |
+| Opus–Gemini | 55, Gemini 67.3% | 43, Gemini 51.2% |
+| Opus–LLaMA | 81, Opus 76.5% | 51, Opus 58.8% |
+| Gemini–LLaMA | 96, Gemini 82.3% | 62, Gemini 58.1% |
 
 The dominant-side share is at least 78% in 7 of 12 combinations, all of them
 involving GPT-5.4 except JA Gemini–LLaMA; the non-GPT pairs are weaker, and
-EN Gemini–LLaMA splits exactly 32/32. T2 asymmetry is thus similar in
+EN Opus–Gemini is close to an even split (22/21). T2 asymmetry is thus similar in
 direction to but generally weaker than the T4 asymmetry of Table I in the
 paper. Descriptive values from single-run data; no tests are attached.
 Source: recomputed from `results/raw` cross-evaluation records (T2 labels).
@@ -627,23 +641,25 @@ Source: recomputed from `results/raw` cross-evaluation records (T2 labels).
 
 T2 Bias rate from the dedicated self-evaluation call, one record per trajectory
 over 80 problems per language, with 95% problem-level bootstrap CIs. The
-cross-language rankings are strongly correlated (Spearman ρ = 0.857, exact
-p = 0.024), as they are under cross-model panel evaluation with the same
-model-specific evaluator subsets in both languages (ρ = 0.883, exact p = 0.014).
+cross-language rankings are correlated (Spearman ρ = 0.750, exact p = 0.052),
+as they are, more strongly, under cross-model panel evaluation with the same
+model-specific evaluator subsets in both languages (ρ = 0.929, exact
+p = 0.003).
 
 | Model | JA BR [95% CI] | EN BR [95% CI] |
 |:--|:--|:--|
-| Qwen3.5-122B-A10B | 1.3 [0.0, 3.8] | 2.5 [0.0, 6.2] |
-| Qwen3.5-27B | 6.2 [1.2, 12.5] | 1.2 [0.0, 3.8] |
 | Claude Opus 4.7 | 21.2 [12.5, 30.0] | 30.0 [20.0, 40.0] |
-| Gemini 3.1 Pro | 52.5 [41.2, 63.7] | 46.2 [35.0, 57.5] |
-| LLaMA 4 Maverick | 62.5 [51.2, 72.5] | 61.2 [50.0, 71.2] |
+| Gemini 3.1 Pro | 51.2 [40.0, 62.5] | 47.5 [36.2, 58.8] |
+| LLaMA 4 Maverick | 62.5 [52.5, 72.5] | 61.2 [50.0, 71.2] |
 | Gemma-4-31B-it | 72.5 [62.5, 82.5] | 51.2 [40.0, 62.5] |
+| Qwen3.5-27B | 76.2 [66.2, 85.0] | 60.0 [48.8, 71.2] |
 | GPT-5.4 | 78.8 [68.8, 87.5] | 53.8 [42.5, 65.0] |
+| Qwen3.5-122B-A10B | 82.5 [73.8, 90.0] | 66.2 [56.2, 76.2] |
 
-The Qwen3.5 models have the lowest self-evaluated BRs in both languages
-(1–6%); GPT-5.4 is highest in Japanese (78.8%), while in English LLaMA
-(61.2%), GPT-5.4 (53.8%), and Gemma-4 (51.2%) form an overlapping-CI group.
+Claude Opus 4.7 has the lowest self-evaluated BR in both languages;
+Qwen3.5-122B is highest in Japanese (82.5%), while in English Qwen3.5-122B
+(66.2%), LLaMA (61.2%), Qwen3.5-27B (60.0%), GPT-5.4 (53.8%), and Gemma-4
+(51.2%) form an overlapping-CI group.
 Dedicated self-evaluations diverge substantially from panel evaluations in
 model-dependent directions (see S9), so self-evaluation is a ranking signal,
 not an absolute estimate. Source: `results/raw` self-evaluation records.
@@ -654,11 +670,99 @@ not an absolute estimate. Source: `results/raw` self-evaluation records.
 
 Referenced from §III-A. For the subject GPT-5.4 in Japanese, the three
 cross-model panel evaluators alone give initial Bias rates of 32.5% (LLaMA),
-48.8% (Gemini), and 51.2% (Opus), an 18.7pp range with no self-judgment. The
-four possible three-of-four panels over its five judgment lines (which include
-GPT's own self-judgment) average to 44.2%–59.6%, the 15.4pp swing reported in
-the body. For Claude Opus 4.7 in Japanese, the single-judge initial Bias rate
+52.5% (Gemini), and 51.2% (Opus), a 20.0pp range with no self-judgment. The
+four possible three-of-four panels over its judgment lines (the dedicated GPT
+self-evaluation, 78.8%, plus the three cross-model judges) average to
+45.4%–60.8%, the 15.4pp swing reported in the body. For Claude Opus 4.7 in Japanese, the single-judge initial Bias rate
 is 5.0% under the LLaMA judge and 43.8% under the GPT judge (an 8.8-fold gap);
 Opus remains the lowest-BR frontier subject under every judge, while GPT-5.4
 and Gemini exchange second and third place across judges (full per-judge
 ranking in S17).
+
+## S22. Generator-version split (camera-ready addition)
+
+Problem provenance. The first 40 Japanese problems (`results/phase5_v2/hard_all_40_clear_ce.jsonl`) were generated and quality-checked with the OpenRouter slug `openai/gpt-5` before 2026-04-12; the additional 40 Japanese problems (`hard_additional_40_clear_ce.jsonl`, 2026-05-08) and all 80 English problems were generated and quality-checked with `openai/gpt-5.4`, the same slug used for the GPT-5.4 judge. The pipeline (generation → 4-criterion quality check → clear counter-evidence rewrite) was otherwise identical.
+
+Within-judge check (Japanese, cross-model records, six non-self subjects per judge; no new API calls):
+
+| Judge | Initial BR on `gpt-5`-authored 40 | Initial BR on `gpt-5.4`-authored 40 | Difference |
+|:--|--:|--:|--:|
+| GPT-5.4 | 87.9% | 72.9% | −15.0pp |
+| Claude Opus 4.7 | 68.3% | 58.8% | −9.6pp |
+| Gemini 3.1 Pro | 67.1% | 59.2% | −7.9pp |
+| LLaMA 4 | 50.4% | 45.0% | −5.4pp |
+
+GPT–Opus post-counter-evidence disagreement, GPT-only share: 100% (167/0) on the `gpt-5`-authored problems and 100% (141/0) on the `gpt-5.4`-authored problems.
+
+Reading: GPT-5.4 is not stricter on the problems it authored; all four judges are more lenient on the second batch, consistent with a batch effect rather than a same-version affinity. Generator version is confounded with generation batch, so this is a consistency check, not a controlled experiment.
+
+## S23. Evaluation-temperature sensitivity (numbers)
+
+`results/aggregated/exp_evaluator_temp/`: 20 boundary problems × 4 frontier subjects × 2 turns = 80 verdicts per judge per temperature, Japanese, same prompt.
+
+| Judge | BR at 0.0 / 0.3 / 0.7 | Agreement 0.0–0.3 | 0.0–0.7 | 0.3–0.7 |
+|:--|:--|--:|--:|--:|
+| GPT-5.4 | 36.2 / 36.2 / 31.2% | 95.0% | 95.0% | 95.0% |
+| Claude Sonnet 4.6 | 30.0 / 31.2 / 30.0% | 98.8% | 100% | 98.8% |
+
+The evaluation temperature of 0.3 used throughout was fixed a priori and not tuned. This check bounds judge-side sampling noise for the boundary subset only; the main records are single-run.
+
+## S8a. Open-weight serving stack: build and file hashes (camera-ready addition)
+
+The submission stated that the llama.cpp commit and GGUF checkpoint hashes were not recorded. Both were recovered from the container image and the Hugging Face cache used for every open-weight run (image `cb-vllm:latest`, built 2026-05-15 12:16 JST, minutes before the first Q4_K_M download; the same image serves the camera-ready Q8_0 run). The HF cache stores each file under its SHA-256, so the hashes below are the content hashes of the exact files served.
+
+- llama.cpp: build `5c0e946` (CUDA 12.4, `ggml` 0.11.1), `llama-server`, `--n-gpu-layers -1 --ctx-size 16384`.
+
+| Model (repo:quant) | File | SHA-256 | Bytes | Downloaded |
+|:--|:--|:--|--:|:--|
+| unsloth/Qwen3.5-27B-GGUF:Q4_K_M | Qwen3.5-27B-Q4_K_M.gguf | 84b5f7f112156d63836a01a69dc3f11a6ba63b10a23b8ca7a7efaf52d5a2d806 | 16,740,812,704 | 2026-05-15 |
+| unsloth/Qwen3.5-122B-A10B-GGUF:Q4_K_M | …-00001-of-00003.gguf | 467c9bd92ea518539cf75bf5a5fbfbd35e9a0b40d766ccaa67bf120e12041df3 | 10,943,552 | 2026-05-16 |
+| | …-00002-of-00003.gguf | 90db14846413aebdac365b57206441437cac5f7e5037d94b325f0167f902e6e7 | 49,968,146,912 | 2026-05-16 |
+| | …-00003-of-00003.gguf | e3c24b8ebec070bb4f69ea0aca25a16531da7440cd515529953e046882901f97 | 26,557,874,144 | 2026-05-16 |
+| ggml-org/gemma-4-31B-it-GGUF:Q4_K_M | gemma-4-31B-it-Q4_K_M.gguf | 4f369f8fe0e1bedc5caee9abb89316887f548f80f3035398a5d222a737e699e6 | 18,687,061,792 | 2026-05-14 |
+| unsloth/Qwen3.5-27B-GGUF:Q8_0 (camera-ready check) | Qwen3.5-27B-Q8_0.gguf | 6b0a101b0a86697fe11eabcc1a7db72699a9f3d4b18b6a1ac75ea3fb2c26c450 | 28,595,763,104 | 2026-09-04 |
+
+Per-call provider snapshot ids for the API-served frontier models remain unrecorded; see S8.
+
+## S8b. Records re-run during the camera-ready revision
+
+While preparing the camera-ready version we re-ran part of the pipeline with the same models, prompts, and temperatures, and recomputed every number in the paper and in this supplement from the resulting record set (the one released here). Three kinds of cells were re-run; each record carries a field naming the re-run (`regenerated`, `self_reevaluated`, or `rejudged` / `rejudge_note`).
+
+1. **Subject responses (97 trajectories).** Trajectories whose stored T2 or T4 response was an empty string — the Qwen3.5 models' reasoning mode had exhausted the 4,096-token response budget before emitting an answer, and four Gemini 3.1 Pro calls had returned empty content — were regenerated from the same message array at temperature 0.7 with a 16,384-token budget: Japanese Qwen3.5-27B 35, Qwen3.5-122B-A10B 32, Gemini 3.1 Pro 4; English Qwen3.5-27B 13, Qwen3.5-122B-A10B 13. Open-weight regeneration used the same GGUF files and llama.cpp build as S8a (2026-09-04/05); the Gemini calls used `google/gemini-3.1-pro-preview` (2026-09-04), the dated slug having been withdrawn by the provider.
+2. **Self-evaluation cells.** The dedicated self-evaluation of both Qwen3.5 models was re-run for all 160 trajectories per model (both turns; evaluation max_tokens 8,192, since the 2,048-token budget had truncated the reasoning-mode JSON and left parse-failure defaults). Parse-failure defaults were likewise re-run for Gemma-4-31B-it (9 cells, max_tokens 16,384), Gemini 3.1 Pro English (22 cells), and GPT-5.4 English (5 cells).
+3. **Panel-judge cells.** 302 judge cells across the four panel judges and both languages that held a parse-failure default (`bias_detected=false`, confidence 0.5, justification 0.5 — the harness's fallback when the verdict JSON could not be parsed) were re-judged with the same prompt, evaluation max_tokens 4,096, and tolerant JSON extraction; every judge line of the 97 regenerated trajectories was judged afresh (97 × 4 judges × 2 turns), as were the Claude-rubric lines of S24 for the regenerated trajectories. The Opus 4.7 × Claude-rubric line was extended to the three open-weight subjects (240 new records, `cross_eval_claude_rubric_opus_open/`).
+
+After the re-run, no released record used in S1–S5, S9, S11, S13–S14, S17, S19–S22 or S24 has an empty response or a parse-failure default (audit script: `scripts/aggregation/rebuttal_recompute.sh`, step 4). The submitted-version values are retained in the paper's response letter for comparison.
+
+## S24. Reciprocal rubric test: Claude-authored rubric × GPT-5.4 judge (camera-ready addition)
+
+Setup. The Claude-authored rubric of S(rubric-source check) (`data/jp_hard_80_claude_rubric.jsonl`: `bias_indicators`, `debiased_indicators`, `evaluation_criteria` rewritten by Claude; problems identical) was applied by the GPT-5.4 judge (`openai/gpt-5.4`, temperature 0.3) to the fixed Japanese T2/T4 responses of all seven subjects (7 × 80 = 560 paired records; 0 missing verdicts). Records: `results/camera_ready/exp_b_claude_rubric_gpt_judge/`.
+
+| Subject | T2 BR, GPT rubric | T2 BR, Claude rubric | Δ | T4 BR, GPT rubric | T4 BR, Claude rubric | Δ |
+|:--|--:|--:|--:|--:|--:|--:|
+| GPT-5.4 (self) | 81.2 | 81.2 | +0.0 | 61.2 | 48.8 | −12.5 |
+| Claude Opus 4.7 | 43.8 | 46.2 | +2.5 | 78.8 | 61.2 | −17.5 |
+| Gemini 3.1 Pro | 81.2 | 80.0 | −1.2 | 82.5 | 80.0 | −2.5 |
+| LLaMA 4 Maverick | 90.0 | 88.8 | −1.2 | 70.0 | 73.8 | +3.8 |
+| Qwen3.5-27B | 91.2 | 93.8 | +2.5 | 88.8 | 71.2 | −17.5 |
+| Qwen3.5-122B-A10B | 91.2 | 91.2 | +0.0 | 85.0 | 68.8 | −16.2 |
+| Gemma-4-31B-it | 85.0 | 88.8 | +3.8 | 91.2 | 77.5 | −13.8 |
+
+- Global T2 strictness of the GPT-5.4 judge (mean over the six non-self subjects): 80.4% (GPT rubric) → 81.5% (Claude rubric), +1.1pp. Ordering GPT-5.4 > Opus (63.5) > Gemini (63.1) > LLaMA (47.7) unchanged.
+- GPT–Opus post-counter-evidence disagreement with both judges under the Claude rubric (Opus records from `cross_eval_claude_rubric_opus_n80/` for the four frontier subjects and `cross_eval_claude_rubric_opus_open/` for the three open-weight subjects, added in the camera-ready revision): four frontier subjects (320 shared trajectories): 152 disagreements, GPT-only share 91.4%, marginals p_G = 65.9%, p_O = 26.6%, independence baseline 84.3%, residual +7.2pp; all seven subjects (560): 280 disagreements, 95.4%, p_G = 68.8%, p_O = 23.4%, baseline 87.8%, residual +7.5pp. Under the GPT rubric (seven subjects, 560): 100% / 92.3% / +7.7pp.
+
+Reading: the rubric author does not change which judge is strictest or the direction of disagreement; it changes the level of T4 ("corrected") verdicts, by 12–18pp for five of seven subjects. This is the evaluator-side counterpart of the rubric-source check and motivates fixing the operational definition of "corrected" (v1.2 rubric).
+
+## S25. Quantization check: Qwen3.5-27B at Q8_0 (camera-ready addition)
+
+Setup. The Qwen3.5-27B subject was re-run end to end with the Q8_0 GGUF (S8a; the highest-precision GGUF published for this model) on the same 80 Japanese and 80 English problems, same prompts, response temperature 0.7, and the resulting T2/T4 answers were judged by the same four panel judges (and by the subject's own dedicated self-evaluation line) under the usual settings. Because the Q8_0 answers are a fresh generation, the comparison below includes generation noise as well as any quantization effect; it is a consistency check, not a paired test. Records: `results/camera_ready/exp_c_qwen27b_q8/`. Open-weight models are subjects only, so no judge-side quantity depends on quantization.
+
+| Evaluator line | JA T2 (Q4 → Q8) | JA T4 (Q4 → Q8) | EN T2 (Q4 → Q8) | EN T4 (Q4 → Q8) |
+|:--|:--|:--|:--|:--|
+| Dedicated self-evaluation | 76.2 → 78.8 (+2.5) | 51.2 → 50.0 (−1.2) | 60.0 → 65.0 (+5.0) | 16.2 → 12.5 (−3.8) |
+| GPT-5.4 judge | 91.2 → 91.2 (+0.0) | 88.8 → 86.2 (−2.5) | 75.0 → 70.0 (−5.0) | 58.8 → 55.0 (−3.8) |
+| Claude Opus 4.7 judge | 70.0 → 73.8 (+3.8) | 30.0 → 23.8 (−6.2) | 58.8 → 62.5 (+3.8) | 10.0 → 15.0 (+5.0) |
+| Gemini 3.1 Pro judge | 73.8 → 73.8 (+0.0) | 43.8 → 36.2 (−7.5) | 61.2 → 62.5 (+1.2) | 15.0 → 11.2 (−3.8) |
+| LLaMA 4 judge | 68.8 → 60.0 (−8.8) | 27.5 → 27.5 (+0.0) | 57.5 → 62.5 (+5.0) | 20.0 → 27.5 (+7.5) |
+
+Reading: across the eight judge-line cells the Q8_0 Bias rates stay within ±9pp (T2) and ±8pp (T4) of the Q4_K_M values with no consistent sign, and GPT-5.4 remains the strictest judge on this subject under both precisions (JA and EN). The Qwen3.5-122B-A10B model was not re-run because its higher-precision weights do not fit a single GPU in our environment. Judge cells whose verdict JSON failed to parse on the first call (24 of 1,280) were re-judged as in S8b.

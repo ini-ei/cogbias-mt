@@ -106,7 +106,7 @@ def twoway_bootstrap(rows, rng):
             for s in bs:
                 samp.extend(by_ps.get((p, s), []))
         out[t] = excess(samp) if samp else np.nan
-    return np.nanpercentile(out, [2.5, 97.5])
+    return out
 
 
 def main():
@@ -121,14 +121,27 @@ def main():
             rows = cells(judg, ea, eb)
             ex = excess(rows)
             rng = np.random.default_rng(SEED)
-            lo, hi = twoway_bootstrap(rows, rng)
+            dist = twoway_bootstrap(rows, rng)
+            lo, hi = np.nanpercentile(dist, [2.5, 97.5])
+            blo, bhi = np.nanpercentile(dist, [100 * 0.025 / 12, 100 * (1 - 0.025 / 12)])  # Bonferroni α/12 percentile CI
+            p_boot = float(np.nanmean(dist <= 0))  # one-sided bootstrap p (share of resamples at or below zero)
             flag = "" if lo > 0 else "  (CI incl. 0)"
             print(f"{ea+'-'+eb:<20}{lang:<5}{ex*100:>+10.1f}{f'[{lo*100:+.1f}, {hi*100:+.1f}]':>22}{flag}")
             res["combos"].append(dict(pair=f"{ea}-{eb}", lang=lang,
                                       excess_pp=round(ex*100, 2),
-                                      twoway_ci_pp=[round(lo*100, 2), round(hi*100, 2)]))
+                                      twoway_ci_pp=[round(lo*100, 2), round(hi*100, 2)],
+                                      bonferroni_ci_pp=[round(blo*100, 2), round(bhi*100, 2)], p_boot=p_boot))
     n_pos = sum(1 for c in res["combos"] if c["twoway_ci_pp"][0] > 0)
     print(f"\n  two-way CI が 0 を除外する組: {n_pos} / 12")
+    # 多重性: BH on one-sided bootstrap p; Bonferroni percentile CI (α/12)
+    cs = res["combos"]; m = len(cs); order = sorted(range(m), key=lambda i: cs[i]["p_boot"]); prev = 1.0
+    for rank in range(m, 0, -1):
+        i = order[rank - 1]; q = min(prev, cs[i]["p_boot"] * m / rank); cs[i]["bh_q"] = round(float(q), 5); cs[i]["bh_reject"] = bool(q < 0.05); prev = q
+    for c in cs:
+        c["bonferroni_reject"] = bool(c["bonferroni_ci_pp"][0] > 0)
+    print(f"  BH-FDR reject: {sum(c['bh_reject'] for c in cs)} / 12;  Bonferroni percentile CI > 0: {sum(c['bonferroni_reject'] for c in cs)} / 12")
+    json.dump({"rows": [dict(pair=c["pair"], lang=c["lang"], excess_pp=c["excess_pp"], p_boot=c["p_boot"], bh_q=c["bh_q"], reject=c["bh_reject"]) for c in cs]}, open(OUT / "twoway_bh.json", "w"), indent=1)
+    json.dump({"alpha": 0.05 / 12, "rows": [dict(pair=c["pair"], lang=c["lang"], excess_pp=c["excess_pp"], ci=c["bonferroni_ci_pp"], reject=c["bonferroni_reject"]) for c in cs]}, open(OUT / "twoway_bonferroni.json", "w"), indent=1)
 
     # (B) mixed-effects logistic on GPT-Opus disagreement cells (headline pair)
     print("\n=== (B) mixed-effects logistic: skew toward stricter judge, problem+subject random effects ===")

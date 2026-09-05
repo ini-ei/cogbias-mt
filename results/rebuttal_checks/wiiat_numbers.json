@@ -1,0 +1,400 @@
+{
+ "strictness": {
+  "JA": {
+   "GPT-5.4": 80.42,
+   "Opus4.7": 63.54,
+   "Gemini3.1": 63.12,
+   "LLaMA4": 47.71
+  },
+  "EN": {
+   "GPT-5.4": 67.71,
+   "Opus4.7": 55.21,
+   "Gemini3.1": 52.71,
+   "LLaMA4": 47.71
+  }
+ },
+ "opus_subject": {
+  "GPT-5.4": 43.75,
+  "Opus4.7": 21.25,
+  "Gemini3.1": 20.0,
+  "LLaMA4": 5.0,
+  "self": 21.25
+ },
+ "gpt_subject": {
+  "Opus4.7": 51.25,
+  "Gemini3.1": 52.5,
+  "LLaMA4": 32.5,
+  "self": 78.75
+ },
+ "gpt_panels": {
+  "Opus4.7+Gemini3.1+LLaMA4": 45.42,
+  "Opus4.7+Gemini3.1+self": 60.83,
+  "Opus4.7+LLaMA4+self": 54.17,
+  "Gemini3.1+LLaMA4+self": 54.58
+ },
+ "table2": {
+  "GPT-5.4-Opus4.7_JA": {
+   "n_dis": 308,
+   "share": 100.0,
+   "dom": "GPT-5.4",
+   "d": 308,
+   "o": 0,
+   "pa": 79.64,
+   "pb": 24.64,
+   "base": 92.29,
+   "resid": 7.71,
+   "kappa": 0.154,
+   "t2_n": 129,
+   "t2_share": 100.0,
+   "t2_dom": "GPT-5.4"
+  },
+  "GPT-5.4-Opus4.7_EN": {
+   "n_dis": 191,
+   "share": 99.48,
+   "dom": "GPT-5.4",
+   "d": 190,
+   "o": 1,
+   "pa": 47.32,
+   "pb": 13.57,
+   "base": 85.12,
+   "resid": 14.36,
+   "kappa": 0.29,
+   "t2_n": 79,
+   "t2_share": 98.73,
+   "t2_dom": "GPT-5.4"
+  },
+  "GPT-5.4-Gemini3.1_JA": {
+   "n_dis": 269,
+   "share": 99.63,
+   "dom": "GPT-5.4",
+   "d": 268,
+   "o": 1,
+   "pa": 79.64,
+   "pb": 31.96,
+   "base": 89.28,
+   "resid": 10.35,
+   "kappa": 0.209,
+   "t2_n": 110,
+   "t2_share": 100.0,
+   "t2_dom": "GPT-5.4"
+  },
+  "GPT-5.4-Gemini3.1_EN": {
+   "n_dis": 202,
+   "share": 100.0,
+   "dom": "GPT-5.4",
+   "d": 202,
+   "o": 0,
+   "pa": 47.32,
+   "pb": 11.25,
+   "base": 87.63,
+   "resid": 12.37,
+   "kappa": 0.247,
+   "t2_n": 78,
+   "t2_share": 98.72,
+   "t2_dom": "GPT-5.4"
+  },
+  "GPT-5.4-LLaMA4_JA": {
+   "n_dis": 351,
+   "share": 100.0,
+   "dom": "GPT-5.4",
+   "d": 351,
+   "o": 0,
+   "pa": 79.64,
+   "pb": 16.96,
+   "base": 95.04,
+   "resid": 4.96,
+   "kappa": 0.099,
+   "t2_n": 178,
+   "t2_share": 98.31,
+   "t2_dom": "GPT-5.4"
+  },
+  "GPT-5.4-LLaMA4_EN": {
+   "n_dis": 179,
+   "share": 94.97,
+   "dom": "GPT-5.4",
+   "d": 170,
+   "o": 9,
+   "pa": 47.32,
+   "pb": 18.57,
+   "base": 79.75,
+   "resid": 15.22,
+   "kappa": 0.338,
+   "t2_n": 90,
+   "t2_share": 97.78,
+   "t2_dom": "GPT-5.4"
+  },
+  "Opus4.7-Gemini3.1_JA": {
+   "n_dis": 97,
+   "share": 71.13,
+   "dom": "Gemini3.1",
+   "d": 69,
+   "o": 28,
+   "pa": 24.64,
+   "pb": 31.96,
+   "base": 58.96,
+   "resid": 12.17,
+   "kappa": 0.576,
+   "t2_n": 55,
+   "t2_share": 67.27,
+   "t2_dom": "Gemini3.1"
+  },
+  "Opus4.7-Gemini3.1_EN": {
+   "n_dis": 51,
+   "share": 62.75,
+   "dom": "Opus4.7",
+   "d": 32,
+   "o": 19,
+   "pa": 13.57,
+   "pb": 11.25,
+   "base": 55.33,
+   "resid": 7.41,
+   "kappa": 0.582,
+   "t2_n": 43,
+   "t2_share": 51.16,
+   "t2_dom": "Gemini3.1"
+  },
+  "Opus4.7-LLaMA4_JA": {
+   "n_dis": 111,
+   "share": 69.37,
+   "dom": "Opus4.7",
+   "d": 77,
+   "o": 34,
+   "pa": 24.64,
+   "pb": 16.96,
+   "base": 61.55,
+   "resid": 7.82,
+   "kappa": 0.404,
+   "t2_n": 81,
+   "t2_share": 76.54,
+   "t2_dom": "Opus4.7"
+  },
+  "Opus4.7-LLaMA4_EN": {
+   "n_dis": 78,
+   "share": 67.95,
+   "dom": "LLaMA4",
+   "d": 53,
+   "o": 25,
+   "pa": 13.57,
+   "pb": 18.57,
+   "base": 59.22,
+   "resid": 8.72,
+   "kappa": 0.486,
+   "t2_n": 51,
+   "t2_share": 58.82,
+   "t2_dom": "Opus4.7"
+  },
+  "Gemini3.1-LLaMA4_JA": {
+   "n_dis": 142,
+   "share": 79.58,
+   "dom": "Gemini3.1",
+   "d": 113,
+   "o": 29,
+   "pa": 31.96,
+   "pb": 16.96,
+   "base": 69.69,
+   "resid": 9.88,
+   "kappa": 0.334,
+   "t2_n": 96,
+   "t2_share": 82.29,
+   "t2_dom": "Gemini3.1"
+  },
+  "Gemini3.1-LLaMA4_EN": {
+   "n_dis": 79,
+   "share": 75.95,
+   "dom": "LLaMA4",
+   "d": 60,
+   "o": 19,
+   "pa": 11.25,
+   "pb": 18.57,
+   "base": 64.28,
+   "resid": 11.67,
+   "kappa": 0.45,
+   "t2_n": 62,
+   "t2_share": 58.06,
+   "t2_dom": "Gemini3.1"
+  }
+ },
+ "strata": {
+  "JA": {
+   "gpt": 20,
+   "tie": 0,
+   "opus": 0,
+   "n_range": [
+    7,
+    24
+   ],
+   "hw_range": [
+    7.1,
+    20.5
+   ]
+  },
+  "EN": {
+   "gpt": 20,
+   "tie": 0,
+   "opus": 0,
+   "n_range": [
+    1,
+    18
+   ],
+   "hw_range": [
+    9.3,
+    48.8
+   ]
+  }
+ },
+ "genver": {
+  "GPT-5.4": [
+   87.92,
+   72.92
+  ],
+  "Opus4.7": [
+   68.33,
+   58.75
+  ],
+  "Gemini3.1": [
+   67.08,
+   59.17
+  ],
+  "LLaMA4": [
+   50.42,
+   45.0
+  ],
+  "share_gpt-5-authored": 100.0,
+  "share_gpt-5.4-authored": 100.0
+ },
+ "expB": {
+  "strictness": 81.46,
+  "per_subject": {
+   "gpt-5": {
+    "t2": [
+     81.25,
+     81.25
+    ],
+    "t4": [
+     61.25,
+     48.75
+    ]
+   },
+   "claude-opus-4.7": {
+    "t2": [
+     43.75,
+     46.25
+    ],
+    "t4": [
+     78.75,
+     61.25
+    ]
+   },
+   "gemini-3.1-pro": {
+    "t2": [
+     81.25,
+     80.0
+    ],
+    "t4": [
+     82.5,
+     80.0
+    ]
+   },
+   "llama-4-maverick": {
+    "t2": [
+     90.0,
+     88.75
+    ],
+    "t4": [
+     70.0,
+     73.75
+    ]
+   },
+   "qwen3.5-27b": {
+    "t2": [
+     91.25,
+     93.75
+    ],
+    "t4": [
+     88.75,
+     71.25
+    ]
+   },
+   "qwen3.5-122b": {
+    "t2": [
+     91.25,
+     91.25
+    ],
+    "t4": [
+     85.0,
+     68.75
+    ]
+   },
+   "gemma-4-31b": {
+    "t2": [
+     85.0,
+     88.75
+    ],
+    "t4": [
+     91.25,
+     77.5
+    ]
+   }
+  },
+  "gpt_opus_4 frontier": {
+   "n": 320,
+   "n_dis": 152,
+   "share": 91.45,
+   "base": 84.26,
+   "d": 139,
+   "o": 13
+  },
+  "gpt_opus_7 subjects": {
+   "n": 560,
+   "n_dis": 280,
+   "share": 95.36,
+   "base": 87.81,
+   "d": 267,
+   "o": 13
+  }
+ },
+ "rubric_fixed": {
+  "gpt-5": [
+   66.25,
+   71.25
+  ],
+  "claude-opus-4.7": [
+   30.0,
+   NaN
+  ],
+  "gemini-3.1-pro": [
+   65.0,
+   65.0
+  ],
+  "llama-4-maverick": [
+   87.5,
+   83.75
+  ]
+ },
+ "self": {
+  "JA": {
+   "gpt-5": 78.75,
+   "claude-opus-4.7": 21.25,
+   "gemini-3.1-pro": 51.25,
+   "llama-4-maverick": 62.5,
+   "qwen3.5-27b": 76.25,
+   "qwen3.5-122b": 82.5,
+   "gemma-4-31b": 72.5
+  },
+  "EN": {
+   "gpt-5": 53.75,
+   "claude-opus-4.7": 30.0,
+   "gemini-3.1-pro": 47.5,
+   "llama-4-maverick": 61.25,
+   "qwen3.5-27b": 60.0,
+   "qwen3.5-122b": 66.25,
+   "gemma-4-31b": 51.25
+  }
+ },
+ "perm": {
+  "bh": 11,
+  "bonf": 10,
+  "bh2": 11,
+  "bonf2": 10
+ }
+}

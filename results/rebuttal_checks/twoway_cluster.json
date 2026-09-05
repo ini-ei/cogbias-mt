@@ -5,131 +5,227 @@
   {
    "pair": "GPT-5.4-Opus4.7",
    "lang": "JA",
-   "excess_pp": 2.4,
+   "excess_pp": 7.71,
    "twoway_ci_pp": [
-    -4.2,
-    10.19
-   ]
+    4.29,
+    11.59
+   ],
+   "bonferroni_ci_pp": [
+    3.19,
+    14.12
+   ],
+   "p_boot": 0.0,
+   "bh_q": 0.0,
+   "bh_reject": true,
+   "bonferroni_reject": true
   },
   {
    "pair": "GPT-5.4-Gemini3.1",
    "lang": "JA",
-   "excess_pp": 8.59,
+   "excess_pp": 10.35,
    "twoway_ci_pp": [
-    4.88,
-    12.97
-   ]
+    5.98,
+    15.25
+   ],
+   "bonferroni_ci_pp": [
+    4.53,
+    17.87
+   ],
+   "p_boot": 0.0,
+   "bh_q": 0.0,
+   "bh_reject": true,
+   "bonferroni_reject": true
   },
   {
    "pair": "GPT-5.4-LLaMA4",
    "lang": "JA",
-   "excess_pp": 5.61,
+   "excess_pp": 4.96,
    "twoway_ci_pp": [
-    2.62,
-    9.19
-   ]
+    2.64,
+    7.54
+   ],
+   "bonferroni_ci_pp": [
+    1.49,
+    9.18
+   ],
+   "p_boot": 0.0,
+   "bh_q": 0.0,
+   "bh_reject": true,
+   "bonferroni_reject": true
   },
   {
    "pair": "Opus4.7-Gemini3.1",
    "lang": "JA",
-   "excess_pp": 2.78,
+   "excess_pp": 12.17,
    "twoway_ci_pp": [
-    0.18,
-    17.71
-   ]
+    1.06,
+    20.72
+   ],
+   "bonferroni_ci_pp": [
+    0.0,
+    25.28
+   ],
+   "p_boot": 0.0041,
+   "bh_q": 0.00492,
+   "bh_reject": true,
+   "bonferroni_reject": false
   },
   {
    "pair": "Opus4.7-LLaMA4",
    "lang": "JA",
-   "excess_pp": 5.77,
+   "excess_pp": 7.82,
    "twoway_ci_pp": [
-    0.32,
-    13.02
-   ]
+    1.29,
+    14.36
+   ],
+   "bonferroni_ci_pp": [
+    0.12,
+    19.11
+   ],
+   "p_boot": 0.0018,
+   "bh_q": 0.0024,
+   "bh_reject": true,
+   "bonferroni_reject": true
   },
   {
    "pair": "Gemini3.1-LLaMA4",
    "lang": "JA",
-   "excess_pp": 6.72,
+   "excess_pp": 9.88,
    "twoway_ci_pp": [
-    0.51,
-    14.53
-   ]
+    4.22,
+    15.4
+   ],
+   "bonferroni_ci_pp": [
+    2.02,
+    19.43
+   ],
+   "p_boot": 0.0,
+   "bh_q": 0.0,
+   "bh_reject": true,
+   "bonferroni_reject": true
   },
   {
    "pair": "GPT-5.4-Opus4.7",
    "lang": "EN",
-   "excess_pp": 8.5,
+   "excess_pp": 14.36,
    "twoway_ci_pp": [
-    1.09,
-    17.41
-   ]
+    7.99,
+    21.1
+   ],
+   "bonferroni_ci_pp": [
+    5.35,
+    25.06
+   ],
+   "p_boot": 0.0,
+   "bh_q": 0.0,
+   "bh_reject": true,
+   "bonferroni_reject": true
   },
   {
    "pair": "GPT-5.4-Gemini3.1",
    "lang": "EN",
-   "excess_pp": 6.39,
+   "excess_pp": 12.37,
    "twoway_ci_pp": [
-    2.55,
-    11.21
-   ]
+    7.39,
+    17.21
+   ],
+   "bonferroni_ci_pp": [
+    5.15,
+    19.86
+   ],
+   "p_boot": 0.0,
+   "bh_q": 0.0,
+   "bh_reject": true,
+   "bonferroni_reject": true
   },
   {
    "pair": "GPT-5.4-LLaMA4",
    "lang": "EN",
-   "excess_pp": 15.45,
+   "excess_pp": 15.22,
    "twoway_ci_pp": [
-    8.31,
-    21.54
-   ]
+    8.56,
+    21.12
+   ],
+   "bonferroni_ci_pp": [
+    5.34,
+    24.27
+   ],
+   "p_boot": 0.0,
+   "bh_q": 0.0,
+   "bh_reject": true,
+   "bonferroni_reject": true
   },
   {
    "pair": "Opus4.7-Gemini3.1",
    "lang": "EN",
-   "excess_pp": 10.53,
+   "excess_pp": 7.41,
    "twoway_ci_pp": [
-    0.65,
-    21.51
-   ]
+    0.39,
+    25.1
+   ],
+   "bonferroni_ci_pp": [
+    0.0,
+    34.64
+   ],
+   "p_boot": 0.0195,
+   "bh_q": 0.0195,
+   "bh_reject": true,
+   "bonferroni_reject": false
   },
   {
    "pair": "Opus4.7-LLaMA4",
    "lang": "EN",
-   "excess_pp": 8.6,
+   "excess_pp": 8.72,
    "twoway_ci_pp": [
-    0.57,
-    16.92
-   ]
+    0.59,
+    19.21
+   ],
+   "bonferroni_ci_pp": [
+    0.0,
+    25.5
+   ],
+   "p_boot": 0.0089,
+   "bh_q": 0.00971,
+   "bh_reject": true,
+   "bonferroni_reject": false
   },
   {
    "pair": "Gemini3.1-LLaMA4",
    "lang": "EN",
-   "excess_pp": 13.18,
+   "excess_pp": 11.67,
    "twoway_ci_pp": [
-    4.33,
-    21.91
-   ]
+    2.77,
+    21.77
+   ],
+   "bonferroni_ci_pp": [
+    0.4,
+    28.5
+   ],
+   "p_boot": 0.0014,
+   "bh_q": 0.0021,
+   "bh_reject": true,
+   "bonferroni_reject": true
   }
  ],
  "mixed": {
   "GPT-Opus_JA": {
-   "n": 330,
-   "mean_gpt_side": 0.9242,
-   "intercept": 0.923,
-   "p_gpt_side": 0.7157,
+   "n": 308,
+   "mean_gpt_side": 1.0,
+   "intercept": 1.0,
+   "p_gpt_side": 0.7311,
    "p_ci": [
-    0.7094,
-    0.7219
+    NaN,
+    NaN
    ]
   },
   "GPT-Opus_EN": {
-   "n": 208,
-   "mean_gpt_side": 0.9567,
-   "intercept": 0.957,
-   "p_gpt_side": 0.7225,
+   "n": 191,
+   "mean_gpt_side": 0.9948,
+   "intercept": 0.985,
+   "p_gpt_side": 0.7281,
    "p_ci": [
-    0.7169,
-    0.728
+    0.7248,
+    0.7315
    ]
   }
  }
