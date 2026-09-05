@@ -99,7 +99,7 @@ class RobustJudge:
 def evaluator_from_path(path):
     # 被験名（ファイル名）ではなく judge ディレクトリ名で判定する
     d = os.path.basename(os.path.dirname(path))
-    if d == "cross_eval_claude_rubric_n80": return "claude-4-sonnet"
+    if d in ("cross_eval_claude_rubric_n80", "cross_eval_claude_n80", "cross_eval_claude_open", "cross_eval_claude_en", "cross_eval_claude_en_open"): return "claude-4-sonnet"
     if d in ("cross_eval_claude_rubric_opus_n80", "cross_eval_claude_rubric_opus_open"): return "claude-opus-4.7"
     if "gpt5" in d: return "gpt-5"
     if "claude_opus" in d or d.startswith("cross_eval_opus_q8"): return "claude-opus-4.7"
