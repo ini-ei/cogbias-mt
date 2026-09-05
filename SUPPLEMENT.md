@@ -38,8 +38,9 @@ gives the two-sided p; the reject counts below are identical under either
 convention). Bonferroni and Benjamini–Hochberg (BH) corrections over the family
 of 12. Source: `results/rebuttal_checks/cluster_checks.json` (script
 `scripts/aggregation/rebuttal_cluster_checks.py`). All values in S1–S5, S9,
-S11, S13–S14, S17, S19–S22 and S24 are from the camera-ready record set
-(see S8b for the records re-run during revision).
+S11, S13–S14, S17, S19–S22, S24 and S25 are from the camera-ready record set
+(see S8b for the records re-run during revision; all three defects corrected
+there had biased the submitted records toward "not biased").
 
 | Pair | Lang | n_disagree | dominant side | share | perm *p* | Bonferroni *q* | BH *q* | reject @0.05 (BH) |
 |:--|:--|--:|:--|--:|--:|--:|--:|:--:|
