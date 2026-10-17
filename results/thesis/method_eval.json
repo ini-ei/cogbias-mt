@@ -1,0 +1,946 @@
+{
+ "JA_T2": {
+  "M0_raw": {
+   "per_subject_range": {
+    "mean": 27.0,
+    "ci": [
+     23.6,
+     30.7
+    ]
+   },
+   "judge_spread": {
+    "mean": 32.7,
+    "ci": [
+     28.7,
+     37.5
+    ]
+   },
+   "panel_swing": {
+    "mean": 11.9,
+    "ci": [
+     10.5,
+     13.5
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.718,
+    "ci": [
+     0.53,
+     0.878
+    ]
+   }
+  },
+  "M1_latent": {
+   "per_subject_range": {
+    "mean": 15.2,
+    "ci": [
+     11.1,
+     19.8
+    ]
+   },
+   "judge_spread": {
+    "mean": 13.5,
+    "ci": [
+     6.6,
+     19.8
+    ]
+   },
+   "panel_swing": {
+    "mean": 6.6,
+    "ci": [
+     4.7,
+     8.6
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.718,
+    "ci": [
+     0.53,
+     0.878
+    ]
+   }
+  },
+  "M2_conf": {
+   "per_subject_range": {
+    "mean": 13.9,
+    "ci": [
+     10.3,
+     19.3
+    ]
+   },
+   "judge_spread": {
+    "mean": 17.2,
+    "ci": [
+     12.9,
+     24.6
+    ]
+   },
+   "panel_swing": {
+    "mean": 6.3,
+    "ci": [
+     4.6,
+     8.7
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.768,
+    "ci": [
+     0.608,
+     0.912
+    ]
+   }
+  },
+  "M3_conf_latent": {
+   "per_subject_range": {
+    "mean": 13.5,
+    "ci": [
+     9.5,
+     18.7
+    ]
+   },
+   "judge_spread": {
+    "mean": 11.2,
+    "ci": [
+     3.8,
+     18.2
+    ]
+   },
+   "panel_swing": {
+    "mean": 5.9,
+    "ci": [
+     4.2,
+     8.0
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.768,
+    "ci": [
+     0.608,
+     0.907
+    ]
+   }
+  },
+  "M4_meanshift": {
+   "per_subject_range": {
+    "mean": 14.0,
+    "ci": [
+     9.9,
+     18.5
+    ]
+   },
+   "judge_spread": {
+    "mean": 6.7,
+    "ci": [
+     2.1,
+     13.8
+    ]
+   },
+   "panel_swing": {
+    "mean": 6.0,
+    "ci": [
+     4.3,
+     7.8
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.718,
+    "ci": [
+     0.53,
+     0.878
+    ]
+   }
+  },
+  "M5_conf_meanshift": {
+   "per_subject_range": {
+    "mean": 12.5,
+    "ci": [
+     8.2,
+     16.7
+    ]
+   },
+   "judge_spread": {
+    "mean": 5.9,
+    "ci": [
+     1.7,
+     11.7
+    ]
+   },
+   "panel_swing": {
+    "mean": 5.3,
+    "ci": [
+     3.6,
+     7.1
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.768,
+    "ci": [
+     0.608,
+     0.912
+    ]
+   }
+  },
+  "M6_zhang": {
+   "per_subject_range": {
+    "mean": 15.9,
+    "ci": [
+     11.5,
+     21.1
+    ]
+   },
+   "judge_spread": {
+    "mean": 13.4,
+    "ci": [
+     5.3,
+     21.9
+    ]
+   },
+   "panel_swing": {
+    "mean": 6.9,
+    "ci": [
+     4.9,
+     9.0
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.718,
+    "ci": [
+     0.53,
+     0.878
+    ]
+   }
+  },
+  "tau_median": {
+   "GPT-5.4": 0.9,
+   "Opus4.7": 0.5,
+   "Gemini3.1": 0.5,
+   "LLaMA4": 0.5
+  },
+  "zhang_rates_median": {
+   "GPT-5.4": {
+    "tpr": 100.0,
+    "fpr": 48.0
+   },
+   "Opus4.7": {
+    "tpr": 87.7,
+    "fpr": 6.4
+   },
+   "Gemini3.1": {
+    "tpr": 94.7,
+    "fpr": 8.2
+   },
+   "LLaMA4": {
+    "tpr": 77.3,
+    "fpr": 5.2
+   }
+  }
+ },
+ "JA_T4": {
+  "M0_raw": {
+   "per_subject_range": {
+    "mean": 57.2,
+    "ci": [
+     52.1,
+     61.8
+    ]
+   },
+   "judge_spread": {
+    "mean": 64.5,
+    "ci": [
+     58.3,
+     69.2
+    ]
+   },
+   "panel_swing": {
+    "mean": 24.1,
+    "ci": [
+     22.0,
+     26.0
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.577,
+    "ci": [
+     0.241,
+     0.862
+    ]
+   }
+  },
+  "M1_latent": {
+   "per_subject_range": {
+    "mean": 31.6,
+    "ci": [
+     21.7,
+     42.0
+    ]
+   },
+   "judge_spread": {
+    "mean": 19.8,
+    "ci": [
+     6.1,
+     37.0
+    ]
+   },
+   "panel_swing": {
+    "mean": 13.6,
+    "ci": [
+     9.7,
+     18.1
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.578,
+    "ci": [
+     0.241,
+     0.864
+    ]
+   }
+  },
+  "M2_conf": {
+   "per_subject_range": {
+    "mean": 18.1,
+    "ci": [
+     12.5,
+     23.2
+    ]
+   },
+   "judge_spread": {
+    "mean": 15.3,
+    "ci": [
+     9.6,
+     21.2
+    ]
+   },
+   "panel_swing": {
+    "mean": 7.8,
+    "ci": [
+     5.4,
+     10.1
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.664,
+    "ci": [
+     0.352,
+     0.929
+    ]
+   }
+  },
+  "M3_conf_latent": {
+   "per_subject_range": {
+    "mean": 21.9,
+    "ci": [
+     14.0,
+     35.2
+    ]
+   },
+   "judge_spread": {
+    "mean": 14.6,
+    "ci": [
+     4.5,
+     32.6
+    ]
+   },
+   "panel_swing": {
+    "mean": 9.2,
+    "ci": [
+     5.8,
+     14.1
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.665,
+    "ci": [
+     0.351,
+     0.912
+    ]
+   }
+  },
+  "M4_meanshift": {
+   "per_subject_range": {
+    "mean": 15.9,
+    "ci": [
+     12.3,
+     20.2
+    ]
+   },
+   "judge_spread": {
+    "mean": 8.7,
+    "ci": [
+     2.5,
+     17.9
+    ]
+   },
+   "panel_swing": {
+    "mean": 6.9,
+    "ci": [
+     5.3,
+     8.7
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.577,
+    "ci": [
+     0.241,
+     0.862
+    ]
+   }
+  },
+  "M5_conf_meanshift": {
+   "per_subject_range": {
+    "mean": 13.6,
+    "ci": [
+     9.4,
+     18.2
+    ]
+   },
+   "judge_spread": {
+    "mean": 8.4,
+    "ci": [
+     2.5,
+     17.1
+    ]
+   },
+   "panel_swing": {
+    "mean": 5.8,
+    "ci": [
+     4.2,
+     7.8
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.664,
+    "ci": [
+     0.352,
+     0.929
+    ]
+   }
+  },
+  "M6_zhang": {
+   "per_subject_range": {
+    "mean": 35.2,
+    "ci": [
+     23.9,
+     49.7
+    ]
+   },
+   "judge_spread": {
+    "mean": 24.3,
+    "ci": [
+     9.6,
+     43.9
+    ]
+   },
+   "panel_swing": {
+    "mean": 15.0,
+    "ci": [
+     10.2,
+     20.6
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.577,
+    "ci": [
+     0.236,
+     0.857
+    ]
+   }
+  },
+  "tau_median": {
+   "GPT-5.4": 0.9,
+   "Opus4.7": 0.5,
+   "Gemini3.1": 0.5,
+   "LLaMA4": 0.5
+  },
+  "zhang_rates_median": {
+   "GPT-5.4": {
+    "tpr": 100.0,
+    "fpr": 75.1
+   },
+   "Opus4.7": {
+    "tpr": 53.2,
+    "fpr": 5.3
+   },
+   "Gemini3.1": {
+    "tpr": 72.0,
+    "fpr": 11.8
+   },
+   "LLaMA4": {
+    "tpr": 39.1,
+    "fpr": 7.1
+   }
+  }
+ },
+ "EN_T2": {
+  "M0_raw": {
+   "per_subject_range": {
+    "mean": 17.2,
+    "ci": [
+     13.9,
+     20.7
+    ]
+   },
+   "judge_spread": {
+    "mean": 20.1,
+    "ci": [
+     15.8,
+     24.2
+    ]
+   },
+   "panel_swing": {
+    "mean": 7.2,
+    "ci": [
+     6.0,
+     8.7
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.859,
+    "ci": [
+     0.727,
+     0.953
+    ]
+   }
+  },
+  "M1_latent": {
+   "per_subject_range": {
+    "mean": 11.5,
+    "ci": [
+     8.3,
+     15.7
+    ]
+   },
+   "judge_spread": {
+    "mean": 9.6,
+    "ci": [
+     3.9,
+     16.4
+    ]
+   },
+   "panel_swing": {
+    "mean": 5.0,
+    "ci": [
+     3.6,
+     6.7
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.859,
+    "ci": [
+     0.727,
+     0.953
+    ]
+   }
+  },
+  "M2_conf": {
+   "per_subject_range": {
+    "mean": 8.5,
+    "ci": [
+     5.4,
+     12.1
+    ]
+   },
+   "judge_spread": {
+    "mean": 8.5,
+    "ci": [
+     5.0,
+     12.1
+    ]
+   },
+   "panel_swing": {
+    "mean": 3.7,
+    "ci": [
+     2.3,
+     5.1
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.869,
+    "ci": [
+     0.724,
+     0.966
+    ]
+   }
+  },
+  "M3_conf_latent": {
+   "per_subject_range": {
+    "mean": 8.9,
+    "ci": [
+     6.5,
+     12.0
+    ]
+   },
+   "judge_spread": {
+    "mean": 9.1,
+    "ci": [
+     3.9,
+     15.7
+    ]
+   },
+   "panel_swing": {
+    "mean": 3.9,
+    "ci": [
+     2.8,
+     5.2
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.869,
+    "ci": [
+     0.724,
+     0.966
+    ]
+   }
+  },
+  "M4_meanshift": {
+   "per_subject_range": {
+    "mean": 11.1,
+    "ci": [
+     7.4,
+     15.1
+    ]
+   },
+   "judge_spread": {
+    "mean": 5.8,
+    "ci": [
+     1.7,
+     10.8
+    ]
+   },
+   "panel_swing": {
+    "mean": 4.8,
+    "ci": [
+     3.3,
+     6.6
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.859,
+    "ci": [
+     0.727,
+     0.953
+    ]
+   }
+  },
+  "M5_conf_meanshift": {
+   "per_subject_range": {
+    "mean": 10.2,
+    "ci": [
+     6.7,
+     13.8
+    ]
+   },
+   "judge_spread": {
+    "mean": 5.0,
+    "ci": [
+     1.7,
+     9.2
+    ]
+   },
+   "panel_swing": {
+    "mean": 4.5,
+    "ci": [
+     3.0,
+     6.0
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.869,
+    "ci": [
+     0.724,
+     0.966
+    ]
+   }
+  },
+  "M6_zhang": {
+   "per_subject_range": {
+    "mean": 12.2,
+    "ci": [
+     9.0,
+     16.0
+    ]
+   },
+   "judge_spread": {
+    "mean": 10.1,
+    "ci": [
+     4.2,
+     17.5
+    ]
+   },
+   "panel_swing": {
+    "mean": 5.3,
+    "ci": [
+     3.8,
+     7.1
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.859,
+    "ci": [
+     0.727,
+     0.953
+    ]
+   }
+  },
+  "tau_median": {
+   "GPT-5.4": 0.9,
+   "Opus4.7": 0.75,
+   "Gemini3.1": 0.5,
+   "LLaMA4": 0.5
+  },
+  "zhang_rates_median": {
+   "GPT-5.4": {
+    "tpr": 100.0,
+    "fpr": 29.0
+   },
+   "Opus4.7": {
+    "tpr": 89.7,
+    "fpr": 3.6
+   },
+   "Gemini3.1": {
+    "tpr": 92.1,
+    "fpr": 3.1
+   },
+   "LLaMA4": {
+    "tpr": 87.7,
+    "fpr": 4.8
+   }
+  }
+ },
+ "EN_T4": {
+  "M0_raw": {
+   "per_subject_range": {
+    "mean": 35.8,
+    "ci": [
+     30.3,
+     41.8
+    ]
+   },
+   "judge_spread": {
+    "mean": 43.7,
+    "ci": [
+     37.1,
+     50.4
+    ]
+   },
+   "panel_swing": {
+    "mean": 14.8,
+    "ci": [
+     12.4,
+     17.1
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.738,
+    "ci": [
+     0.55,
+     0.907
+    ]
+   }
+  },
+  "M1_latent": {
+   "per_subject_range": {
+    "mean": 18.6,
+    "ci": [
+     12.8,
+     28.3
+    ]
+   },
+   "judge_spread": {
+    "mean": 15.0,
+    "ci": [
+     4.6,
+     28.7
+    ]
+   },
+   "panel_swing": {
+    "mean": 7.5,
+    "ci": [
+     5.1,
+     11.3
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.738,
+    "ci": [
+     0.549,
+     0.906
+    ]
+   }
+  },
+  "M2_conf": {
+   "per_subject_range": {
+    "mean": 9.9,
+    "ci": [
+     6.8,
+     17.2
+    ]
+   },
+   "judge_spread": {
+    "mean": 9.9,
+    "ci": [
+     5.4,
+     19.2
+    ]
+   },
+   "panel_swing": {
+    "mean": 4.0,
+    "ci": [
+     2.7,
+     6.9
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.762,
+    "ci": [
+     0.422,
+     0.941
+    ]
+   }
+  },
+  "M3_conf_latent": {
+   "per_subject_range": {
+    "mean": 14.0,
+    "ci": [
+     8.4,
+     23.0
+    ]
+   },
+   "judge_spread": {
+    "mean": 10.9,
+    "ci": [
+     2.9,
+     23.3
+    ]
+   },
+   "panel_swing": {
+    "mean": 5.7,
+    "ci": [
+     3.5,
+     9.3
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.761,
+    "ci": [
+     0.424,
+     0.937
+    ]
+   }
+  },
+  "M4_meanshift": {
+   "per_subject_range": {
+    "mean": 13.7,
+    "ci": [
+     10.4,
+     18.9
+    ]
+   },
+   "judge_spread": {
+    "mean": 8.2,
+    "ci": [
+     2.5,
+     17.0
+    ]
+   },
+   "panel_swing": {
+    "mean": 5.9,
+    "ci": [
+     4.4,
+     7.9
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.738,
+    "ci": [
+     0.55,
+     0.907
+    ]
+   }
+  },
+  "M5_conf_meanshift": {
+   "per_subject_range": {
+    "mean": 10.1,
+    "ci": [
+     7.4,
+     14.1
+    ]
+   },
+   "judge_spread": {
+    "mean": 5.6,
+    "ci": [
+     1.7,
+     13.1
+    ]
+   },
+   "panel_swing": {
+    "mean": 4.2,
+    "ci": [
+     3.1,
+     5.9
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.761,
+    "ci": [
+     0.422,
+     0.941
+    ]
+   }
+  },
+  "M6_zhang": {
+   "per_subject_range": {
+    "mean": 19.4,
+    "ci": [
+     12.2,
+     33.0
+    ]
+   },
+   "judge_spread": {
+    "mean": 14.1,
+    "ci": [
+     3.9,
+     29.9
+    ]
+   },
+   "panel_swing": {
+    "mean": 7.6,
+    "ci": [
+     4.8,
+     12.5
+    ]
+   },
+   "rank_agreement": {
+    "mean": 0.734,
+    "ci": [
+     0.516,
+     0.909
+    ]
+   }
+  },
+  "tau_median": {
+   "GPT-5.4": 0.95,
+   "Opus4.7": 0.5,
+   "Gemini3.1": 0.5,
+   "LLaMA4": 0.75
+  },
+  "zhang_rates_median": {
+   "GPT-5.4": {
+    "tpr": 100.0,
+    "fpr": 41.9
+   },
+   "Opus4.7": {
+    "tpr": 54.3,
+    "fpr": 3.7
+   },
+   "Gemini3.1": {
+    "tpr": 44.2,
+    "fpr": 1.1
+   },
+   "LLaMA4": {
+    "tpr": 65.9,
+    "fpr": 8.1
+   }
+  }
+ }
+}

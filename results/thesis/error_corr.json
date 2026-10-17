@@ -1,0 +1,198 @@
+{
+ "JA_T2": {
+  "pairs": {
+   "GPT-5.4-Opus4.7": {
+    "phi_error": -0.119,
+    "r_judgment": 0.521,
+    "n": 400,
+    "err_rate_a": 0.133,
+    "err_rate_b": 0.085
+   },
+   "GPT-5.4-Gemini3.1": {
+    "phi_error": 0.267,
+    "r_judgment": 0.68,
+    "n": 400,
+    "err_rate_a": 0.158,
+    "err_rate_b": 0.052
+   },
+   "GPT-5.4-LLaMA4": {
+    "phi_error": -0.087,
+    "r_judgment": 0.495,
+    "n": 400,
+    "err_rate_a": 0.198,
+    "err_rate_b": 0.12
+   },
+   "Opus4.7-Gemini3.1": {
+    "phi_error": -0.054,
+    "r_judgment": 0.743,
+    "n": 400,
+    "err_rate_a": 0.08,
+    "err_rate_b": 0.033
+   },
+   "Opus4.7-LLaMA4": {
+    "phi_error": 0.161,
+    "r_judgment": 0.677,
+    "n": 400,
+    "err_rate_a": 0.05,
+    "err_rate_b": 0.15
+   },
+   "Gemini3.1-LLaMA4": {
+    "phi_error": 0.032,
+    "r_judgment": 0.693,
+    "n": 400,
+    "err_rate_a": 0.062,
+    "err_rate_b": 0.12
+   }
+  },
+  "mean_phi_error": 0.033,
+  "mean_phi_clipped": 0.077,
+  "n_eff": 3.25
+ },
+ "JA_T4": {
+  "pairs": {
+   "GPT-5.4-Opus4.7": {
+    "phi_error": -0.363,
+    "r_judgment": 0.284,
+    "n": 400,
+    "err_rate_a": 0.345,
+    "err_rate_b": 0.2
+   },
+   "GPT-5.4-Gemini3.1": {
+    "phi_error": -0.245,
+    "r_judgment": 0.317,
+    "n": 400,
+    "err_rate_a": 0.407,
+    "err_rate_b": 0.08
+   },
+   "GPT-5.4-LLaMA4": {
+    "phi_error": -0.453,
+    "r_judgment": 0.216,
+    "n": 400,
+    "err_rate_a": 0.417,
+    "err_rate_b": 0.223
+   },
+   "Opus4.7-Gemini3.1": {
+    "phi_error": 0.218,
+    "r_judgment": 0.565,
+    "n": 400,
+    "err_rate_a": 0.19,
+    "err_rate_b": 0.085
+   },
+   "Opus4.7-LLaMA4": {
+    "phi_error": 0.231,
+    "r_judgment": 0.379,
+    "n": 400,
+    "err_rate_a": 0.145,
+    "err_rate_b": 0.242
+   },
+   "Gemini3.1-LLaMA4": {
+    "phi_error": 0.104,
+    "r_judgment": 0.367,
+    "n": 400,
+    "err_rate_a": 0.083,
+    "err_rate_b": 0.22
+   }
+  },
+  "mean_phi_error": -0.085,
+  "mean_phi_clipped": 0.092,
+  "n_eff": 3.13
+ },
+ "EN_T2": {
+  "pairs": {
+   "GPT-5.4-Opus4.7": {
+    "phi_error": -0.097,
+    "r_judgment": 0.658,
+    "n": 400,
+    "err_rate_a": 0.115,
+    "err_rate_b": 0.068
+   },
+   "GPT-5.4-Gemini3.1": {
+    "phi_error": -0.062,
+    "r_judgment": 0.763,
+    "n": 400,
+    "err_rate_a": 0.09,
+    "err_rate_b": 0.037
+   },
+   "GPT-5.4-LLaMA4": {
+    "phi_error": -0.045,
+    "r_judgment": 0.687,
+    "n": 400,
+    "err_rate_a": 0.11,
+    "err_rate_b": 0.08
+   },
+   "Opus4.7-Gemini3.1": {
+    "phi_error": 0.112,
+    "r_judgment": 0.827,
+    "n": 400,
+    "err_rate_a": 0.062,
+    "err_rate_b": 0.037
+   },
+   "Opus4.7-LLaMA4": {
+    "phi_error": 0.196,
+    "r_judgment": 0.809,
+    "n": 400,
+    "err_rate_a": 0.05,
+    "err_rate_b": 0.075
+   },
+   "Gemini3.1-LLaMA4": {
+    "phi_error": 0.072,
+    "r_judgment": 0.78,
+    "n": 400,
+    "err_rate_a": 0.043,
+    "err_rate_b": 0.083
+   }
+  },
+  "mean_phi_error": 0.029,
+  "mean_phi_clipped": 0.063,
+  "n_eff": 3.36
+ },
+ "EN_T4": {
+  "pairs": {
+   "GPT-5.4-Opus4.7": {
+    "phi_error": -0.223,
+    "r_judgment": 0.398,
+    "n": 400,
+    "err_rate_a": 0.273,
+    "err_rate_b": 0.117
+   },
+   "GPT-5.4-Gemini3.1": {
+    "phi_error": -0.215,
+    "r_judgment": 0.36,
+    "n": 400,
+    "err_rate_a": 0.263,
+    "err_rate_b": 0.115
+   },
+   "GPT-5.4-LLaMA4": {
+    "phi_error": -0.188,
+    "r_judgment": 0.397,
+    "n": 400,
+    "err_rate_a": 0.282,
+    "err_rate_b": 0.083
+   },
+   "Opus4.7-Gemini3.1": {
+    "phi_error": 0.463,
+    "r_judgment": 0.591,
+    "n": 400,
+    "err_rate_a": 0.08,
+    "err_rate_b": 0.107
+   },
+   "Opus4.7-LLaMA4": {
+    "phi_error": 0.009,
+    "r_judgment": 0.468,
+    "n": 400,
+    "err_rate_a": 0.115,
+    "err_rate_b": 0.08
+   },
+   "Gemini3.1-LLaMA4": {
+    "phi_error": 0.217,
+    "r_judgment": 0.475,
+    "n": 400,
+    "err_rate_a": 0.102,
+    "err_rate_b": 0.075
+   }
+  },
+  "mean_phi_error": 0.01,
+  "mean_phi_clipped": 0.115,
+  "n_eff": 2.98
+ }
+}

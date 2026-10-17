@@ -86,6 +86,19 @@ python scripts/generation/quality_check.py --input <new>.jsonl
 }
 ```
 
+## Thesis analyses (2026-10)
+
+The undergraduate thesis built on this benchmark (日英マルチターン認知バイアスベンチマーク CogBias-MT の構築と LLM-as-a-Judge における評価偏りの定量化・補正, Musashino University, 2027-01) adds label-free analyses of judge-induced evaluation bias. Scripts live in `scripts/aggregation/` and their outputs in `results/thesis/`; all of them run on the cached raw judgments after step 1 of `reproduce.sh` (no API calls).
+
+| Script | Output | What it computes |
+|---|---|---|
+| `thesis_gap_numbers.py` | `results/thesis/ja_en_gap.json` | JA−EN bias-rate gaps per subject / judge / bias type / domain with independent-language bootstrap CIs |
+| `thesis_latent_class.py` | `results/thesis/latent_class.json` | Dawid–Skene two-class latent-class model over the 4 panel judges (EM, problem bootstrap 1,000); judge sensitivity / false-positive rate against the latent class; Rogan–Gladen correction |
+| `thesis_latent_validation.py` | `results/thesis/latent_validation.json` | Checks of the model assumptions: leave-one-judge-out AUC, within-class correlations, pattern goodness-of-fit (parametric bootstrap), BIC comparisons (2 vs 3 classes, judge parameters by subject group / bias type), confidence-threshold analysis, JA−EN gap decomposition, judge-subset stability |
+| `thesis_error_corr.py` | `results/thesis/error_corr.json` | Pairwise error correlation (φ) of judges against the latent class and Kish effective number of judges |
+| `thesis_latent_dependence.py` | `results/thesis/latent_dependence.json` | Two-class model with a free within-class 2×2 joint for one judge pair (local dependence); BIC against the conditional-independence model for all 6 pairs |
+| `thesis_method_eval.py` | `results/thesis/method_eval.json` | Train/test (40/40 problems, 200 splits) comparison of correction methods M0–M6 on judge-invariance metrics (M5 = confidence thresholding + mean-shift, proposed; M6 = majority-vote-proxy estimation after Zhang et al. 2026, arXiv:2609.12002) |
+
 ## License
 
 - Code (`scripts/`): MIT

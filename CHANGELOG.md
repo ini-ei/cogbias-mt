@@ -1,5 +1,8 @@
 # CogBias-MT Changelog
 
+## v1.4 (2026-10-18)
+- Added the thesis analysis scripts (`scripts/aggregation/thesis_*.py`) and their outputs (`results/thesis/*.json`): latent-class estimation of judge sensitivity / false-positive rate without human labels, assumption checks (LOJO, goodness-of-fit, BIC, local-dependence model, error correlation / effective judge count), confidence-threshold correction, train/test comparison of correction methods M0–M6, and JA−EN gap decomposition. No change to the benchmark data or to the paper's numbers.
+
 ## v0.2 (2026-06-12)
 - **Added missing raw judgments for the Claude Opus 4.7 evaluator** to
   `results/raw/ja_cross_eval_n80.tar.gz` (`cross_eval_claude_opus_n80/`, 7 subjects × 80)
