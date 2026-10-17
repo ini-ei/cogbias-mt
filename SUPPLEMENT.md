@@ -160,22 +160,32 @@ not an artifact of treating π as known.
 The narrowest margins are the EN Opus–Gemini and Opus–LLaMA cells, whose lower
 bounds sit just above zero.
 
-**Multiplicity adjustment.** The CIs above are per-combination. Two adjusted
-views (both from the same seed-42 bootstrap):
+**Multiplicity adjustment.** The CIs above are per-combination. Adjusted views
+(from the same seed-42 bootstrap):
 
-- **BH-FDR (α = 0.05)** on one-sided bootstrap *p*-values (share of resamples
-  at or below zero; `results/rebuttal_checks/twoway_bh.json`): **12 of 12**
-  reject (largest *q* = 0.020, EN Opus–Gemini). This matches the procedure used
-  for the raw directional asymmetry (S1) and is the primary adjusted view.
 - **Bonferroni-adjusted percentile CIs** (α/12, the [0.208%, 99.792%] quantiles;
   `twoway_bonferroni.json`): **9 of 12** remain above zero; the three that touch
   zero are JA Opus–Gemini, EN Opus–Gemini, and EN Opus–LLaMA, the three cells
   with the fewest disagreements (51–97). Bonferroni is conservative here given
   the dependence among the 12 tests (shared subjects and judges).
+- *(Withdrawn 2026-09-25.)* An earlier version of this section also reported a
+  BH-FDR count (12/12) computed on the share of resamples at or below zero,
+  calling that share a "one-sided bootstrap *p*-value". That share is a
+  descriptive tail proportion (as the paper's §III states), not a *p*-value
+  from a null-centred distribution, so the BH count is withdrawn;
+  `twoway_bh.json` is retained only for reproducibility of the old table.
+
+**Method sensitivity (extended analyses, S26; `arxiv_extended.json`).**
+Basic (reflected) and normal two-way intervals include zero for EN Opus–Gemini
+and EN Opus–LLaMA (10/12 above zero); problem-only and subject-only cluster
+intervals and every leave-one-subject-out estimate stay positive in 12/12; a
+Mantel–Haenszel test of within-cell association stratified by problem (80
+strata) or by subject (7 strata) rejects conditional independence in 12/12
+after Bonferroni. See S26.
 
 The sign remains positive in all 12 under every view. The paper's main text
-reports the per-combination count (12/12) and states that no multiplicity-
-adjusted claim is made for the residual (§VI).
+reports the per-combination count (12/12) and states that the count is
+method-sensitive for the two smallest EN cells (see S26).
 
 ---
 
@@ -472,6 +482,7 @@ section number is kept so that cross-references stay valid.
 | S8 | `results/raw/*.tar.gz` | `scripts/evaluation/` |
 | S9 | `results/rebuttal_checks/cross_eval_rho.json` | `rebuttal_cross_eval_rho.py` |
 | S10 | — (interpretive note) | — |
+| S26 | `results/rebuttal_checks/arxiv_extended.json`, `arxiv_extended_stdout.txt` | `arxiv_stats_extended.py` |
 
 The JSON outputs under `results/rebuttal_checks/` and `results/forced_rubric/`
 are the authoritative, directly-verifiable values for S1–S6. The `rebuttal_*` /
@@ -699,7 +710,7 @@ Reading: GPT-5.4 is not stricter on the problems it authored; all four judges ar
 
 ## S23. Evaluation-temperature sensitivity (numbers)
 
-`results/aggregated/exp_evaluator_temp/`: 20 boundary problems × 4 frontier subjects × 2 turns = 80 verdicts per judge per temperature, Japanese, same prompt.
+`results/aggregated/exp_evaluator_temp/`: 10 boundary problems × 4 subjects × 2 turns = 80 verdicts per judge per temperature, Japanese, same prompt. (Corrected 2026-09-25: an earlier version of this line said "20 boundary problems × 4 frontier subjects"; the record files contain 10 distinct problem ids.) This pilot predates the final panel: the two judges are GPT-5.4 and Claude Sonnet 4.6 (Sonnet is **not** a panel member), and the four subjects are GPT-5.4, Claude Sonnet 4.6 (own responses), Gemini 3.1 Pro, and LLaMA 4 Maverick, i.e. the pilot subject set rather than the final one. Wilson 95% CIs: GPT-5.4 agreement 95.0% [87.8, 98.0] for every temperature pair; Sonnet 98.8% [93.3, 99.8] and 100% [95.4, 100].
 
 | Judge | BR at 0.0 / 0.3 / 0.7 | Agreement 0.0–0.3 | 0.0–0.7 | 0.3–0.7 |
 |:--|:--|--:|--:|--:|
@@ -767,3 +778,34 @@ Setup. The Qwen3.5-27B subject was re-run end to end with the Q8_0 GGUF (S8a; th
 | LLaMA 4 judge | 68.8 → 60.0 (−8.8) | 27.5 → 27.5 (+0.0) | 57.5 → 62.5 (+5.0) | 20.0 → 27.5 (+7.5) |
 
 Reading: across the eight judge-line cells the Q8_0 Bias rates stay within ±9pp (T2) and ±8pp (T4) of the Q4_K_M values with no consistent sign, and GPT-5.4 remains the strictest judge on this subject under both precisions (JA and EN). The Qwen3.5-122B-A10B model was not re-run because its higher-precision weights do not fit a single GPU in our environment. Judge cells whose verdict JSON failed to parse on the first call (24 of 1,280) were re-judged as in S8b.
+
+## S26. Extended statistical analyses (2026-09-25)
+
+These analyses extend the conference version; they are organized below as
+Appendices A–F following the authors' extended manuscript (not submitted to a
+preprint server). All quantities are produced by `scripts/aggregation/arxiv_stats_extended.py` (seed 42,
+10,000 bootstrap resamples, 100,000 permutations) and stored in
+`results/rebuttal_checks/arxiv_extended.json` (stdout copy:
+`arxiv_extended_stdout.txt`). No number of the conference version changes.
+
+| Appendix | Content | Key result |
+|:--|:--|:--|
+| A | Problem-cluster bootstrap 95% CIs for every headline number of §IV-A (JA, T2) | strictness GPT-5.4 80.4 [75.6, 85.0], Opus 63.5 [56.5, 70.4], Gemini 63.1 [56.5, 69.6], LLaMA 47.7 [41.5, 54.0]; spread 32.7 [27.9, 37.5]; Opus–Gemini difference +0.4 [−3.3, +4.2] (not separable); Opus 4.7 subject 5.0% (4/80, Wilson [2.0, 12.2]) vs 43.8% (35/80, [33.4, 54.7]), difference 38.8 [27.5, 50.0], ratio 8.8 [4.3, 35.0] (unstable, denominator 4); GPT-5.4 subject panel swing 15.4 [11.7, 19.2], same extreme panels in every resample |
+| B | κ, PABAK, Gwet AC1, prevalence index for all 12 T4 combinations | GPT pairs (JA): p_o 37–52%, prevalence index 0.03–0.12, PABAK/AC1 ≤ κ → low κ is genuine low agreement; non-GPT pairs: prevalence index 0.43–0.75, AC1 0.60–0.88 → κ understates agreement |
+| C | Residual: two-way percentile / basic / normal, problem-only, subject-only, LOSO range; Mantel–Haenszel by problem and by subject | percentile 12/12 > 0; basic 10/12; normal 10/12 (EN Opus–Gemini, EN Opus–LLaMA include zero); problem-only 12/12; subject-only 12/12; LOSO min > 0 12/12; MH 12/12 after Bonferroni under both stratifications |
+| D | Single-step max-T permutation (sign flips shared within language across the six pairs) for the 50:50 null | adjusted two-sided p < 0.05 in 10/12; exceptions EN Opus–Gemini (0.57) and EN Opus–LLaMA (0.14), the same two that fail Bonferroni |
+| E | Paired problem-bootstrap CIs for every Table III effect | rubric-fixed (Sonnet judge; subjects GPT-5.4, Sonnet own, Gemini, LLaMA): T2 Δ −5.0…+3.7, all CIs include zero (half-widths 3–9pp); reciprocal: global strictness Δ +1.0 [−1.0, +3.1], T4 falls for 5/7 with CIs excluding zero; generator version: GPT-5.4 Δ −15.0 [−24.2, −6.7], other judges' CIs include zero; quantization: all 16 per-cell CIs include zero, pooled T2 0.0 [−4.2, +4.2], T4 −1.4 [−5.6, +2.8]; temperature pilot Wilson CIs (S23) |
+| F | Sensitivity to the re-run regimes: exclude the 97 regenerated trajectories and every re-judged cell | dominant judge identical in 12/12, residual > 0 in 12/12; max share change 13.8pp (EN Gemini–LLaMA, d 79 → 39); JA strictness on remaining records 78.2 / 60.0 / 58.0 / 43.0 |
+
+Corrections recorded in this revision: S3 (BH count on bootstrap tail
+proportion withdrawn), S23 (10 not 20 boundary problems; pilot subject set and
+non-panel judge stated explicitly).
+
+**Erratum to the conference version, Sec. II-B (recorded 2026-10-17).** The
+sentence "the 160 retained problems average 4.85" has no supporting record.
+The recorded first-pass quality scores are: Japanese additional 40 problems,
+39 accepted, mean 4.93 (`results/phase5_v2/quality_report_additional_40.json`
+in the research repository); English 80 problems, 74 accepted, mean 4.48
+(`quality_report_en.json`). The figure 4.85 originates from an early draft
+table of per-criterion means over the first 40 Japanese problems and does not
+describe the 160-problem set.

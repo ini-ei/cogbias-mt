@@ -1,0 +1,165 @@
+/Users/cider/cognitive_bias_research/.venv/lib/python3.9/site-packages/statsmodels/stats/contingency_tables.py:1077: RuntimeWarning: divide by zero encountered in scalar divide
+  odds_ratio = np.sum(self._ad / self._n) / np.sum(self._bc / self._n)
+/Users/cider/cognitive_bias_research/.venv/lib/python3.9/site-packages/statsmodels/stats/contingency_tables.py:1119: RuntimeWarning: divide by zero encountered in scalar divide
+  mid /= (adns * bcns)
+/Users/cider/cognitive_bias_research/.venv/lib/python3.9/site-packages/statsmodels/stats/contingency_tables.py:1121: RuntimeWarning: invalid value encountered in scalar divide
+  lor_va += np.sum((1 - self._apd / self._n) *
+
+### A1. Global T2 strictness (JA), problem-cluster bootstrap 95% CI
+| GPT-5.4 | 80.4 | [75.6, 85.0] |
+| Opus 4.7 | 63.5 | [56.5, 70.4] |
+| Gemini 3.1 | 63.1 | [56.5, 69.6] |
+| LLaMA 4 | 47.7 | [41.5, 54.0] |
+spread 32.7 pp; CI (fixed strictest-lenient pair) [27.9, 37.5]; CI (max-min, selection-inclusive) [27.9, 37.5]
+  diff GPT-5.4-Opus4.7: +16.9 [+11.9, +22.1]
+  diff GPT-5.4-Gemini3.1: +17.3 [+12.3, +22.5]
+  diff GPT-5.4-LLaMA4: +32.7 [+27.9, +37.5]
+  diff Opus4.7-Gemini3.1: +0.4 [-3.3, +4.2]
+  diff Opus4.7-LLaMA4: +15.8 [+11.7, +20.0]
+  diff Gemini3.1-LLaMA4: +15.4 [+11.0, +19.8]
+
+### A2. Opus 4.7 subject (JA T2): LLaMA vs GPT judge
+{"n": 80, "llama": {"k": 4, "point": 5.0, "wilson": [2.0, 12.2]}, "gpt": {"k": 35, "point": 43.8, "wilson": [33.4, 54.7]}, "diff_pp": {"point": 38.8, "ci": [27.5, 50.0]}, "ratio": {"point": 8.8, "ci": [4.3, 35.0], "n_resamples_llama_zero": 155}, "mcnemar": {"g_only": 31, "l_only": 0}}
+
+### A3. GPT-5.4 subject (JA T2): panel swing
+{"n": 80, "per_line": {"self": 78.8, "Opus4.7": 51.2, "Gemini3.1": 52.5, "LLaMA4": 32.5}, "cross_range": {"point": 20.0, "ci": [11.2, 28.8]}, "panels": {"self+Opus4.7+Gemini3.1": 60.8, "self+Opus4.7+LLaMA4": 54.2, "self+Gemini3.1+LLaMA4": 54.6, "Opus4.7+Gemini3.1+LLaMA4": 45.4}, "swing": {"point": 15.4, "max_panel": "self+Opus4.7+Gemini3.1", "min_panel": "Opus4.7+Gemini3.1+LLaMA4", "ci_fixed_panels": [11.7, 19.2], "ci_max_minus_min": [11.7, 19.2]}}
+
+### B. Agreement statistics per combination (T4): κ, PABAK, Gwet AC1, prevalence index
+| GPT-5.4–Opus 4.7 | JA | po 45.0 | κ 0.15 | PABAK -0.10 | AC1 -0.10 | PI 0.04 | pA 79.6 pB 24.6 |
+| GPT-5.4–Gemini 3.1 | JA | po 52.0 | κ 0.21 | PABAK 0.04 | AC1 0.05 | PI 0.12 | pA 79.6 pB 32.0 |
+| GPT-5.4–LLaMA 4 | JA | po 37.3 | κ 0.10 | PABAK -0.25 | AC1 -0.25 | PI 0.03 | pA 79.6 pB 17.0 |
+| Opus 4.7–Gemini 3.1 | JA | po 82.7 | κ 0.58 | PABAK 0.65 | AC1 0.71 | PI 0.43 | pA 24.6 pB 32.0 |
+| Opus 4.7–LLaMA 4 | JA | po 80.2 | κ 0.40 | PABAK 0.60 | AC1 0.70 | PI 0.58 | pA 24.6 pB 17.0 |
+| Gemini 3.1–LLaMA 4 | JA | po 74.6 | κ 0.33 | PABAK 0.49 | AC1 0.60 | PI 0.51 | pA 32.0 pB 17.0 |
+| GPT-5.4–Opus 4.7 | EN | po 65.9 | κ 0.29 | PABAK 0.32 | AC1 0.41 | PI 0.39 | pA 47.3 pB 13.6 |
+| GPT-5.4–Gemini 3.1 | EN | po 63.9 | κ 0.25 | PABAK 0.28 | AC1 0.38 | PI 0.41 | pA 47.3 pB 11.2 |
+| GPT-5.4–LLaMA 4 | EN | po 68.0 | κ 0.34 | PABAK 0.36 | AC1 0.43 | PI 0.34 | pA 47.3 pB 18.6 |
+| Opus 4.7–Gemini 3.1 | EN | po 90.9 | κ 0.58 | PABAK 0.82 | AC1 0.88 | PI 0.75 | pA 13.6 pB 11.2 |
+| Opus 4.7–LLaMA 4 | EN | po 86.1 | κ 0.49 | PABAK 0.72 | AC1 0.81 | PI 0.68 | pA 13.6 pB 18.6 |
+| Gemini 3.1–LLaMA 4 | EN | po 85.9 | κ 0.45 | PABAK 0.72 | AC1 0.81 | PI 0.70 | pA 11.2 pB 18.6 |
+
+### C. Residual: CI method sensitivity and conditional (MH) association
+| pair | lang | resid | 2-way pct | 2-way basic | 2-way normal | problem-only | subject-only | LOSO min..max | MH OR|problem [CI] p | MH OR|subject [CI] p |
+| GPT-5.4–Opus 4.7 | JA | +7.7 | [+4.3, +11.7] | [+3.8, +11.1] | [+4.0, +11.4] | [+5.7, +9.9] | [+5.2, +10.4] | +6.8..+8.6 | inf [nan, nan] p=6.6e-06 | inf [nan, nan] p=2.1e-10 |
+| GPT-5.4–Gemini 3.1 | JA | +10.3 | [+6.0, +15.2] | [+5.5, +14.7] | [+5.7, +15.0] | [+7.9, +13.0] | [+7.2, +13.6] | +9.3..+11.8 | 26.5 [3.7, 189.58] p=8.9e-07 | 98.5 [11.33, 856.02] p=8.4e-15 |
+| GPT-5.4–LLaMA 4 | JA | +5.0 | [+2.6, +7.4] | [+2.5, +7.3] | [+2.6, +7.4] | [+3.5, +6.6] | [+3.1, +6.1] | +4.6..+5.7 | inf [nan, nan] p=1.6e-05 | inf [nan, nan] p=2.6e-06 |
+| Opus 4.7–Gemini 3.1 | JA | +12.2 | [+1.0, +20.9] | [+3.5, +23.3] | [+1.9, +22.4] | [+5.8, +18.6] | [+0.9, +17.0] | +7.4..+14.4 | 15.65 [7.23, 33.85] p=0 | 25.81 [14.57, 45.72] p=0 |
+| Opus 4.7–LLaMA 4 | JA | +7.8 | [+1.2, +14.4] | [+1.2, +14.4] | [+1.3, +14.3] | [+3.1, +12.5] | [+4.5, +10.5] | +6.8..+9.0 | 10.59 [4.96, 22.62] p=3.6e-12 | 6.81 [4.1, 11.3] p=8.9e-16 |
+| Gemini 3.1–LLaMA 4 | JA | +9.9 | [+4.3, +15.5] | [+4.3, +15.5] | [+4.3, +15.4] | [+6.4, +13.5] | [+6.9, +13.1] | +8.8..+11.2 | 10.65 [4.94, 22.93] p=5e-12 | 5.83 [3.5, 9.7] p=5.7e-13 |
+| GPT-5.4–Opus 4.7 | EN | +14.4 | [+7.9, +21.1] | [+7.6, +20.9] | [+7.8, +20.9] | [+10.7, +18.3] | [+9.7, +19.1] | +12.5..+15.9 | inf [nan, nan] p=9.4e-10 | 111.22 [13.6, 909.25] p=0 |
+| GPT-5.4–Gemini 3.1 | EN | +12.4 | [+7.4, +17.1] | [+7.6, +17.4] | [+7.4, +17.3] | [+8.6, +16.4] | [+10.1, +13.9] | +11.7..+13.0 | inf [nan, nan] p=2.3e-07 | inf [nan, nan] p=1.4e-13 |
+| GPT-5.4–LLaMA 4 | EN | +15.2 | [+8.3, +21.2] | [+9.2, +22.1] | [+8.8, +21.6] | [+10.7, +20.0] | [+11.2, +18.4] | +14.1..+16.7 | 14.5 [5.49, 38.3] p=3.8e-12 | 12.57 [5.98, 26.45] p=1e-15 |
+| Opus 4.7–Gemini 3.1 | EN | +7.4 | [+0.4, +25.7] | [-10.9, +14.5] | [-6.1, +21.0] | [+0.7, +15.9] | [+0.4, +22.6] | +1.5..+12.3 | 12.0 [4.74, 30.39] p=1.3e-12 | 28.39 [13.64, 59.1] p=0 |
+| Opus 4.7–LLaMA 4 | EN | +8.7 | [+0.6, +19.3] | [-1.9, +16.8] | [-1.1, +18.5] | [+1.9, +16.2] | [+1.8, +15.3] | +6.0..+10.5 | 13.73 [5.51, 34.17] p=2.7e-12 | 11.11 [6.14, 20.1] p=0 |
+| Gemini 3.1–LLaMA 4 | EN | +11.7 | [+2.8, +21.6] | [+1.7, +20.5] | [+2.2, +21.1] | [+5.1, +18.2] | [+7.5, +18.6] | +9.4..+13.0 | 25.0 [7.64, 81.76] p=6.5e-12 | 10.03 [5.43, 18.54] p=0 |
+  twoway_percentile: lower bound > 0 in 12/12
+  twoway_basic: lower bound > 0 in 10/12
+  twoway_normal: lower bound > 0 in 10/12
+  problem_only: lower bound > 0 in 12/12
+  subject_only: lower bound > 0 in 12/12
+  LOSO residual min > 0 in 12/12; MH|problem p<0.05: 12/12 (Bonferroni 12/12); MH|subject p<0.05: 12/12 (Bonferroni 12/12)
+
+### D. Raw asymmetry: single-step max-T permutation (flips shared within language) — FWER-adjusted p
+| GPT-5.4-Opus4.7 | JA | n=308 | share 100.0 | z=8.19 | raw one-sided p=1e-05 | max-T adj. two-sided p=1e-05 |
+| GPT-5.4-Gemini3.1 | JA | n=269 | share 99.6 | z=8.04 | raw one-sided p=1e-05 | max-T adj. two-sided p=1e-05 |
+| GPT-5.4-LLaMA4 | JA | n=351 | share 100.0 | z=8.36 | raw one-sided p=1e-05 | max-T adj. two-sided p=1e-05 |
+| Opus4.7-Gemini3.1 | JA | n=97 | share 71.1 | z=3.27 | raw one-sided p=0.00039 | max-T adj. two-sided p=0.00702 |
+| Opus4.7-LLaMA4 | JA | n=111 | share 69.4 | z=2.90 | raw one-sided p=0.0019 | max-T adj. two-sided p=0.0262 |
+| Gemini3.1-LLaMA4 | JA | n=142 | share 79.6 | z=4.46 | raw one-sided p=1e-05 | max-T adj. two-sided p=1e-05 |
+| GPT-5.4-Opus4.7 | EN | n=191 | share 99.5 | z=6.96 | raw one-sided p=1e-05 | max-T adj. two-sided p=1e-05 |
+| GPT-5.4-Gemini3.1 | EN | n=202 | share 100.0 | z=7.07 | raw one-sided p=1e-05 | max-T adj. two-sided p=1e-05 |
+| GPT-5.4-LLaMA4 | EN | n=179 | share 95.0 | z=6.21 | raw one-sided p=1e-05 | max-T adj. two-sided p=1e-05 |
+| Opus4.7-Gemini3.1 | EN | n=51 | share 62.7 | z=1.64 | raw one-sided p=0.067 | max-T adj. two-sided p=0.568 |
+| Opus4.7-LLaMA4 | EN | n=78 | share 67.9 | z=2.34 | raw one-sided p=0.011 | max-T adj. two-sided p=0.14 |
+| Gemini3.1-LLaMA4 | EN | n=79 | share 75.9 | z=3.08 | raw one-sided p=0.0011 | max-T adj. two-sided p=0.0144 |
+  max-T adjusted p < 0.05: 10/12
+
+### E1. Rubric author, judge fixed (Sonnet 4.6 judge): GPT rubric → Claude rubric, T2 BR, paired by problem
+| gpt-5 | n=80 | 67.5 → 71.2 | Δ +3.7 [-3.7, +11.3] | T4 Δ +11.3 [+0.0, +22.5] |
+| claude-4-sonnet | n=80 | 33.8 → 36.2 | Δ +2.5 [+0.0, +6.2] | T4 Δ +2.5 [-10.0, +13.8] |
+| gemini-3.1-pro | n=80 | 66.2 → 65.0 | Δ -1.2 [-10.0, +7.5] | T4 Δ -2.5 [-15.0, +10.0] |
+| llama-4-maverick | n=80 | 88.8 → 83.8 | Δ -5.0 [-11.3, +1.2] | T4 Δ +10.0 [-1.2, +21.2] |
+| claude-opus-4.7 | (no Claude-rubric records) |
+  subjects with both rubrics: ['gpt-5', 'claude-4-sonnet', 'gemini-3.1-pro', 'llama-4-maverick']; rank same: True; max|Δ| = 5.0
+
+### E2. Rubric author, reciprocal (GPT-5.4 judge): GPT rubric → Claude rubric
+| gpt-5 | T2 81.2 → 81.2 (Δ +0.0 [-5.0, +5.0]) | T4 61.3 → 48.8 (Δ -12.5 [-22.5, -2.5]) |
+| claude-opus-4.7 | T2 43.8 → 46.2 (Δ +2.5 [-3.8, +10.0]) | T4 78.8 → 61.3 (Δ -17.5 [-27.5, -7.5]) |
+| gemini-3.1-pro | T2 81.2 → 80.0 (Δ -1.2 [-7.5, +5.0]) | T4 82.5 → 80.0 (Δ -2.5 [-10.0, +5.0]) |
+| llama-4-maverick | T2 90.0 → 88.8 (Δ -1.3 [-3.8, +0.0]) | T4 70.0 → 73.8 (Δ +3.8 [-6.2, +13.7]) |
+| qwen3.5-27b | T2 91.2 → 93.8 (Δ +2.5 [-2.5, +7.5]) | T4 88.8 → 71.2 (Δ -17.5 [-26.2, -10.0]) |
+| qwen3.5-122b | T2 91.2 → 91.2 (Δ +0.0 [+0.0, +0.0]) | T4 85.0 → 68.8 (Δ -16.2 [-26.2, -6.2]) |
+| gemma-4-31b | T2 85.0 → 88.8 (Δ +3.7 [+0.0, +8.8]) | T4 91.2 → 77.5 (Δ -13.7 [-22.5, -6.2]) |
+  global T2 strictness: {'gpt_rubric': np.float64(80.4), 'claude_rubric': np.float64(81.5), 'delta': np.float64(1.0), 'ci': [-1.0, 3.1]}
+
+### E3. Generator version (JA): strictness on gpt-5-authored 40 vs own 40, per judge, two-sample problem bootstrap
+| GPT-5.4 | 87.9 | 72.9 | Δ -15.0 [-24.2, -6.7] |
+| Opus 4.7 | 68.3 | 58.8 | Δ -9.6 [-23.3, +4.6] |
+| Gemini 3.1 | 67.1 | 59.2 | Δ -7.9 [-20.8, +5.0] |
+| LLaMA 4 | 50.4 | 45.0 | Δ -5.4 [-17.9, +7.1] |
+
+### E4. Quantization (Qwen3.5-27B): Q4_K_M → Q8_0 per evaluator line, paired by problem
+| JA | GPT-5.4 | T2 91.2 → 91.2 (Δ +0.0 [-7.5, +7.5]) | T4 88.8 → 86.2 (Δ -2.5 [-8.8, +3.7]) |
+| JA | Opus4.7 | T2 70.0 → 73.8 (Δ +3.8 [-3.8, +12.5]) | T4 30.0 → 23.8 (Δ -6.2 [-15.0, +1.3]) |
+| JA | Gemini3.1 | T2 73.8 → 73.8 (Δ +0.0 [-7.5, +7.5]) | T4 43.8 → 36.2 (Δ -7.5 [-17.5, +2.5]) |
+| JA | LLaMA4 | T2 68.8 → 60.0 (Δ -8.8 [-18.8, +1.3]) | T4 27.5 → 27.5 (Δ +0.0 [-10.0, +10.0]) |
+| JA | self | T2 76.2 → 78.8 (Δ +2.5 [-3.8, +10.0]) | T4 51.2 → 50.0 (Δ -1.2 [-12.5, +10.0]) |
+| EN | GPT-5.4 | T2 75.0 → 70.0 (Δ -5.0 [-12.5, +1.3]) | T4 58.8 → 55.0 (Δ -3.7 [-11.3, +3.7]) |
+| EN | Opus4.7 | T2 58.8 → 62.5 (Δ +3.7 [-5.0, +12.5]) | T4 10.0 → 15.0 (Δ +5.0 [-2.5, +12.5]) |
+| EN | Gemini3.1 | T2 61.3 → 62.5 (Δ +1.2 [-7.5, +11.2]) | T4 15.0 → 11.2 (Δ -3.7 [-12.5, +3.8]) |
+| EN | LLaMA4 | T2 57.5 → 62.5 (Δ +5.0 [-3.7, +13.7]) | T4 20.0 → 27.5 (Δ +7.5 [-3.8, +18.8]) |
+| EN | self | T2 60.0 → 65.0 (Δ +5.0 [-2.5, +12.5]) | T4 16.2 → 12.5 (Δ -3.8 [-11.2, +3.7]) |
+  pooled over 8 judge cells: T2 {'mean_delta': np.float64(0.0), 'ci': [-4.2, 4.2], 'max_abs': np.float64(8.8)}  T4 {'mean_delta': np.float64(-1.4), 'ci': [-5.6, 2.8], 'max_abs': np.float64(7.5)}
+
+### E5. Evaluation-temperature check (80 boundary verdicts; judges GPT-5.4 and Claude Sonnet 4.6 — Sonnet is not a panel member; subjects gpt-5, claude-4-sonnet, gemini-3.1-pro, llama-4-maverick)
+| gpt-5 | n=80 | BR {'0.0': np.float64(36.2), '0.3': np.float64(36.2), '0.7': np.float64(31.2)} | agree_0.0_0.3: 95.0 [87.8, 98.0] | agree_0.0_0.7: 95.0 [87.8, 98.0] | agree_0.3_0.7: 95.0 [87.8, 98.0] |
+| claude-4-sonnet | n=80 | BR {'0.0': np.float64(30.0), '0.3': np.float64(31.2), '0.7': np.float64(30.0)} | agree_0.0_0.3: 98.8 [93.3, 99.8] | agree_0.0_0.7: 100.0 [95.4, 100.0] | agree_0.3_0.7: 98.8 [93.3, 99.8] |
+
+### F. Regime sensitivity: exclude regenerated trajectories (97) / additionally every re-judged cell
+
+[all] strictness JA: GPT-5.4 80.4 (n=480), Opus4.7 63.5 (n=480), Gemini3.1 63.1 (n=480), LLaMA4 47.7 (n=480); Opus subject LLaMA/GPT {'LLaMA4': np.float64(5.0), 'GPT-5.4': np.float64(43.8)}
+  GPT-5.4-Opus4.7_JA: n=560 dis=308 GPT-5.4 100.0% base 92.3 resid +7.7
+  GPT-5.4-Gemini3.1_JA: n=560 dis=269 GPT-5.4 99.6% base 89.3 resid +10.3
+  GPT-5.4-LLaMA4_JA: n=560 dis=351 GPT-5.4 100.0% base 95.0 resid +5.0
+  Opus4.7-Gemini3.1_JA: n=560 dis=97 Gemini3.1 71.1% base 59.0 resid +12.2
+  Opus4.7-LLaMA4_JA: n=560 dis=111 Opus4.7 69.4% base 61.5 resid +7.8
+  Gemini3.1-LLaMA4_JA: n=560 dis=142 Gemini3.1 79.6% base 69.7 resid +9.9
+  GPT-5.4-Opus4.7_EN: n=560 dis=191 GPT-5.4 99.5% base 85.1 resid +14.4
+  GPT-5.4-Gemini3.1_EN: n=560 dis=202 GPT-5.4 100.0% base 87.6 resid +12.4
+  GPT-5.4-LLaMA4_EN: n=560 dis=179 GPT-5.4 95.0% base 79.8 resid +15.2
+  Opus4.7-Gemini3.1_EN: n=560 dis=51 Opus4.7 62.7% base 55.3 resid +7.4
+  Opus4.7-LLaMA4_EN: n=560 dis=78 LLaMA4 67.9% base 59.2 resid +8.7
+  Gemini3.1-LLaMA4_EN: n=560 dis=79 LLaMA4 75.9% base 64.3 resid +11.7
+
+[no_regenerated] strictness JA: GPT-5.4 78.2 (n=409), Opus4.7 61.1 (n=409), Gemini3.1 60.5 (n=413), LLaMA4 43.0 (n=409); Opus subject LLaMA/GPT {'LLaMA4': np.float64(5.0), 'GPT-5.4': np.float64(43.8)}
+  GPT-5.4-Opus4.7_JA: n=489 dis=268 GPT-5.4 100.0% base 92.2 resid +7.8
+  GPT-5.4-Gemini3.1_JA: n=489 dis=240 GPT-5.4 99.6% base 89.6 resid +10.0
+  GPT-5.4-LLaMA4_JA: n=489 dis=304 GPT-5.4 100.0% base 94.9 resid +5.1
+  Opus4.7-Gemini3.1_JA: n=489 dis=82 Gemini3.1 68.3% base 57.8 resid +10.5
+  Opus4.7-LLaMA4_JA: n=489 dis=92 Opus4.7 69.6% base 61.5 resid +8.1
+  Gemini3.1-LLaMA4_JA: n=489 dis=116 Gemini3.1 78.4% base 68.6 resid +9.8
+  GPT-5.4-Opus4.7_EN: n=534 dis=179 GPT-5.4 99.4% base 85.2 resid +14.2
+  GPT-5.4-Gemini3.1_EN: n=534 dis=191 GPT-5.4 100.0% base 88.2 resid +11.8
+  GPT-5.4-LLaMA4_EN: n=534 dis=164 GPT-5.4 95.7% base 79.6 resid +16.2
+  Opus4.7-Gemini3.1_EN: n=534 dis=48 Opus4.7 64.6% base 56.4 resid +8.2
+  Opus4.7-LLaMA4_EN: n=534 dis=69 LLaMA4 69.6% base 59.6 resid +9.9
+  Gemini3.1-LLaMA4_EN: n=534 dis=69 LLaMA4 79.7% base 65.6 resid +14.1
+
+[no_regenerated_no_rejudged] strictness JA: GPT-5.4 78.2 (n=409), Opus4.7 60.0 (n=375), Gemini3.1 58.0 (n=352), LLaMA4 43.0 (n=409); Opus subject LLaMA/GPT {'LLaMA4': np.float64(5.0), 'GPT-5.4': np.float64(43.8)}
+  GPT-5.4-Opus4.7_JA: n=455 dis=250 GPT-5.4 100.0% base 92.2 resid +7.8
+  GPT-5.4-Gemini3.1_JA: n=414 dis=206 GPT-5.4 100.0% base 89.9 resid +10.1
+  GPT-5.4-LLaMA4_JA: n=489 dis=304 GPT-5.4 100.0% base 94.9 resid +5.1
+  Opus4.7-Gemini3.1_JA: n=388 dis=55 Gemini3.1 63.6% base 55.4 resid +8.2
+  Opus4.7-LLaMA4_JA: n=455 dis=85 Opus4.7 69.4% base 61.6 resid +7.8
+  Gemini3.1-LLaMA4_JA: n=414 dis=79 Gemini3.1 75.9% base 64.9 resid +11.1
+  GPT-5.4-Opus4.7_EN: n=444 dis=136 GPT-5.4 99.3% base 85.0 resid +14.3
+  GPT-5.4-Gemini3.1_EN: n=438 dis=141 GPT-5.4 100.0% base 91.2 resid +8.8
+  GPT-5.4-LLaMA4_EN: n=517 dis=161 GPT-5.4 95.7% base 80.0 resid +15.7
+  Opus4.7-Gemini3.1_EN: n=397 dis=18 Opus4.7 72.2% base 59.6 resid +12.6
+  Opus4.7-LLaMA4_EN: n=444 dis=40 LLaMA4 65.0% base 56.2 resid +8.8
+  Gemini3.1-LLaMA4_EN: n=439 dis=39 LLaMA4 89.7% base 70.8 resid +19.0
+
+  dominant judge identical in all 12 after both exclusions: True; residual > 0: 12/12; max |Δ share| = 13.8pp
+  regenerated-only cells: GPT-5.4-Opus4.7_JA: n=71 dis=40 GPT-5.4 100.0% resid 5.7; GPT-5.4-Gemini3.1_JA: n=71 dis=29 GPT-5.4 100.0% resid 10.4; GPT-5.4-LLaMA4_JA: n=71 dis=47 GPT-5.4 100.0% resid 3.6; Opus4.7-Gemini3.1_JA: n=71 dis=15 Gemini3.1 86.7% resid 20.9; Opus4.7-LLaMA4_JA: n=71 dis=19 Opus4.7 68.4% resid 6.2; Gemini3.1-LLaMA4_JA: n=71 dis=26 Gemini3.1 84.6% resid 8.7; GPT-5.4-Opus4.7_EN: n=26 dis=12 GPT-5.4 100.0% resid 12.0; GPT-5.4-Gemini3.1_EN: n=26 dis=11 GPT-5.4 100.0% resid 14.1; GPT-5.4-LLaMA4_EN: n=26 dis=15 GPT-5.4 86.7% resid 0.7; Opus4.7-Gemini3.1_EN: n=26 dis=3 Gemini3.1 66.7% resid 12.0; Opus4.7-LLaMA4_EN: n=26 dis=9 LLaMA4 55.6% resid 0.9; Gemini3.1-LLaMA4_EN: n=26 dis=10 Gemini3.1 50.0% resid 0.0
+
+saved -> /Users/cider/cognitive_bias_research/results/rebuttal_checks/arxiv_extended.json
