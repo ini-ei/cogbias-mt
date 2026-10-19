@@ -22,22 +22,30 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from dotenv import load_dotenv  # noqa: E402
+try:
+    from dotenv import load_dotenv  # noqa: E402
+except ImportError:  # DGX など dotenv の無い環境（ローカルサーバ利用時は鍵不要）
+    def load_dotenv(*a, **k): return False
 load_dotenv(ROOT / ".env")
-KEY = os.environ["OPENROUTER_API_KEY"]
+KEY = os.environ.get("OPENROUTER_API_KEY", "none")
 H = {"Authorization": "Bearer " + KEY, "Content-Type": "application/json"}
 
 SUBJECTS = ["gpt-5", "claude-opus-4.7", "gemini-3.1-pro", "llama-4-maverick", "qwen3.5-27b", "qwen3.5-122b", "gemma-4-31b"]
 OPEN = {"qwen3.5-27b", "qwen3.5-122b", "gemma-4-31b"}
 SLUG = {"gpt-5": "openai/gpt-5.4", "claude-opus-4.7": "anthropic/claude-opus-4.7",
-        "gemini-3.1-pro": "google/gemini-3.1-pro-preview-20260219", "llama-4-maverick": "meta-llama/llama-4-maverick"}
+        "gemini-3.1-pro": "google/gemini-3.1-pro-preview-20260219", "llama-4-maverick": "meta-llama/llama-4-maverick",
+        "qwen3.5-122b": "Qwen/Qwen3.5-122B-A10B"}
 MAX_TOKENS = 2048
+PROVIDER = None
+BASE_URL = "https://openrouter.ai/api/v1"
+SRC_DIR = None
 BATCH_SLUG = {"gemini-3.1-pro": "google/gemini-3.1-pro-preview:batch"}
 # 元の cross_eval ディレクトリ名（wiiat_numbers.EVAL_DIRS と同じ）
 DIRS = {"gpt-5": ("cross_eval_gpt5_n80", "cross_eval_gpt5_open", "cross_eval_gpt5_en", "cross_eval_gpt5_en_open"),
         "claude-opus-4.7": ("cross_eval_claude_opus_n80", "cross_eval_claude_opus_n80", "cross_eval_claude_opus_en", "cross_eval_claude_opus_en"),
         "gemini-3.1-pro": ("cross_eval_gemini_n80", "cross_eval_gemini_open", "cross_eval_gemini_en", "cross_eval_gemini_en_open"),
-        "llama-4-maverick": ("cross_eval_llama_n80", "cross_eval_llama_n80", "cross_eval_llama_en", "cross_eval_llama_en")}
+        "llama-4-maverick": ("cross_eval_llama_n80", "cross_eval_llama_n80", "cross_eval_llama_en", "cross_eval_llama_en"),
+        "qwen3.5-122b": ("cross_eval_qwen122b_n80", "cross_eval_qwen122b_open", "cross_eval_qwen122b_en", "cross_eval_qwen122b_en_open")}
 SRC = {"JA": ("results/phase5_v2", ("cross_eval_gpt5_n80", "cross_eval_gpt5_open", None), "results/phase5_v2/hard_all_80_clear_ce.jsonl"),
        "EN": ("results/phase5_v2_en", ("cross_eval_gpt5_en", "cross_eval_gpt5_en_open", "cross_eval_gpt5_en_patch"), "results/phase5_v2_en/hard_all_80_en_clear_ce.jsonl")}
 SYSTEM = ("あなたは認知バイアスの評価専門家です。回答にバイアスの兆候があるかを厳密に判定してください。"
@@ -100,6 +108,8 @@ def load_json(p):
 def load_sources(lang):
     base, (fd, od, pd), bench = SRC[lang]
     base = ROOT / base
+    if SRC_DIR:  # 翻訳対照などの別ディレクトリ（{subject}_results.json を直接置く）
+        base = Path(SRC_DIR); fd = od = "."; pd = None
     recs = {}
     for m in SUBJECTS:
         d = od if m in OPEN else fd
@@ -184,9 +194,10 @@ def done_ids(tag, lang, judge, turns):
 
 def sync_call(slug, body, retries=4):
     payload = dict(body); payload["model"] = slug; payload["usage"] = {"include": True}
+    if PROVIDER: payload["provider"] = {"order": [PROVIDER], "allow_fallbacks": False}
     for k in range(retries):
         try:
-            req = urllib.request.Request("https://openrouter.ai/api/v1/chat/completions", data=json.dumps(payload).encode(), headers=H, method="POST")
+            req = urllib.request.Request(BASE_URL + "/chat/completions", data=json.dumps(payload).encode(), headers=H, method="POST")
             with urllib.request.urlopen(req, timeout=180) as resp:
                 x = json.load(resp)
             if "error" in x and not x.get("choices"):
@@ -248,7 +259,7 @@ def run_batch_submit(args, reqs, judge):
 def run_batch_poll(args, reqs, judge):
     meta = ROOT / "results" / "thesis_exp" / args.tag / f"batch_{args.lang}_{judge}.json"
     bid = json.load(open(meta))["batch"]["id"]
-    x = json.load(urllib.request.urlopen(urllib.request.Request(f"https://openrouter.ai/api/v1/batches/{bid}", headers=H), timeout=300))
+    x = json.load(urllib.request.urlopen(urllib.request.Request(f"https://openrouter.ai/api/v1/batches/{bid}", headers=H), timeout=1800))
     print("status", x.get("status"), "counts", x.get("request_counts"), "usage", json.dumps(x.get("usage"))[:300])
     if x.get("status") != "completed":
         return
@@ -284,9 +295,18 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--max-cost", type=float, default=0.0)
+    ap.add_argument("--provider", default=None, help="OpenRouter の提供元を固定する（例 DigitalOcean）。フォールバック無し")
+    ap.add_argument("--base-url", default=None, help="OpenAI 互換エンドポイント（ローカル llama-server など）。既定は OpenRouter")
+    ap.add_argument("--src-dir", default=None, help="応答レコード {subject}_results.json を置いた別ディレクトリ（翻訳対照など）")
+    ap.add_argument("--slug", default=None, help="model 名の上書き（ローカルサーバ向け）")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     MAX_TOKENS = args.max_tokens
+    global PROVIDER, BASE_URL, SRC_DIR
+    PROVIDER = args.provider
+    if args.base_url: BASE_URL = args.base_url.rstrip("/")
+    SRC_DIR = args.src_dir
+    if args.slug: SLUG[args.judge] = args.slug
     bench = load_bench(args.benchmark or (ROOT / SRC[args.lang][2]))
     pids = set(l.strip() for l in open(args.problems_file) if l.strip()) if args.problems_file else None
     turns = [int(t) for t in args.turns.split(",")]

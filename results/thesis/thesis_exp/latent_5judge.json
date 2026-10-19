@@ -1,0 +1,1414 @@
+{
+ "JA": {
+  "T2": {
+   "qwen_strictness": 63.5,
+   "n": 480,
+   "agreement_with": {
+    "GPT-5.4": {
+     "n": 400,
+     "agree": 85.2,
+     "kappa": 0.647
+    },
+    "Opus4.7": {
+     "n": 400,
+     "agree": 88.2,
+     "kappa": 0.741
+    },
+    "Gemini3.1": {
+     "n": 400,
+     "agree": 92.0,
+     "kappa": 0.831
+    },
+    "LLaMA4": {
+     "n": 400,
+     "agree": 82.0,
+     "kappa": 0.649
+    }
+   },
+   "judges4": {
+    "n_cells": 560,
+    "judges": {
+     "GPT-5.4": {
+      "tpr": 100.0,
+      "fpr": 47.0,
+      "strictness_obs": 80.4,
+      "strictness_corrected": 64.1,
+      "tpr_ci": [
+       100.0,
+       100.0
+      ],
+      "fpr_ci": [
+       37.1,
+       56.2
+      ]
+     },
+     "Opus4.7": {
+      "tpr": 90.0,
+      "fpr": 3.3,
+      "strictness_obs": 63.5,
+      "strictness_corrected": 69.5,
+      "tpr_ci": [
+       85.5,
+       94.4
+      ],
+      "fpr_ci": [
+       0.0,
+       8.1
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 96.5,
+      "fpr": 8.4,
+      "strictness_obs": 63.1,
+      "strictness_corrected": 62.1,
+      "tpr_ci": [
+       93.6,
+       98.9
+      ],
+      "fpr_ci": [
+       0.0,
+       15.5
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 80.5,
+      "fpr": 3.3,
+      "strictness_obs": 47.7,
+      "strictness_corrected": 57.5,
+      "tpr_ci": [
+       73.0,
+       86.9
+      ],
+      "fpr_ci": [
+       0.0,
+       6.7
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 48.8,
+     "claude-opus-4.7": 10.4,
+     "gemini-3.1-pro": 54.6,
+     "llama-4-maverick": 82.3,
+     "qwen3.5-27b": 75.0,
+     "qwen3.5-122b": 83.0,
+     "gemma-4-31b": 73.1
+    },
+    "spread_obs": 32.7,
+    "spread_corrected": 12.0,
+    "mean_range_obs": 26.6,
+    "mean_range_corrected": 12.9,
+    "pi_ci": {
+     "gpt-5": [
+      35.9,
+      60.5
+     ],
+     "claude-opus-4.7": [
+      1.7,
+      25.8
+     ],
+     "gemini-3.1-pro": [
+      42.6,
+      65.8
+     ],
+     "llama-4-maverick": [
+      73.5,
+      90.2
+     ],
+     "qwen3.5-27b": [
+      64.4,
+      85.6
+     ],
+     "qwen3.5-122b": [
+      71.5,
+      91.3
+     ],
+     "gemma-4-31b": [
+      64.2,
+      82.5
+     ]
+    }
+   },
+   "judges5": {
+    "n_cells": 560,
+    "judges": {
+     "GPT-5.4": {
+      "tpr": 100.0,
+      "fpr": 43.8,
+      "strictness_obs": 80.4,
+      "strictness_corrected": 65.2,
+      "tpr_ci": [
+       99.8,
+       100.0
+      ],
+      "fpr_ci": [
+       35.7,
+       51.4
+      ]
+     },
+     "Opus4.7": {
+      "tpr": 88.4,
+      "fpr": 1.8,
+      "strictness_obs": 63.5,
+      "strictness_corrected": 71.3,
+      "tpr_ci": [
+       84.5,
+       91.5
+      ],
+      "fpr_ci": [
+       0.0,
+       5.8
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 94.4,
+      "fpr": 5.0,
+      "strictness_obs": 63.1,
+      "strictness_corrected": 65.0,
+      "tpr_ci": [
+       91.1,
+       96.9
+      ],
+      "fpr_ci": [
+       0.7,
+       8.4
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 77.7,
+      "fpr": 2.3,
+      "strictness_obs": 47.7,
+      "strictness_corrected": 60.2,
+      "tpr_ci": [
+       72.1,
+       83.0
+      ],
+      "fpr_ci": [
+       0.0,
+       4.7
+      ]
+     },
+     "Qwen122B": {
+      "tpr": 99.5,
+      "fpr": 9.6,
+      "strictness_obs": 63.5,
+      "strictness_corrected": 60.0,
+      "tpr_ci": [
+       97.9,
+       100.0
+      ],
+      "fpr_ci": [
+       4.4,
+       15.9
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 54.1,
+     "claude-opus-4.7": 17.5,
+     "gemini-3.1-pro": 54.9,
+     "llama-4-maverick": 83.7,
+     "qwen3.5-27b": 76.3,
+     "qwen3.5-122b": 85.0,
+     "gemma-4-31b": 73.5
+    },
+    "spread_obs": 32.7,
+    "spread_corrected": 11.3,
+    "mean_range_obs": 27.5,
+    "mean_range_corrected": 14.0,
+    "pi_ci": {
+     "gpt-5": [
+      43.8,
+      66.2
+     ],
+     "claude-opus-4.7": [
+      8.6,
+      26.5
+     ],
+     "gemini-3.1-pro": [
+      42.7,
+      68.2
+     ],
+     "llama-4-maverick": [
+      75.9,
+      92.1
+     ],
+     "qwen3.5-27b": [
+      66.7,
+      85.3
+     ],
+     "qwen3.5-122b": [
+      76.2,
+      93.2
+     ],
+     "gemma-4-31b": [
+      63.8,
+      82.4
+     ]
+    }
+   },
+   "judges4_noGPT": {
+    "n_cells": 560,
+    "judges": {
+     "Opus4.7": {
+      "tpr": 89.4,
+      "fpr": 4.1,
+      "strictness_obs": 63.5,
+      "strictness_corrected": 69.7,
+      "tpr_ci": [
+       85.4,
+       92.6
+      ],
+      "fpr_ci": [
+       0.0,
+       8.2
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 95.5,
+      "fpr": 7.4,
+      "strictness_obs": 63.1,
+      "strictness_corrected": 63.2,
+      "tpr_ci": [
+       92.3,
+       98.1
+      ],
+      "fpr_ci": [
+       1.8,
+       14.1
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 80.1,
+      "fpr": 2.2,
+      "strictness_obs": 47.7,
+      "strictness_corrected": 58.4,
+      "tpr_ci": [
+       74.5,
+       86.2
+      ],
+      "fpr_ci": [
+       0.0,
+       5.3
+      ]
+     },
+     "Qwen122B": {
+      "tpr": 100.0,
+      "fpr": 11.9,
+      "strictness_obs": 63.5,
+      "strictness_corrected": 58.6,
+      "tpr_ci": [
+       99.1,
+       100.0
+      ],
+      "fpr_ci": [
+       6.9,
+       19.6
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 52.8,
+     "claude-opus-4.7": 15.1,
+     "gemini-3.1-pro": 53.7,
+     "llama-4-maverick": 82.6,
+     "qwen3.5-27b": 75.5,
+     "qwen3.5-122b": 81.5,
+     "gemma-4-31b": 72.0
+    },
+    "spread_obs": 15.8,
+    "spread_corrected": 11.3,
+    "mean_range_obs": 15.9,
+    "mean_range_corrected": 11.5,
+    "pi_ci": {
+     "gpt-5": [
+      42.0,
+      64.9
+     ],
+     "claude-opus-4.7": [
+      5.9,
+      24.1
+     ],
+     "gemini-3.1-pro": [
+      43.6,
+      65.6
+     ],
+     "llama-4-maverick": [
+      74.6,
+      89.7
+     ],
+     "qwen3.5-27b": [
+      66.9,
+      85.3
+     ],
+     "qwen3.5-122b": [
+      71.9,
+      90.6
+     ],
+     "gemma-4-31b": [
+      61.2,
+      83.5
+     ]
+    }
+   }
+  },
+  "T4": {
+   "qwen_strictness": 32.1,
+   "n": 480,
+   "agreement_with": {
+    "GPT-5.4": {
+     "n": 400,
+     "agree": 53.0,
+     "kappa": 0.206
+    },
+    "Opus4.7": {
+     "n": 400,
+     "agree": 75.8,
+     "kappa": 0.435
+    },
+    "Gemini3.1": {
+     "n": 400,
+     "agree": 82.0,
+     "kappa": 0.575
+    },
+    "LLaMA4": {
+     "n": 400,
+     "agree": 75.5,
+     "kappa": 0.355
+    }
+   },
+   "judges4": {
+    "n_cells": 560,
+    "judges": {
+     "GPT-5.4": {
+      "tpr": 100.0,
+      "fpr": 67.9,
+      "strictness_obs": 82.7,
+      "strictness_corrected": 46.1,
+      "tpr_ci": [
+       100.0,
+       100.0
+      ],
+      "fpr_ci": [
+       62.0,
+       77.3
+      ]
+     },
+     "Opus4.7": {
+      "tpr": 56.6,
+      "fpr": 0.0,
+      "strictness_obs": 27.1,
+      "strictness_corrected": 47.8,
+      "tpr_ci": [
+       48.4,
+       82.8
+      ],
+      "fpr_ci": [
+       0.0,
+       1.3
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 76.4,
+      "fpr": 2.1,
+      "strictness_obs": 31.7,
+      "strictness_corrected": 39.8,
+      "tpr_ci": [
+       68.7,
+       87.8
+      ],
+      "fpr_ci": [
+       0.0,
+       15.4
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 40.9,
+      "fpr": 0.9,
+      "strictness_obs": 18.1,
+      "strictness_corrected": 43.0,
+      "tpr_ci": [
+       33.8,
+       49.8
+      ],
+      "fpr_ci": [
+       0.0,
+       6.0
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 21.3,
+     "claude-opus-4.7": 10.7,
+     "gemini-3.1-pro": 58.8,
+     "llama-4-maverick": 39.8,
+     "qwen3.5-27b": 54.9,
+     "qwen3.5-122b": 51.5,
+     "gemma-4-31b": 60.8
+    },
+    "spread_obs": 64.6,
+    "spread_corrected": 8.0,
+    "mean_range_obs": 56.8,
+    "mean_range_corrected": 23.9,
+    "pi_ci": {
+     "gpt-5": [
+      11.0,
+      30.9
+     ],
+     "claude-opus-4.7": [
+      0.0,
+      19.6
+     ],
+     "gemini-3.1-pro": [
+      42.3,
+      70.6
+     ],
+     "llama-4-maverick": [
+      8.0,
+      51.2
+     ],
+     "qwen3.5-27b": [
+      36.5,
+      67.8
+     ],
+     "qwen3.5-122b": [
+      29.7,
+      63.8
+     ],
+     "gemma-4-31b": [
+      45.4,
+      71.3
+     ]
+    }
+   },
+   "judges5": {
+    "n_cells": 560,
+    "judges": {
+     "GPT-5.4": {
+      "tpr": 100.0,
+      "fpr": 67.5,
+      "strictness_obs": 82.7,
+      "strictness_corrected": 46.8,
+      "tpr_ci": [
+       100.0,
+       100.0
+      ],
+      "fpr_ci": [
+       59.9,
+       74.6
+      ]
+     },
+     "Opus4.7": {
+      "tpr": 56.6,
+      "fpr": 0.3,
+      "strictness_obs": 27.1,
+      "strictness_corrected": 47.6,
+      "tpr_ci": [
+       48.9,
+       66.5
+      ],
+      "fpr_ci": [
+       0.0,
+       3.4
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 74.7,
+      "fpr": 1.5,
+      "strictness_obs": 31.7,
+      "strictness_corrected": 41.2,
+      "tpr_ci": [
+       64.7,
+       86.8
+      ],
+      "fpr_ci": [
+       0.0,
+       5.1
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 40.5,
+      "fpr": 1.2,
+      "strictness_obs": 18.1,
+      "strictness_corrected": 43.1,
+      "tpr_ci": [
+       33.7,
+       48.9
+      ],
+      "fpr_ci": [
+       0.0,
+       4.6
+      ]
+     },
+     "Qwen122B": {
+      "tpr": 69.2,
+      "fpr": 5.8,
+      "strictness_obs": 32.1,
+      "strictness_corrected": 41.5,
+      "tpr_ci": [
+       62.3,
+       78.3
+      ],
+      "fpr_ci": [
+       0.8,
+       10.3
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 20.1,
+     "claude-opus-4.7": 15.3,
+     "gemini-3.1-pro": 53.3,
+     "llama-4-maverick": 42.1,
+     "qwen3.5-27b": 58.6,
+     "qwen3.5-122b": 51.8,
+     "gemma-4-31b": 59.5
+    },
+    "spread_obs": 64.6,
+    "spread_corrected": 6.3,
+    "mean_range_obs": 56.8,
+    "mean_range_corrected": 25.6,
+    "pi_ci": {
+     "gpt-5": [
+      12.2,
+      31.3
+     ],
+     "claude-opus-4.7": [
+      4.8,
+      28.8
+     ],
+     "gemini-3.1-pro": [
+      40.8,
+      66.6
+     ],
+     "llama-4-maverick": [
+      28.5,
+      54.6
+     ],
+     "qwen3.5-27b": [
+      43.8,
+      70.9
+     ],
+     "qwen3.5-122b": [
+      38.6,
+      65.4
+     ],
+     "gemma-4-31b": [
+      43.5,
+      71.3
+     ]
+    }
+   },
+   "judges4_noGPT": {
+    "n_cells": 560,
+    "judges": {
+     "Opus4.7": {
+      "tpr": 62.7,
+      "fpr": 3.2,
+      "strictness_obs": 27.1,
+      "strictness_corrected": 40.1,
+      "tpr_ci": [
+       51.9,
+       72.7
+      ],
+      "fpr_ci": [
+       0.0,
+       7.5
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 85.5,
+      "fpr": 4.5,
+      "strictness_obs": 31.7,
+      "strictness_corrected": 33.5,
+      "tpr_ci": [
+       73.4,
+       97.9
+      ],
+      "fpr_ci": [
+       0.0,
+       9.5
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 44.2,
+      "fpr": 3.6,
+      "strictness_obs": 18.1,
+      "strictness_corrected": 36.7,
+      "tpr_ci": [
+       35.7,
+       52.7
+      ],
+      "fpr_ci": [
+       1.0,
+       7.3
+      ]
+     },
+     "Qwen122B": {
+      "tpr": 75.3,
+      "fpr": 9.2,
+      "strictness_obs": 32.1,
+      "strictness_corrected": 34.6,
+      "tpr_ci": [
+       65.2,
+       86.2
+      ],
+      "fpr_ci": [
+       3.8,
+       14.5
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 17.2,
+     "claude-opus-4.7": 9.0,
+     "gemini-3.1-pro": 48.7,
+     "llama-4-maverick": 35.0,
+     "qwen3.5-27b": 49.0,
+     "qwen3.5-122b": 42.5,
+     "gemma-4-31b": 48.4
+    },
+    "spread_obs": 14.0,
+    "spread_corrected": 6.6,
+    "mean_range_obs": 18.9,
+    "mean_range_corrected": 20.4,
+    "pi_ci": {
+     "gpt-5": [
+      8.1,
+      26.9
+     ],
+     "claude-opus-4.7": [
+      1.8,
+      18.6
+     ],
+     "gemini-3.1-pro": [
+      35.9,
+      60.9
+     ],
+     "llama-4-maverick": [
+      20.4,
+      51.0
+     ],
+     "qwen3.5-27b": [
+      38.2,
+      63.1
+     ],
+     "qwen3.5-122b": [
+      29.0,
+      58.2
+     ],
+     "gemma-4-31b": [
+      30.2,
+      64.9
+     ]
+    }
+   }
+  }
+ },
+ "EN": {
+  "T2": {
+   "qwen_strictness": 52.5,
+   "n": 480,
+   "agreement_with": {
+    "GPT-5.4": {
+     "n": 400,
+     "agree": 88.5,
+     "kappa": 0.765
+    },
+    "Opus4.7": {
+     "n": 400,
+     "agree": 93.2,
+     "kappa": 0.864
+    },
+    "Gemini3.1": {
+     "n": 400,
+     "agree": 92.5,
+     "kappa": 0.85
+    },
+    "LLaMA4": {
+     "n": 400,
+     "agree": 91.0,
+     "kappa": 0.819
+    }
+   },
+   "judges4": {
+    "n_cells": 560,
+    "judges": {
+     "GPT-5.4": {
+      "tpr": 100.0,
+      "fpr": 24.7,
+      "strictness_obs": 67.7,
+      "strictness_corrected": 57.1,
+      "tpr_ci": [
+       100.0,
+       100.0
+      ],
+      "fpr_ci": [
+       18.8,
+       31.7
+      ]
+     },
+     "Opus4.7": {
+      "tpr": 90.3,
+      "fpr": 1.8,
+      "strictness_obs": 55.2,
+      "strictness_corrected": 60.3,
+      "tpr_ci": [
+       85.7,
+       93.8
+      ],
+      "fpr_ci": [
+       0.0,
+       4.2
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 93.8,
+      "fpr": 0.0,
+      "strictness_obs": 52.7,
+      "strictness_corrected": 56.2,
+      "tpr_ci": [
+       89.3,
+       96.9
+      ],
+      "fpr_ci": [
+       0.0,
+       0.5
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 87.8,
+      "fpr": 3.5,
+      "strictness_obs": 47.7,
+      "strictness_corrected": 52.4,
+      "tpr_ci": [
+       83.9,
+       92.1
+      ],
+      "fpr_ci": [
+       0.4,
+       6.9
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 46.2,
+     "claude-opus-4.7": 26.8,
+     "gemini-3.1-pro": 51.6,
+     "llama-4-maverick": 74.3,
+     "qwen3.5-27b": 64.5,
+     "qwen3.5-122b": 72.4,
+     "gemma-4-31b": 53.1
+    },
+    "spread_obs": 20.0,
+    "spread_corrected": 7.9,
+    "mean_range_obs": 16.6,
+    "mean_range_corrected": 8.9,
+    "pi_ci": {
+     "gpt-5": [
+      34.1,
+      58.9
+     ],
+     "claude-opus-4.7": [
+      17.3,
+      36.3
+     ],
+     "gemini-3.1-pro": [
+      41.1,
+      63.3
+     ],
+     "llama-4-maverick": [
+      64.3,
+      83.8
+     ],
+     "qwen3.5-27b": [
+      53.0,
+      75.0
+     ],
+     "qwen3.5-122b": [
+      63.4,
+      81.2
+     ],
+     "gemma-4-31b": [
+      42.1,
+      63.9
+     ]
+    }
+   },
+   "judges5": {
+    "n_cells": 560,
+    "judges": {
+     "GPT-5.4": {
+      "tpr": 100.0,
+      "fpr": 28.6,
+      "strictness_obs": 67.7,
+      "strictness_corrected": 54.8,
+      "tpr_ci": [
+       99.3,
+       100.0
+      ],
+      "fpr_ci": [
+       20.5,
+       35.8
+      ]
+     },
+     "Opus4.7": {
+      "tpr": 93.0,
+      "fpr": 2.5,
+      "strictness_obs": 55.2,
+      "strictness_corrected": 58.2,
+      "tpr_ci": [
+       88.6,
+       96.4
+      ],
+      "fpr_ci": [
+       0.0,
+       5.2
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 92.9,
+      "fpr": 4.4,
+      "strictness_obs": 52.7,
+      "strictness_corrected": 54.6,
+      "tpr_ci": [
+       89.4,
+       96.3
+      ],
+      "fpr_ci": [
+       1.1,
+       7.5
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 90.1,
+      "fpr": 5.1,
+      "strictness_obs": 47.7,
+      "strictness_corrected": 50.1,
+      "tpr_ci": [
+       85.5,
+       94.5
+      ],
+      "fpr_ci": [
+       2.4,
+       7.8
+      ]
+     },
+     "Qwen122B": {
+      "tpr": 99.4,
+      "fpr": 4.8,
+      "strictness_obs": 52.5,
+      "strictness_corrected": 50.4,
+      "tpr_ci": [
+       96.1,
+       100.0
+      ],
+      "fpr_ci": [
+       1.3,
+       8.7
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 44.9,
+     "claude-opus-4.7": 24.2,
+     "gemini-3.1-pro": 46.0,
+     "llama-4-maverick": 72.8,
+     "qwen3.5-27b": 63.3,
+     "qwen3.5-122b": 71.2,
+     "gemma-4-31b": 51.2
+    },
+    "spread_obs": 20.0,
+    "spread_corrected": 8.1,
+    "mean_range_obs": 16.6,
+    "mean_range_corrected": 10.1,
+    "pi_ci": {
+     "gpt-5": [
+      34.2,
+      55.1
+     ],
+     "claude-opus-4.7": [
+      15.0,
+      34.3
+     ],
+     "gemini-3.1-pro": [
+      36.3,
+      57.8
+     ],
+     "llama-4-maverick": [
+      62.0,
+      82.9
+     ],
+     "qwen3.5-27b": [
+      51.5,
+      72.7
+     ],
+     "qwen3.5-122b": [
+      61.1,
+      81.6
+     ],
+     "gemma-4-31b": [
+      38.8,
+      61.7
+     ]
+    }
+   },
+   "judges4_noGPT": {
+    "n_cells": 560,
+    "judges": {
+     "Opus4.7": {
+      "tpr": 94.9,
+      "fpr": 3.1,
+      "strictness_obs": 55.2,
+      "strictness_corrected": 56.8,
+      "tpr_ci": [
+       91.9,
+       97.6
+      ],
+      "fpr_ci": [
+       0.6,
+       6.5
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 94.6,
+      "fpr": 5.6,
+      "strictness_obs": 52.7,
+      "strictness_corrected": 52.9,
+      "tpr_ci": [
+       91.2,
+       97.4
+      ],
+      "fpr_ci": [
+       2.6,
+       9.7
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 91.7,
+      "fpr": 5.7,
+      "strictness_obs": 47.7,
+      "strictness_corrected": 48.9,
+      "tpr_ci": [
+       87.8,
+       95.2
+      ],
+      "fpr_ci": [
+       2.8,
+       8.6
+      ]
+     },
+     "Qwen122B": {
+      "tpr": 100.0,
+      "fpr": 6.5,
+      "strictness_obs": 52.5,
+      "strictness_corrected": 49.2,
+      "tpr_ci": [
+       99.2,
+       100.0
+      ],
+      "fpr_ci": [
+       2.8,
+       10.7
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 44.6,
+     "claude-opus-4.7": 22.7,
+     "gemini-3.1-pro": 46.2,
+     "llama-4-maverick": 70.2,
+     "qwen3.5-27b": 60.6,
+     "qwen3.5-122b": 68.3,
+     "gemma-4-31b": 50.9
+    },
+    "spread_obs": 7.5,
+    "spread_corrected": 7.9,
+    "mean_range_obs": 6.6,
+    "mean_range_corrected": 6.4,
+    "pi_ci": {
+     "gpt-5": [
+      33.7,
+      56.0
+     ],
+     "claude-opus-4.7": [
+      12.7,
+      33.0
+     ],
+     "gemini-3.1-pro": [
+      35.5,
+      57.5
+     ],
+     "llama-4-maverick": [
+      59.8,
+      81.1
+     ],
+     "qwen3.5-27b": [
+      49.2,
+      72.2
+     ],
+     "qwen3.5-122b": [
+      57.1,
+      78.8
+     ],
+     "gemma-4-31b": [
+      39.9,
+      61.4
+     ]
+    }
+   }
+  },
+  "T4": {
+   "qwen_strictness": 14.8,
+   "n": 480,
+   "agreement_with": {
+    "GPT-5.4": {
+     "n": 400,
+     "agree": 63.8,
+     "kappa": 0.298
+    },
+    "Opus4.7": {
+     "n": 400,
+     "agree": 87.0,
+     "kappa": 0.517
+    },
+    "Gemini3.1": {
+     "n": 400,
+     "agree": 89.8,
+     "kappa": 0.463
+    },
+    "LLaMA4": {
+     "n": 400,
+     "agree": 84.8,
+     "kappa": 0.445
+    }
+   },
+   "judges4": {
+    "n_cells": 560,
+    "judges": {
+     "GPT-5.4": {
+      "tpr": 100.0,
+      "fpr": 34.8,
+      "strictness_obs": 52.9,
+      "strictness_corrected": 27.8,
+      "tpr_ci": [
+       100.0,
+       100.0
+      ],
+      "fpr_ci": [
+       28.9,
+       39.5
+      ]
+     },
+     "Opus4.7": {
+      "tpr": 54.9,
+      "fpr": 0.7,
+      "strictness_obs": 15.4,
+      "strictness_corrected": 27.1,
+      "tpr_ci": [
+       42.4,
+       66.8
+      ],
+      "fpr_ci": [
+       0.0,
+       2.0
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 47.1,
+      "fpr": 0.0,
+      "strictness_obs": 9.4,
+      "strictness_corrected": 19.9,
+      "tpr_ci": [
+       35.9,
+       61.2
+      ],
+      "fpr_ci": [
+       0.0,
+       0.0
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 67.9,
+      "fpr": 3.8,
+      "strictness_obs": 20.2,
+      "strictness_corrected": 26.0,
+      "tpr_ci": [
+       56.5,
+       77.2
+      ],
+      "fpr_ci": [
+       1.4,
+       6.7
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 1.7,
+     "claude-opus-4.7": 5.7,
+     "gemini-3.1-pro": 49.1,
+     "llama-4-maverick": 14.7,
+     "qwen3.5-27b": 25.0,
+     "qwen3.5-122b": 32.9,
+     "gemma-4-31b": 39.3
+    },
+    "spread_obs": 43.5,
+    "spread_corrected": 7.9,
+    "mean_range_obs": 35.5,
+    "mean_range_corrected": 13.5,
+    "pi_ci": {
+     "gpt-5": [
+      0.0,
+      5.7
+     ],
+     "claude-opus-4.7": [
+      0.0,
+      11.9
+     ],
+     "gemini-3.1-pro": [
+      34.5,
+      67.1
+     ],
+     "llama-4-maverick": [
+      7.5,
+      25.5
+     ],
+     "qwen3.5-27b": [
+      14.9,
+      36.7
+     ],
+     "qwen3.5-122b": [
+      22.8,
+      45.2
+     ],
+     "gemma-4-31b": [
+      27.6,
+      50.6
+     ]
+    }
+   },
+   "judges5": {
+    "n_cells": 560,
+    "judges": {
+     "GPT-5.4": {
+      "tpr": 100.0,
+      "fpr": 34.5,
+      "strictness_obs": 52.9,
+      "strictness_corrected": 28.1,
+      "tpr_ci": [
+       100.0,
+       100.0
+      ],
+      "fpr_ci": [
+       28.5,
+       40.7
+      ]
+     },
+     "Opus4.7": {
+      "tpr": 53.8,
+      "fpr": 0.7,
+      "strictness_obs": 15.4,
+      "strictness_corrected": 27.8,
+      "tpr_ci": [
+       44.4,
+       65.1
+      ],
+      "fpr_ci": [
+       0.0,
+       1.9
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 45.4,
+      "fpr": 0.0,
+      "strictness_obs": 9.4,
+      "strictness_corrected": 20.6,
+      "tpr_ci": [
+       34.7,
+       55.8
+      ],
+      "fpr_ci": [
+       0.0,
+       0.0
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 65.7,
+      "fpr": 4.6,
+      "strictness_obs": 20.2,
+      "strictness_corrected": 26.4,
+      "tpr_ci": [
+       56.9,
+       75.3
+      ],
+      "fpr_ci": [
+       2.1,
+       7.7
+      ]
+     },
+     "Qwen122B": {
+      "tpr": 60.6,
+      "fpr": 1.2,
+      "strictness_obs": 14.8,
+      "strictness_corrected": 22.9,
+      "tpr_ci": [
+       49.9,
+       70.4
+      ],
+      "fpr_ci": [
+       0.0,
+       2.5
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 1.5,
+     "claude-opus-4.7": 3.7,
+     "gemini-3.1-pro": 46.4,
+     "llama-4-maverick": 16.9,
+     "qwen3.5-27b": 27.1,
+     "qwen3.5-122b": 33.1,
+     "gemma-4-31b": 41.6
+    },
+    "spread_obs": 43.5,
+    "spread_corrected": 7.5,
+    "mean_range_obs": 35.5,
+    "mean_range_corrected": 15.7,
+    "pi_ci": {
+     "gpt-5": [
+      0.0,
+      4.7
+     ],
+     "claude-opus-4.7": [
+      0.0,
+      10.1
+     ],
+     "gemini-3.1-pro": [
+      31.3,
+      58.8
+     ],
+     "llama-4-maverick": [
+      9.6,
+      26.3
+     ],
+     "qwen3.5-27b": [
+      15.9,
+      37.9
+     ],
+     "qwen3.5-122b": [
+      21.8,
+      47.0
+     ],
+     "gemma-4-31b": [
+      28.4,
+      53.4
+     ]
+    }
+   },
+   "judges4_noGPT": {
+    "n_cells": 560,
+    "judges": {
+     "Opus4.7": {
+      "tpr": 60.0,
+      "fpr": 0.8,
+      "strictness_obs": 15.4,
+      "strictness_corrected": 24.7,
+      "tpr_ci": [
+       43.5,
+       75.5
+      ],
+      "fpr_ci": [
+       0.0,
+       2.8
+      ]
+     },
+     "Gemini3.1": {
+      "tpr": 50.1,
+      "fpr": 0.0,
+      "strictness_obs": 9.4,
+      "strictness_corrected": 18.7,
+      "tpr_ci": [
+       33.7,
+       69.0
+      ],
+      "fpr_ci": [
+       0.0,
+       1.1
+      ]
+     },
+     "LLaMA4": {
+      "tpr": 68.3,
+      "fpr": 6.3,
+      "strictness_obs": 20.2,
+      "strictness_corrected": 24.1,
+      "tpr_ci": [
+       57.1,
+       81.7
+      ],
+      "fpr_ci": [
+       1.0,
+       10.1
+      ]
+     },
+     "Qwen122B": {
+      "tpr": 64.6,
+      "fpr": 2.3,
+      "strictness_obs": 14.8,
+      "strictness_corrected": 20.1,
+      "tpr_ci": [
+       52.3,
+       77.3
+      ],
+      "fpr_ci": [
+       0.0,
+       4.7
+      ]
+     }
+    },
+    "pi": {
+     "gpt-5": 1.4,
+     "claude-opus-4.7": 2.9,
+     "gemini-3.1-pro": 39.1,
+     "llama-4-maverick": 17.0,
+     "qwen3.5-27b": 22.0,
+     "qwen3.5-122b": 31.0,
+     "gemma-4-31b": 37.9
+    },
+    "spread_obs": 10.8,
+    "spread_corrected": 6.0,
+    "mean_range_obs": 10.0,
+    "mean_range_corrected": 11.7,
+    "pi_ci": {
+     "gpt-5": [
+      0.0,
+      4.0
+     ],
+     "claude-opus-4.7": [
+      0.0,
+      7.2
+     ],
+     "gemini-3.1-pro": [
+      24.2,
+      56.5
+     ],
+     "llama-4-maverick": [
+      7.8,
+      28.8
+     ],
+     "qwen3.5-27b": [
+      10.9,
+      33.7
+     ],
+     "qwen3.5-122b": [
+      15.5,
+      50.4
+     ],
+     "gemma-4-31b": [
+      25.7,
+      52.8
+     ]
+    }
+   }
+  }
+ }
+}

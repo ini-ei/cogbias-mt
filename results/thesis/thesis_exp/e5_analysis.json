@@ -1,0 +1,504 @@
+{
+ "ids20": [
+  "anchoring-daily_life-hard-001",
+  "anchoring-education-hard-001",
+  "anchoring-labor-hard-001",
+  "anchoring-legal-hard-001",
+  "anchoring-medical-hard-001",
+  "confirmation_bias-daily_life-hard-001",
+  "confirmation_bias-education-hard-001",
+  "confirmation_bias-labor-hard-001",
+  "confirmation_bias-legal-hard-001",
+  "confirmation_bias-medical-hard-001",
+  "framing-daily_life-hard-001",
+  "framing-education-hard-001",
+  "framing-labor-hard-001",
+  "framing-legal-hard-001",
+  "framing-medical-hard-001",
+  "representativeness-daily_life-hard-001",
+  "representativeness-education-hard-001",
+  "representativeness-labor-hard-002",
+  "representativeness-legal-hard-001",
+  "representativeness-medical-hard-001"
+ ],
+ "en20": [
+  "anchoring-daily_life-hard-en-001",
+  "anchoring-education-hard-en-001",
+  "anchoring-labor-hard-en-001",
+  "anchoring-legal-hard-en-001",
+  "anchoring-medical-hard-en-001",
+  "confirmation_bias-daily_life-hard-en-001",
+  "confirmation_bias-education-hard-en-001",
+  "confirmation_bias-labor-hard-en-001",
+  "confirmation_bias-legal-hard-en-001",
+  "confirmation_bias-medical-hard-en-001",
+  "framing-daily_life-hard-en-001",
+  "framing-education-hard-en-001",
+  "framing-labor-hard-en-001",
+  "framing-legal-hard-en-001",
+  "framing-medical-hard-en-001",
+  "representativeness-daily_life-hard-en-001",
+  "representativeness-education-hard-en-001",
+  "representativeness-labor-hard-en-001",
+  "representativeness-legal-hard-en-001",
+  "representativeness-medical-hard-en-001"
+ ],
+ "judges": {
+  "GPT-5.4": {
+   "T2": {
+    "JA20": {
+     "mean": 81.7,
+     "lo": 71.7,
+     "hi": 91.7,
+     "n_pid": 20
+    },
+    "ENtr20": {
+     "mean": 86.7,
+     "lo": 75.0,
+     "hi": 96.7,
+     "n_pid": 20
+    },
+    "EN20": {
+     "mean": 58.3,
+     "lo": 45.0,
+     "hi": 71.7,
+     "n_pid": 20
+    },
+    "EN80": {
+     "mean": 60.8,
+     "lo": 53.8,
+     "hi": 67.9,
+     "n_pid": 80
+    },
+    "lang_effect_JA_minus_ENtr": {
+     "mean": -5.0,
+     "lo": -13.3,
+     "hi": 3.3,
+     "n_pid": 20
+    },
+    "item_effect_ENtr_minus_EN20": {
+     "mean": 28.3,
+     "lo": 11.7,
+     "hi": 45.0,
+     "n_pid": 20
+    },
+    "orig_gap_JA_minus_EN20": {
+     "mean": 23.3,
+     "lo": 10.0,
+     "hi": 38.3,
+     "n_pid": 20
+    }
+   },
+   "T4": {
+    "JA20": {
+     "mean": 76.7,
+     "lo": 65.0,
+     "hi": 88.3,
+     "n_pid": 20
+    },
+    "ENtr20": {
+     "mean": 88.3,
+     "lo": 80.0,
+     "hi": 96.7,
+     "n_pid": 20
+    },
+    "EN20": {
+     "mean": 45.0,
+     "lo": 30.0,
+     "hi": 60.0,
+     "n_pid": 20
+    },
+    "EN80": {
+     "mean": 48.3,
+     "lo": 40.8,
+     "hi": 56.2,
+     "n_pid": 80
+    },
+    "lang_effect_JA_minus_ENtr": {
+     "mean": -11.7,
+     "lo": -23.3,
+     "hi": -0.0,
+     "n_pid": 20
+    },
+    "item_effect_ENtr_minus_EN20": {
+     "mean": 43.3,
+     "lo": 26.7,
+     "hi": 60.0,
+     "n_pid": 20
+    },
+    "orig_gap_JA_minus_EN20": {
+     "mean": 31.7,
+     "lo": 11.7,
+     "hi": 51.7,
+     "n_pid": 20
+    }
+   }
+  },
+  "Opus4.7": {
+   "T2": {
+    "JA20": {
+     "mean": 55.0,
+     "lo": 40.0,
+     "hi": 70.0,
+     "n_pid": 20
+    },
+    "ENtr20": {
+     "mean": 66.7,
+     "lo": 50.0,
+     "hi": 81.7,
+     "n_pid": 20
+    },
+    "EN20": {
+     "mean": 48.3,
+     "lo": 35.0,
+     "hi": 61.7,
+     "n_pid": 20
+    },
+    "EN80": {
+     "mean": 51.7,
+     "lo": 43.3,
+     "hi": 60.0,
+     "n_pid": 80
+    },
+    "lang_effect_JA_minus_ENtr": {
+     "mean": -11.7,
+     "lo": -23.3,
+     "hi": 1.7,
+     "n_pid": 20
+    },
+    "item_effect_ENtr_minus_EN20": {
+     "mean": 18.3,
+     "lo": -1.7,
+     "hi": 38.3,
+     "n_pid": 20
+    },
+    "orig_gap_JA_minus_EN20": {
+     "mean": 6.7,
+     "lo": -8.3,
+     "hi": 23.3,
+     "n_pid": 20
+    }
+   },
+   "T4": {
+    "JA20": {
+     "mean": 25.0,
+     "lo": 11.7,
+     "hi": 40.0,
+     "n_pid": 20
+    },
+    "ENtr20": {
+     "mean": 15.0,
+     "lo": 3.3,
+     "hi": 28.3,
+     "n_pid": 20
+    },
+    "EN20": {
+     "mean": 5.0,
+     "lo": 0.0,
+     "hi": 10.0,
+     "n_pid": 20
+    },
+    "EN80": {
+     "mean": 10.8,
+     "lo": 6.7,
+     "hi": 15.4,
+     "n_pid": 80
+    },
+    "lang_effect_JA_minus_ENtr": {
+     "mean": 10.0,
+     "lo": -3.3,
+     "hi": 25.0,
+     "n_pid": 20
+    },
+    "item_effect_ENtr_minus_EN20": {
+     "mean": 10.0,
+     "lo": -3.3,
+     "hi": 25.0,
+     "n_pid": 20
+    },
+    "orig_gap_JA_minus_EN20": {
+     "mean": 20.0,
+     "lo": 5.0,
+     "hi": 36.7,
+     "n_pid": 20
+    }
+   }
+  },
+  "Gemini3.1": {
+   "T2": {
+    "JA20": {
+     "mean": 58.3,
+     "lo": 43.3,
+     "hi": 73.3,
+     "n_pid": 20
+    },
+    "ENtr20": {
+     "mean": 60.0,
+     "lo": 45.0,
+     "hi": 75.0,
+     "n_pid": 20
+    },
+    "EN20": {
+     "mean": 43.3,
+     "lo": 28.3,
+     "hi": 58.3,
+     "n_pid": 20
+    },
+    "EN80": {
+     "mean": 47.1,
+     "lo": 39.2,
+     "hi": 55.0,
+     "n_pid": 80
+    },
+    "lang_effect_JA_minus_ENtr": {
+     "mean": -1.7,
+     "lo": -10.0,
+     "hi": 6.7,
+     "n_pid": 20
+    },
+    "item_effect_ENtr_minus_EN20": {
+     "mean": 16.7,
+     "lo": -1.7,
+     "hi": 36.7,
+     "n_pid": 20
+    },
+    "orig_gap_JA_minus_EN20": {
+     "mean": 15.0,
+     "lo": -1.7,
+     "hi": 31.7,
+     "n_pid": 20
+    }
+   },
+   "T4": {
+    "JA20": {
+     "mean": 28.3,
+     "lo": 13.3,
+     "hi": 45.0,
+     "n_pid": 20
+    },
+    "ENtr20": {
+     "mean": 15.0,
+     "lo": 5.0,
+     "hi": 26.7,
+     "n_pid": 20
+    },
+    "EN20": {
+     "mean": 1.7,
+     "lo": 0.0,
+     "hi": 5.0,
+     "n_pid": 20
+    },
+    "EN80": {
+     "mean": 3.3,
+     "lo": 0.8,
+     "hi": 6.7,
+     "n_pid": 80
+    },
+    "lang_effect_JA_minus_ENtr": {
+     "mean": 13.3,
+     "lo": -0.0,
+     "hi": 28.3,
+     "n_pid": 20
+    },
+    "item_effect_ENtr_minus_EN20": {
+     "mean": 13.3,
+     "lo": 3.3,
+     "hi": 26.7,
+     "n_pid": 20
+    },
+    "orig_gap_JA_minus_EN20": {
+     "mean": 26.7,
+     "lo": 10.0,
+     "hi": 43.3,
+     "n_pid": 20
+    }
+   }
+  },
+  "LLaMA4": {
+   "T2": {
+    "JA20": {
+     "mean": 30.0,
+     "lo": 16.7,
+     "hi": 43.3,
+     "n_pid": 20
+    },
+    "ENtr20": {
+     "mean": 26.7,
+     "lo": 11.7,
+     "hi": 43.3,
+     "n_pid": 20
+    },
+    "EN20": {
+     "mean": 35.0,
+     "lo": 21.7,
+     "hi": 50.0,
+     "n_pid": 20
+    },
+    "EN80": {
+     "mean": 38.8,
+     "lo": 30.8,
+     "hi": 46.7,
+     "n_pid": 80
+    },
+    "lang_effect_JA_minus_ENtr": {
+     "mean": 3.3,
+     "lo": -8.3,
+     "hi": 15.0,
+     "n_pid": 20
+    },
+    "item_effect_ENtr_minus_EN20": {
+     "mean": -8.3,
+     "lo": -25.0,
+     "hi": 8.3,
+     "n_pid": 20
+    },
+    "orig_gap_JA_minus_EN20": {
+     "mean": -5.0,
+     "lo": -18.3,
+     "hi": 8.3,
+     "n_pid": 20
+    }
+   },
+   "T4": {
+    "JA20": {
+     "mean": 8.3,
+     "lo": 1.7,
+     "hi": 15.0,
+     "n_pid": 20
+    },
+    "ENtr20": {
+     "mean": 11.7,
+     "lo": 5.0,
+     "hi": 18.3,
+     "n_pid": 20
+    },
+    "EN20": {
+     "mean": 5.0,
+     "lo": 0.0,
+     "hi": 10.0,
+     "n_pid": 20
+    },
+    "EN80": {
+     "mean": 14.6,
+     "lo": 10.4,
+     "hi": 19.2,
+     "n_pid": 80
+    },
+    "lang_effect_JA_minus_ENtr": {
+     "mean": -3.3,
+     "lo": -11.7,
+     "hi": 5.0,
+     "n_pid": 20
+    },
+    "item_effect_ENtr_minus_EN20": {
+     "mean": 6.7,
+     "lo": -1.7,
+     "hi": 15.0,
+     "n_pid": 20
+    },
+    "orig_gap_JA_minus_EN20": {
+     "mean": 3.3,
+     "lo": -5.0,
+     "hi": 11.7,
+     "n_pid": 20
+    }
+   }
+  }
+ },
+ "subjects": {
+  "gpt-5": {
+   "T2": {
+    "JA20": 45.0,
+    "ENtr20": 43.3,
+    "EN20": 46.7,
+    "EN80": 45.8
+   },
+   "T4": {
+    "JA20": 20.0,
+    "ENtr20": 5.0,
+    "EN20": 1.7,
+    "EN80": 2.1
+   }
+  },
+  "claude-opus-4.7": {
+   "T2": {
+    "JA20": 35.0,
+    "ENtr20": 41.7,
+    "EN20": 16.7,
+    "EN80": 25.4
+   },
+   "T4": {
+    "JA20": 35.0,
+    "ENtr20": 28.3,
+    "EN20": 13.3,
+    "EN80": 13.8
+   }
+  },
+  "gemini-3.1-pro": {
+   "T2": {
+    "JA20": 61.7,
+    "ENtr20": 65.0,
+    "EN20": 53.3,
+    "EN80": 55.0
+   },
+   "T4": {
+    "JA20": 46.7,
+    "ENtr20": 50.0,
+    "EN20": 31.7,
+    "EN80": 43.8
+   }
+  },
+  "llama-4-maverick": {
+   "T2": {
+    "JA20": 83.3,
+    "ENtr20": 90.0,
+    "EN20": 68.3,
+    "EN80": 72.1
+   },
+   "T4": {
+    "JA20": 36.7,
+    "ENtr20": 46.7,
+    "EN20": 10.0,
+    "EN80": 17.5
+   }
+  }
+ },
+ "pairs_ENtr_T4": {
+  "GPT-5.4-Opus4.7": {
+   "n": 80,
+   "n_dis": 54,
+   "share": 100.0,
+   "dom": "GPT-5.4"
+  },
+  "GPT-5.4-Gemini3.1": {
+   "n": 80,
+   "n_dis": 50,
+   "share": 100.0,
+   "dom": "GPT-5.4"
+  },
+  "GPT-5.4-LLaMA4": {
+   "n": 80,
+   "n_dis": 56,
+   "share": 100.0,
+   "dom": "GPT-5.4"
+  },
+  "Opus4.7-Gemini3.1": {
+   "n": 80,
+   "n_dis": 8,
+   "share": 75.0,
+   "dom": "Gemini3.1"
+  },
+  "Opus4.7-LLaMA4": {
+   "n": 80,
+   "n_dis": 16,
+   "share": 56.2,
+   "dom": "Opus4.7"
+  },
+  "Gemini3.1-LLaMA4": {
+   "n": 80,
+   "n_dis": 14,
+   "share": 71.4,
+   "dom": "Gemini3.1"
+  }
+ }
+}
