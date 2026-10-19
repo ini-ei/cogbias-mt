@@ -1,0 +1,304 @@
+{
+ "evals": [
+  "GPT-5.4",
+  "Gemini3.1",
+  "LLaMA4"
+ ],
+ "n_cells": 560,
+ "v1.1": {
+  "strictness": {
+   "GPT-5.4": 82.7,
+   "Gemini3.1": 31.7,
+   "LLaMA4": 18.1
+  },
+  "judge_spread": 64.6,
+  "per_subject_range": 52.3,
+  "rank_agreement": 0.803,
+  "per_subject": {
+   "gpt-5": {
+    "GPT-5.4": null,
+    "Gemini3.1": 17.5,
+    "LLaMA4": 2.5
+   },
+   "claude-opus-4.7": {
+    "GPT-5.4": 78.8,
+    "Gemini3.1": 10.0,
+    "LLaMA4": 2.5
+   },
+   "gemini-3.1-pro": {
+    "GPT-5.4": 82.5,
+    "Gemini3.1": null,
+    "LLaMA4": 26.2
+   },
+   "llama-4-maverick": {
+    "GPT-5.4": 70.0,
+    "Gemini3.1": 38.8,
+    "LLaMA4": null
+   },
+   "qwen3.5-27b": {
+    "GPT-5.4": 88.8,
+    "Gemini3.1": 43.8,
+    "LLaMA4": 27.5
+   },
+   "qwen3.5-122b": {
+    "GPT-5.4": 85.0,
+    "Gemini3.1": 40.0,
+    "LLaMA4": 21.2
+   },
+   "gemma-4-31b": {
+    "GPT-5.4": 91.2,
+    "Gemini3.1": 40.0,
+    "LLaMA4": 28.7
+   }
+  },
+  "pairs": {
+   "GPT-5.4-Gemini3.1": {
+    "n": 560,
+    "n_dis": 269,
+    "share": 99.6,
+    "dom": "GPT-5.4",
+    "pa": 79.6,
+    "pb": 32.0,
+    "base": 89.3,
+    "resid": 10.3,
+    "kappa": 0.209
+   },
+   "GPT-5.4-LLaMA4": {
+    "n": 560,
+    "n_dis": 351,
+    "share": 100.0,
+    "dom": "GPT-5.4",
+    "pa": 79.6,
+    "pb": 17.0,
+    "base": 95.0,
+    "resid": 5.0,
+    "kappa": 0.099
+   },
+   "Gemini3.1-LLaMA4": {
+    "n": 560,
+    "n_dis": 142,
+    "share": 79.6,
+    "dom": "Gemini3.1",
+    "pa": 32.0,
+    "pb": 17.0,
+    "base": 69.7,
+    "resid": 9.9,
+    "kappa": 0.334
+   }
+  },
+  "split": {
+   "raw": {
+    "per_subject_range": {
+     "mean": 52.15,
+     "lo": 47.5,
+     "hi": 56.43
+    },
+    "judge_spread": {
+     "mean": 64.36,
+     "lo": 57.92,
+     "hi": 70.0
+    },
+    "rank_agreement": {
+     "mean": 0.62,
+     "lo": 0.28,
+     "hi": 0.9
+    }
+   },
+   "mean_shift": {
+    "per_subject_range": {
+     "mean": 11.94,
+     "lo": 7.38,
+     "hi": 16.97
+    },
+    "judge_spread": {
+     "mean": 7.09,
+     "lo": 1.25,
+     "hi": 15.01
+    },
+    "rank_agreement": {
+     "mean": 0.62,
+     "lo": 0.28,
+     "hi": 0.9
+    }
+   },
+   "threshold_mean_shift": {
+    "per_subject_range": {
+     "mean": 9.33,
+     "lo": 5.71,
+     "hi": 15.07
+    },
+    "judge_spread": {
+     "mean": 7.11,
+     "lo": 1.25,
+     "hi": 15.37
+    },
+    "rank_agreement": {
+     "mean": 0.76,
+     "lo": 0.54,
+     "hi": 0.97
+    }
+   }
+  }
+ },
+ "v1.2": {
+  "strictness": {
+   "GPT-5.4": 79.4,
+   "Gemini3.1": 23.8,
+   "LLaMA4": 13.3
+  },
+  "judge_spread": 66.0,
+  "per_subject_range": 54.5,
+  "rank_agreement": 0.422,
+  "per_subject": {
+   "gpt-5": {
+    "GPT-5.4": null,
+    "Gemini3.1": 20.0,
+    "LLaMA4": 2.5
+   },
+   "claude-opus-4.7": {
+    "GPT-5.4": 73.8,
+    "Gemini3.1": 10.0,
+    "LLaMA4": 1.2
+   },
+   "gemini-3.1-pro": {
+    "GPT-5.4": 83.8,
+    "Gemini3.1": null,
+    "LLaMA4": 23.8
+   },
+   "llama-4-maverick": {
+    "GPT-5.4": 68.8,
+    "Gemini3.1": 35.0,
+    "LLaMA4": null
+   },
+   "qwen3.5-27b": {
+    "GPT-5.4": 83.8,
+    "Gemini3.1": 28.7,
+    "LLaMA4": 22.5
+   },
+   "qwen3.5-122b": {
+    "GPT-5.4": 81.2,
+    "Gemini3.1": 25.0,
+    "LLaMA4": 11.2
+   },
+   "gemma-4-31b": {
+    "GPT-5.4": 85.0,
+    "Gemini3.1": 23.8,
+    "LLaMA4": 18.8
+   }
+  },
+  "pairs": {
+   "GPT-5.4-Gemini3.1": {
+    "n": 560,
+    "n_dis": 286,
+    "share": 100.0,
+    "dom": "GPT-5.4",
+    "pa": 75.7,
+    "pb": 24.6,
+    "base": 90.5,
+    "resid": 9.5,
+    "kappa": 0.19
+   },
+   "GPT-5.4-LLaMA4": {
+    "n": 560,
+    "n_dis": 350,
+    "share": 100.0,
+    "dom": "GPT-5.4",
+    "pa": 75.7,
+    "pb": 13.2,
+    "base": 95.3,
+    "resid": 4.7,
+    "kappa": 0.093
+   },
+   "Gemini3.1-LLaMA4": {
+    "n": 560,
+    "n_dis": 114,
+    "share": 78.1,
+    "dom": "Gemini3.1",
+    "pa": 24.6,
+    "pb": 13.2,
+    "base": 68.2,
+    "resid": 9.8,
+    "kappa": 0.351
+   }
+  },
+  "split": {
+   "raw": {
+    "per_subject_range": {
+     "mean": 54.33,
+     "lo": 48.57,
+     "hi": 58.93
+    },
+    "judge_spread": {
+     "mean": 65.8,
+     "lo": 59.17,
+     "hi": 71.26
+    },
+    "rank_agreement": {
+     "mean": 0.48,
+     "lo": 0.13,
+     "hi": 0.84
+    }
+   },
+   "mean_shift": {
+    "per_subject_range": {
+     "mean": 11.04,
+     "lo": 7.49,
+     "hi": 16.07
+    },
+    "judge_spread": {
+     "mean": 7.33,
+     "lo": 1.67,
+     "hi": 15.42
+    },
+    "rank_agreement": {
+     "mean": 0.48,
+     "lo": 0.13,
+     "hi": 0.84
+    }
+   },
+   "threshold_mean_shift": {
+    "per_subject_range": {
+     "mean": 8.9,
+     "lo": 5.36,
+     "hi": 13.72
+    },
+    "judge_spread": {
+     "mean": 6.77,
+     "lo": 1.67,
+     "hi": 13.35
+    },
+    "rank_agreement": {
+     "mean": 0.73,
+     "lo": 0.45,
+     "hi": 0.94
+    }
+   }
+  }
+ },
+ "cell_change": {
+  "GPT-5.4": {
+   "n": 480,
+   "agree": 92.1,
+   "v11_rate": 82.7,
+   "v12_rate": 79.4,
+   "to_no": 27,
+   "to_yes": 11
+  },
+  "Gemini3.1": {
+   "n": 480,
+   "agree": 88.8,
+   "v11_rate": 31.7,
+   "v12_rate": 23.8,
+   "to_no": 46,
+   "to_yes": 8
+  },
+  "LLaMA4": {
+   "n": 480,
+   "agree": 91.9,
+   "v11_rate": 18.1,
+   "v12_rate": 13.3,
+   "to_no": 31,
+   "to_yes": 8
+  }
+ }
+}

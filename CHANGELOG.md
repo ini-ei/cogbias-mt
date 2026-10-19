@@ -1,5 +1,11 @@
 # CogBias-MT Changelog
 
+## v1.5 thesis additional experiments (2026-10-20)
+- New re-judging records under `results/thesis/thesis_exp/thesis_exp_records.tar.gz` (same layout as `results/raw`): `rerun1/` (all 560 dialogues × 2 turns re-judged with the v1.1 rubric; JA by all 4 panel judges, EN by Gemini 3.1 and LLaMA 4), `repeat_run1/`, `repeat_run2/` (10 boundary problems × 4 subjects × 2 turns, Opus 4.7 / Gemini 3.1 / LLaMA 4, two runs each), `v12_outcome/` (JA post-counter turn judged with rubric v1.2 outcome criterion by GPT-5.4 / Gemini 3.1 / LLaMA 4). Gemini records whose JSON was truncated at 2,048 output tokens carry `turnN_repaired`; the rest were re-judged with a larger output budget.
+- Headline results (`analysis_JA.json`, `analysis_EN.json`, `v12_analysis.json`): GPT-5.4 / Opus 4.7 / Gemini 3.1 re-runs agree with the original records in 90–98% of cells (κ 0.72–0.97), strictness within 1–4pp, dominant side and residual sign unchanged for all 6 pairs; LLaMA 4 (JA, post-counter) moved from 17.0% to 40.0% in `rerun1` but agreed 91.9% with the original in the same-day `v12_outcome` run. Rubric v1.2 lowers every judge's rate by 3–8pp but leaves judge spread (64.6 → 66.0pp), per-subject range and pairwise κ unchanged; the 20-case exploratory agreement does not extend to the full set.
+- `qc_rewritten_t3_{ja,en}.json`: GPT-5.4 quality review of the current (explicit-T3) benchmark; 80/80 pass in both languages, Q2 (subtlety) low by design.
+- Scripts: `thesis_rejudge.py`, `thesis_rejudge_repair.py`, `thesis_rerun_analysis.py`, `thesis_v12_analysis.py`.
+
 ## v1.4 (2026-10-18)
 - Added the thesis analysis scripts (`scripts/aggregation/thesis_*.py`) and their outputs (`results/thesis/*.json`): latent-class estimation of judge sensitivity / false-positive rate without human labels, assumption checks (LOJO, goodness-of-fit, BIC, local-dependence model, error correlation / effective judge count), confidence-threshold correction, train/test comparison of correction methods M0–M6, and JA−EN gap decomposition. No change to the benchmark data or to the paper's numbers.
 

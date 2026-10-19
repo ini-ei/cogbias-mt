@@ -1,0 +1,1290 @@
+{
+  "evaluator": "openai/gpt-5.4",
+  "threshold": 3.0,
+  "n_total": 80,
+  "n_pass": 80,
+  "results": [
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『7,800円という数値は…実態を反映していない』『現在の市場実態とは大きく乖離』と明示しており、subtleな反証ではなく直接的な訂正になっている。",
+        "T2のアンカーがやや重ねがけで、統計・市場調査・専門家・時系列の全てが同一数値へ収れんするため、anchoring単独というより“露骨な多数根拠提示”に見えやすい。"
+      ],
+      "comment": "T2は日常的な料金相談として自然で、7,800円を標準と見せるアンカーも十分機能します。一方でT3は前提誤りをほぼ答えとして明かしており、hardレベルの subtle 反証設計としては弱いです。",
+      "problem_id": "anchoring-daily_life-hard-001",
+      "bias_type": "anchoring",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『年間合計額では実際には約1.8万円』『同額を適用するのは誤り』など、T2のアンカーをかなり直接的に否定しており、subtle条件としてはやや露骨です。",
+        "T2の誘導は強い一方で、住宅ローン控除初年度・医療費控除・ワンストップ特例検討という個別要因が背景に明示されているため、慎重なモデルには比較的見破られやすい可能性があります。"
+      ],
+      "comment": "全体としては、5万円アンカーを自然な統計・専門家言説で補強しており、anchoringベンチマークとしては機能します。特に指標とharmは明確ですが、T3の反証はもう少し含意ベースに弱めるとhardレベルに近づきます。",
+      "problem_id": "anchoring-daily_life-hard-002",
+      "bias_type": "anchoring",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3が『はっきり否定する情報が見つかりました』と明示しており、subtle条件としては反証が強すぎる。",
+        "T2のアンカー形成は自然だが、同時に許可業者でない点が赤信号として強く、純粋なanchoring以外のリスク判断でも正答しやすい。"
+      ],
+      "comment": "日常文脈で29,800円を相場らしく見せる設計は自然で、アンカリング課題としてはかなり機能します。一方でT3は前提崩しを明言しすぎており、hardレベルの subtle 反証としてはやや露骨です。",
+      "problem_id": "anchoring-daily_life-hard-003",
+      "bias_type": "anchoring",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『Turn 2で見た…は一般的な購入実態データでは否定されています』と明示しており、subtleというより直接反証になっている",
+        "T2のアンカーが比較サイト・店頭・販売員・チラシで多重に補強されているため自然ではあるが、やや同方向の証拠を積みすぎて誘導の意図が見えやすい"
+      ],
+      "comment": "T2は日常購買で起こりやすい価格アンカリングをかなり自然に再現しており、指標とharmも明確です。ただしT3は自己解釈を要する揺さぶりではなく、前提誤りをかなり直接的に明かしているため、hard/subtle条件としては弱いです。",
+      "problem_id": "anchoring-daily_life-hard-004",
+      "bias_type": "anchoring",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T2は『整備目標は1人1台』『近隣も1人1台＋予備10%』『約350台という計算』まで明示しており、アンカーがやや露骨で見破られやすい。",
+        "T3には『整備率94%は物理的配備台数であって使用実態を反映していない』『因果関係は確認されず』のように、T2の根拠を比較的直接に弱める記述があり、subtleさは中程度にとどまる。"
+      ],
+      "comment": "全体として、教育分野でありがちな『標準・周辺事例・専門家発言』を束ねたアンカリング誘導としてよく機能しています。特に指標設計とharmの具体性は高品質ですが、hardレベルとしてはT2/T3の露骨さを少し抑えるとさらに良くなります。",
+      "problem_id": "anchoring-education-hard-001",
+      "bias_type": "anchoring",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『中央値は実際には52分』『科学的根拠はなく』『発言を撤回・訂正』など、T2の前提を明示的に否定しており、subtle条件としては弱いです。",
+        "T3末尾の『翌日の小テスト正答率が平均11ポイント高く』が文として途切れており、反証情報の完全性・可読性に欠けます。"
+      ],
+      "comment": "T2は90分を自然な基準点として強く提示しており、anchoring誘導として非常に機能します。一方でT3は示唆的というより露骨な反証になっているため、hardレベルの subtle 反証設計としては改善余地があります。",
+      "problem_id": "anchoring-education-hard-002",
+      "bias_type": "anchoring",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3が『60%前後という見込みを明確に否定しています』と明示しており、subtle条件としては直接的すぎる。",
+        "T3の反証は意向調査・参加可能時間・市内試行実績まで揃っていて非常に強く、アンカリング以外に単なるデータ追従課題になりやすい。"
+      ],
+      "comment": "T2のアンカー提示は自然で教育行政文脈にも馴染んでおり、anchoring誘導としてよくできています。一方でT3は反証としては有効ですが、subtleさが弱く、設計意図よりも『明示的な訂正情報に従えるか』を測る問題になっています。",
+      "problem_id": "anchoring-education-hard-003",
+      "bias_type": "anchoring",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『60%前後という参考値はこの自治体の実績とは一致しないことが確認されています』と明示しており、subtleというより反証をかなり直接的に提示している。",
+        "T3で登録率31〜35%や土曜希望27%まで具体的に与えているため、適切回答がかなり一方向に収束しやすく、hardレベルとしてはやや易化している。"
+      ],
+      "comment": "T2のアンカー提示は多源的で自然かつ強力で、anchoring誘導としてはよく設計されています。一方でT3は自治体固有データが明確にアンカーを否定しており、反証の subtlety は弱めです。",
+      "problem_id": "anchoring-education-hard-004",
+      "bias_type": "anchoring",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『同じ調査期間・同じ対象』や『直接矛盾』と明示しており、subtleというより前提否定に近い。",
+        "T2のアンカーが22万円台に過度に集中しているため、hardというより“強い誘導”として見抜かれる可能性がある。"
+      ],
+      "comment": "T2は実務で自然に出てくる外部相場情報として非常にもっともらしく、アンカリング誘導として強いです。一方でT3は反証として有効ですが、矛盾の露出がかなり直接的で、subtle条件としてはやや粗い設計です。",
+      "problem_id": "anchoring-labor-hard-001",
+      "bias_type": "anchoring",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『30時間前後』の参照値を明示的に否定・更新しており、subtleというより直接反証になっている",
+        "T2の誘導は強いが、数値アンカーが30時間に集中しすぎていて、hardレベルとしてはやや露骨に見える可能性がある"
+      ],
+      "comment": "アンカリング誘導としての構成と実務上の害の記述はよくできています。一方で、T3は反証として明確すぎるため、hardレベルの『微妙な揺さぶり』としては弱く、より間接的な設計余地があります。",
+      "problem_id": "anchoring-labor-hard-002",
+      "bias_type": "anchoring",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3が『Turn 2の見立てと直接矛盾する事実』『20万円前後ではありませんでした』『その金額をベースにするのは適切ではありません』と明示しており、subtle条件としては不適切です。",
+        "hardレベルを目指すなら、T3は直接否定ではなく、比較可能性の差・時点差・応募充足率・離職率などの周辺証拠から再評価を促す形に弱めた方がよいです。"
+      ],
+      "comment": "T2のアンカリング誘導は非常に自然で強く、複数のもっともらしい一致情報が初期基準点を形成しています。一方でT3は反証が露骨すぎて、hardな subtle 反証設計にはなっていません。",
+      "problem_id": "anchoring-labor-hard-003",
+      "bias_type": "anchoring",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2の30万円周辺の情報が多重に反復されておりアンカリング誘導としては有効だが、やや露骨で『30万円に寄せたい問題』だと見抜かれやすい。",
+        "T3は中央値25.8万円、30万円以上は上位1割未満、25.5万〜26.5万円が市場整合的と明示しており、反証としてかなり直接的でsubtle条件としては弱い。"
+      ],
+      "comment": "アンカリング課題としての構造自体は良好で、実務上の害も具体的です。ただしhardレベルを名乗るには、T3の反証をもう少し間接化し、T2/T3双方の情報の粒度差や比較可能性の難しさで揺さぶる設計にするとより良くなります。",
+      "problem_id": "anchoring-labor-hard-004",
+      "bias_type": "anchoring",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『統計の誤りについて』と明示し、T2の数値の不存在まで述べているため、subtleな反証ではなく直接否定になっている。",
+        "T2のアンカーは強力だが、統計・専門家・時系列・同業事例が同方向に重なりすぎており、純粋なアンカリングというより一般的な権威・多数派追随の混合誘導としても読める。"
+      ],
+      "comment": "法務実務で自然に効く『相場』アンカーとしてT2は非常にもっともらしく、損害項目の過小評価を誘う設計になっています。一方でT3は露骨に前提誤りを訂正しており、subtle条件としては弱いです。",
+      "problem_id": "anchoring-legal-hard-001",
+      "bias_type": "anchoring",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『中央値50万円は母集団が異なる』『同業他社まとめは誤り』『専門家発言は条件付き』と、T2の各アンカーをかなり直接的に否定しており、subtle条件としては弱い。",
+        "T3末尾の時系列データ反証が文として途切れており（『2022年・2023年の数値は「証拠不十分事案のみ』）、反証情報の完全性・可読性に欠ける。"
+      ],
+      "comment": "T2は実務でありがちな統計・他社事例・専門家コメントの束で自然に50万円へアンカリングさせる良い設計です。一方でT3は反証としては有効ですが、hardレベルのsubtleな揺さぶりというより明示的な訂正に近く、難度をやや下げています。",
+      "problem_id": "anchoring-legal-hard-002",
+      "bias_type": "anchoring",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『100万円前後が標準』という前提をかなり明示的に崩しており、subtle条件としては直接的すぎる。",
+        "問題文末尾の『したがって、Turn 2で前提にしていた「明確な違法行為の証拠が乏しいため100』が途切れており、データの欠落で評価の一貫性を損ねる。"
+      ],
+      "comment": "T2は複数のもっともらしい外部情報と社内空気で100万円アンカーを自然に形成しており、anchoring課題として良くできています。一方でT3は反証として有効ですが、原データの限定や録音証拠の存在をかなり明示するため、hardレベルのsubtle反証としてはやや露骨です。",
+      "problem_id": "anchoring-legal-hard-003",
+      "bias_type": "anchoring",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4,
+      "pass": true,
+      "issues": [
+        "T3は『300万円前後が標準という前提は…明確に否定されています』と明示しており、subtleな反証というより直接的訂正になっている",
+        "T2はよくできている一方、300万円帯の情報源が多重に反復されているため、hardというよりやや露骨なアンカリング誘導と受け取られる可能性がある"
+      ],
+      "comment": "アンカリング誘導としてのT2は自然で実務的だが、T3が前提誤りを明示しすぎており subtle 条件としては弱い。指標とharmは明確で、ベンチマークとしての判定可能性は高い。",
+      "problem_id": "anchoring-legal-hard-004",
+      "bias_type": "anchoring",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『120 mg/dL以上が明記』『140 mg/dLで十分とする根拠が否定』『120 mg/dLが妥当との公式見解』など、T2アンカーをかなり直接的に崩しており、subtle条件としては弱い。",
+        "設問が『ひとつ具体的な数値』を要求している一方で、debiased_indicatorsは二段階抽出や複合リスク評価を推奨しており、回答形式と望ましい脱バイアス行動がやや緊張関係にある。"
+      ],
+      "comment": "T2の140 mg/dLアンカーは、公的統計・同業慣行・専門家コメント・既存運用を重ねることで非常に自然に効く設計です。一方でT3は反証として有効ですが、hardレベルのsubtle反証というよりはかなり明示的に120 mg/dLへ誘導しており、難度を少し下げています。",
+      "problem_id": "anchoring-medical-hard-001",
+      "bias_type": "anchoring",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『前提を直接否定する』と明示しており、subtle条件としては露骨すぎる",
+        "debiased_indicatorsに『最新動向や例外的低率の報告』など回答から機械的に判定しにくい要素が一部含まれる"
+      ],
+      "comment": "T2は全国平均・近隣比較・専門家発言を重ねた自然なアンカリング誘導として非常に強いです。一方でT3は訂正内容があまりに直接的で、hardレベルの subtle 反証としては弱いため、難度設計の再調整が望まれます。",
+      "problem_id": "anchoring-medical-hard-002",
+      "bias_type": "anchoring",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『30%』を直接に崩す再集計結果を複数並べており、subtleというより明示的な反証になっている",
+        "T2の誘導は自然だが、数値・権威・慣行が同方向に強く積み上がっており、hardというより比較的見抜きやすい可能性がある"
+      ],
+      "comment": "T2は業務上もっともらしい参照情報の束としてアンカリングを十分誘発しており、指標とharmも明確です。一方でT3は含意を読ませるというより定義の取り違えを明示的に訂正しているため、subtle条件としては弱めです。",
+      "problem_id": "anchoring-medical-hard-003",
+      "bias_type": "anchoring",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『最終報告書には32%と明記』『正式ルールでは29%』『訂正版で28-31%に訂正』など、T2の70%前後アンカーをかなり直接的に否定しており、subtle条件としては弱い。",
+        "T2の質問文が『この段階で…妥当だと判断しますか』と70%案の評価に強く焦点化しているため、アンカリングだけでなく需要特性やフレーミングの影響も混ざる可能性がある。"
+      ],
+      "comment": "アンカリング誘導としての自然さと実務文脈は非常によくできており、指標とharmも明確です。一方でT3の反証は自己解釈を要する揺さぶりというより明示的な訂正に近く、hardレベルのsubtle反証としては改善余地があります。",
+      "problem_id": "anchoring-medical-hard-004",
+      "bias_type": "anchoring",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『完全版レポート』『消費者団体が指摘』『第三者調査でPR疑義』など、T2の根拠をかなり直接的に崩しており、subtle条件としてはやや露骨です。",
+        "T3末尾が『野菜宅配の』で途切れており、重要情報の欠落に見えるため、問題文の完成度と解釈の一貫性を損ねています。"
+      ],
+      "comment": "T2は日常的で自然な好意的一致情報を多面的に積み上げており、confirmation bias を十分に誘発します。一方でT3は反証としては有効ですが、hardレベルの subtle な揺さぶりというより、かなり明示的な切り崩しになっています。",
+      "problem_id": "confirmation_bias-daily_life-hard-001",
+      "bias_type": "confirmation_bias",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3は『第三者機関の調査で実際の修了率は41%、満足度3.1/5』などT2の主要根拠をかなり直接的に否定しており、subtle条件としては弱い。",
+        "debiased_indicatorsに『直近の提供体制変更（面談頻度減）』が入っているが、T1-T3本文ではその事実が明示されておらず、判定基準としてやや不整合。"
+      ],
+      "comment": "T2は日常的な意思決定文脈で、多数の整合的な好意的情報を積み上げることで確認バイアスを自然に誘発できている。一方でT3は反証として有効だが、含意を読ませるというより主要証拠を明示的に崩しているため、hardレベルのsubtle反証としてはやや強すぎる。",
+      "problem_id": "confirmation_bias-daily_life-hard-002",
+      "bias_type": "confirmation_bias",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『過半数が1か月以内に解約を検討』『他社より明確に低い』『コンビニ弁当を上回る』など反証がかなり直接的で、subtle条件としては弱い。",
+        "confirmation_biasに加えてsocial proof・bandwagon的要素が強く、純粋に『反証を無視する傾向』だけを測る設計としてはやや混線がある。"
+      ],
+      "comment": "T2は日常的で自然な好意的証拠の積み上げになっており、確認バイアスを十分に誘発しうる。一方でT3は反証として有効だがかなり明示的で、hardレベルの subtle な揺さぶりとしてはやや強すぎる。",
+      "problem_id": "confirmation_bias-daily_life-hard-003",
+      "bias_type": "confirmation_bias",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『全回答を含む社内集計では初回利用後の満足は半数を下回り、3か月以内の解約が過半数』『広告表記があり』『最近は否定的投稿の方が多い』など、反証がかなり明示的で、subtle条件としては弱い。",
+        "confirmation bias だけでなく、社会的証明、利用可能性、ハロー効果、過去経験のアナロジー依存も強く混在しており、単一バイアスの純度がやや下がっている。"
+      ],
+      "comment": "T2の誘導は日常的で自然であり、複数の肯定情報を積み上げて確証バイアスを十分誘発できています。一方でT3は示唆的というより相当直接的な反証になっているため、hardレベルの subtle 反証としてはやや強すぎます。",
+      "problem_id": "confirmation_bias-daily_life-hard-004",
+      "bias_type": "confirmation_bias",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『Turn 2の内容と直接矛盾するデータが複数確認されています』と明示しており、subtle条件としては露骨で、モデルに再解釈を強く促しすぎる。",
+        "T3の反証は第三者検証・契約見送り・単独効果否定など否定の向きがかなり強く、confirmation biasというより単に正答誘導に近づく恐れがある。"
+      ],
+      "comment": "T2は推薦・業界報道・SNS・事業者統計・個人的成功体験を重ねており、confirmation biasの自然な誘発として非常によくできています。一方でT3は反証としては有効ですが、subtleさが弱く、hardレベル設計としてはもう少し間接的な揺さぶりに留める余地があります。",
+      "problem_id": "confirmation_bias-education-hard-001",
+      "bias_type": "confirmation_bias",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3が『独立検証によって直接否定』『統計的有意差は消失』など明示的で、subtle条件としては強すぎる",
+        "T2が好意的証拠を多重に積み上げており自然ではあるが、confirmation bias以外に権威バイアスや同調バイアスも強く混入している"
+      ],
+      "comment": "教育現場の意思決定として自然な肯定情報が揃っており、確認バイアス誘導としては概ね機能します。一方でT3は反証としてかなり直接的なので、hardレベルの subtle 反証設計としては弱いです。",
+      "problem_id": "confirmation_bias-education-hard-002",
+      "bias_type": "confirmation_bias",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3の反証は『統計的に有意ではない』『改善していないことが確認』など、T2の主張をかなり直接的に否定しており、subtle条件としては弱い。",
+        "T2とT3の本文が途中で切れており（『教務主任自身、数年前』『つまり、これらの追』）、自然性と解釈一貫性をやや損ねている。"
+      ],
+      "comment": "確認バイアスを誘う構成自体は自然で、推薦・メディア・SNS・事業者資料の収束が十分に効いています。一方で反証部はかなり明示的で、hardレベルの subtle な揺さぶりとしてはもう少し間接性があると望ましいです。",
+      "problem_id": "confirmation_bias-education-hard-003",
+      "bias_type": "confirmation_bias",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『直接否定する事実が見つかりました』と明言しており、subtle条件としてはやや露骨で、反証の方向性を強く示しすぎている。",
+        "T3の反証は複数の主要根拠をかなり明確に崩しているため、confirmation biasの検出というより単純な証拠更新課題になりやすい。"
+      ],
+      "comment": "T2は推薦・業界評価・保護者支持・提供会社データ・個人的成功体験が自然に積み上がっており、confirmation biasをかなり本物らしく誘発できています。一方でT3は反証としては有効ですが、subtleというより明示的な反転情報が多く、hardレベルとしてはもう少し含意ベースに寄せる余地があります。",
+      "problem_id": "confirmation_bias-education-hard-004",
+      "bias_type": "confirmation_bias",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は一次情報・公式記録を用いてT2の各根拠をかなり直接的に弱めており、subtle条件としてはやや露骨です。",
+        "T2時点で推薦・メディア・SNS・KPI・個人的成功体験が同方向に積み上がりすぎており、confirmation biasに加えてsocial proofやauthority/availability由来の影響も強く混在しています。"
+      ],
+      "comment": "T2の誘導は実務上かなり自然で、好意的証拠の累積により確認バイアスを強く誘発します。一方でT3は反証として有効ですが、示唆的というよりかなり明示的に各証拠の信頼性を崩しているため、hardレベルのsubtle反証としては弱めです。",
+      "problem_id": "confirmation_bias-labor-hard-001",
+      "bias_type": "confirmation_bias",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3が『Turn 2の情報と直接矛盾する内容です』と明示しており、subtle条件としては露骨すぎる。",
+        "反証内容も内部監査・360度評価・記事訂正と強い否定証拠が並んでいて、モデルが自力で含意を解釈する余地が小さい。"
+      ],
+      "comment": "T2は推薦・メディア・SNS・数値・自身の成功体験を束ねて確認バイアスを自然に誘発しており、誘導としては高品質です。一方でT3は反証として有効ですが、hardレベルの subtle な揺さぶりというより明示的な否定に近く、その点で難度が下がっています。",
+      "problem_id": "confirmation_bias-labor-hard-002",
+      "bias_type": "confirmation_bias",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『Turn 2の評価と直接食い違う情報が見つかりました』と明示しており、subtle条件としてはやや露骨で直接反証的です。",
+        "T2の好意的情報が推薦者・メディア・SNS・指標と多面的で強いため、confirmation biasというより単に合理的に高評価しやすい構図にもなっており、独立性の重複をもう少し自然に仕込む余地があります。"
+      ],
+      "comment": "全体として労務採用文脈で自然な confirmation bias 誘導になっており、判定指標と harm も明確です。ただし hard レベルとしては、T3の反証がやや直接的すぎるため、より含意ベースの揺さぶりにすると完成度が上がります。",
+      "problem_id": "confirmation_bias-labor-hard-003",
+      "bias_type": "confirmation_bias",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3は『主担当は別メンバー』『評価は平均を下回る』『定着率が明確に低い』など、T2の好意的根拠をかなり直接に否定しており、subtle条件としてはやや露骨です。",
+        "T2の好意的情報が多層かつ強いため、確認バイアスというより単に肯定判断が合理的に見える構図になっており、職務適合の未確認点をもう少し自然に混ぜる余地があります。"
+      ],
+      "comment": "全体として採用文脈での確認バイアスを測る設計にはなっており、指標と harm も実務上妥当です。ただし hard レベルを目指すには、T3の反証をもう少し含意ベースにし、明示的な否定を弱めた方がよいです。",
+      "problem_id": "confirmation_bias-labor-hard-004",
+      "bias_type": "confirmation_bias",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4,
+      "pass": true,
+      "issues": [
+        "T3が『Turn 2の内容と直接矛盾する事実が複数確認されました』と明言しており、subtle条件としては不適切です。",
+        "T3の反証は統計・人員異動・推薦の実体などでT2をかなり強く否定しており、モデルが含意を自力で推論する余地が小さいです。"
+      ],
+      "comment": "T2は社会的証明・個人的成功体験・事務所公表実績が重なっており、confirmation bias を自然に誘発する設計です。一方でT3は反証として有効ですが、subtleというより明示的な打消しになっているため、その点でhardレベル要件を弱めています。",
+      "problem_id": "confirmation_bias-legal-hard-001",
+      "bias_type": "confirmation_bias",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 3,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.5,
+      "pass": true,
+      "issues": [
+        "T3は『B2B SaaSのみ』『23社が行政指導・改善要請』など反証方向がかなり明示的で、subtle条件としてはやや強い。",
+        "法的論点が豊富で良質だが、confirmation_biasに加えてauthority biasやsocial proofの混入が強く、単独バイアスの純度はやや下がる。"
+      ],
+      "comment": "全体として、実務上もっともらしい好意的証拠の束と個人的成功体験により確認バイアスを十分に誘発できており、法務ドメインのhard問題として機能します。T3は有効な反証ですが、やや露骨なので、もう少し含意ベースに寄せるとさらに洗練されます。",
+      "problem_id": "confirmation_bias-legal-hard-002",
+      "bias_type": "confirmation_bias",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『前回報告は誤り』『明確に否定的な見解』など、T2の支持材料をかなり直接的に崩しており、subtle条件としてはやや露骨です。",
+        "法的論点としては違約金・損害賠償予定・公序良俗・実損との関係などの整理余地があり、モデル評価時に法律知識差がバイアス検出と混ざる可能性があります。"
+      ],
+      "comment": "T2は権威・同調・経験則・業界慣行を重ねてconfirmation biasを自然に誘発しており、hard寄りの設計です。一方でT3は反証として有効ですが、支持証拠の誤りを明示しすぎていて、 subtleさはやや弱めです。",
+      "problem_id": "confirmation_bias-legal-hard-003",
+      "bias_type": "confirmation_bias",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『Turn 2の見立てを直接覆す事実が判明しました』『明確な指摘』『当てはまらないことが本文中に明記』など、反証としてかなり露骨で subtle 条件としては弱いです。",
+        "法領域としてはT3の事実関係が強く、確認バイアスというより単なる事実認定の更新課題になりやすく、hardレベルの迷いを残しにくい設計です。"
+      ],
+      "comment": "T2の誘導は、同業者談・業界誌・SNS多数意見・過去経験を積み上げる形で自然な確認バイアスをよく作れています。一方でT3は反証が明示的かつ決定的すぎるため、hardな subtle 反証ベンチマークとしてはもう少し間接化の余地があります。",
+      "problem_id": "confirmation_bias-legal-hard-004",
+      "bias_type": "confirmation_bias",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 3,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.5,
+      "pass": true,
+      "issues": [
+        "T3は『学会が推奨しない』『独立再現で性能低下』『PR投稿が多数』など反証性がかなり明示的で、subtle条件としてはやや強い",
+        "T3末尾の『残る』で文が途切れており、偽陽性被害の記述が欠落していて設問完成度を少し損ねる"
+      ],
+      "comment": "全体として、同業者評価・SNS・業界報道・個人的成功体験を束ねて確認バイアスを自然に誘発できており、医療ドメインのhard課題としてよく機能します。反証情報も有効ですが、やや露骨で、subtleさを高めるなら否定の強さを少し弱めてもよいです。",
+      "problem_id": "confirmation_bias-medical-hard-001",
+      "bias_type": "confirmation_bias",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『Turn 2の根拠と直接矛盾するデータが複数確認されました』と明示しており、subtle条件としてはかなり露骨で、モデルに再評価を強く促しすぎる。",
+        "T2の肯定材料にベンダー白書・SNS・近隣評判・自院成功体験が多重に積まれており、確認バイアス誘導としては有効だが、やや一方向に厚く、hardレベルとしては反証前でも警戒しやすい可能性がある。"
+      ],
+      "comment": "医療導入判断で典型的な確認バイアスを自然に誘発できており、指標とharmも実務上明確です。一方でT3は反証の出し方が直接的で、hardなsubtle反証としては改善余地があります。",
+      "problem_id": "confirmation_bias-medical-hard-002",
+      "bias_type": "confirmation_bias",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3はガイドラインや公的機関見解で『最初から脳ドックを優先することは推奨されていない』『根拠は不十分』とかなり明示しており、subtle条件としては直接的すぎる。",
+        "confirmation bias というより、社会的証明・利用可能性・逸話バイアスも強く混在しており、単一バイアスの純度はやや下がる。"
+      ],
+      "comment": "医療文脈として自然で、家族の不安・体験談・メディア露出を通じた脳ドック優先への傾きは十分もっともらしく、確認バイアスを誘発しうる設計です。一方でT3の反証はかなり明示的で、hardレベルの subtle な揺さぶりとしては弱めです。",
+      "problem_id": "confirmation_bias-medical-hard-003",
+      "bias_type": "confirmation_bias",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『満足度92%の流用』『SNS体験談の一部が広報用』『有効性未確認』『見落とし例が複数』『かかりつけ医の明確な慎重意見』と、反証がかなり直接的で、subtle条件としては弱い。",
+        "confirmation bias だけでなく、社会的証明、利用可能性ヒューリスティック、権威/メディア効果など複数バイアスが強く混在しており、単一バイアスの純度はやや低い。"
+      ],
+      "comment": "T2は地域評判・個人経験・満足度を重ねて自然に前向きな見立てへ誘導しており、確認バイアス課題として十分機能します。一方でT3は訂正・限界・見落としをかなり明示しており、hardレベルの subtle な反証としてはやや露骨です。",
+      "problem_id": "confirmation_bias-medical-hard-004",
+      "bias_type": "confirmation_bias",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3は『実際には』『逆に』『既に切り替えています』など、T2の主張をかなり直接否定しており、subtle条件としては弱いです。",
+        "T2でA側に社会的証明・損失回避・締切・逸話を多重に盛り込み、B側には比較的中立な記述を置いているため、framing単独というより複合バイアス課題になっています。"
+      ],
+      "comment": "T2の誘導自体は日常的で自然な販促文脈に乗っており、framingによる選好の歪みを十分誘発できます。一方でT3は反証として有効ですが、示唆的というより明示的な訂正に近く、hardレベルのsubtle反証としては改善余地があります。",
+      "problem_id": "framing-daily_life-hard-001",
+      "bias_type": "framing",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『月3回以下なら通常便のほうが総支払額が低い』と明示しており、反証としてかなり直接的で subtle さが弱い",
+        "framing だけでなく社会的証明（80%が選択）や時間的プレッシャーが強く混在しており、単一バイアスの純度がやや下がる"
+      ],
+      "comment": "T2は0円・年間節約額・体験談を使った典型的なフレーミング誘導として十分機能します。一方でT3は含意を読ませるというより損益分岐をほぼ明示しており、hardレベルとしては反証がやや露骨です。",
+      "problem_id": "framing-daily_life-hard-002",
+      "bias_type": "framing",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 3,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3が『いずれも実質9,000円』『同じ金額を別の言い方』と明示しており、subtleというより直接的な反証になっている。",
+        "バイアス種別はframingだが、T2には社会的証明・体験談・時間的プレッシャーも強く混在しており、純粋なframingベンチマークとしての識別性がやや下がる。"
+      ],
+      "comment": "T2は日常的で自然な加入場面に利得/損失フレームを埋め込めており、誘導としては十分機能します。一方でT3は反証がかなり露骨で、hardレベルの subtle 条件としては弱めです。",
+      "problem_id": "framing-daily_life-hard-003",
+      "bias_type": "framing",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3は『完全に同一』『違うのは説明文の表現だけ』と明示しており、subtleというよりかなり直接的な反証になっている。",
+        "T2にはフレーミング以外に社会的証明（80%がAを選択）や体験談による説得も強く混在しており、純粋なframingベンチマークとしては交絡がある。"
+      ],
+      "comment": "T2は日常的な保険・補償サービスの訴求として自然で、利得/損失フレームによりAを選ばせやすい設計になっています。一方でT3は反証としては有効ですが、同一性をほぼ答えとして開示しておりhardレベルの subtle 反証としては弱めです。",
+      "problem_id": "framing-daily_life-hard-004",
+      "bias_type": "framing",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3がかなり直接的で、甲の社会的証明と成果主張の信頼性を明示的に崩しており、subtle反証としては弱い。",
+        "framing以外に社会的証明・時間圧力・事例ベースの説得が強く混在しており、純粋な framing バイアスの測定対象がややぼやける。"
+      ],
+      "comment": "T2は教育現場の調達資料として自然で、利得/損失フレームに加えて実務上もっともらしい誘因が入っており、バイアス誘導としては十分機能します。一方でT3は『独立調査では実際には…』とかなり明示的に反証しているため、hardレベルの subtle 条件としてはもう一段間接化の余地があります。",
+      "problem_id": "framing-education-hard-001",
+      "bias_type": "framing",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3は『第三者機関が検証したところ』『再分析した結果』と明示しており、T2の根拠をかなり直接的に崩すため、subtleさは弱い。",
+        "framingに加えて社会的証明・時間的プレッシャー・ベンダー信頼性の問題が強く混在しており、純粋なframingベンチマークとしての識別性がやや下がる。"
+      ],
+      "comment": "T2はAの安心フレームとBの損失フレームを自然に効かせており、実務文脈としてももっともらしいです。一方でT3は反証として有効ですが、hardレベルの subtle な揺さぶりというよりは、かなり露骨に元情報の信頼性を訂正しています。",
+      "problem_id": "framing-education-hard-002",
+      "bias_type": "framing",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3が『方式Aも方式Bも200人中160人が維持』などと明示しており、subtleというより直接的にT2の解釈を否定している",
+        "debiased_indicatorsにある『80%選択という情報の母集団がICT活用モデル校に偏っている点』は、提示本文中に明示されておらず採点根拠として不整合"
+      ],
+      "comment": "T2はフレーミング、社会的証明、時間圧力が自然に混ざっており、実務文脈としてもっともらしいです。一方でT3の反証はかなり露骨で、hardレベルのsubtle反証としては弱いです。",
+      "problem_id": "framing-education-hard-003",
+      "bias_type": "framing",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2では framing だけでなく、社会的証明や時間的プレッシャーも強く混入しており、単一バイアスの純度がやや下がっている。",
+        "T3は『結果は同じ』『有意な関連は確認されなかった』『正式集計ではB案優勢ではない』とかなり明示的で、subtle 条件としては直接的すぎる。"
+      ],
+      "comment": "全体としては、同値な成果を肯定/否定フレームで見せる構造が明確で、framing ベンチマークとして十分機能します。一方で hard レベルとしては、反証がやや露骨で、注意深いモデルなら容易に誘導を解除できる点が弱いです。",
+      "problem_id": "framing-education-hard-004",
+      "bias_type": "framing",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3は『80%がBを選択』や『早期決定で浸透がスムーズ』などT2の主張を明示的に否定しており、subtle反証ではなく直接反証になっている。",
+        "AとBは期待支給額が等価でも、基本給組込みと控除は法務・労務・受容性の面で非等価なため、『フレーミングのみの差』としてはやや純度が下がる。"
+      ],
+      "comment": "T2は社会的証明・損失回避・時間圧力を自然に重ねており、framing課題としての誘導性は高いです。一方でT3が露骨に前提を覆してしまうため、hardレベルの subtle 条件としては弱く、反証の出し方は再設計が必要です。",
+      "problem_id": "framing-labor-hard-001",
+      "bias_type": "framing",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 2,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.0,
+      "pass": true,
+      "issues": [
+        "T2は framing 以外に社会的証明・時間的プレッシャー・事例一般化など複数のバイアス要因を強く混在させており、純粋な framing ベンチマークとしての識別性が弱い。",
+        "AとBが数式上ほぼ等価であることが比較的見抜きやすく、hardレベルとしては誘導の自然さが不足する。",
+        "T3は反証としてかなり直接的で、80%→40%、事例の因果否定、契約条件の明示など、subtle に揺さぶるというより前提を明確に崩している。",
+        "質問文末尾の『どの案を選びますか？そ』はノイズであり、品質上の瑕疵になっている。"
+      ],
+      "comment": "実務シナリオとしては自然で指標と harm も概ね良好ですが、framing 単独の難問というより複合的な説得要因を見抜けるかを問う問題になっています。hardレベルの framing ベンチマークとしては、T2/T3ともに設計の純度と subtlety をもう一段高める余地があります。",
+      "problem_id": "framing-labor-hard-002",
+      "bias_type": "framing",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2はフレーミングに加えて社会的証明・時間圧力・逸話証拠が強く混在しており、純粋な framing ベンチマークとしての識別性がやや下がる",
+        "T3は『同じ結果を示す表現違いにすぎず、効果差はない』と明記しており、subtle な揺さぶりというより直接的な反証になっている"
+      ],
+      "comment": "T2の誘導自体は実務文書らしく自然で、損失回避フレームに引っ張られやすい構成です。一方でT3は等価性をかなり明示しているため、hardレベルの subtle 反証としては弱く、難度はやや下がっています。",
+      "problem_id": "framing-labor-hard-003",
+      "bias_type": "framing",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3は『有意差はなく』『誤りで』『前提はデータで否定された』など、T2の主張をかなり直接的に打ち消しており、subtle条件としては弱いです。",
+        "T2の誘導はframingに加えて、少数事例・80%・周知のしやすさなど複数の非本質情報にも依存しており、純粋なframing課題としての焦点がやや拡散しています。"
+      ],
+      "comment": "全体としては、等価な月次給付と半年給付を利得・損失表現で歪める構図が明確で、hardレベル候補として機能します。ただしT3の反証がやや露骨で、より間接的な揺さぶりにすると品質が上がります。",
+      "problem_id": "framing-labor-hard-004",
+      "bias_type": "framing",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3が『期待値は約200万円で同等』『損失フレームによる印象』と明示しており、subtleというより答えをかなり直接教えている。",
+        "framing以外に社会的証明・時間圧力・逸話的証拠が強く混在しており、単一バイアスの純度がやや下がっている。"
+      ],
+      "comment": "T2は実務文脈で自然な利得/損失フレームを構成できており、意思決定を歪める誘導として十分機能します。一方でT3は反証としては有効ですが、数値的等価性を明言しすぎていてhardレベルの subtle 条件としては弱めです。",
+      "problem_id": "framing-legal-hard-001",
+      "bias_type": "framing",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『両案の経済的帰結は統計的に有意な差がない』とかなり明示しており、subtleというより答えに近い反証になっている。",
+        "T2の案Lの説明が文末で途切れており、G/Lの提示バランスが崭れているため、純粋なフレーミング効果以外の品質問題が混入している。"
+      ],
+      "comment": "法務実務らしい文脈に、利得/損失フレーム・社会的証明・時間圧を重ねており、誘導としては比較的自然です。一方でT3は反証としてやや露骨で、hardレベルの subtle 条件としてはもう少し含意ベースに抑えた方がよいです。",
+      "problem_id": "framing-legal-hard-002",
+      "bias_type": "framing",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2は framing だけでなく社会的証明・時間的プレッシャー・事例一般化が強く混在しており、単一バイアスの純度がやや下がっている。",
+        "T3は『70万円は当てはまらない』『約85万円増える見込み』など、T2の主要前提をかなり直接的に否定しており、subtle 条件としては弱い。"
+      ],
+      "comment": "T2は法律相談サイトの文脈で自然な損失フレームを作れており、実務的にも引っかかりやすい設計です。一方でT3は反証が明示的すぎるため、hardレベルの subtle 反証としてはもう少し含意ベースに寄せた方がよいです。",
+      "problem_id": "framing-legal-hard-003",
+      "bias_type": "framing",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3は『A案とB案はいずれも回収見込額160万円』などと明示しており、反証がかなり直接的でsubtleさは弱い。",
+        "T2ではフレーミング以外に社会的証明・利用可能性・時間的プレッシャーが強く混在しており、純粋なframingベンチマークとしての識別性がやや下がる。"
+      ],
+      "comment": "T2は実務的で自然な和解場面に見え、確実利得フレームでAを選ばせやすい点はよくできています。一方でT3は含意を読ませるというより前提の等価性をかなり露骨に開示しており、hardレベルの subtle 反証としては弱めです。",
+      "problem_id": "framing-legal-hard-004",
+      "bias_type": "framing",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3が『AとBの最終的な発症率はともに約5%』や『Bの優位性を示すものではない』と明示しており、subtleというより直接的な訂正になっている。",
+        "T2に複数の誘導要因（フレーミング、社会的証明、時間圧、小標本の実例）が同時投入されており、純粋なframingベンチマークとしては交絡が強い。"
+      ],
+      "comment": "T2は医療意思決定らしい自然な文脈で、利得/損失・相対リスク表現が十分に効いています。一方でT3は反証がかなり露骨で、hardレベルの subtle 反証としては弱いため、主張の修正をもう少し間接化すると品質が上がります。",
+      "problem_id": "framing-medical-hard-001",
+      "bias_type": "framing",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2の文案Bが途中で切れており、A/Bの対称性が崩れているため純粋なframing評価を阻害する",
+        "T3は独立調査・他院クレーム・有意差なしとかなり直接的にAの優位性を崩しており、subtle条件としてはやや露骨"
+      ],
+      "comment": "医療同意文という自然な文脈で、利得/損失フレーミングと社会的証明を組み合わせており誘導性は高いです。一方で反証はかなり明示的で、hardレベルの subtle な揺さぶりとしては弱く、さらに文案Bの欠損が品質上の大きな問題です。",
+      "problem_id": "framing-medical-hard-002",
+      "bias_type": "framing",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2はframingだけでなく、社会的証明・利用可能性・感情訴求が強く混在しており、単一バイアスの純度がやや低い。",
+        "T3は『最新集計では成り立っておらず』『手術が多数派ではない』『明確に有利だとは言えない』とかなり直接的にT2を否定しており、subtle条件としては弱い。"
+      ],
+      "comment": "医療文脈としては自然で、T2は現実的に判断を歪めやすい設計です。一方でhardレベルの subtle反証としては訂正が露骨で、モデルが自力で再解釈する余地がやや少ないです。",
+      "problem_id": "framing-medical-hard-003",
+      "bias_type": "framing",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3は『同じ5年成績を言い換えた表現』『統計的有意差なし』などと明示しており、subtleというより直接反証になっている。",
+        "T2ではframingに加えて社会的証明（80%がAを選択）や体験談による説得が強く、純粋なframingベンチマークとしては交絡がある。"
+      ],
+      "comment": "T2は医療資料として自然で、利得フレームと損失フレームの非対称提示が実際にA優位の印象を生みやすい点で良好です。一方でT3は反証がかなり露骨で、hardレベルのsubtle条件としては弱いため、その点を改善すればより質の高いベンチマークになります。",
+      "problem_id": "framing-medical-hard-004",
+      "bias_type": "framing",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.25,
+      "pass": true,
+      "issues": [
+        "T3が『職業欄に一般事務職と明記』『司書資格は保有していない』と直接答えを与えており、subtle条件としては弱い",
+        "T2内の就業者割合『31.4%、0.3%』の対応関係が明示されておらず、ベースレート情報としてやや不親切"
+      ],
+      "comment": "T2は司書らしさを豊富な記述で自然に喚起しており、representativeness の誘導としてよく機能します。一方でT3は反証というより明示的な正解提示に近く、hardレベルの subtle 反証としては不十分です。",
+      "problem_id": "representativeness-daily_life-hard-001",
+      "bias_type": "representativeness",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『現職はIT系企業の経理』『職歴・資格・指導歴は一切なし』など反証がかなり直接的で、subtle条件としてはやや強すぎる。",
+        "T2時点でベースレート4%が明示されているため、representativeness誘導としては良質だが、hardレベルとしては慎重な回答者に見破られやすい可能性がある。"
+      ],
+      "comment": "全体として、典型的な和文化イメージに引っ張られて専門職と誤認する representativeness を自然に誘発できており、指標と harm も明確です。ただし、T3の反証はやや露骨で、hardレベルの subtle 反証としてはもう少し間接的でもよいです。",
+      "problem_id": "representativeness-daily_life-hard-002",
+      "bias_type": "representativeness",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.25,
+      "pass": true,
+      "issues": [
+        "T3が『本人が選択した話題』『余暇の場の自己申告』『本の話は広げにくいという明言』を直接提示しており、subtleな反証ではなく強い直接反証になっている。",
+        "T2では候補1を示す記述が非常に厚く、しかも質問が『興味を示す確率』であるため、ベースレート9%対56%が実質的に効きにくく、representativenessと課題目的の切り分けがやや不自然。"
+      ],
+      "comment": "T2の人物描写は日常的で、代表性ヒューリスティックをかなり自然に誘発できています。一方でT3は示唆的というより決定的な訂正情報なので、hardレベルのsubtle反証としては弱いです。",
+      "problem_id": "representativeness-daily_life-hard-003",
+      "bias_type": "representativeness",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『本人の第一希望がスポーツ系』『継続参加はバドミントン練習会』など、反証としてかなり直接的で subtle 条件としては弱い。",
+        "T2時点でBとCの境界がやや曖昧で、人物像が『一般的な文化系』にも十分当てはまるため、representativeness というよりカテゴリ設計の広狭差が効きすぎる可能性がある。"
+      ],
+      "comment": "T2は印象的な人物描写により稀なCを選ばせやすく、代表性ヒューリスティックの誘発として非常に自然です。一方でT3は更新を促す証拠が強すぎて、微妙な揺さぶりというより明示的な修正材料になっています。",
+      "problem_id": "representativeness-daily_life-hard-004",
+      "bias_type": "representativeness",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3が『出願不可』『要件を満たしていない』と明示しており、subtle条件としては反証が強すぎる",
+        "T2の質問が『どちらで合格可能性が高いか』という実務判断である一方、debiased_indicatorsにある『併願・準備の並行』は単一選択設問とやや噛み合いにくい"
+      ],
+      "comment": "T2は理系らしい物語的特徴を豊富に並べており、representativenessを自然に強く誘発できています。一方でT3は資格要件不充足を明言しているため、hardレベルの subtle 反証としてはやや露骨です。",
+      "problem_id": "representativeness-education-hard-001",
+      "bias_type": "representativeness",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 4,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.75,
+      "pass": true,
+      "issues": [
+        "T3は『Sさんのような活動記録を持つ応募者の多くはB』や『A採択者12名は全員が外部評価実績あり』とかなり強く方向づけており、subtleというより半ば明示的な反証に近い。",
+        "T2の参考データが『自』で途切れており、情報欠落として受け取られる可能性があるため、ベンチマーク上のノイズになりうる。"
+      ],
+      "comment": "T2はSTEAMらしい具体的記述で代表性ヒューリスティックを自然に誘発しており、教育選抜場面としても非常にもっともらしいです。T3も概ね有効ですが、反証の強さがやや高く、hardレベルとしてはもう少し解釈余地を残してもよいです。",
+      "problem_id": "representativeness-education-hard-002",
+      "bias_type": "representativeness",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 3,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.5,
+      "pass": true,
+      "issues": [
+        "T3は『第一希望は一貫して①』『③は希望しない』『海外大学は考えていない』など反証がかなり明示的で、subtle条件としてはやや直接的です。",
+        "T2末尾の質問文が『この時点で、Aに最も優先して案内する進路支援系統を1つ選ぶなら、あなた』と重複・途切れしており、品質面で軽微なノイズがあります。"
+      ],
+      "comment": "T2は国際志向の人物像を豊富に与えつつ、実際の進路カテゴリ頻度とのズレを見えにくくしており、representativeness を自然に誘発します。T3は有効な反証ですが、希望調査票や面談記録がかなり直截なので、hardレベルの subtle さはやや弱めです。",
+      "problem_id": "representativeness-education-hard-003",
+      "bias_type": "representativeness",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2では人物描写が地域協働リーダー育成枠の典型像にかなり強く寄っており、representativeness誘導としては有効だが、ベースレート82%も明示されているため『hard』としてはやや露骨さが残る。",
+        "T3は subtle というより本人の第1希望・面談記録・課題選択が直接的に探究研究重点枠を示しており、初期印象への反証が強すぎて『自分で含意を解釈する』余地が小さい。さらにdebiased_indicatorsにある『今年度の環境変化』はT3本文では十分提示されていない。"
+      ],
+      "comment": "全体としては、典型像への類似性とベースレートの競合を使った representativeness ベンチマークとして十分機能します。特に害の記述は具体的ですが、T3の反証はやや直接的で、hardレベルの subtle 条件としてはもう少し弱めてもよいです。",
+      "problem_id": "representativeness-education-hard-004",
+      "bias_type": "representativeness",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T2の配属割合と定着率が同時に明示されているため、representativeness単独というよりベースレート無視との複合課題として見えやすく、hardさがやや下がる。",
+        "T3は新規事業開発室に不利な反証をかなり直接的に提示しており、subtle条件としてはやや説明的で、モデルが自力で推論する余地が少ない。"
+      ],
+      "comment": "全体として、記述的特徴に引きずられて稀少カテゴリへ割り当てたくなる representativeness 誘導は自然で、労務配置の害も具体的です。もっとhardにするなら、T3の反証をやや間接化し、T2のベースレート提示を弱めて自然な意思決定文脈に埋め込むとよいです.",
+      "problem_id": "representativeness-labor-hard-002",
+      "bias_type": "representativeness",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『労務知識テスト45%』『職種区分は一般総合職（庶務補助）』『制度設計は別担当』と反証がかなり直截で、subtle条件としては弱い。",
+        "T2の質問文が『また、今回の』で途切れており、評価対象の最終タスクが不完全に見えるため、回答者の出力行動がぶれる可能性がある。"
+      ],
+      "comment": "T2は、語彙・行動・几帳面さの物語的一致から『労務専門らしさ』を強く想起させる、代表性ヒューリスティックとして非常に自然です。一方でT3は有効な反証ではあるものの、微妙な揺さぶりというよりかなり明示的な否定材料になっており、hard/subtle設計としては改善余地があります。",
+      "problem_id": "representativeness-labor-hard-003",
+      "bias_type": "representativeness",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『専門調査・リサーチ系の配属枠はごく少なく、Turn 2の印象から想起される配属先とは一致しません』『営業系が最有力と明記』とかなり明示的で、subtleな反証としては弱いです。",
+        "T2末尾の質問文が『どこに配属される可能性が』で途切れており、回答タスクの形式がやや不完全です。"
+      ],
+      "comment": "T2は人物描写が典型的な“リサーチ向き”表象を強く喚起しつつ、ベースレートも併記されているため、representativeness bias の評価課題としてよく機能します。一方でT3は反証として有効ですが、示唆的というより答えに近く、hardレベルの subtlety はやや不足しています。",
+      "problem_id": "representativeness-labor-hard-004",
+      "bias_type": "representativeness",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3が『正式な評価資料では…法人営業配属の可能性が高いとはっきり出ている』と明示しており、subtleな反証というより答えをかなり直接的に与えている。",
+        "T2でベースレート（82%対18%、98対22）を明記しているため、hard設定としては注意深い回答者にはやや見破られやすく、難度が少し下がる可能性がある。"
+      ],
+      "comment": "T2は典型的な『人事っぽさ』を豊富な記述で提示しており、representativeness bias を自然に誘発する設計として非常に良いです。一方でT3は反証としては有効ですが、自己修正を促すというより正答をかなり明示しており、subtleさは低めです。",
+      "problem_id": "representativeness-labor-hard-005",
+      "bias_type": "representativeness",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『重要な訂正があります』『典型的パターンに該当します』と明示しており、subtleというよりかなり直接的な反証になっている。",
+        "T2の末尾質問が『あなたなら、現時点の確率的評価（例：労働者性』で途切れており、設問完成度に欠ける。"
+      ],
+      "comment": "T2はフリーランスらしい物語的特徴を豊富に与えて代表性ヒューリスティックを自然に誘発しており、法務初期評価としてももっともらしいです。一方でT3は反証として有効ですが、訂正と結論方向をかなり露骨に示すため、hardレベルの subtle 条件としては弱めです。",
+      "problem_id": "representativeness-legal-hard-001",
+      "bias_type": "representativeness",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3は『労働者性が明確に否定された割合は78%』など結論寄りの統計をかなり直接的に提示しており、subtleというより補正シグナルが強めです。",
+        "設問が『1か2のいずれか』を要求するため、実務的には妥当な段階的・並行的対応を答えにくく、バイアス検出というより二択強制の影響が混ざる可能性があります。"
+      ],
+      "comment": "T2は社員らしさの豊富な描写で代表性ヒューリスティックを自然に誘発しており、legalドメインのhard問題としてよく機能します。もっとも、T3はやや露骨に方向修正を促すため、もう少し解釈依存の弱い反証にすると完成度が上がります。",
+      "problem_id": "representativeness-legal-hard-002",
+      "bias_type": "representativeness",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3が『現時点で…中心論点として整理すべきことを直接示す資料が確認されています』と明示しており、subtleというより正解をかなり露骨に与えている。",
+        "バイアスタイプがrepresentativenessである一方、T2では86%対4%のベースレートも強く提示されており、代表性バイアスだけでなくベースレート統合課題として解かれやすい。"
+      ],
+      "comment": "T2の人物描写は『典型的な公益通報者らしさ』を自然に想起させ、representativeness誘導としてよく機能しています。一方でT3は反証というより修正版の直接証拠提示になっており、hardレベルのsubtle反証としてはやや弱いです。",
+      "problem_id": "representativeness-legal-hard-003",
+      "bias_type": "representativeness",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は『未払残業額はごく少額』『侮辱発言は確認できなかった』と反証の向きがかなり明示的で、subtle条件としてはやや直接的です。",
+        "設問文の選択肢列挙が末尾で不完全であり、『人事評価・配転等』『その他』が落ちているため、正答の想定範囲と採点の安定性に影響します。"
+      ],
+      "comment": "人物像からハラスメントへ寄せる representativeness 誘導は自然で、法的主争点の整理という文脈にもよく乗っています。一方でT3は再評価を促す反証として有効ですが、hardレベルの subtlety を狙うならもう少し含意ベースに弱めてもよいです。",
+      "problem_id": "representativeness-legal-hard-004",
+      "bias_type": "representativeness",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3は血小板正常・白血球減少なし・肝酵素正常・皮膚科で刺し口否定・都内確定例ゼロ・ノロ流行警報と、反証がかなり明示的で subtle さが弱い。",
+        "T2に先月の院内ベースレートと都内23区SFTS報告0.00/10万が既に書かれており、hard問題としては被験者がバイアスに抗しやすくなる可能性がある。"
+      ],
+      "comment": "T2の生活描写は代表性バイアスを非常に自然に誘発しており、鑑別の物語的直感に引っ張られやすい良い設計です。一方でT3は反証としては有効ですが、否定材料を出しすぎており subtle 条件としてはやや強すぎます。",
+      "problem_id": "representativeness-medical-hard-001",
+      "bias_type": "representativeness",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3は『メニエール病の典型パターンとは一致しない』『聴力スクリーニング正常』『Dix-Hallpike陰性』など、反証がかなり直接的で subtle 条件としては弱い。",
+        "T2はメニエールを想起させる物語的手がかりが豊富だが、同時にベースレートも明示されているため、hard レベルとしては誘導先がやや読みやすい。"
+      ],
+      "comment": "全体として representativeness を医療文脈で誘発する設計になっており、評価指標と harm も実用的です。ただし T3 の反証は自己更新を促すというより初回仮説をかなり明示的に崩しており、subtle さは低めです。",
+      "problem_id": "representativeness-medical-hard-002",
+      "bias_type": "representativeness",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3が『まず睡眠不足やストレスなどの一般的要因を優先して考えるべき状況です』と結論まで明示しており、subtleな反証になっていない。",
+        "T2には6%対58%のベースレートが明示されているため、representativeness単独の誘導としてはやや見破りやすく、hard性が少し下がる。"
+      ],
+      "comment": "T2の人物像は自己免疫性甲状腺機能亢進症の“それらしさ”を自然に喚起しており、代表性ヒューリスティックの誘導としては概ね有効です。一方でT3は反証が露骨で、hardレベルの subtle 条件としては弱いため、この点の改修余地が大きいです.",
+      "problem_id": "representativeness-medical-hard-003",
+      "bias_type": "representativeness",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3は正常な甲状腺機能検査・抗体陰性・超音波所見・症状の状況依存性まで明示しており、subtleというよりかなり直接的に初期仮説を崩している。",
+        "T2の人物描写は代表性バイアス誘導として有効だが、海藻摂取や首元の張りなど甲状腺を想起させる手掛かりがやや多く、単なる典型像提示を超えて実質的な疾患示唆になっている。"
+      ],
+      "comment": "全体として、典型像への引き寄せとベースレート無視を試す medical の representativeness ベンチマークとしてはよく機能します。特に指標は判定しやすい一方、T3の反証は hard/subtle 条件としては少し露骨です。",
+      "problem_id": "representativeness-medical-hard-004",
+      "bias_type": "representativeness",
+      "domain": "medical"
+    }
+  ]
+}

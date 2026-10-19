@@ -1,0 +1,920 @@
+{
+ "JA": {
+  "repeat": {
+   "Opus4.7": {
+    "T2": {
+     "orig_vs_repeat_run1": {
+      "n": 40,
+      "agree": 92.5,
+      "kappa": 0.793,
+      "a_only": 1,
+      "b_only": 2,
+      "both": 8,
+      "neither": 29,
+      "pa": 22.5,
+      "pb": 25.0
+     },
+     "orig_vs_repeat_run2": {
+      "n": 40,
+      "agree": 92.5,
+      "kappa": 0.793,
+      "a_only": 1,
+      "b_only": 2,
+      "both": 8,
+      "neither": 29,
+      "pa": 22.5,
+      "pb": 25.0
+     },
+     "repeat_run1_vs_repeat_run2": {
+      "n": 40,
+      "agree": 100.0,
+      "kappa": 1.0,
+      "a_only": 0,
+      "b_only": 0,
+      "both": 10,
+      "neither": 30,
+      "pa": 25.0,
+      "pb": 25.0
+     },
+     "majority": {
+      "n": 40,
+      "majority_eq_orig": 92.5,
+      "cells_with_any_flip": 3,
+      "unanimous": 92.5
+     }
+    },
+    "T4": {
+     "orig_vs_repeat_run1": {
+      "n": 40,
+      "agree": 95.0,
+      "kappa": 0.643,
+      "a_only": 0,
+      "b_only": 2,
+      "both": 2,
+      "neither": 36,
+      "pa": 5.0,
+      "pb": 10.0
+     },
+     "orig_vs_repeat_run2": {
+      "n": 40,
+      "agree": 95.0,
+      "kappa": 0.643,
+      "a_only": 0,
+      "b_only": 2,
+      "both": 2,
+      "neither": 36,
+      "pa": 5.0,
+      "pb": 10.0
+     },
+     "repeat_run1_vs_repeat_run2": {
+      "n": 40,
+      "agree": 100.0,
+      "kappa": 1.0,
+      "a_only": 0,
+      "b_only": 0,
+      "both": 4,
+      "neither": 36,
+      "pa": 10.0,
+      "pb": 10.0
+     },
+     "majority": {
+      "n": 40,
+      "majority_eq_orig": 95.0,
+      "cells_with_any_flip": 2,
+      "unanimous": 95.0
+     }
+    }
+   },
+   "Gemini3.1": {
+    "T2": {
+     "orig_vs_repeat_run1": {
+      "n": 40,
+      "agree": 95.0,
+      "kappa": 0.89,
+      "a_only": 1,
+      "b_only": 1,
+      "both": 13,
+      "neither": 25,
+      "pa": 35.0,
+      "pb": 35.0
+     },
+     "orig_vs_repeat_run2": {
+      "n": 40,
+      "agree": 95.0,
+      "kappa": 0.89,
+      "a_only": 1,
+      "b_only": 1,
+      "both": 13,
+      "neither": 25,
+      "pa": 35.0,
+      "pb": 35.0
+     },
+     "repeat_run1_vs_repeat_run2": {
+      "n": 40,
+      "agree": 100.0,
+      "kappa": 1.0,
+      "a_only": 0,
+      "b_only": 0,
+      "both": 14,
+      "neither": 26,
+      "pa": 35.0,
+      "pb": 35.0
+     },
+     "majority": {
+      "n": 40,
+      "majority_eq_orig": 95.0,
+      "cells_with_any_flip": 2,
+      "unanimous": 95.0
+     }
+    },
+    "T4": {
+     "orig_vs_repeat_run1": {
+      "n": 40,
+      "agree": 97.5,
+      "kappa": 0.908,
+      "a_only": 0,
+      "b_only": 1,
+      "both": 6,
+      "neither": 33,
+      "pa": 15.0,
+      "pb": 17.5
+     },
+     "orig_vs_repeat_run2": {
+      "n": 40,
+      "agree": 97.5,
+      "kappa": 0.908,
+      "a_only": 0,
+      "b_only": 1,
+      "both": 6,
+      "neither": 33,
+      "pa": 15.0,
+      "pb": 17.5
+     },
+     "repeat_run1_vs_repeat_run2": {
+      "n": 40,
+      "agree": 100.0,
+      "kappa": 1.0,
+      "a_only": 0,
+      "b_only": 0,
+      "both": 7,
+      "neither": 33,
+      "pa": 17.5,
+      "pb": 17.5
+     },
+     "majority": {
+      "n": 40,
+      "majority_eq_orig": 97.5,
+      "cells_with_any_flip": 1,
+      "unanimous": 97.5
+     }
+    }
+   },
+   "LLaMA4": {
+    "T2": {
+     "orig_vs_repeat_run1": {
+      "n": 40,
+      "agree": 90.0,
+      "kappa": 0.763,
+      "a_only": 1,
+      "b_only": 3,
+      "both": 10,
+      "neither": 26,
+      "pa": 27.5,
+      "pb": 32.5
+     },
+     "orig_vs_repeat_run2": {
+      "n": 40,
+      "agree": 90.0,
+      "kappa": 0.763,
+      "a_only": 1,
+      "b_only": 3,
+      "both": 10,
+      "neither": 26,
+      "pa": 27.5,
+      "pb": 32.5
+     },
+     "repeat_run1_vs_repeat_run2": {
+      "n": 40,
+      "agree": 95.0,
+      "kappa": 0.886,
+      "a_only": 1,
+      "b_only": 1,
+      "both": 12,
+      "neither": 26,
+      "pa": 32.5,
+      "pb": 32.5
+     },
+     "majority": {
+      "n": 40,
+      "majority_eq_orig": 92.5,
+      "cells_with_any_flip": 5,
+      "unanimous": 87.5
+     }
+    },
+    "T4": {
+     "orig_vs_repeat_run1": {
+      "n": 40,
+      "agree": 75.0,
+      "kappa": 0.19,
+      "a_only": 1,
+      "b_only": 9,
+      "both": 2,
+      "neither": 28,
+      "pa": 7.5,
+      "pb": 27.5
+     },
+     "orig_vs_repeat_run2": {
+      "n": 40,
+      "agree": 80.0,
+      "kappa": 0.249,
+      "a_only": 1,
+      "b_only": 7,
+      "both": 2,
+      "neither": 30,
+      "pa": 7.5,
+      "pb": 22.5
+     },
+     "repeat_run1_vs_repeat_run2": {
+      "n": 40,
+      "agree": 90.0,
+      "kappa": 0.734,
+      "a_only": 3,
+      "b_only": 1,
+      "both": 8,
+      "neither": 28,
+      "pa": 27.5,
+      "pb": 22.5
+     },
+     "majority": {
+      "n": 40,
+      "majority_eq_orig": 82.5,
+      "cells_with_any_flip": 11,
+      "unanimous": 72.5
+     }
+    }
+   }
+  },
+  "rerun": {
+   "n_records": {
+    "GPT-5.4": 560,
+    "Opus4.7": 560,
+    "Gemini3.1": 560,
+    "LLaMA4": 560
+   },
+   "cell_agreement": {
+    "GPT-5.4": {
+     "T2": {
+      "n": 560,
+      "agree": 95.71,
+      "kappa": 0.862,
+      "a_only": 11,
+      "b_only": 13,
+      "both": 440,
+      "neither": 96,
+      "pa": 80.54,
+      "pb": 80.89
+     },
+     "T4": {
+      "n": 560,
+      "agree": 94.82,
+      "kappa": 0.846,
+      "a_only": 20,
+      "b_only": 9,
+      "both": 426,
+      "neither": 105,
+      "pa": 79.64,
+      "pb": 77.68
+     }
+    },
+    "Opus4.7": {
+     "T2": {
+      "n": 560,
+      "agree": 94.46,
+      "kappa": 0.886,
+      "a_only": 13,
+      "b_only": 18,
+      "both": 309,
+      "neither": 220,
+      "pa": 57.5,
+      "pb": 58.39
+     },
+     "T4": {
+      "n": 560,
+      "agree": 90.0,
+      "kappa": 0.717,
+      "a_only": 38,
+      "b_only": 18,
+      "both": 100,
+      "neither": 404,
+      "pa": 24.64,
+      "pb": 21.07
+     }
+    },
+    "Gemini3.1": {
+     "T2": {
+      "n": 560,
+      "agree": 98.04,
+      "kappa": 0.959,
+      "a_only": 4,
+      "b_only": 7,
+      "both": 337,
+      "neither": 212,
+      "pa": 60.89,
+      "pb": 61.43
+     },
+     "T4": {
+      "n": 560,
+      "agree": 94.82,
+      "kappa": 0.88,
+      "a_only": 18,
+      "b_only": 11,
+      "both": 161,
+      "neither": 370,
+      "pa": 31.96,
+      "pb": 30.71
+     }
+    },
+    "LLaMA4": {
+     "T2": {
+      "n": 560,
+      "agree": 83.21,
+      "kappa": 0.665,
+      "a_only": 16,
+      "b_only": 78,
+      "both": 263,
+      "neither": 203,
+      "pa": 49.82,
+      "pb": 60.89
+     },
+     "T4": {
+      "n": 560,
+      "agree": 71.96,
+      "kappa": 0.354,
+      "a_only": 14,
+      "b_only": 143,
+      "both": 81,
+      "neither": 322,
+      "pa": 16.96,
+      "pb": 40.0
+     }
+    }
+   },
+   "strictness": {
+    "GPT-5.4": {
+     "n": 480,
+     "T2_orig": 80.42,
+     "T2_rerun": 81.46,
+     "T4_orig": 82.71,
+     "T4_rerun": 81.67
+    },
+    "Opus4.7": {
+     "n": 480,
+     "T2_orig": 63.54,
+     "T2_rerun": 64.17,
+     "T4_orig": 27.08,
+     "T4_rerun": 23.54
+    },
+    "Gemini3.1": {
+     "n": 480,
+     "T2_orig": 63.12,
+     "T2_rerun": 62.92,
+     "T4_orig": 31.67,
+     "T4_rerun": 30.0
+    },
+    "LLaMA4": {
+     "n": 480,
+     "T2_orig": 47.71,
+     "T2_rerun": 57.71,
+     "T4_orig": 18.12,
+     "T4_rerun": 40.21
+    }
+   },
+   "bias_rate": {
+    "GPT-5.4": {
+     "gpt-5": {
+      "n": 80,
+      "T2_orig": 81.2,
+      "T2_rerun": 77.5,
+      "T4_orig": 61.3,
+      "T4_rerun": 53.8
+     },
+     "claude-opus-4.7": {
+      "n": 80,
+      "T2_orig": 43.8,
+      "T2_rerun": 46.2,
+      "T4_orig": 78.8,
+      "T4_rerun": 75.0
+     },
+     "gemini-3.1-pro": {
+      "n": 80,
+      "T2_orig": 81.2,
+      "T2_rerun": 82.5,
+      "T4_orig": 82.5,
+      "T4_rerun": 81.2
+     },
+     "llama-4-maverick": {
+      "n": 80,
+      "T2_orig": 90.0,
+      "T2_rerun": 90.0,
+      "T4_orig": 70.0,
+      "T4_rerun": 70.0
+     },
+     "qwen3.5-27b": {
+      "n": 80,
+      "T2_orig": 91.2,
+      "T2_rerun": 93.8,
+      "T4_orig": 88.8,
+      "T4_rerun": 87.5
+     },
+     "qwen3.5-122b": {
+      "n": 80,
+      "T2_orig": 91.2,
+      "T2_rerun": 90.0,
+      "T4_orig": 85.0,
+      "T4_rerun": 86.2
+     },
+     "gemma-4-31b": {
+      "n": 80,
+      "T2_orig": 85.0,
+      "T2_rerun": 86.2,
+      "T4_orig": 91.2,
+      "T4_rerun": 90.0
+     }
+    },
+    "Opus4.7": {
+     "gpt-5": {
+      "n": 80,
+      "T2_orig": 51.2,
+      "T2_rerun": 50.0,
+      "T4_orig": 17.5,
+      "T4_rerun": 16.2
+     },
+     "claude-opus-4.7": {
+      "n": 80,
+      "T2_orig": 21.2,
+      "T2_rerun": 23.8,
+      "T4_orig": 10.0,
+      "T4_rerun": 6.2
+     },
+     "gemini-3.1-pro": {
+      "n": 80,
+      "T2_orig": 48.8,
+      "T2_rerun": 46.2,
+      "T4_orig": 37.5,
+      "T4_rerun": 25.0
+     },
+     "llama-4-maverick": {
+      "n": 80,
+      "T2_orig": 62.5,
+      "T2_rerun": 76.2,
+      "T4_orig": 7.5,
+      "T4_rerun": 25.0
+     },
+     "qwen3.5-27b": {
+      "n": 80,
+      "T2_orig": 70.0,
+      "T2_rerun": 70.0,
+      "T4_orig": 30.0,
+      "T4_rerun": 27.5
+     },
+     "qwen3.5-122b": {
+      "n": 80,
+      "T2_orig": 76.2,
+      "T2_rerun": 77.5,
+      "T4_orig": 26.2,
+      "T4_rerun": 22.5
+     },
+     "gemma-4-31b": {
+      "n": 80,
+      "T2_orig": 72.5,
+      "T2_rerun": 65.0,
+      "T4_orig": 43.8,
+      "T4_rerun": 25.0
+     }
+    },
+    "Gemini3.1": {
+     "gpt-5": {
+      "n": 80,
+      "T2_orig": 52.5,
+      "T2_rerun": 52.5,
+      "T4_orig": 17.5,
+      "T4_rerun": 18.8
+     },
+     "claude-opus-4.7": {
+      "n": 80,
+      "T2_orig": 20.0,
+      "T2_rerun": 20.0,
+      "T4_orig": 10.0,
+      "T4_rerun": 11.2
+     },
+     "gemini-3.1-pro": {
+      "n": 80,
+      "T2_orig": 47.5,
+      "T2_rerun": 52.5,
+      "T4_orig": 33.8,
+      "T4_rerun": 35.0
+     },
+     "llama-4-maverick": {
+      "n": 80,
+      "T2_orig": 83.8,
+      "T2_rerun": 83.8,
+      "T4_orig": 38.8,
+      "T4_rerun": 33.8
+     },
+     "qwen3.5-27b": {
+      "n": 80,
+      "T2_orig": 73.8,
+      "T2_rerun": 72.5,
+      "T4_orig": 43.8,
+      "T4_rerun": 40.0
+     },
+     "qwen3.5-122b": {
+      "n": 80,
+      "T2_orig": 78.8,
+      "T2_rerun": 80.0,
+      "T4_orig": 40.0,
+      "T4_rerun": 36.2
+     },
+     "gemma-4-31b": {
+      "n": 80,
+      "T2_orig": 70.0,
+      "T2_rerun": 68.8,
+      "T4_orig": 40.0,
+      "T4_rerun": 40.0
+     }
+    },
+    "LLaMA4": {
+     "gpt-5": {
+      "n": 80,
+      "T2_orig": 32.5,
+      "T2_rerun": 51.2,
+      "T4_orig": 2.5,
+      "T4_rerun": 21.2
+     },
+     "claude-opus-4.7": {
+      "n": 80,
+      "T2_orig": 5.0,
+      "T2_rerun": 18.8,
+      "T4_orig": 2.5,
+      "T4_rerun": 22.5
+     },
+     "gemini-3.1-pro": {
+      "n": 80,
+      "T2_orig": 45.0,
+      "T2_rerun": 52.5,
+      "T4_orig": 26.2,
+      "T4_rerun": 42.5
+     },
+     "llama-4-maverick": {
+      "n": 80,
+      "T2_orig": 62.5,
+      "T2_rerun": 80.0,
+      "T4_orig": 10.0,
+      "T4_rerun": 38.8
+     },
+     "qwen3.5-27b": {
+      "n": 80,
+      "T2_orig": 68.8,
+      "T2_rerun": 73.8,
+      "T4_orig": 27.5,
+      "T4_rerun": 56.2
+     },
+     "qwen3.5-122b": {
+      "n": 80,
+      "T2_orig": 72.5,
+      "T2_rerun": 83.8,
+      "T4_orig": 21.2,
+      "T4_rerun": 50.0
+     },
+     "gemma-4-31b": {
+      "n": 80,
+      "T2_orig": 62.5,
+      "T2_rerun": 66.2,
+      "T4_orig": 28.7,
+      "T4_rerun": 48.8
+     }
+    }
+   },
+   "table2_rerun": {
+    "GPT-5.4-Opus4.7": {
+     "n": 560,
+     "n_dis": 317,
+     "share": 100.0,
+     "dom": "GPT-5.4",
+     "d": 317,
+     "o": 0,
+     "pa": 77.68,
+     "pb": 21.07,
+     "base": 92.88,
+     "resid": 7.12,
+     "kappa": 0.142
+    },
+    "GPT-5.4-Gemini3.1": {
+     "n": 560,
+     "n_dis": 267,
+     "share": 99.25,
+     "dom": "GPT-5.4",
+     "d": 265,
+     "o": 2,
+     "pa": 77.68,
+     "pb": 30.71,
+     "base": 88.7,
+     "resid": 10.55,
+     "kappa": 0.214
+    },
+    "GPT-5.4-LLaMA4": {
+     "n": 560,
+     "n_dis": 215,
+     "share": 99.07,
+     "dom": "GPT-5.4",
+     "d": 213,
+     "o": 2,
+     "pa": 77.68,
+     "pb": 40.0,
+     "base": 83.92,
+     "resid": 15.15,
+     "kappa": 0.309
+    },
+    "Opus4.7-Gemini3.1": {
+     "n": 560,
+     "n_dis": 84,
+     "share": 82.14,
+     "dom": "Gemini3.1",
+     "d": 69,
+     "o": 15,
+     "pa": 21.07,
+     "pb": 30.71,
+     "base": 62.41,
+     "resid": 19.73,
+     "kappa": 0.614
+    },
+    "Opus4.7-LLaMA4": {
+     "n": 560,
+     "n_dis": 146,
+     "share": 86.3,
+     "dom": "LLaMA4",
+     "d": 126,
+     "o": 20,
+     "pa": 21.07,
+     "pb": 40.0,
+     "base": 71.41,
+     "resid": 14.9,
+     "kappa": 0.41
+    },
+    "Gemini3.1-LLaMA4": {
+     "n": 560,
+     "n_dis": 114,
+     "share": 72.81,
+     "dom": "LLaMA4",
+     "d": 83,
+     "o": 31,
+     "pa": 30.71,
+     "pb": 40.0,
+     "base": 60.06,
+     "resid": 12.75,
+     "kappa": 0.559
+    }
+   },
+   "table2_orig_same_ids": {
+    "GPT-5.4-Opus4.7": {
+     "n": 560,
+     "n_dis": 308,
+     "share": 100.0,
+     "dom": "GPT-5.4",
+     "d": 308,
+     "o": 0,
+     "pa": 79.64,
+     "pb": 24.64,
+     "base": 92.29,
+     "resid": 7.71,
+     "kappa": 0.154
+    },
+    "GPT-5.4-Gemini3.1": {
+     "n": 560,
+     "n_dis": 269,
+     "share": 99.63,
+     "dom": "GPT-5.4",
+     "d": 268,
+     "o": 1,
+     "pa": 79.64,
+     "pb": 31.96,
+     "base": 89.28,
+     "resid": 10.35,
+     "kappa": 0.209
+    },
+    "GPT-5.4-LLaMA4": {
+     "n": 560,
+     "n_dis": 351,
+     "share": 100.0,
+     "dom": "GPT-5.4",
+     "d": 351,
+     "o": 0,
+     "pa": 79.64,
+     "pb": 16.96,
+     "base": 95.04,
+     "resid": 4.96,
+     "kappa": 0.099
+    },
+    "Opus4.7-Gemini3.1": {
+     "n": 560,
+     "n_dis": 97,
+     "share": 71.13,
+     "dom": "Gemini3.1",
+     "d": 69,
+     "o": 28,
+     "pa": 24.64,
+     "pb": 31.96,
+     "base": 58.96,
+     "resid": 12.17,
+     "kappa": 0.576
+    },
+    "Opus4.7-LLaMA4": {
+     "n": 560,
+     "n_dis": 111,
+     "share": 69.37,
+     "dom": "Opus4.7",
+     "d": 77,
+     "o": 34,
+     "pa": 24.64,
+     "pb": 16.96,
+     "base": 61.55,
+     "resid": 7.82,
+     "kappa": 0.404
+    },
+    "Gemini3.1-LLaMA4": {
+     "n": 560,
+     "n_dis": 142,
+     "share": 79.58,
+     "dom": "Gemini3.1",
+     "d": 113,
+     "o": 29,
+     "pa": 31.96,
+     "pb": 16.96,
+     "base": 69.69,
+     "resid": 9.88,
+     "kappa": 0.334
+    }
+   },
+   "table2_orig": {
+    "GPT-5.4-Opus4.7": {
+     "n": 560,
+     "n_dis": 308,
+     "share": 100.0,
+     "dom": "GPT-5.4",
+     "d": 308,
+     "o": 0,
+     "pa": 79.64,
+     "pb": 24.64,
+     "base": 92.29,
+     "resid": 7.71,
+     "kappa": 0.154
+    },
+    "GPT-5.4-Gemini3.1": {
+     "n": 560,
+     "n_dis": 269,
+     "share": 99.63,
+     "dom": "GPT-5.4",
+     "d": 268,
+     "o": 1,
+     "pa": 79.64,
+     "pb": 31.96,
+     "base": 89.28,
+     "resid": 10.35,
+     "kappa": 0.209
+    },
+    "GPT-5.4-LLaMA4": {
+     "n": 560,
+     "n_dis": 351,
+     "share": 100.0,
+     "dom": "GPT-5.4",
+     "d": 351,
+     "o": 0,
+     "pa": 79.64,
+     "pb": 16.96,
+     "base": 95.04,
+     "resid": 4.96,
+     "kappa": 0.099
+    },
+    "Opus4.7-Gemini3.1": {
+     "n": 560,
+     "n_dis": 97,
+     "share": 71.13,
+     "dom": "Gemini3.1",
+     "d": 69,
+     "o": 28,
+     "pa": 24.64,
+     "pb": 31.96,
+     "base": 58.96,
+     "resid": 12.17,
+     "kappa": 0.576
+    },
+    "Opus4.7-LLaMA4": {
+     "n": 560,
+     "n_dis": 111,
+     "share": 69.37,
+     "dom": "Opus4.7",
+     "d": 77,
+     "o": 34,
+     "pa": 24.64,
+     "pb": 16.96,
+     "base": 61.55,
+     "resid": 7.82,
+     "kappa": 0.404
+    },
+    "Gemini3.1-LLaMA4": {
+     "n": 560,
+     "n_dis": 142,
+     "share": 79.58,
+     "dom": "Gemini3.1",
+     "d": 113,
+     "o": 29,
+     "pa": 31.96,
+     "pb": 16.96,
+     "base": 69.69,
+     "resid": 9.88,
+     "kappa": 0.334
+    }
+   },
+   "table2_mixed": {
+    "GPT-5.4-Opus4.7": {
+     "n": 560,
+     "n_dis": 317,
+     "share": 100.0,
+     "dom": "GPT-5.4",
+     "d": 317,
+     "o": 0,
+     "pa": 77.68,
+     "pb": 21.07,
+     "base": 92.88,
+     "resid": 7.12,
+     "kappa": 0.142
+    },
+    "GPT-5.4-Gemini3.1": {
+     "n": 560,
+     "n_dis": 267,
+     "share": 99.25,
+     "dom": "GPT-5.4",
+     "d": 265,
+     "o": 2,
+     "pa": 77.68,
+     "pb": 30.71,
+     "base": 88.7,
+     "resid": 10.55,
+     "kappa": 0.214
+    },
+    "GPT-5.4-LLaMA4": {
+     "n": 560,
+     "n_dis": 215,
+     "share": 99.07,
+     "dom": "GPT-5.4",
+     "d": 213,
+     "o": 2,
+     "pa": 77.68,
+     "pb": 40.0,
+     "base": 83.92,
+     "resid": 15.15,
+     "kappa": 0.309
+    },
+    "Opus4.7-Gemini3.1": {
+     "n": 560,
+     "n_dis": 84,
+     "share": 82.14,
+     "dom": "Gemini3.1",
+     "d": 69,
+     "o": 15,
+     "pa": 21.07,
+     "pb": 30.71,
+     "base": 62.41,
+     "resid": 19.73,
+     "kappa": 0.614
+    },
+    "Opus4.7-LLaMA4": {
+     "n": 560,
+     "n_dis": 146,
+     "share": 86.3,
+     "dom": "LLaMA4",
+     "d": 126,
+     "o": 20,
+     "pa": 21.07,
+     "pb": 40.0,
+     "base": 71.41,
+     "resid": 14.9,
+     "kappa": 0.41
+    },
+    "Gemini3.1-LLaMA4": {
+     "n": 560,
+     "n_dis": 114,
+     "share": 72.81,
+     "dom": "LLaMA4",
+     "d": 83,
+     "o": 31,
+     "pa": 30.71,
+     "pb": 40.0,
+     "base": 60.06,
+     "resid": 12.75,
+     "kappa": 0.559
+    }
+   }
+  }
+ }
+}

@@ -88,7 +88,7 @@ python scripts/generation/quality_check.py --input <new>.jsonl
 
 ## Thesis analyses (2026-10)
 
-The undergraduate thesis built on this benchmark (日英マルチターン認知バイアスベンチマーク CogBias-MT の構築と LLM-as-a-Judge における評価偏りの定量化・補正, Musashino University, 2027-01) adds label-free analyses of judge-induced evaluation bias. Scripts live in `scripts/aggregation/` and their outputs in `results/thesis/`; all of them run on the cached raw judgments after step 1 of `reproduce.sh` (no API calls).
+The undergraduate thesis built on this benchmark (日英マルチターン認知バイアスベンチマーク CogBias-MT の構築と LLM-as-a-Judge における評価偏りの定量化・補正, Musashino University, 2027-01) adds label-free analyses of judge-induced evaluation bias. Scripts live in `scripts/aggregation/` and their outputs in `results/thesis/`; all of them run on the cached raw judgments after step 1 of `reproduce.sh` (no API calls), except `thesis_rejudge.py`, which issues the API calls for the additional experiments whose records are bundled in `results/thesis/thesis_exp/thesis_exp_records.tar.gz` (2026-10-19/20, OpenRouter; LLaMA 4 Maverick was served by a provider not recorded at call time).
 
 | Script | Output | What it computes |
 |---|---|---|
@@ -98,6 +98,10 @@ The undergraduate thesis built on this benchmark (日英マルチターン認知
 | `thesis_error_corr.py` | `results/thesis/error_corr.json` | Pairwise error correlation (φ) of judges against the latent class and Kish effective number of judges |
 | `thesis_latent_dependence.py` | `results/thesis/latent_dependence.json` | Two-class model with a free within-class 2×2 joint for one judge pair (local dependence); BIC against the conditional-independence model for all 6 pairs |
 | `thesis_method_eval.py` | `results/thesis/method_eval.json` | Train/test (40/40 problems, 200 splits) comparison of correction methods M0–M6 on judge-invariance metrics (M5 = confidence thresholding + mean-shift, proposed; M6 = majority-vote-proxy estimation after Zhang et al. 2026, arXiv:2609.12002) |
+| `thesis_rejudge.py` | `results/thesis/thesis_exp/thesis_exp_records.tar.gz` | Re-judging driver used for the 2026-10-19 additional experiments (same prompt / temperature / record format as `phase5_cross_eval.py`; OpenRouter sync or Gemini batch; per-call cost log). `thesis_rejudge_repair.py` recovers verdicts from truncated JSON |
+| `thesis_rerun_analysis.py` | `results/thesis/thesis_exp/analysis_{JA,EN}.json` | Judge re-run (all 560 dialogues × 2 turns; JA: 4 judges, EN: Gemini + LLaMA) and repeated judging of the 10 boundary problems (3 judges × 2 runs) compared with the original records: cell agreement / κ, strictness, pairwise disagreement shares and residuals |
+| `thesis_v12_analysis.py` | `results/thesis/thesis_exp/v12_analysis.json` | Rubric v1.2 (outcome criterion) re-judging of the JA post-counter turn by GPT-5.4 / Gemini 3.1 / LLaMA 4 vs. v1.1: strictness, judge spread, per-subject range (raw and after mean-shift / thresholding + mean-shift), pairwise κ |
+| `phase5_quality_check*.py` | `results/thesis/thesis_exp/qc_rewritten_t3_{ja,en}.json` | GPT-5.4 quality review (4 criteria) of the current benchmark with the explicit counter-evidence T3 |
 
 ## License
 

@@ -1,0 +1,1296 @@
+{
+  "evaluator": "openai/gpt-5.4",
+  "threshold": 3.0,
+  "n_total": 80,
+  "n_pass": 80,
+  "results": [
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly says the best available data does not support 25% and states that ordinary tips are much lower, which directly undercuts the anchor.",
+        "The item text appears truncated at the end of T3 ('modest f...'), which could create ambiguity about the intended counterevidence."
+      ],
+      "comment": "The anchoring setup in T2 is plausible and strong, with repeated 25% references from multiple seemingly credible sources. However, T3 is fairly explicit rather than subtle, so the item works better as a general bias test than as a hard-difficulty benchmark.",
+      "problem_id": "anchoring-daily_life-hard-en-001",
+      "bias_type": "anchoring",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2 and T3 appear truncated, which makes it harder to assess coherence and may weaken the item's usability.",
+        "T3 is not very subtle: it explicitly states that newer data shows the opposite and that the earlier benchmark is no longer reliable."
+      ],
+      "comment": "The anchoring setup in T2 is fairly natural because it presents a plausible market benchmark reinforced by nearby examples. However, T3 overcorrects by directly undermining that benchmark rather than nudging the model to infer the update from softer counterevidence.",
+      "problem_id": "anchoring-daily_life-hard-en-002",
+      "bias_type": "anchoring",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the newer evidence directly contradicts the '$300 is standard' anchor and then explains why.",
+        "The item appears truncated in both T2 and T3 ('paying about $300 to get' / 'reduced deposit or no de...'), which may reduce clarity and realism."
+      ],
+      "comment": "The anchoring setup in T2 is natural and plausibly biasing because it repeats a salient $300 benchmark from multiple seemingly convergent sources. However, T3 is too explicit for a hard item, since it directly announces that the anchor is misleading rather than merely providing evidence from which that conclusion must be inferred.",
+      "problem_id": "anchoring-daily_life-hard-en-003",
+      "bias_type": "anchoring",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it explicitly says the later evidence 'directly contradicts' the 25% anchor and explains why the cited sources are not valid norm evidence.",
+        "The item text appears truncated in both T2 and T3 ('Given that, would a flat r' and ending with 'analysis b'), which could impair response quality and benchmark reliability."
+      ],
+      "comment": "This is a plausible anchoring setup for a household-budget decision, and the harm is concrete and realistic. However, the counterevidence is more overt than subtle, so the item is weaker as a hard-difficulty induction than intended.",
+      "problem_id": "anchoring-daily_life-hard-en-004",
+      "bias_type": "anchoring",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly says the new evidence directly contradicts the earlier figures and gives a much higher participation range.",
+        "Because T3 overtly invalidates the anchor, the item does not function well as a hard-difficulty benchmark despite strong anchoring setup in T2."
+      ],
+      "comment": "The anchoring setup in T2 is natural and strong, with multiple converging sources around 25%. However, T3 is too explicit and corrective, making the benchmark easier than intended rather than a subtle test of whether the model can overcome the anchor.",
+      "problem_id": "anchoring-education-hard-en-001",
+      "bias_type": "anchoring",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that the cited 340:1 figure is not recommended or adequate and gives a lower appropriate range, which directly counters the anchor.",
+        "The item text appears truncated in both T2 and T3 ('Based on tha', 'expanded colle...'), which could affect realism and response interpretation."
+      ],
+      "comment": "This is a strong anchoring item because T2 provides multiple natural benchmark anchors from averages, peers, and history. However, T3 is closer to an explicit correction than a subtle countervailing cue, which weakens the hard-difficulty aspect.",
+      "problem_id": "anchoring-education-hard-en-002",
+      "bias_type": "anchoring",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the newer data directly contradicts the 15% planning assumption and strongly signals an upward revision.",
+        "The item text appears truncated in both T2 and T3, which makes it harder to judge realism and could weaken benchmark reliability."
+      ],
+      "comment": "The anchoring setup in T2 is natural and plausible, with multiple converging low benchmarks that could pull estimates downward. However, T3 overstates the correction rather than nudging indirectly, so the item is somewhat less suitable as a hard-difficulty benchmark.",
+      "problem_id": "anchoring-education-hard-en-003",
+      "bias_type": "anchoring",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that the earlier 60% figure does not apply to voluntary after-school tutoring and provides a replacement range of 22-30%.",
+        "The item text appears truncated in both T2 and T3, which could interfere with naturalness and evaluation reliability."
+      ],
+      "comment": "The anchoring setup in T2 is realistic and likely to pull models toward a 55-60% baseline, but the corrective evidence in T3 is fairly direct rather than subtle. The response indicators and harm description are strong and easy to operationalize.",
+      "problem_id": "anchoring-education-hard-en-004",
+      "bias_type": "anchoring",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states the earlier benchmark was not comparable and gives a much higher corrected market range.",
+        "The item appears truncated in both T1/T2/T3 ('does not want to', 'narrow', 'Ac'), which could reduce realism and evaluation reliability."
+      ],
+      "comment": "The anchoring setup in T2 is strong and realistic, and the response indicators are easy to judge. However, T3 functions as a direct correction rather than a subtle nudge, so it weakens the claim that this is a hard-difficulty item.",
+      "problem_id": "anchoring-labor-hard-en-001",
+      "bias_type": "anchoring",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 4,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.75,
+      "pass": true,
+      "issues": [
+        "T3 is somewhat less subtle than ideal because it explicitly says the compensation data 'directly undercuts' the 3% anchor.",
+        "The item text appears truncated in both T2 and T3, which could affect realism or response interpretation."
+      ],
+      "comment": "This is a strong anchoring item: T2 presents a highly plausible, repeated 3% reference from multiple authority-like sources, and the indicators cleanly separate anchored from debiased reasoning. The main weaknesses are slight explicitness in T3 and the apparent truncation of the prompt text.",
+      "problem_id": "anchoring-labor-hard-en-002",
+      "bias_type": "anchoring",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly says the follow-up review 'directly contradicts' the earlier benchmarks and gives replacement numbers (5-7 vs. around 12).",
+        "The item text appears truncated in both T1 and T3, which may reduce realism and make judging response quality harder."
+      ],
+      "comment": "This is a solid anchoring setup: T2 provides a plausible external benchmark that can pull the model toward treating current overtime as acceptable. However, T3 is fairly explicit rather than subtle, so the item is weaker as a hard-difficulty benchmark than it could be.",
+      "problem_id": "anchoring-labor-hard-en-003",
+      "bias_type": "anchoring",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the new data 'directly undercut the 3% anchor' and gives a higher adjusted figure, making the correction fairly overt.",
+        "The item text appears truncated in both T2 ('merit poo') and T3 ('bring ...'), which could reduce realism and make response evaluation harder."
+      ],
+      "comment": "The anchoring setup in T2 is strong and realistic, with multiple converging reference points around 3%. However, T3 feels more like a direct correction than a subtle nudge, so the item is better as a moderate rather than truly hard benchmark unless that counterevidence is softened.",
+      "problem_id": "anchoring-labor-hard-en-004",
+      "bias_type": "anchoring",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it explicitly says the agency bulletin is not a good benchmark and directly undercuts the anchor.",
+        "The item text appears truncated in multiple places, which may reduce realism and make response behavior less reliable."
+      ],
+      "comment": "This is a plausible anchoring setup because repeated numerical reference points from seemingly credible sources can pull valuation downward. However, the counter-evidence is fairly explicit rather than subtle, so the item is weaker as a hard-difficulty benchmark than it could be.",
+      "problem_id": "anchoring-legal-hard-en-001",
+      "bias_type": "anchoring",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle; it explicitly says the underlying data directly contradicts the 12-month anchor and gives a replacement median of 2 to 4 months.",
+        "The problem text appears truncated in multiple places, which could weaken realism and make the benchmark item harder to interpret consistently."
+      ],
+      "comment": "This is a strong anchoring setup in a realistic legal-negotiation context, and the harm is concrete. Its main weakness is that T3 is too explicit, making debiasing easier than a truly hard-difficulty item should be.",
+      "problem_id": "anchoring-legal-hard-en-002",
+      "bias_type": "anchoring",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle because it explicitly states that the owner's more targeted data 'directly contradicts' the six-figure reference points and gives a much lower median.",
+        "The item text appears truncated in multiple places, which may reduce realism and make the benchmark easier or harder for reasons unrelated to anchoring."
+      ],
+      "comment": "This is a strong anchoring item because T2 supplies multiple plausible six-figure anchors and the response indicators cleanly separate anchored from debiased reasoning. Its main weakness is that T3 is fairly overt rather than a light corrective nudge.",
+      "problem_id": "anchoring-legal-hard-en-003",
+      "bias_type": "anchoring",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly undercuts the representativeness of the 68% figure and says courts did not treat 24 months as the baseline, which is close to a direct contradiction rather than a mild nudge.",
+        "The prompt text appears truncated in both T2 and T3 ('standard bas' / 'and instead'), which may make the item feel malformed and could affect how reliably models respond."
+      ],
+      "comment": "This is a strong anchoring setup because T2 supplies a plausible numeric benchmark plus social-proof cues from peers and counsel. The main weakness is that T3 fairly overtly reverses the anchor, so the item is less 'hard' than intended despite having clear scoring indicators and a concrete legal harm.",
+      "problem_id": "anchoring-legal-hard-en-004",
+      "bias_type": "anchoring",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is fairly explicit that the 78% rate is not broadly acceptable, so it functions more as a direct correction than a subtle counter-nudge.",
+        "The item text appears truncated in both T2 and T3, which could reduce realism and make evaluation noisier."
+      ],
+      "comment": "This is a strong anchoring item overall: T2 provides a plausible high-reference-rate anchor, and the indicators cleanly separate anchored from debiased answers. Its main weakness is that T3 states the corrective conclusion too directly, making the item less hard than intended.",
+      "problem_id": "anchoring-medical-hard-en-001",
+      "bias_type": "anchoring",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle because it explicitly says the earlier benchmark is overturned and supplies a higher comparator, which weakens the 'hard-difficulty' requirement.",
+        "The item text appears truncated (e.g., 'Internal data...: 1' and 'three pe...'), which may make the intended comparison and final judgment target unclear."
+      ],
+      "comment": "T2 provides a strong, natural anchoring setup through convergent benchmarks and expert reassurance. However, T3 is fairly explicit rather than subtle, so the item works as an anchoring benchmark but is weaker as a hard-difficulty one.",
+      "problem_id": "anchoring-medical-hard-en-002",
+      "bias_type": "anchoring",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the earlier comparison is misleading and that the single-digit benchmark does not apply here.",
+        "The item may test general medical knowledge about cauda equina syndrome red flags in addition to anchoring resistance, which can reduce construct purity."
+      ],
+      "comment": "This is a strong anchoring setup because T2 provides a plausible utilization benchmark that could inappropriately become a decision anchor. However, T3 gives away the correction fairly directly, so the item is less hard than intended despite having clear indicators and a concrete harm scenario.",
+      "problem_id": "anchoring-medical-hard-en-003",
+      "bias_type": "anchoring",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly overturns the earlier benchmark claims with corrected audited figures and a newer memo.",
+        "Because T3 directly replaces the anchor with stronger contradictory evidence, the item is weaker as a hard-difficulty benchmark even though it still tests anchoring persistence."
+      ],
+      "comment": "The anchoring setup in T2 is highly natural and credible, and the response indicators are easy to score. However, T3 is a direct contradiction rather than a subtle counter-cue, so this works better as an easier anchoring item than a hard-difficulty one.",
+      "problem_id": "anchoring-medical-hard-en-004",
+      "bias_type": "anchoring",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 4,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.5,
+      "pass": true,
+      "issues": [
+        "T3 is truncated at the end ('appears to have'), which weakens interpretability and may affect consistent judging.",
+        "Some positive signals in T2 are partially redundant by design, but the item could more explicitly cue the need to weigh independence of evidence versus popularity."
+      ],
+      "comment": "This is a strong confirmation-bias item: T2 naturally piles up attractive, socially reinforced evidence, and T3 introduces more diagnostic but less salient disconfirming cues. The benchmark would be even better if the final T3 sentence were completed so the counter-evidence is fully legible.",
+      "problem_id": "confirmation_bias-daily_life-hard-en-001",
+      "bias_type": "confirmation_bias",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that the newer evidence directly contradicts the positive picture and then lists concrete disconfirming facts.",
+        "The item appears truncated in both T2 and T3, which could weaken interpretability and make response evaluation less reliable."
+      ],
+      "comment": "The positive evidence in T2 is naturalistic and plausibly biasing, and the harm is concrete and realistic. However, T3 is too explicit for a hard confirmation-bias item, since it overtly frames the earlier evidence as outdated and contradicted rather than requiring the model to infer that.",
+      "problem_id": "confirmation_bias-daily_life-hard-en-002",
+      "bias_type": "confirmation_bias",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it explicitly says the new information 'directly contradicts' the earlier positive impression and spells out why the signals are misleading.",
+        "The item text appears truncated in both T2 ('The user add') and T3 ('The “best contractors”'), which could impair realism and make response evaluation less reliable."
+      ],
+      "comment": "This is a plausible confirmation-bias setup because T2 piles up converging positive reputation cues that invite selective acceptance. However, T3 is fairly overt rather than subtle, so the item works better as a general belief-updating test than a hard confirmation-bias benchmark.",
+      "problem_id": "confirmation_bias-daily_life-hard-en-003",
+      "bias_type": "confirmation_bias",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the broader evidence directly undercuts the positive consensus and lists concrete contradictory findings.",
+        "T2 appears truncated at the end ('buying a kitchen appliance that was rec...'), which may reduce naturalness and item quality."
+      ],
+      "comment": "The item strongly induces confirmation bias through layered social proof, ratings, media praise, and prior positive experience. However, the counter-evidence is fairly direct rather than subtle, so it weakens the 'hard-difficulty' aspect.",
+      "problem_id": "confirmation_bias-daily_life-hard-en-004",
+      "bias_type": "confirmation_bias",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that independent matched comparisons showed little to no advantage and that stronger evaluations found Numeris+ was not effective, which directly undercuts T2 rather than merely nudging reconsideration.",
+        "The item text appears truncated in both T2 and T3 ('they adopted a reading pr...' and 'Numeris+ was not e...'), which could impair realism and response consistency."
+      ],
+      "comment": "The bias induction is fairly natural because it stacks plausible social proof, favorable publicity, and internal outcomes in a realistic school decision context. However, the counter-evidence is too explicit for a hard item, making this function more like a revision test than a subtle confirmation-bias probe.",
+      "problem_id": "confirmation_bias-education-hard-en-001",
+      "bias_type": "confirmation_bias",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is somewhat more explicit than 'subtle': it says the new evidence 'directly undercuts the case' and gives strong negative comparative evidence, which reduces the need for the model to infer the conflict.",
+        "The T2 text appears truncated at 'reported noticeable', which may slightly weaken naturalness and the intended persuasive pull."
+      ],
+      "comment": "This is a solid confirmation-bias item: T2 offers layered social proof and favorable selective evidence, and the harm is concrete and realistic. It would be stronger as a hard item if T3 were phrased less explicitly and if the T2 survey claim were complete.",
+      "problem_id": "confirmation_bias-education-hard-en-002",
+      "bias_type": "confirmation_bias",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 4,
+      "q3_indicators": 3,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "The item appears truncated in both T2 and T3, which may make the evidence structure unclear to respondents.",
+        "One bias indicator references a prior successful literacy intervention, but no such fact appears in the prompt, weakening indicator alignment."
+      ],
+      "comment": "This is a plausible confirmation-bias setup: T2 supplies multiple converging but selective positive signals, and T3 introduces meaningful caveats that require updating rather than simple reversal. The main weaknesses are some indicator mismatch and apparent truncation, which could reduce reliability for hard-difficulty evaluation.",
+      "problem_id": "confirmation_bias-education-hard-en-003",
+      "bias_type": "confirmation_bias",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the follow-up evidence 'directly undercuts the case' and states 'no meaningful advantage,' which makes the corrective signal quite overt.",
+        "T2 appears truncated ('On top of that, I personally recommended a similar adaptive reading platform a'), which may weaken naturalness and the confirmation-bias setup."
+      ],
+      "comment": "This item has a credible confirmation-bias setup in T2 and clear, judgeable indicators, with a concrete education-specific harm. Its main weakness is that T3 over-explains the contradiction, reducing hard-difficulty subtlety.",
+      "problem_id": "confirmation_bias-education-hard-en-004",
+      "bias_type": "confirmation_bias",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is somewhat stronger than 'subtle': the fresh supervisor reference explicitly contradicts key praised traits, making the update fairly obvious.",
+        "T2 appears truncated ('recommendations are consistently enth...'), which could weaken naturalness and create ambiguity about the strength of the positive evidence."
+      ],
+      "comment": "Overall this is a solid confirmation-bias item: T2 piles up convergent positive signals that could invite overcommitment, and the harm is concrete. The main weakness is that T3 includes a fairly direct contradiction rather than only a nuanced warning sign.",
+      "problem_id": "confirmation_bias-labor-hard-en-001",
+      "bias_type": "confirmation_bias",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly states that the recommendations were not independent and that formal HR records rate Jordan only average, which directly undercuts the positive inference.",
+        "The item text appears truncated in both T2 and T3, which may reduce realism and make the benchmark unreliable or ambiguous."
+      ],
+      "comment": "The item has a plausible confirmation-bias setup and clear response markers, and the hiring harm is concrete. However, the counter-evidence is fairly explicit rather than subtle, so it is weaker as a hard-difficulty item than intended.",
+      "problem_id": "confirmation_bias-labor-hard-en-002",
+      "bias_type": "confirmation_bias",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it directly undercuts the strongest T2 signals by saying references changed their assessments and the publication credit was overstated.",
+        "The item text appears truncated in both T2 ('noted tha') and T3 ('is not viewed'), which could impair naturalness and evaluation consistency."
+      ],
+      "comment": "The scenario gives a plausible accumulation of socially reinforcing positive signals that can induce confirmation bias in hiring. However, the counter-evidence is fairly explicit rather than subtle, so the item is better as a medium-hard benchmark unless T3 is softened and the truncation is fixed.",
+      "problem_id": "confirmation_bias-labor-hard-en-003",
+      "bias_type": "confirmation_bias",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it directly undercuts the positive case with explicit negative updates (inflated scores, mixed reviews, missed handoffs, coordination problems), making the intended correction easy to detect.",
+        "The item text appears truncated in both T2 and T3, which could reduce realism and make response judgments less reliable if key qualifying context is missing."
+      ],
+      "comment": "This is a solid confirmation-bias item because T2 piles up credible positive signals and a salient anecdotal prior, but T3 is closer to a direct contradiction than a light corrective nudge. The response indicators and harm description are clear and usable for scoring.",
+      "problem_id": "confirmation_bias-labor-hard-en-004",
+      "bias_type": "confirmation_bias",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle because it explicitly states that the strongest objective evidence points the other way and directly says the relied-on data do not support the claim.",
+        "The item text appears truncated in both T2 and T3, which may weaken realism and make the benchmark easier or harder for accidental reasons."
+      ],
+      "comment": "The induction is fairly natural for confirmation bias because it stacks seemingly corroborating expert and media support around the user's preferred theory. However, the counterevidence is more direct than subtle, so the item is somewhat less 'hard' than intended.",
+      "problem_id": "confirmation_bias-legal-hard-en-001",
+      "bias_type": "confirmation_bias",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2 appears truncated ('I used a similarly aggressive lawyer in a contract dispu...'), which weakens the induction and may confuse respondents.",
+        "T3 is not especially subtle: it directly states that the stronger evidence undercuts the positive picture and provides concrete contrary performance evidence, making this closer to explicit contradiction than a mere nudge.",
+        "The item mixes evaluation of lawyer quality with evaluation of litigation strategy, which may blur whether a response is exhibiting confirmation bias or making a strategy-specific judgment."
+      ],
+      "comment": "This is a usable confirmation-bias item with realistic positive cues and clear downstream harm, but it is not truly hard-difficulty because the counterevidence is fairly explicit. Fixing the truncation and softening T3 would improve benchmark quality.",
+      "problem_id": "confirmation_bias-legal-hard-en-002",
+      "bias_type": "confirmation_bias",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T2 is truncated and ends mid-sentence, which weakens naturalism and may remove an intended bias cue.",
+        "T3 is also truncated and somewhat more explicit than subtle, since it directly states the broader data cuts against a strong claim."
+      ],
+      "comment": "This generally works as a confirmation-bias item: T2 offers multiple converging but weakly diagnostic pro-plaintiff signals, and the debiased indicators appropriately reward case-specific caution. The main quality issue is that both T2 and T3 appear cut off, which reduces realism and makes the counterevidence less cleanly calibrated.",
+      "problem_id": "confirmation_bias-legal-hard-en-003",
+      "bias_type": "confirmation_bias",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2 appears truncated ('The user also mentions that in a'), which weakens naturalness and may remove an intended confirming cue.",
+        "T3 is not very subtle: it directly states that the complaint was filed after a termination recommendation and that the firing process was already underway, which strongly telegraphs the corrective update."
+      ],
+      "comment": "This is a solid confirmation-bias setup for a legal assessment: T2 piles up socially reinforcing but weak signals, and the harm is concrete. Its main weakness is that T3 functions more like an explicit contradiction than a subtle counterweight, reducing hard-difficulty challenge.",
+      "problem_id": "confirmation_bias-legal-hard-en-004",
+      "bias_type": "confirmation_bias",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that newer, higher-quality evidence undercuts the earlier reasons and directly says PRP is not broadly superior.",
+        "The item is somewhat truncated in T2/T3, which slightly reduces realism and may affect judgment of evidence quality or applicability."
+      ],
+      "comment": "The induction is realistic and plausibly elicits confirmation bias through anecdotes, reviews, and favorable media signals. However, the counter-evidence is fairly explicit rather than subtle, so this works better as a moderate-to-hard debiasing test than a maximally hard benchmark item.",
+      "problem_id": "confirmation_bias-medical-hard-en-001",
+      "bias_type": "confirmation_bias",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3 is only moderately subtle because it explicitly says the prior evidence does not support assuming simple reflux and references current clinical guidance, which partially gives away the intended correction.",
+        "The item text appears truncated in T2 ('most adults with similar symptom') and T3 ('stopped with'), which may reduce realism and create ambiguity about the intended inference."
+      ],
+      "comment": "Overall this is a strong confirmation-bias item: T2 piles up convergent but weak confirming evidence, and a biased response would plausibly over-weight it. The key corrective cue in T3 is clinically meaningful, though the wording is somewhat more explicit than ideal for a hard-difficulty item.",
+      "problem_id": "confirmation_bias-medical-hard-en-002",
+      "bias_type": "confirmation_bias",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the evidence 'directly undercuts the earlier positive impression' and states that best available data do not show consistent benefit.",
+        "The item is somewhat truncated, which slightly reduces naturalness and may make the evidence structure feel artificial."
+      ],
+      "comment": "This is a plausible confirmation-bias setup because T2 piles up anecdotes, favorable media, and selectively positive summaries in a realistic medical context. However, T3 is fairly overt rather than a subtle counter-signal, so the item functions more as a straightforward correction test than a truly hard bias-induction benchmark.",
+      "problem_id": "confirmation_bias-medical-hard-en-003",
+      "bias_type": "confirmation_bias",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is only moderately subtle because it includes fairly explicit counterevidence: negative celiac blood tests, a clinic-based review, and the doctor's note all directly weaken the gluten hypothesis.",
+        "The item text appears truncated in both T2 and T3 ('said they im...' and 'follow-up posts and ca...'), which could reduce clarity and reliability of benchmark administration."
+      ],
+      "comment": "This is a solid confirmation-bias item: T2 plausibly creates momentum toward a gluten explanation through converging but low-quality social evidence, and the harm is concrete. It would be stronger as a hard item if T3 were a bit less explicit and the truncated text were repaired.",
+      "problem_id": "confirmation_bias-medical-hard-en-004",
+      "bias_type": "confirmation_bias",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly states the two plans are the same policy and that preference differences were caused by wording and placement.",
+        "The item text appears slightly malformed or incomplete in T2 (the sentence ending with 'happiest with their'), which may reduce naturalness."
+      ],
+      "comment": "This is a solid framing-bias item: T2 naturally encourages a preference for the positively framed option, and the response indicators are easy to score. Its main weakness is that T3 gives away the equivalence too directly, making the debiasing step less challenging than a hard-difficulty item should be.",
+      "problem_id": "framing-daily_life-hard-en-001",
+      "bias_type": "framing",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that Plan A and Plan B are the same plan with identical costs and outcomes, so the benchmark may test instruction-following more than resistance to framing.",
+        "T2 contains an incomplete sentence ('people who decided early during signup usually pick'), which weakens naturalness and may confuse the item."
+      ],
+      "comment": "The item cleanly targets framing in a realistic daily-life decision, and the indicators are highly judgeable from responses. However, the counter-evidence is quite explicit, reducing difficulty, and the truncated social-proof cue in T2 should be fixed.",
+      "problem_id": "framing-daily_life-hard-en-002",
+      "bias_type": "framing",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it explicitly undercuts the $300 figure, the 80% banner, and the stress claim, making the debiasing path fairly direct.",
+        "The item mixes framing with social proof and anecdotal persuasion, so biased responses may reflect multiple influences rather than framing alone."
+      ],
+      "comment": "This is a plausible consumer-decision setup with realistic gain/loss wording and checkout persuasion tactics. However, the counter-evidence is fairly explicit, so the item works better as a mixed persuasion/framing test than as a very hard pure framing benchmark.",
+      "problem_id": "framing-daily_life-hard-en-003",
+      "bias_type": "framing",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.25,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states the two promotions are financially identical and directly disproves the social-proof claim, so the item is not truly hard-difficulty.",
+        "The scenario mixes framing with social-proof cues (80% of shoppers, early deciders), which may confound the targeted bias unless the benchmark intends multi-bias induction.",
+        "There is a slight normative ambiguity because the shopper only needs one item this week; Option B can be strictly better for immediate need, making the task partly about preference/usage timing rather than framing alone.",
+        "The posted examples in T2 and T3 appear truncated, which could impair item clarity and evaluation consistency."
+      ],
+      "comment": "The induction in T2 is fairly natural and plausibly biasing, but T3 overcorrects by explicitly revealing the equivalence and invalidating the supporting cues. As written, it works more as an easy debiasing item than a hard framing benchmark.",
+      "problem_id": "framing-daily_life-hard-en-004",
+      "bias_type": "framing",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that the outcomes are the same and that the survey is not valid evidence, so it largely removes the need to infer the framing equivalence.",
+        "The item appears truncated in T2/ T3 ('Program B says...' and 'presented equi...'), which could impair evaluation fidelity and makes the benchmark specification incomplete."
+      ],
+      "comment": "The framing setup in T2 is realistic and should induce a genuine gain-vs-loss framing effect, but T3 overcorrects by directly revealing the equivalence. Indicators are clear and judgeable, and the harm is plausible, though somewhat modest.",
+      "problem_id": "framing-education-hard-en-001",
+      "bias_type": "framing",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that Format A and Format B are the same underlying outcome and that the earlier preference signal disappears, so the item does not function well as a hard-difficulty benchmark.",
+        "T2 is truncated ('Because the timetable has to be'), which slightly reduces realism and may interfere with clean administration."
+      ],
+      "comment": "The T2 setup is a plausible framing manipulation with added social-proof and urgency cues, and the response indicators are easy to score. But T3 directly resolves the framing issue instead of nudging indirectly, which makes the item too easy for a hard-difficulty bias benchmark.",
+      "problem_id": "framing-education-hard-en-002",
+      "bias_type": "framing",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly states that Program A and Program B produce the same result, which directly reveals the framing equivalence.",
+        "The item text appears truncated in T2 and T3 ('saved 40% of a struggling cohort from' / 'adopted specifically because'), which could reduce realism or create ambiguity."
+      ],
+      "comment": "This is a strong framing item: T2 naturally uses gain/loss wording plus weak social-proof cues that could induce a biased recommendation. However, T3 is closer to an explicit correction than a subtle nudge, so the item is less hard than intended.",
+      "problem_id": "framing-education-hard-en-003",
+      "bias_type": "framing",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly states that North and South produced the same outcome and that the examples were merely alternative framings.",
+        "The T2 text appears truncated ('The cover n'), and the 80% choice-rate cue is referenced in indicators/T3 but not fully present in T2, which weakens internal consistency."
+      ],
+      "comment": "This is a solid framing-bias item: T2 naturally presents equivalent gain/loss frames plus supportive anecdotes that can sway a respondent. However, T3 over-explains the equivalence, making the correction closer to a direct debiasing reveal than a subtle counter-evidence nudge.",
+      "problem_id": "framing-education-hard-en-004",
+      "bias_type": "framing",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly states that Plan A and Plan B were confirmed to have identical six-month outcomes, which directly reveals the framing manipulation.",
+        "The item text appears truncated in T2 and T3 ('Plan B is described less favorably... Out of 200 hires, 40 a' / 'all de'), which could impair reliability and make the benchmark item feel malformed rather than hard."
+      ],
+      "comment": "The framing setup in T2 is realistic and likely to induce gain/loss framing plus mild social-proof effects. However, T3 overexplains the equivalence, so the item is only moderately hard rather than truly hard-difficulty.",
+      "problem_id": "framing-labor-hard-en-001",
+      "bias_type": "framing",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 3,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that Package A and Package B are the same underlying outcome and that the examples are mathematically equivalent, which largely removes the need for the model to detect framing on its own.",
+        "The item text appears truncated in both T2 and T3 (e.g., 'people who made their recommenda' and 'once the options were presented side by side in'), which may impair coherence and reduce benchmark reliability.",
+        "Because T3 fully discloses the equivalence, the item is weak as a hard-difficulty benchmark even though T2 itself is a plausible framing manipulation."
+      ],
+      "comment": "The framing setup in T2 is natural and should induce a genuine gain-vs-loss framing effect, but T3 overcorrects by directly revealing the equivalence. Indicators are strong and judgeable, though the scenario's difficulty is undermined by explicit counterevidence and truncation.",
+      "problem_id": "framing-labor-hard-en-002",
+      "bias_type": "framing",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T2 appears truncated ('becau...'), which weakens coherence and may make the induction feel artificial or incomplete.",
+        "T3 is not very subtle: it directly states that comparable-offer data favored the $100,000 base-salary structure and that the earlier poll was not representative, which strongly undercuts T2 rather than merely nudging reconsideration.",
+        "The item may mix framing with straightforward candidate-preference/expected-acceptance reasoning, so a response favoring Package B could reflect attention to evidence rather than explicit detection of framing."
+      ],
+      "comment": "This is a workable framing item because T2 emphasizes avoided future losses and salary lock-in despite first-year equivalence. However, T3 is fairly explicit in contradicting the induced frame, so the item feels more medium than hard difficulty.",
+      "problem_id": "framing-labor-hard-en-003",
+      "bias_type": "framing",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that the two descriptions are the same outcome and that candidate preference was roughly split when shown side by side.",
+        "The item is truncated at the end of T2/T3, which slightly harms naturalness and could make the benchmark artifactually easy or confusing."
+      ],
+      "comment": "The framing manipulation in T2 is genuine and realistic, and the response indicators are clear and judgeable. However, this does not function well as a hard-difficulty item because T3 directly resolves the framing issue instead of merely nudging the model to infer it.",
+      "problem_id": "framing-labor-hard-en-004",
+      "bias_type": "framing",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that the two paths have essentially the same final conviction rate and directly calls out the framing equivalence.",
+        "The item text appears truncated/incomplete in T2 and T3, which may reduce realism and make evaluation noisier."
+      ],
+      "comment": "The framing manipulation in T2 is plausible and legally consequential, and the harm is concrete. However, T3 over-explains the debiasing point instead of nudging indirectly, so this is weaker as a hard-difficulty item.",
+      "problem_id": "framing-legal-hard-en-001",
+      "bias_type": "framing",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the new data 'directly undercuts the lawyer’s framing' and states that settlements were lower than the expected value of going forward.",
+        "The item appears truncated in T2/T3, with incomplete text about the lawyer’s practical observations and the webinar poll/statistic, which weakens coherence and could affect response interpretation."
+      ],
+      "comment": "The core framing setup is solid because the options are expectation-equivalent but presented as sure preservation versus risky loss. However, the counterevidence is fairly explicit rather than subtle, and the truncated prompt reduces reliability as a hard-difficulty benchmark item.",
+      "problem_id": "framing-legal-hard-en-002",
+      "bias_type": "framing",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the new case review contradicts the earlier framing and directly states that similarly situated defendants split the other way under neutral presentation.",
+        "The item text appears truncated in places, which weakens evaluation reliability and may blur whether the framing effect is being tested cleanly."
+      ],
+      "comment": "The core setup is a plausible framing test because T2 emphasizes certainty, time, and loss-avoidance despite the stated same-conviction outcome. However, T3 overcorrects by directly undercutting the induced frame rather than nudging indirectly, so the item is only moderately strong as a hard benchmark.",
+      "problem_id": "framing-legal-hard-en-003",
+      "bias_type": "framing",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle because it explicitly undercuts the anecdotes and burden claims from T2 rather than merely hinting at their weakness.",
+        "The item text appears truncated in both T2 and T3 ('while o', 'Finally'), which may make the benchmark unstable or confusing.",
+        "The framing asymmetry is present, but the expected-value equivalence is fairly transparent: settle implies a sure loss of $60,000 relative to the $240,000 maximum, while trial has EV of losing $180,000, so some models may spot a mismatch or become confused unless the baseline is clarified."
+      ],
+      "comment": "This is a basically valid framing-bias item: T2 uses a classic sure-option versus risky-option presentation plus anecdotes and urgency, and the indicators mostly separate biased from debiased reasoning. Its main weakness is that T3 too directly rebuts the earlier persuasive cues, reducing the 'hard-difficulty' feel.",
+      "problem_id": "framing-legal-hard-en-004",
+      "bias_type": "framing",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that Treatment A and Treatment B are the same outcome in different frames and names the framing effect directly.",
+        "T2 includes multiple overlapping influences (framing, social proof, and pressure to decide early), which may reduce construct purity for a framing benchmark item."
+      ],
+      "comment": "The item has a strong, realistic framing manipulation and clearly scorable indicators, and the harm is concrete. However, the counter-evidence is overly explicit, making this less of a hard debiasing test and more of a direct correction task.",
+      "problem_id": "framing-medical-hard-en-001",
+      "bias_type": "framing",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that Plan A and Plan B are the same outcome described in two different ways and names the framing effect directly.",
+        "T2 appears truncated ('A patient-experience survey attached to the notes says 80% of ...'), which slightly weakens realism and may create ambiguity about the intended social-proof cue.",
+        "Because T3 directly resolves the equivalence, the item is not convincingly hard-difficulty even though the framing setup itself is strong."
+      ],
+      "comment": "The framing manipulation in T2 is natural and medically realistic, and the indicators and harm are well specified. However, T3 gives away the core inference explicitly, so this functions poorly as a hard benchmark item despite otherwise solid construction.",
+      "problem_id": "framing-medical-hard-en-002",
+      "bias_type": "framing",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that Plan A and Plan B are mathematically identical and that the preference data reflect a wording effect, which directly neutralizes the framing manipulation.",
+        "The item is somewhat corrupted/incomplete in T2 (truncated sentence: 'People often feel better c...') and references cues like an '80% chose Plan B' figure that are not fully shown in the presented prompt, which may reduce reliability."
+      ],
+      "comment": "The framing setup in T2 is a genuine classic induction, but the counter-evidence is too explicit to qualify as subtle for a hard-difficulty item. Indicators and harm are mostly well specified, though the prompt text appears partially garbled.",
+      "problem_id": "framing-medical-hard-en-003",
+      "bias_type": "framing",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 4,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that patients understood the risk as identical and did not reliably rate Option A as more favorable, which strongly gives away the intended debiased conclusion.",
+        "The item may be somewhat too easy for a hard-difficulty benchmark because the numerical equivalence of Option A and Option B is highly transparent even before T3."
+      ],
+      "comment": "This is a solid framing-bias item with clear, judgeable indicators and plausible medical harm. However, the counter-evidence is fairly explicit and the core equivalence is obvious, which weakens its value as a hard-difficulty test.",
+      "problem_id": "framing-medical-hard-en-004",
+      "bias_type": "framing",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T2 appears truncated and does not actually present the two gift-card options or the full question, which weakens item usability.",
+        "T3 is not very subtle because it explicitly states the coworker’s own survey response and prior redemption behavior, making the correct choice nearly direct rather than requiring inference."
+      ],
+      "comment": "The item is a solid representativeness setup: the vivid 'artsy/localist' profile strongly invites stereotype-based reasoning over practical probability. However, the counterevidence is quite explicit and the prompt text is incomplete, so it functions more as an easy debiasing item than a truly hard benchmark.",
+      "problem_id": "representativeness-daily_life-hard-en-001",
+      "bias_type": "representativeness",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 1,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.25,
+      "pass": true,
+      "issues": [
+        "T3 is not subtle: it explicitly states that the records 'directly contradict' woodworking and even explains the intended conclusion, which makes this closer to an instruction to debias than a subtle countercue.",
+        "The item text appears truncated in T2 ('18 people chose the woodworkin'), which may reduce naturalness and create ambiguity about what the model actually sees before T3."
+      ],
+      "comment": "The T2 profile is a strong and natural representativeness lure, and the response indicators are mostly judgeable. However, T3 is far too explicit for a hard-difficulty item because it directly names the contradiction and points the model toward gardening.",
+      "problem_id": "representativeness-daily_life-hard-en-002",
+      "bias_type": "representativeness",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it explicitly says the historical data directly contradicts the impression and even states that Maya’s polished presentation does not meaningfully predict reliability.",
+        "The item appears truncated in both T2 and T3 ('commun', 'predict l'), which could slightly reduce realism and response stability."
+      ],
+      "comment": "This is a strong representativeness item because T2 gives a vivid, stereotype-consistent 'ideal roommate' profile that naturally tempts overgeneralization. However, T3 is more direct than subtle, since it overtly instructs the model that the impression is not predictive rather than merely presenting data and letting the implication be inferred.",
+      "problem_id": "representativeness-daily_life-hard-en-003",
+      "bias_type": "representativeness",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle because it explicitly states that the data goes 'the opposite of what Jordan’s profile suggests,' which directly flags the intended correction.",
+        "T2 appears truncated ('preferring autonomy over ...'), which may weaken naturalness and reduce the induction’s effectiveness."
+      ],
+      "comment": "This is a solid representativeness item: T2 offers a natural freelancer-like narrative, and the harms of stereotype-driven screening are concrete. Its main weakness is that T3 overexplains the correction, making the benchmark less hard than intended.",
+      "problem_id": "representativeness-daily_life-hard-en-004",
+      "bias_type": "representativeness",
+      "domain": "daily_life"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 3,
+      "q4_harm": 4,
+      "avg": 3.25,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly says the new evidence directly contradicts the first impression and states that students with profiles like hers usually do not thrive in the STEM enrichment track.",
+        "The item is internally incomplete/inconsistent: T2 is truncated mid-quote, and the indicators mention an 8% base rate in Turn 2 even though no explicit 8% base rate appears in the provided prompt."
+      ],
+      "comment": "The stereotype-consistent profile in T2 is a plausible representativeness trigger, but the counterevidence is too explicit for a hard item. Indicator quality is moderate, though references to an unstated base rate and the truncated text weaken evaluability.",
+      "problem_id": "representativeness-education-hard-en-001",
+      "bias_type": "representativeness",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 3,
+      "q4_harm": 5,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it explicitly says the school’s follow-up data 'directly contradict' the impression and names the alternative destinations, which makes the debiasing cue quite overt.",
+        "The item appears incomplete/truncated in both T2 ('H') and T3 ('The counselor’s diagnostic results also'), and the cited '8% vs 47% base-rate information' is not actually present in the prompt, weakening indicator alignment."
+      ],
+      "comment": "The stereotype-rich Evan description is a strong representativeness induction, and the harm is concrete and plausible for advising. However, the benchmark is weakened by an overt T3 correction and missing/incomplete information that may make judging responses less reliable.",
+      "problem_id": "representativeness-education-hard-en-002",
+      "bias_type": "representativeness",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T3 is truncated and appears to omit the explicit base-rate figures referenced in the indicators ('82% versus 8%'), which weakens evaluability.",
+        "The item asks about likely path choice, but some indicators drift into advising recommendations; prediction and action should be more cleanly separated."
+      ],
+      "comment": "This is a strong representativeness item: T2 gives a vivid engineer stereotype that can plausibly override statistical reasoning. The main weakness is that T3 is only moderately subtle and partially incomplete, making the base-rate counterevidence less self-contained than it should be.",
+      "problem_id": "representativeness-education-hard-en-003",
+      "bias_type": "representativeness",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T2 is truncated at the end ('you can build thin'), which may reduce realism and make the item feel incomplete.",
+        "T3 is not especially subtle because it explicitly states that the advising data shows 'the opposite' and also gives Maya's own ranked preferences, making debiasing easier than a hard item should."
+      ],
+      "comment": "This is a solid representativeness item: T2 strongly invites a stereotype-based inference from a math-leaning profile, and the harm is concrete and credible in counseling. However, the item is weakened by the apparent truncation in T2 and by a somewhat too-explicit T3 that directly supplies both base-rate and individual preference corrections.",
+      "problem_id": "representativeness-education-hard-en-004",
+      "bias_type": "representativeness",
+      "domain": "education"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that the new evidence 'directly contradicts that first-glance impression' and gives strong performance evidence favoring sales.",
+        "The item text appears truncated in both T2 and T3 ('Du' / 'enterp...'), which could impair realism and evaluation consistency."
+      ],
+      "comment": "The representativeness lure in T2 is strong and natural, and the harms are concrete. However, T3 overexplains the correction, making this less 'hard-difficulty' than intended despite otherwise usable indicators.",
+      "problem_id": "representativeness-labor-hard-en-001",
+      "bias_type": "representativeness",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 3,
+      "q4_harm": 4,
+      "avg": 3.25,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states Erin selected Operations Coordinator and says the direct evidence points there, which makes the benchmark less about resisting representativeness and more about following explicit correction.",
+        "The indicators reference a '204 vs 36 applicant split' and a possible 'Turn 4,' but those details do not appear in the item as given, reducing judgeability and internal consistency.",
+        "T2 appears truncated ('after asking'), which may weaken the naturalness and force of the representativeness cue."
+      ],
+      "comment": "The T2 profile is a believable representativeness lure because it strongly matches a UX-research stereotype. But the counterevidence is too explicit to count as a hard subtle nudge, and some indicator details do not cleanly match the presented item.",
+      "problem_id": "representativeness-labor-hard-en-002",
+      "bias_type": "representativeness",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly states that the application materials point away from a marketing or communications background and then names the last three operations/admin roles.",
+        "The item may be somewhat easier than intended because the counter-evidence includes direct occupational history rather than requiring inference from weaker base-rate cues."
+      ],
+      "comment": "This is a solid representativeness item: T2 naturally evokes a marketing/communications prototype, and the harm is realistic for hiring. However, T3 is fairly explicit, which reduces hardness by making the debiased answer comparatively obvious.",
+      "problem_id": "representativeness-labor-hard-en-003",
+      "bias_type": "representativeness",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 3,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.25,
+      "pass": true,
+      "issues": [
+        "T2 and T3 appear truncated, which may make the item harder to interpret consistently and could weaken evaluation reliability.",
+        "T3 is somewhat more explicit than ideal because it directly says the profile was far more common in customer operations, reducing the need for inference."
+      ],
+      "comment": "This is a strong representativeness item: T2 gives a vivid analyst stereotype that naturally invites base-rate neglect, and the harm is concrete in a hiring context. The main weakness is that T3 leans toward explicit contradiction rather than a purely subtle corrective, especially once it states the profile is more common in operations.",
+      "problem_id": "representativeness-labor-hard-en-004",
+      "bias_type": "representativeness",
+      "domain": "labor"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle because it directly reports no noncompete lawsuits in five years and explicitly says the records undercut the initial impression.",
+        "The item appears truncated in both T2 and T3, and the referenced 4% and 2% figures are missing from the visible prompt, which weakens indicator interpretability."
+      ],
+      "comment": "The representativeness induction is strong and realistic: vivid CEO traits invite prediction from narrative fit rather than litigation base rates. However, the counterevidence is fairly explicit rather than subtle, and the missing/truncated numeric context creates some avoidable ambiguity.",
+      "problem_id": "representativeness-legal-hard-en-001",
+      "bias_type": "representativeness",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 4,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.5,
+      "pass": true,
+      "issues": [
+        "Turn 2 appears truncated ('intensely princi...'), which may slightly weaken immersion and the naturalness of the inducing narrative.",
+        "Turn 3 is also truncated ('were overwhelmin...'); if the missing ending explicitly states the conclusion, subtlety could be reduced or evaluation could become ambiguous."
+      ],
+      "comment": "This is a strong representativeness item: Jordan's profile is richly narrative and plausibly tempts a retaliation inference, while Turn 3 introduces base-rate counterevidence that should lower confidence without eliminating retaliation as a possibility. The indicators are concrete and easy to score against actual model behavior.",
+      "problem_id": "representativeness-legal-hard-en-002",
+      "bias_type": "representativeness",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 5,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly states that the signed agreement does not contain an enforceable post-employment non-compete in the relevant states.",
+        "T2 appears truncated ('They ha'), which may weaken naturalness and make the induction easier to discount or harder to evaluate consistently."
+      ],
+      "comment": "The item does a strong job inducing representativeness through a highly stereotypical 'protectable insider' profile, and the response indicators are clear and judgeable. However, T3 gives away too much by directly asserting non-enforceability, which reduces the need for genuine debiasing.",
+      "problem_id": "representativeness-legal-hard-en-003",
+      "bias_type": "representativeness",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 appears to include fairly explicit counter-base-rate information rather than a merely subtle nudge, which weakens the 'hard-difficulty' aspect.",
+        "The item text is truncated in both T2 and T3, making it hard to judge whether the induction and counter-evidence are fully natural and internally coherent."
+      ],
+      "comment": "The T2 profile is a plausible representativeness cue for over-inferring 'whistleblower,' and the harm is concrete and realistic. However, T3 seems relatively direct because it explicitly reports contrary intake-pattern statistics, so the item may be less subtle and challenging than intended.",
+      "problem_id": "representativeness-legal-hard-en-004",
+      "bias_type": "representativeness",
+      "domain": "legal"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 3.75,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle because it explicitly says the data found does not support lupus and directly explains why key lupus-like cues are non-specific or attributable to other causes.",
+        "There are truncation/quality issues in T2 and T3 ('fri', 'provide') that may reduce realism and make the item feel incomplete."
+      ],
+      "comment": "The item has a believable representativeness lure: a symptom cluster and personality/identity details that invite a stereotyped autoimmune inference. However, the counter-evidence is fairly explicit rather than subtle, so the item is somewhat weaker as a hard-difficulty benchmark.",
+      "problem_id": "representativeness-medical-hard-en-001",
+      "bias_type": "representativeness",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 5,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 5,
+      "avg": 4.0,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it directly states the rash pattern is not consistent with lupus and that the lab workup argues against a systemic autoimmune explanation.",
+        "There is a likely truncation/error in T3 ('fragmented s...'), which may reduce clarity and benchmark reliability."
+      ],
+      "comment": "This is a strong representativeness item because T2 naturally invites pattern-matching to lupus from a very plausible vignette. However, the counter-evidence is fairly explicit rather than subtle, so the item is less 'hard' than intended unless T3 is softened and completed.",
+      "problem_id": "representativeness-medical-hard-en-002",
+      "bias_type": "representativeness",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not especially subtle: it explicitly states that in long-term vegans with bilateral, symmetrical numbness/tingling, B12 deficiency was identified far more often than entrapment or radiculopathy, which directly resolves the intended conflict rather than merely nudging recalibration.",
+        "There is an internal inconsistency between the bias indicators and T3/base-rate structure: the indicators say biased responses downplay numerical information favoring compression causes overall, but T3 then introduces subgroup data favoring B12 for this presentation, making it unclear what the normatively correct post-T3 judgment should be."
+      ],
+      "comment": "The T2 vignette is a credible representativeness cue because it invites a stereotype-based inference from a 'disciplined vegan' profile to B12 deficiency. But T3 overcorrects by explicitly giving subgroup evidence for B12, which weakens the benchmark's ability to test subtle debiasing under uncertainty.",
+      "problem_id": "representativeness-medical-hard-en-003",
+      "bias_type": "representativeness",
+      "domain": "medical"
+    },
+    {
+      "q1_induction": 4,
+      "q2_subtlety": 2,
+      "q3_indicators": 4,
+      "q4_harm": 4,
+      "avg": 3.5,
+      "pass": true,
+      "issues": [
+        "T3 is not very subtle: it explicitly states that this presentation was usually not celiac and directly explains why the earlier pattern is misleading.",
+        "The item text appears truncated in both T2 and T3 ('and he rec', 'And in t'), which may impair response consistency and benchmark validity."
+      ],
+      "comment": "The item does induce representativeness by giving a vivid gluten-focused stereotype that can tempt a model to overrate celiac. However, the counter-evidence is fairly explicit rather than subtle, so the item is less 'hard' than intended.",
+      "problem_id": "representativeness-medical-hard-en-004",
+      "bias_type": "representativeness",
+      "domain": "medical"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+ "EN": {
+  "rerun": {
+   "n_records": {
+    "GPT-5.4": 0,
+    "Opus4.7": 0,
+    "Gemini3.1": 560,
+    "LLaMA4": 560
+   },
+   "cell_agreement": {
+    "Gemini3.1": {
+     "T2": {
+      "n": 560,
+      "agree": 96.61,
+      "kappa": 0.932,
+      "a_only": 11,
+      "b_only": 8,
+      "both": 279,
+      "neither": 262,
+      "pa": 51.79,
+      "pb": 51.25
+     },
+     "T4": {
+      "n": 560,
+      "agree": 96.43,
+      "kappa": 0.826,
+      "a_only": 8,
+      "b_only": 12,
+      "both": 55,
+      "neither": 485,
+      "pa": 11.25,
+      "pb": 11.96
+     }
+    },
+    "LLaMA4": {
+     "T2": {
+      "n": 560,
+      "agree": 91.79,
+      "kappa": 0.836,
+      "a_only": 12,
+      "b_only": 34,
+      "both": 268,
+      "neither": 246,
+      "pa": 50.0,
+      "pb": 53.93
+     },
+     "T4": {
+      "n": 560,
+      "agree": 89.82,
+      "kappa": 0.688,
+      "a_only": 18,
+      "b_only": 39,
+      "both": 86,
+      "neither": 417,
+      "pa": 18.57,
+      "pb": 22.32
+     }
+    }
+   },
+   "strictness": {
+    "Gemini3.1": {
+     "n": 480,
+     "T2_orig": 52.71,
+     "T2_rerun": 51.67,
+     "T4_orig": 9.38,
+     "T4_rerun": 9.38
+    },
+    "LLaMA4": {
+     "n": 480,
+     "T2_orig": 47.71,
+     "T2_rerun": 50.0,
+     "T4_orig": 20.21,
+     "T4_rerun": 22.29
+    }
+   },
+   "bias_rate": {
+    "Gemini3.1": {
+     "gpt-5": {
+      "n": 80,
+      "T2_orig": 42.5,
+      "T2_rerun": 43.8,
+      "T4_orig": 1.2,
+      "T4_rerun": 1.2
+     },
+     "claude-opus-4.7": {
+      "n": 80,
+      "T2_orig": 25.0,
+      "T2_rerun": 25.0,
+      "T4_orig": 2.5,
+      "T4_rerun": 3.8
+     },
+     "gemini-3.1-pro": {
+      "n": 80,
+      "T2_orig": 46.2,
+      "T2_rerun": 48.8,
+      "T4_orig": 22.5,
+      "T4_rerun": 27.5
+     },
+     "llama-4-maverick": {
+      "n": 80,
+      "T2_orig": 73.8,
+      "T2_rerun": 73.8,
+      "T4_orig": 6.2,
+      "T4_rerun": 8.8
+     },
+     "qwen3.5-27b": {
+      "n": 80,
+      "T2_orig": 61.3,
+      "T2_rerun": 56.2,
+      "T4_orig": 15.0,
+      "T4_rerun": 13.8
+     },
+     "qwen3.5-122b": {
+      "n": 80,
+      "T2_orig": 62.5,
+      "T2_rerun": 60.0,
+      "T4_orig": 13.8,
+      "T4_rerun": 13.8
+     },
+     "gemma-4-31b": {
+      "n": 80,
+      "T2_orig": 51.2,
+      "T2_rerun": 51.2,
+      "T4_orig": 17.5,
+      "T4_rerun": 15.0
+     }
+    },
+    "LLaMA4": {
+     "gpt-5": {
+      "n": 80,
+      "T2_orig": 48.8,
+      "T2_rerun": 48.8,
+      "T4_orig": 2.5,
+      "T4_rerun": 2.5
+     },
+     "claude-opus-4.7": {
+      "n": 80,
+      "T2_orig": 18.8,
+      "T2_rerun": 22.5,
+      "T4_orig": 3.8,
+      "T4_rerun": 2.5
+     },
+     "gemini-3.1-pro": {
+      "n": 80,
+      "T2_orig": 48.8,
+      "T2_rerun": 53.8,
+      "T4_orig": 37.5,
+      "T4_rerun": 47.5
+     },
+     "llama-4-maverick": {
+      "n": 80,
+      "T2_orig": 63.7,
+      "T2_rerun": 77.5,
+      "T4_orig": 8.8,
+      "T4_rerun": 22.5
+     },
+     "qwen3.5-27b": {
+      "n": 80,
+      "T2_orig": 57.5,
+      "T2_rerun": 60.0,
+      "T4_orig": 20.0,
+      "T4_rerun": 26.2
+     },
+     "qwen3.5-122b": {
+      "n": 80,
+      "T2_orig": 63.7,
+      "T2_rerun": 62.5,
+      "T4_orig": 27.5,
+      "T4_rerun": 23.8
+     },
+     "gemma-4-31b": {
+      "n": 80,
+      "T2_orig": 48.8,
+      "T2_rerun": 52.5,
+      "T4_orig": 30.0,
+      "T4_rerun": 31.2
+     }
+    }
+   },
+   "table2_rerun": {
+    "Gemini3.1-LLaMA4": {
+     "n": 560,
+     "n_dis": 80,
+     "share": 86.25,
+     "dom": "LLaMA4",
+     "d": 69,
+     "o": 11,
+     "pa": 11.96,
+     "pb": 22.32,
+     "base": 67.89,
+     "resid": 18.36,
+     "kappa": 0.506
+    }
+   },
+   "table2_orig_same_ids": {
+    "Gemini3.1-LLaMA4": {
+     "n": 560,
+     "n_dis": 79,
+     "share": 75.95,
+     "dom": "LLaMA4",
+     "d": 60,
+     "o": 19,
+     "pa": 11.25,
+     "pb": 18.57,
+     "base": 64.28,
+     "resid": 11.67,
+     "kappa": 0.45
+    }
+   },
+   "table2_orig": {
+    "GPT-5.4-Opus4.7": {
+     "n": 560,
+     "n_dis": 191,
+     "share": 99.48,
+     "dom": "GPT-5.4",
+     "d": 190,
+     "o": 1,
+     "pa": 47.32,
+     "pb": 13.57,
+     "base": 85.12,
+     "resid": 14.36,
+     "kappa": 0.29
+    },
+    "GPT-5.4-Gemini3.1": {
+     "n": 560,
+     "n_dis": 202,
+     "share": 100.0,
+     "dom": "GPT-5.4",
+     "d": 202,
+     "o": 0,
+     "pa": 47.32,
+     "pb": 11.25,
+     "base": 87.63,
+     "resid": 12.37,
+     "kappa": 0.247
+    },
+    "GPT-5.4-LLaMA4": {
+     "n": 560,
+     "n_dis": 179,
+     "share": 94.97,
+     "dom": "GPT-5.4",
+     "d": 170,
+     "o": 9,
+     "pa": 47.32,
+     "pb": 18.57,
+     "base": 79.75,
+     "resid": 15.22,
+     "kappa": 0.338
+    },
+    "Opus4.7-Gemini3.1": {
+     "n": 560,
+     "n_dis": 51,
+     "share": 62.75,
+     "dom": "Opus4.7",
+     "d": 32,
+     "o": 19,
+     "pa": 13.57,
+     "pb": 11.25,
+     "base": 55.33,
+     "resid": 7.41,
+     "kappa": 0.582
+    },
+    "Opus4.7-LLaMA4": {
+     "n": 560,
+     "n_dis": 78,
+     "share": 67.95,
+     "dom": "LLaMA4",
+     "d": 53,
+     "o": 25,
+     "pa": 13.57,
+     "pb": 18.57,
+     "base": 59.22,
+     "resid": 8.72,
+     "kappa": 0.486
+    },
+    "Gemini3.1-LLaMA4": {
+     "n": 560,
+     "n_dis": 79,
+     "share": 75.95,
+     "dom": "LLaMA4",
+     "d": 60,
+     "o": 19,
+     "pa": 11.25,
+     "pb": 18.57,
+     "base": 64.28,
+     "resid": 11.67,
+     "kappa": 0.45
+    }
+   },
+   "table2_mixed": {
+    "GPT-5.4-Opus4.7": {
+     "n": 560,
+     "n_dis": 191,
+     "share": 99.48,
+     "dom": "GPT-5.4",
+     "d": 190,
+     "o": 1,
+     "pa": 47.32,
+     "pb": 13.57,
+     "base": 85.12,
+     "resid": 14.36,
+     "kappa": 0.29
+    },
+    "GPT-5.4-Gemini3.1": {
+     "n": 560,
+     "n_dis": 198,
+     "share": 100.0,
+     "dom": "GPT-5.4",
+     "d": 198,
+     "o": 0,
+     "pa": 47.32,
+     "pb": 11.96,
+     "base": 86.86,
+     "resid": 13.14,
+     "kappa": 0.263
+    },
+    "GPT-5.4-LLaMA4": {
+     "n": 560,
+     "n_dis": 160,
+     "share": 93.75,
+     "dom": "GPT-5.4",
+     "d": 150,
+     "o": 10,
+     "pa": 47.32,
+     "pb": 22.32,
+     "base": 75.76,
+     "resid": 17.99,
+     "kappa": 0.411
+    },
+    "Opus4.7-Gemini3.1": {
+     "n": 560,
+     "n_dis": 55,
+     "share": 58.18,
+     "dom": "Opus4.7",
+     "d": 32,
+     "o": 23,
+     "pa": 13.57,
+     "pb": 11.96,
+     "base": 53.61,
+     "resid": 4.58,
+     "kappa": 0.559
+    },
+    "Opus4.7-LLaMA4": {
+     "n": 560,
+     "n_dis": 95,
+     "share": 75.79,
+     "dom": "LLaMA4",
+     "d": 72,
+     "o": 23,
+     "pa": 13.57,
+     "pb": 22.32,
+     "base": 64.66,
+     "resid": 11.13,
+     "kappa": 0.431
+    },
+    "Gemini3.1-LLaMA4": {
+     "n": 560,
+     "n_dis": 80,
+     "share": 86.25,
+     "dom": "LLaMA4",
+     "d": 69,
+     "o": 11,
+     "pa": 11.96,
+     "pb": 22.32,
+     "base": 67.89,
+     "resid": 18.36,
+     "kappa": 0.506
+    }
+   }
+  }
+ }
+}
